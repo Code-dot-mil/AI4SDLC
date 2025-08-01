@@ -20,6 +20,7 @@ markdown_extensions:
 nav:
   - Home:
     - Overview: index.md
-
+  - Reference:
+     - Glossary: glossary.md
 plugins:
   - search
