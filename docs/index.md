@@ -90,7 +90,6 @@ Each play is designed to stand alone while reinforcing shared principles—so yo
 
 ## Human-Machine Teaming Themes
 
-
 AI augmentation isn’t just a tooling upgrade—it’s a shift in how humans and machines collaborate across the software lifecycle. As organizations adopt GenAI, they must address more than integration and governance—they must rethink roles, decision-making, and trust.
 
 The following themes appear throughout the AI4SDLC plays and reflect critical human-centric issues teams must face when responsibly using GenAI in secure, mission-aligned environments:
