@@ -102,7 +102,7 @@ GenAI shifts human work from hand-coding to reviewing, prompting, and validating
 ### Cognitive Overload and Prompting Fatigue
 
 As teams adopt GenAI, developers and engineers are experiencing decision fatigue from unclear outputs, inconsistent prompting results, and lack of context. Effective prompting strategies and human-in-the-loop workflows are essential.  
-[Read more → TBD] 
+[Read more → TBD]
 
 ### Calibrated Trust and Human Oversight
 
