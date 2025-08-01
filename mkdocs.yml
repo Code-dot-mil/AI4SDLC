@@ -1,5 +1,5 @@
 site_name: AI for the SDLC 
-repo_url: https://gitlab.mitre.org/dod-ai4sdlc/GuidanceAsCode/  # Update with your actual repo.  <--this will need to change
+repo_url: https://code-dot-mil.github.io/AI4SDLC/  # Update with your actual repo.  <--this will need to change
 edit_uri: edit/main/docs/
 
 theme:
@@ -22,5 +22,6 @@ nav:
     - Overview: index.md
   - Reference:
      - Glossary: glossary.md
+
 plugins:
   - search
