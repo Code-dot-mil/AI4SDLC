@@ -8,6 +8,7 @@ Artificial Intelligence (AI) is reshaping how software is designed, built, teste
 
 Our goal is to provide **practical guidance** while also linking to **relevant and helpful content from across the DoD and industry**, helping teams can access the latest policies, frameworks, and best practices.  
 
+![Core Loop Diagram](images/01_CORE_LOOP_4x.png)
 ----
 
 ##  **\#AI4SDLC?**
