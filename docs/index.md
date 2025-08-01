@@ -98,22 +98,22 @@ The following themes appear throughout the AI4SDLC plays and reflect critical hu
 ### Shifting Roles: From Creators to Reviewers
 
 GenAI shifts human work from hand-coding to reviewing, prompting, and validating machine-suggested outputs. This changes team dynamics, responsibilities, and required skills.  
-[Read more → <TBD>]
+[Read more → TBD]
 
 ### Cognitive Overload and Prompting Fatigue
 
 As teams adopt GenAI, developers and engineers are experiencing decision fatigue from unclear outputs, inconsistent prompting results, and lack of context. Effective prompting strategies and human-in-the-loop workflows are essential.  
-[Read more → <TBD>] 
+[Read more → TBD] 
 
 ### Calibrated Trust and Human Oversight
 
 Trusting AI-generated outputs is not binary. Teams must design workflows that ensure the right level of human oversight based on risk, criticality, and system phase.  
-[Read more →<TBD>]
+[Read more → TBD]
 
 ### Human-Machine Interaction Patterns
 
 As teams integrate GenAI into their workflows, they aren't just choosing tools—they're defining how humans and machines collaborate. From standalone web interfaces to agentic platforms, each interaction pattern affects traceability, trust, and governance. Whether you're prompting in an IDE, using an AI-first workspace, or delegating tasks to autonomous agents, it's critical to architect the right level of human oversight.  
-[Read more →]plays/HMT-interactionpatterns.md)
+[Read more → TBD]
 
 ----
 
