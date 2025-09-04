@@ -22,7 +22,7 @@ nav:
     - Overview: index.md
     - Toolchain Fundamentals: plays/fundamentals-play.md
   - Plays:
-    - - Fundamentals: plays/fundamentals-play.md
+    - Toolchain Fundamentals: plays/fundamentals-play.md
   - Tools & Templates:
     - Play Template: plays/template.md
     - Architectural Decision Records: resources/ArchitecturalDecisionRecord.md
