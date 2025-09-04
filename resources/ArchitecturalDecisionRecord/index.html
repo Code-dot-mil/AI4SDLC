@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../../plays/fundamentals-play/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../glossary/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>AI for the SDLC</title>
+        <title>Architectural Decision Records - AI for the SDLC</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#architectural-decision-record-adr" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +84,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Architectural Decision Records
             
           </span>
         </div>
@@ -184,7 +193,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -204,7 +213,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/plays/fundamentals-play/" class="md-tabs__link">
+        <a href="../../plays/fundamentals-play/" class="md-tabs__link">
           
   
   
@@ -220,11 +229,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/plays/template.md" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../plays/template.md" class="md-tabs__link">
           
   
   
@@ -244,7 +255,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/glossary/" class="md-tabs__link">
+        <a href="../../glossary/" class="md-tabs__link">
           
   
   
@@ -278,7 +289,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -349,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -372,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/plays/fundamentals-play/" class="md-nav__link">
+      <a href="../../plays/fundamentals-play/" class="md-nav__link">
         
   
   
@@ -443,7 +454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/plays/fundamentals-play/" class="md-nav__link">
+      <a href="../../plays/fundamentals-play/" class="md-nav__link">
         
   
   
@@ -470,24 +481,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -500,7 +516,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tools & Templates
@@ -514,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/plays/template.md" class="md-nav__link">
+      <a href="../../plays/template.md" class="md-nav__link">
         
   
   
@@ -534,10 +550,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Architectural Decision Records
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -548,6 +586,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Rationale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-controls-and-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Controls and Safeguards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consequences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-related-records-or-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Related Records or References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -608,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   
@@ -648,6 +760,70 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Context
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Rationale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-controls-and-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Controls and Safeguards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Consequences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-related-records-or-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Related Records or References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -659,8 +835,148 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="architectural-decision-record-adr">Architectural Decision Record (ADR)</h1>
+<p><strong>Title</strong>: AI Model Hosting and Usage Decision<br />
+<strong>ADR ID</strong>: ADR-00X<br />
+<strong>Status</strong>: Proposed / Approved / Superseded<br />
+<strong>Date</strong>: [YYYY-MM-DD]<br />
+<strong>Author(s)</strong>: [Name(s), Org, Contact Info]<br />
+<strong>Reviewer(s)</strong>: [Architecture board, cyber lead, PM, etc.]</p>
+<hr />
+<h2 id="1-context"><strong>1. Context</strong></h2>
+<p>Briefly describe the context in which the AI model will be used:</p>
+<ul>
+<li><strong>Project / Mission Area</strong>:  </li>
+<li><strong>Classification Level</strong>: (e.g., Unclassified, CUI, IL4, IL5, IL6)  </li>
+<li><strong>Stage in SDLC</strong>: (e.g., Code Generation, Testing, Planning Support)  </li>
+<li><strong>Team / Software Factory</strong>:  </li>
+<li><strong>Model Use Purpose</strong>: (e.g., LLM-generated tests, agentic task coordination, documentation support)</li>
+</ul>
+<hr />
+<h2 id="2-decision"><strong>2. Decision</strong></h2>
+<p>We have selected the following model hosting and usage pattern:</p>
+<ul>
+<li><strong>Hosting Model</strong>:</li>
+<li>☐ Public SaaS (e.g., OpenAI.com, Bard)</li>
+<li>☐ Gov SaaS / Controlled Cloud (e.g., Azure OpenAI IL5)</li>
+<li>☐ Self-Hosted / Open Source (e.g., LLaMA 2, Mistral)</li>
+<li>
+<p>☐ Hybrid / RAG with Controlled External Model Access</p>
+</li>
+<li>
+<p><strong>Model(s) Chosen</strong>:  </p>
+</li>
+<li><strong>Access Method</strong>: (e.g., API call, RAG via broker, IDE plugin)  </li>
+<li><strong>Environment of Use</strong>: (e.g., Platform One, air-gapped enclave, GovCloud pipeline)  </li>
+</ul>
+<hr />
+<h2 id="3-rationale"><strong>3. Rationale</strong></h2>
+<p>Provide justification for the selected model and hosting choice:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Consideration</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mission Risk &amp; Classification</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Required Trust Level</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Pipeline Integration Capability</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Model Transparency / Versioning Needs</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Sustainment Capacity</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Vendor Compliance (FedRAMP, IL4/5)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Security &amp; Privacy Constraints</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Performance Requirements</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Prompt / Output Governance Maturity</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-controls-and-safeguards"><strong>4. Controls and Safeguards</strong></h2>
+<p>Document the cybersecurity and governance guardrails in place:</p>
+<ul>
+<li>[ ] Model version control (locked or tracked)</li>
+<li>[ ] Prompt and output logging enabled</li>
+<li>[ ] Prompt templates versioned and reviewed</li>
+<li>[ ] Human-in-the-loop validation (where applicable)</li>
+<li>[ ] Egress controls for hybrid or external access</li>
+<li>[ ] Automated or manual rollback plan in place</li>
+<li>[ ] Integration with existing DevSecOps logging and policy</li>
+</ul>
+<hr />
+<h2 id="5-consequences"><strong>5. Consequences</strong></h2>
+<p>Describe potential consequences or tradeoffs of this decision:</p>
+<ul>
+<li><strong>Known Risks</strong> (e.g., latency, vendor lock-in, insufficient observability):  </li>
+<li><strong>Fallback Plan or Alternative</strong>:  </li>
+<li><strong>Periodic Review Timeline</strong> (e.g., every 6 months or upon model update):  </li>
+</ul>
+<hr />
+<h2 id="6-related-records-or-references"><strong>6. Related Records or References</strong></h2>
+<ul>
+<li>[Link to system architecture doc]  </li>
+<li>[Trust calibration checklist or framework alignment]  </li>
+<li>[Supply Chain Risk Management record]  </li>
+<li>[DoD AI Strategy / AI RMF mapping]  </li>
+<li>[Testing and evaluation results, if any]</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -696,10 +1012,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   </body>

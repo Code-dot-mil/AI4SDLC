@@ -1,0 +1,3355 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="./">
+      
+      
+        <link rel="next" href="../../resources/ArchitecturalDecisionRecord/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Toolchain Fundamentals - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#play-fundamentals-for-designing-an-ai-augmented-tool-chain" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Toolchain Fundamentals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://code-dot-mil.github.io/AI4SDLC/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Code-Dot-Mil
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../template.md" class="md-tabs__link">
+          
+  
+  
+  Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://code-dot-mil.github.io/AI4SDLC/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Code-Dot-Mil
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary-the-play-in-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary (The Play in Brief)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Why This Play Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecting-the-ai-augmented-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Architecting the AI-Augmented Toolchain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Architecting the AI-Augmented Toolchain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-ai-augmented-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an AI-Augmented Toolchain?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecting-for-security-and-trustworthiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecting for Security and Trustworthiness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-architecture-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Architecture Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference Architecture Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-promptops-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. PromptOps Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-retrieval-augmented-generation-rag-broker" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Retrieval-Augmented Generation (RAG) Broker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-policy-as-code-for-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Policy-as-Code for AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-agent-execution-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Agent Execution Guardrails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-software-bill-of-materials-sbom-model-bom-mlbom" class="md-nav__link">
+    <span class="md-ellipsis">
+      E. Software Bill of Materials (SBOM) + Model BOM (MLBOM)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-from-code-suggestion-to-secure-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: From Code Suggestion to Secure Toolchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-define-the-hosting-and-usage-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Define the Hosting and Usage Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Define the Hosting and Usage Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-saas-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public SaaS Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#government-saas-controlled-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Government SaaS / Controlled Cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-hosted-air-gapped-open-source-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Hosted / Air-Gapped / Open Source Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-hosting-and-usage-models-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Hosting and Usage Models: Comparison Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legend:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-decision-framework-choosing-the-right-ai-hosting-and-usage-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Decision Framework: Choosing the Right AI Hosting and Usage Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Decision Framework: Choosing the Right AI Hosting and Usage Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-determine-mission-sensitivity-and-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Determine Mission Sensitivity and Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-assess-technical-and-operational-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Assess Technical and Operational Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-evaluate-cyber-and-compliance-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Evaluate Cyber and Compliance Risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-match-to-a-hosting-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Match to a Hosting Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-architectural-decision-record-adr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output: Architectural Decision Record (ADR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-humans-interact-with-ai-augmented-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How Humans Interact with AI-Augmented Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. How Humans Interact with AI-Augmented Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-interaction-patterns-todays-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Interaction Patterns: Today’s Landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Insight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-implication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Implication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-designing-for-trust-and-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Designing for Trust and Cybersecurity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Designing for Trust and Cybersecurity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trust-is-a-system-propertynot-a-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trust Is a System Property—Not a Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-calibrated-trust-lens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Calibrated Trust Lens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-principles-for-secure-ai-augmented-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Principles for Secure AI-Augmented Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-controls-from-dod-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Controls from DoD Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Insight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-measures-and-success-indicators-measuring-what-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7: Measures and Success Indicators – Measuring What Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7: Measures and Success Indicators – Measuring What Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-the-mission-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start with the Mission Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-a-balanced-set-of-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Track a Balanced Set of Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expect-experimentation-and-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expect Experimentation and Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-a-comprehensive-sdlc-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain a Comprehensive SDLC View
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-metric-targets-and-minimums" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Metric Targets and Minimums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-categories-and-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metric Categories and Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traditional-metrics-still-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traditional Metrics Still Matter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-these-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use These Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chasing-the-right-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chasing the Right Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expect-metric-volatilityand-plan-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expect Metric Volatility—And Plan for It
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-five-common-missteps" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Five Common Missteps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Five Common Missteps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-using-public-saas-models-for-sensitive-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Using Public SaaS Models for Sensitive Workloads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-treating-prompts-like-ephemeral-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Treating Prompts Like Ephemeral Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bypassing-human-in-the-loop-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Bypassing Human-in-the-Loop Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ignoring-model-update-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ignoring Model Update Drift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-over-reliance-on-tooling-without-calibrated-trust" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Over-Reliance on Tooling Without Calibrated Trust
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Strategic Insight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-recommendations-next-best-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Recommendations &amp; Next Best Play
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Recommendations &amp; Next Best Play">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations-for-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations for Today
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-best-play-code-generation-and-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Best Play: Code Generation and Completion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Plays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary-the-play-in-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary (The Play in Brief)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Why This Play Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecting-the-ai-augmented-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Architecting the AI-Augmented Toolchain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Architecting the AI-Augmented Toolchain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-ai-augmented-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an AI-Augmented Toolchain?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecting-for-security-and-trustworthiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecting for Security and Trustworthiness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-architecture-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Architecture Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference Architecture Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-promptops-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. PromptOps Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-retrieval-augmented-generation-rag-broker" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Retrieval-Augmented Generation (RAG) Broker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-policy-as-code-for-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Policy-as-Code for AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-agent-execution-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Agent Execution Guardrails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-software-bill-of-materials-sbom-model-bom-mlbom" class="md-nav__link">
+    <span class="md-ellipsis">
+      E. Software Bill of Materials (SBOM) + Model BOM (MLBOM)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-from-code-suggestion-to-secure-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: From Code Suggestion to Secure Toolchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-define-the-hosting-and-usage-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Define the Hosting and Usage Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Define the Hosting and Usage Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-saas-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public SaaS Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#government-saas-controlled-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Government SaaS / Controlled Cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-hosted-air-gapped-open-source-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Hosted / Air-Gapped / Open Source Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-hosting-and-usage-models-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Hosting and Usage Models: Comparison Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legend:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-decision-framework-choosing-the-right-ai-hosting-and-usage-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Decision Framework: Choosing the Right AI Hosting and Usage Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Decision Framework: Choosing the Right AI Hosting and Usage Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-determine-mission-sensitivity-and-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Determine Mission Sensitivity and Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-assess-technical-and-operational-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Assess Technical and Operational Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-evaluate-cyber-and-compliance-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Evaluate Cyber and Compliance Risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-match-to-a-hosting-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Match to a Hosting Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-architectural-decision-record-adr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output: Architectural Decision Record (ADR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-humans-interact-with-ai-augmented-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How Humans Interact with AI-Augmented Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. How Humans Interact with AI-Augmented Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-interaction-patterns-todays-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Interaction Patterns: Today’s Landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Insight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-implication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Implication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-designing-for-trust-and-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Designing for Trust and Cybersecurity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Designing for Trust and Cybersecurity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trust-is-a-system-propertynot-a-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trust Is a System Property—Not a Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-calibrated-trust-lens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Calibrated Trust Lens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-principles-for-secure-ai-augmented-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Principles for Secure AI-Augmented Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-controls-from-dod-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Controls from DoD Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Insight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-measures-and-success-indicators-measuring-what-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7: Measures and Success Indicators – Measuring What Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7: Measures and Success Indicators – Measuring What Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-the-mission-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start with the Mission Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-a-balanced-set-of-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Track a Balanced Set of Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expect-experimentation-and-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expect Experimentation and Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-a-comprehensive-sdlc-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain a Comprehensive SDLC View
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-metric-targets-and-minimums" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Metric Targets and Minimums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-categories-and-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metric Categories and Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traditional-metrics-still-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traditional Metrics Still Matter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-these-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use These Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chasing-the-right-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chasing the Right Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expect-metric-volatilityand-plan-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expect Metric Volatility—And Plan for It
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-five-common-missteps" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Five Common Missteps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Five Common Missteps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-using-public-saas-models-for-sensitive-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Using Public SaaS Models for Sensitive Workloads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-treating-prompts-like-ephemeral-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Treating Prompts Like Ephemeral Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bypassing-human-in-the-loop-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Bypassing Human-in-the-Loop Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ignoring-model-update-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ignoring Model Update Drift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-over-reliance-on-tooling-without-calibrated-trust" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Over-Reliance on Tooling Without Calibrated Trust
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Strategic Insight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-recommendations-next-best-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Recommendations &amp; Next Best Play
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Recommendations &amp; Next Best Play">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations-for-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations for Today
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-best-play-code-generation-and-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Best Play: Code Generation and Completion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools & Templates
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tools & Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Play Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architectural Decision Records
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary-the-play-in-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary (The Play in Brief)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Why This Play Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecting-the-ai-augmented-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Architecting the AI-Augmented Toolchain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Architecting the AI-Augmented Toolchain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-ai-augmented-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an AI-Augmented Toolchain?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecting-for-security-and-trustworthiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecting for Security and Trustworthiness
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-architecture-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference Architecture Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference Architecture Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-promptops-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. PromptOps Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-retrieval-augmented-generation-rag-broker" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Retrieval-Augmented Generation (RAG) Broker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-policy-as-code-for-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Policy-as-Code for AI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-agent-execution-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Agent Execution Guardrails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-software-bill-of-materials-sbom-model-bom-mlbom" class="md-nav__link">
+    <span class="md-ellipsis">
+      E. Software Bill of Materials (SBOM) + Model BOM (MLBOM)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Recommendation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-from-code-suggestion-to-secure-toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: From Code Suggestion to Secure Toolchain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-define-the-hosting-and-usage-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Define the Hosting and Usage Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Define the Hosting and Usage Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#public-saas-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public SaaS Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#government-saas-controlled-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Government SaaS / Controlled Cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#self-hosted-air-gapped-open-source-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Hosted / Air-Gapped / Open Source Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybrid-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybrid Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-hosting-and-usage-models-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Hosting and Usage Models: Comparison Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legend:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-decision-framework-choosing-the-right-ai-hosting-and-usage-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Decision Framework: Choosing the Right AI Hosting and Usage Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Decision Framework: Choosing the Right AI Hosting and Usage Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-determine-mission-sensitivity-and-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Determine Mission Sensitivity and Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-assess-technical-and-operational-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Assess Technical and Operational Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-evaluate-cyber-and-compliance-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Evaluate Cyber and Compliance Risk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-match-to-a-hosting-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Match to a Hosting Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-architectural-decision-record-adr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output: Architectural Decision Record (ADR)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-humans-interact-with-ai-augmented-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. How Humans Interact with AI-Augmented Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. How Humans Interact with AI-Augmented Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-interaction-patterns-todays-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Interaction Patterns: Today’s Landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Insight
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-implication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architectural Implication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-designing-for-trust-and-cybersecurity" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Designing for Trust and Cybersecurity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Designing for Trust and Cybersecurity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trust-is-a-system-propertynot-a-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trust Is a System Property—Not a Feature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-calibrated-trust-lens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use the Calibrated Trust Lens
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-principles-for-secure-ai-augmented-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Principles for Secure AI-Augmented Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-controls-from-dod-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling Controls from DoD Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-insight_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Insight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-measures-and-success-indicators-measuring-what-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7: Measures and Success Indicators – Measuring What Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7: Measures and Success Indicators – Measuring What Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-the-mission-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start with the Mission Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-a-balanced-set-of-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Track a Balanced Set of Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expect-experimentation-and-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expect Experimentation and Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintain-a-comprehensive-sdlc-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintain a Comprehensive SDLC View
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-metric-targets-and-minimums" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Metric Targets and Minimums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-categories-and-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metric Categories and Indicators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traditional-metrics-still-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traditional Metrics Still Matter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-these-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use These Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chasing-the-right-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chasing the Right Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expect-metric-volatilityand-plan-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expect Metric Volatility—And Plan for It
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-five-common-missteps" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Five Common Missteps
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Five Common Missteps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-using-public-saas-models-for-sensitive-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Using Public SaaS Models for Sensitive Workloads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-treating-prompts-like-ephemeral-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Treating Prompts Like Ephemeral Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-bypassing-human-in-the-loop-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Bypassing Human-in-the-Loop Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ignoring-model-update-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ignoring Model Update Drift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-over-reliance-on-tooling-without-calibrated-trust" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Over-Reliance on Tooling Without Calibrated Trust
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategic-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Strategic Insight
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-recommendations-next-best-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Recommendations &amp; Next Best Play
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Recommendations &amp; Next Best Play">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recommendations-for-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations for Today
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-best-play-code-generation-and-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Best Play: Code Generation and Completion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="play-fundamentals-for-designing-an-ai-augmented-tool-chain"><strong>Play: Fundamentals for Designing an AI-Augmented Tool Chain</strong></h1>
+<h2 id="executive-summary-the-play-in-brief">Executive Summary (The Play in Brief)</h2>
+<p>Generative   AI (GenAI) is flooding into software teams—often through developer tools, Integrated Development Environment (IDE) plugins, chatbots, and open Application Programming Interface (API) integrations. As a form of Machine Learning (ML), GenAI models are capable of generating new content—like code, documentation, or test cases—rather than simply classifying or predicting. Across the DoD, there's a clear mandate to accelerate adoption, with recent strategies urging agencies to scale AI capabilities in support of mission objectives. But without foundational knowledge of how these tools are architected—and how they intersect with mission workflows, trust boundaries, and cyber risk—organizations risk making decisions that are fast, but fragile.
+This play is designed to help DoD teams and software factories design their AI-augmented toolchains with intention. It starts with tools—not because tools come first, but because tooling is where AI shows up first. By unpacking hosting models, usage patterns, and human interaction modalities, this play enables teams to make mission-aligned, architecture-led decisions that support lasting change.</p>
+<p>It’s not about picking a model. It’s about understanding how tools fit into the broader SDLC—who uses them, why, and with what risk.</p>
+<ul>
+<li>
+<p>TL;DR: Start with your mission use case and workflow—who needs the AI-augmented capability, <em>why</em>, and <em>where</em> it fits in the SDLC.  Then architect your hosting and integration strategy with an eye toward trust boundaries, usage models, interaction patterns, and cyber risk posture. This play unpacks the landscape of  options—so teams can make deliberate, mission-aligned decisions about where GenAI belongs and how to adopt it responsibly.</p>
+</li>
+<li>
+<p>Intended audience: CIOs, Chief Engineers, DevSecOps Leads, Program Managers, Technical Leads, Software Engineers, and Software Factory Architects.</p>
+</li>
+<li>
+<p>📌 Key takeaway: The most important architectural decision isn’t which model—it’s how and why you’re using it. Define your use case first, then select a hosting and integration model that aligns with your mission, workforce, and risk posture.</p>
+</li>
+</ul>
+<h2 id="1-why-this-play-matters"><strong>1. Why This Play Matters</strong></h2>
+<p>The moment a team or organization decides to experiment with or integrate GenAI into the software development lifecycle, they face a foundational architectural decision: Where will the model live? And just as importantly, who controls it, who can see the inputs, and what risks come with those choices?</p>
+<p>Choosing a hosting and usage model isn't a technical formality—it’s a strategic inflection point with operational, security, and trust implications. The wrong choice can introduce mission-impacting risk, stall authorizations, or limit scale. The right choice aligns with the mission's sensitivity, embraces the reality of cybersecurity-by-design, and supports long-term sustainability and trust.</p>
+<p>This is not just about hosting infrastructure. It’s about:</p>
+<ul>
+<li>Defining your trust boundaries</li>
+<li>Controlling data ingress and egress</li>
+<li>Quantifying exposure to adversarial AI threats, model drift, and data leakage</li>
+<li>Ensuring compliance with DoD data classification, Zero Trust mandates, and supply chain integrity</li>
+</ul>
+<p>In short, before choosing a model or a vendor, teams must step back and ask: <em>What is the mission, what is the risk tolerance, and what’s the operational boundary that will keep us in control?</em></p>
+<h2 id="2-architecting-the-ai-augmented-toolchain"><strong>2. Architecting the AI-Augmented Toolchain</strong></h2>
+<p>GenAI is not a bolt-on capability. As it becomes embedded across the software development lifecycle—from planning and design to testing, deployment, and sustainment—it demands deliberate architectural thinking. Choosing the right tooling isn’t enough. We must design the <strong>AI-augmented toolchain</strong> to ensure it’s observable, controllable, and secure by design.</p>
+<h3 id="what-is-an-ai-augmented-toolchain">What Is an AI-Augmented Toolchain?</h3>
+<p>An AI-augmented toolchain refers to a pipeline or suite of tools where one or more components (code generators, test writers, documentation agents, deployment optimizers, etc.) are infused with AI—often via LLMs or agentic systems. These tools can be passive (suggesting code) or active (taking autonomous actions).</p>
+<p>In DoD and other high-assurance environments, augmenting the toolchain introduces <em>new architectural surfaces</em>:</p>
+<ul>
+<li>Trust boundaries between human, model, and action</li>
+<li>Prompt design and versioning as code artifacts</li>
+<li>Feedback loops that must be observable and auditable</li>
+<li>Emergent behavior that must be bounded or governed</li>
+</ul>
+<hr />
+<h3 id="architecting-for-security-and-trustworthiness">Architecting for Security and Trustworthiness</h3>
+<p>Just as we embrace *DevSecOps as a mindset, we must extend it to AI-Augmented DevSecOps. This includes:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Area</strong></th>
+<th><strong>Architectural Guidance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identity &amp; Access</strong></td>
+<td>Enforce least-privilege access for AI tools. Ensure LLMs or agents cannot access sensitive scopes unless explicitly permitted.</td>
+</tr>
+<tr>
+<td><strong>Prompt Provenance</strong></td>
+<td>Treat prompts and context injections as code—version them, audit them, and protect them.</td>
+</tr>
+<tr>
+<td><strong>Model Boundaries</strong></td>
+<td>Clarify where models live (local, cloud, hybrid) and enforce strict egress controls.</td>
+</tr>
+<tr>
+<td><strong>Observability &amp; Logging</strong></td>
+<td>Introduce telemetry at every interaction point: prompts, model outputs, agent actions.</td>
+</tr>
+<tr>
+<td><strong>Testability</strong></td>
+<td>Validate AI-generated outputs with both traditional and AI-aware test harnesses.</td>
+</tr>
+<tr>
+<td><strong>Rollback &amp; Recovery</strong></td>
+<td>Enable rollback of both model versions and AI-generated artifacts (e.g., code, configs).</td>
+</tr>
+<tr>
+<td><strong>Policy Enforcement</strong></td>
+<td>Integrate policies into DevSecOps to block unauthorized model use, drift, or dependency pulls.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="reference-architecture-concepts">Reference Architecture Concepts</h3>
+<p>To build mission-ready, AI-augmented pipelines, organizations must rethink how data, models, and logic interact across the software development lifecycle. The following architectural patterns provide building blocks for trustworthy, scalable, and observable GenAI integrations:</p>
+<h4 id="a-promptops-layer"><strong>A. PromptOps Layer</strong></h4>
+<p>Establish a dedicated layer in your pipeline to manage prompts as code—including reusable templates, version control, parameter injection, and governance. This improves traceability and reproducibility of AI-generated outputs.  <em>Think of it like CI/CD for prompts.</em></p>
+<h4 id="b-retrieval-augmented-generation-rag-broker"><strong>B. Retrieval-Augmented Generation (RAG) Broker</strong></h4>
+<p>When external models (like LLMs) are used, a RAG broker retrieves internal, curated context (e.g., knowledge bases, architecture docs, ticket history) to send along with the prompt. This reduces hallucination risk and increases model relevance—without retraining the model itself.</p>
+<h4 id="c-policy-as-code-for-ai"><strong>C. Policy-as-Code for AI</strong></h4>
+<p>Use policy engines (e.g., Open Policy Agent, Conftest) to inspect and enforce rules around where and how AI is used. For example: block certain model types in production, restrict prompt content, or require logging before execution.   AI needs to be governed just like infrastructure.</p>
+<h4 id="d-agent-execution-guardrails"><strong>D. Agent Execution Guardrails</strong></h4>
+<p>For agent-based systems (e.g., AutoGPT, Crew.AI, OpenHands), introduce runtime controls that constrain behavior. Examples include:
+- Memory limits<br />
+- Execution timeouts<br />
+- Tool usage boundaries<br />
+These guardrails reduce the risk of emergent or uncontrolled AI behaviors.</p>
+<h4 id="e-software-bill-of-materials-sbom-model-bom-mlbom"><strong>E. Software Bill of Materials (SBOM) + Model BOM (MLBOM)</strong></h4>
+<p>Track not only your traditional open-source dependencies, but also:
+- The <strong>models</strong> you're using<br />
+- The <strong>datasets</strong> they were trained or fine-tuned on<br />
+- The <strong>versioning</strong> and update dates  </p>
+<p>This transparency supports reproducibility, compliance, and secure software supply chain practices.</p>
+<hr />
+<h3 id="recommendation">📌 Recommendation</h3>
+<p>These components are not one-size-fits-all. Start small—map one toolchain, identify one use case—and apply these patterns incrementally as trust and complexity grow.</p>
+<hr />
+<h3 id="example-from-code-suggestion-to-secure-toolchain">Example: From Code Suggestion to Secure Toolchain</h3>
+<p>Let’s say your team adopts GitHub Copilot or integrates an internal LLM for code generation.</p>
+<p><strong>Without architectural planning</strong>:</p>
+<ul>
+<li>Prompts aren’t versioned.</li>
+<li>No record of generated output.</li>
+<li>Outputs go straight into pipeline with no review.</li>
+<li>Developers rely on outputs without understanding.</li>
+</ul>
+<p><strong>With AI-Augmented Toolchain Architecture</strong>:</p>
+<ul>
+<li>Prompts and outputs are logged and versioned.</li>
+<li>Every AI suggestion is validated against policy.</li>
+<li>Code gen is gated by a test scaffold validator.</li>
+<li>Generated code can be traced back to a prompt and model version.</li>
+</ul>
+<hr />
+<h3 id="takeaway">📌 Takeaway</h3>
+<blockquote>
+<p>It's kind of like a driver assistance system. It doesn't prevent all accidents that can happen, but it makes traffic a little bit more secure.</p>
+<p>— <em>Thomas Dohmke, CEO of GitHub, June 2023</em> </p>
+</blockquote>
+<hr />
+<h2 id="3-define-the-hosting-and-usage-models"><strong>3. Define the Hosting and Usage Models</strong></h2>
+<p>Before selecting a tool, service, model, or vendor, it’s essential to understand the distinct hosting and usage patterns available for GenAI across the SDLC. Each model comes with architectural, security, and operational implications—especially in the context of federal classification levels, cATO pipelines, and Zero Trust mandates.</p>
+<p>The primary categories are:</p>
+<h3 id="public-saas-model"><strong>Public SaaS Model</strong></h3>
+<p><em>Examples: ChatGPT via OpenAI.com, Claude, Bard, Gemini (unclassified public interfaces)</em></p>
+<ul>
+<li>✅ <strong>Pros</strong>: Immediate access, broad community knowledge, rapid iteration</li>
+<li>⚠️ <strong>Risks</strong>: Model weights are opaque, vendor-managed updates may introduce regression or drift; user inputs may be logged or retained; no guarantee of U.S. jurisdiction; limited ability to enforce data governance</li>
+<li><strong>Security Context</strong>: High external trust boundary; not suitable for mission-critical, export-controlled, or CUI workloads</li>
+<li><strong>Use Case Fit</strong>: Low-risk experimentation, internal education, code snippets for generic use—not for production or sensitive use</li>
+</ul>
+<hr />
+<h3 id="government-saas-controlled-cloud"><strong>Government SaaS / Controlled Cloud</strong></h3>
+<p><em>Examples: Azure OpenAI in IL4/5, AWS Bedrock in GovCloud, Google Gov AI</em></p>
+<ul>
+<li>✅ <strong>Pros</strong>: FedRAMP Moderate/High or IL4/5/6 compliance; access to proprietary model strengths with more boundary clarity; improved telemetry and logging</li>
+<li>⚠️ <strong>Risks</strong>: Reliant on third-party updates; difficult to guarantee reproducibility or model immutability; access control is only as strong as your cloud configuration</li>
+<li><strong>Integration Fit</strong>: Good for DevSecOps teams using Platform One, Cloud One, or internal AI services aligned to JWCC constructs</li>
+<li><strong>Security Context</strong>: Moderate to High trust boundary; acceptable for CUI and some mission workloads depending on use case</li>
+</ul>
+<hr />
+<h3 id="self-hosted-air-gapped-open-source-model"><strong>Self-Hosted / Air-Gapped / Open Source Model</strong></h3>
+<p><em>Examples: LLaMA 2, Mistral, Falcon, Dolly, fine-tuned FLAN-T5, Mixtral, custom RAG solutions</em></p>
+<ul>
+<li>✅ <strong>Pros</strong>: Maximum control, full auditability, offline operation; essential for classified, air-gapped, or multi-national environments</li>
+<li>⚠️ <strong>Risks</strong>: Requires internal expertise to fine-tune, maintain, secure, and serve models; significant MLOps burden; potential risk of underperforming models without tuning</li>
+<li><strong>Security Context</strong>: Highest trust boundary; architected for enclave deployment, SCIF integration, and red/black separation</li>
+<li><strong>Use Case Fit</strong>: Mission-critical decision support, secure coding, embedded agents in ISR/command software, disconnected ops</li>
+</ul>
+<hr />
+<h3 id="hybrid-models"><strong>Hybrid Models</strong></h3>
+<p><em>Examples: RAG architecture with local vector DB + external LLM callout, or mixed trust layering</em></p>
+<ul>
+<li>✅ <strong>Pros</strong>: Retain local context and control; reduce data exposure by decoupling model from sensitive knowledge; opportunity to build fine-tuned pipelines with prompt injection defense</li>
+<li>⚠️ <strong>Risks</strong>: Complex architecture introduces new attack surfaces; demands rigorous prompt sanitization, inference auditing, and failover strategies</li>
+<li><strong>Trust Impact</strong>: Can increase calibrated trust if traceability and observability are engineered properly</li>
+</ul>
+<hr />
+<h3 id="ai-hosting-and-usage-models-comparison-matrix"><strong>AI Hosting and Usage Models: Comparison Matrix</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Criteria</strong></th>
+<th><strong>Public SaaS</strong><br>(e.g., OpenAI, Bard)</th>
+<th><strong>Gov SaaS / Controlled Cloud</strong><br>(e.g., Azure OpenAI IL5)</th>
+<th><strong>Self-Hosted / Air-Gapped</strong><br>(e.g., LLaMA2, Mistral)</th>
+<th><strong>Hybrid (RAG / Mixed Trust)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security Posture</strong></td>
+<td>🔴 Low<br> (external trust boundary)</td>
+<td>🟡 Moderate<br>  (cloud-config dependent)</td>
+<td>🟢 High<br> (max control, enclave ready)</td>
+<td>🟡 Variable<br> (depends on architecture)</td>
+</tr>
+<tr>
+<td><strong>Data Control</strong></td>
+<td>🔴 None<br> (inputs may be retained/logged)</td>
+<td>🟡 Partial<br>(depends on configuration)</td>
+<td>🟢 Full<br> (data stays within domain)</td>
+<td>🟡 Conditional<br> (requires strict design)</td>
+</tr>
+<tr>
+<td><strong>Model Transparency</strong></td>
+<td>🔴 Opaque<br> (vendor-managed weights)</td>
+<td>🔴 Mostly opaque<br> (versioning limited)</td>
+<td>🟢 Transparent<br> (open weights and config)</td>
+<td>🟡 Partial<br> (depends on external callouts)</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>🟢 High<br> (vendor-optimized infra)</td>
+<td>🟢 High<br> (cloud-accelerated)</td>
+<td>🟡 Moderate<br> (depends on in-house tuning)</td>
+<td>🟡 Variable<br> (depends on pipeline design)</td>
+</tr>
+<tr>
+<td><strong>Operational Cost</strong></td>
+<td>🟡 Low up-front<br> (can scale fast)</td>
+<td>🟡 Subscription/ licensing<br> (cost per token or instance)</td>
+<td>🔴 High setup<br>🟡 Lower long-term TCO</td>
+<td>🟡 Moderate<br> (RAG infra + model callout costs)</td>
+</tr>
+<tr>
+<td><strong>Model Reproducibility</strong></td>
+<td>🔴 None<br> (model updates at vendor discretion)</td>
+<td>🔴 Limited<br>(some vendor change control)</td>
+<td>🟢 High<br>(versions locked, reproducible)</td>
+<td>🟡 Mixed<br> (depends on callout dependencies)</td>
+</tr>
+<tr>
+<td><strong>Mission Fit (Classified/CUI)</strong></td>
+<td>🔴 Poor<br>(not suitable)</td>
+<td>🟡 Moderate<br> (IL4/5 compliant workloads)</td>
+<td>🟢 Excellent<br> (supports SCIF, disconnected ops)</td>
+<td>🟡 Moderate<br> (requires strict partitioning)</td>
+</tr>
+<tr>
+<td><strong>Integration Complexity</strong></td>
+<td>🟢 Minimal<br> (API-based access)</td>
+<td>🟢 Moderate<br>  (P1/C1 aligned^)</td>
+<td>🔴 High<br> (requires MLOps, infra buildout)</td>
+<td>🔴 High<br> (requires orchestrated pipeline)</td>
+</tr>
+</tbody>
+</table>
+<p>^ P1 = Platform One, C1 = Cloud One</p>
+<hr />
+<h3 id="legend">Legend:</h3>
+<ul>
+<li>🟢 = Preferred / Strong Alignment</li>
+<li>🟡 = Acceptable with Caution / Design Needed</li>
+<li>🔴 = High Risk / Higher Complexity </li>
+</ul>
+<hr />
+<h2 id="4-decision-framework-choosing-the-right-ai-hosting-and-usage-model"><strong>4. Decision Framework: Choosing the Right AI Hosting and Usage Model</strong></h2>
+<p>When introducing GenAI into the software development lifecycle, it’s tempting to reach for the most powerful model or the easiest plug-in. But success in a high-assurance, mission-driven environment like the DoD demands a <strong>deliberate decision-making framework</strong>—one that accounts for classification level, trust posture, sustainment, and mission criticality.</p>
+<p>This framework helps guide teams—software factories, PMOs, mission leads, and cyber operators—through a set of architectural questions to select the <strong>right AI hosting and usage model</strong>, not just the most available one.</p>
+<hr />
+<h3 id="step-1-determine-mission-sensitivity-and-context">Step 1: Determine Mission Sensitivity and Context</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Question</strong></th>
+<th><strong>Why It Matters</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is the classification level of the data or workload?</td>
+<td>Determines model placement (e.g., public SaaS is disallowed for CUI or classified)</td>
+</tr>
+<tr>
+<td>Is this mission-critical, safety-critical, or time-sensitive?</td>
+<td>High-stakes decisions demand higher trust, auditability, and model control</td>
+</tr>
+<tr>
+<td>Will AI outputs directly influence code, policy, deployment, or operations?</td>
+<td>Direct impact requires tighter control, testing, and provenance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-2-assess-technical-and-operational-constraints">Step 2: Assess Technical and Operational Constraints</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Question</strong></th>
+<th><strong>Why It Matters</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Are you able to sustain a self-hosted or hybrid model (e.g., infrastructure, MLOps)?</td>
+<td>Not every environment has the staff or resources to support open-source models securely</td>
+</tr>
+<tr>
+<td>Does your pipeline support prompt logging, model versioning, and traceability?</td>
+<td>Without these, you can’t build calibrated trust or meet ATO expectations</td>
+</tr>
+<tr>
+<td>What latency, scale, or throughput requirements do you have?</td>
+<td>Some models work best locally; others need elastic cloud scale or acceleration</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-3-evaluate-cyber-and-compliance-risk">Step 3: Evaluate Cyber and Compliance Risk</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Question</strong></th>
+<th><strong>Why It Matters</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is this model FedRAMP authorized or operating inside IL4/5/6?</td>
+<td>Ensures alignment with DoD risk management frameworks</td>
+</tr>
+<tr>
+<td>Can you audit all AI interactions (input, model, output)?</td>
+<td>Required for cyber resilience and post-incident forensics</td>
+</tr>
+<tr>
+<td>Are there constraints around vendor ownership, model sourcing, or training data provenance?</td>
+<td>Critical for understanding and mitigating geopolitical risk or model bias exposure</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-4-match-to-a-hosting-model">Step 4: Match to a Hosting Model</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Hosting Model</strong></th>
+<th><strong>Best Fit For…</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public SaaS</strong></td>
+<td>Low-risk prototyping and internal training only. Not mission workloads.</td>
+</tr>
+<tr>
+<td><strong>Gov SaaS / Controlled Cloud</strong></td>
+<td>Moderate-trust workloads in IL4/5/6 with vendor-supported models.</td>
+</tr>
+<tr>
+<td><strong>Self-Hosted / Open Source</strong></td>
+<td>High-assurance, enclave or air-gapped missions. Full model control and traceability.</td>
+</tr>
+<tr>
+<td><strong>Hybrid / RAG</strong></td>
+<td>Context-specific augmentation of existing SDLC with controlled external inference.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="output-architectural-decision-record-adr">Output: Architectural Decision Record (ADR)</h3>
+<p>For each decision, teams should record:</p>
+<ul>
+<li>Mission description and data classification</li>
+<li>Selected hosting model and justification</li>
+<li>Expected model usage (e.g., generate tests, support code review)</li>
+<li>Controls in place (prompt logging, access control, rollback procedures)</li>
+<li>Risk exceptions or mitigations</li>
+</ul>
+<p>A sample architectural decision record template is available[here].(https://ArchitecturalDecisionRecord.md) </p>
+<h2 id="5-how-humans-interact-with-ai-augmented-tools"><strong>5. How Humans Interact with AI-Augmented Tools</strong></h2>
+<p>As organizations adopt GenAI, they're not just choosing models or hosting platforms—they're defining how humans and machines will collaborate. These <strong>interaction patterns</strong> vary widely across environments, each bringing different levels of traceability, auditability, and risk.</p>
+<p>These patterns shape:</p>
+<ul>
+<li>Developer workflows and mental models  </li>
+<li>Security and compliance boundaries  </li>
+<li>Trust calibration and explainability  </li>
+<li>The software factory’s ability to scale and govern</li>
+</ul>
+<h3 id="ai-interaction-patterns-todays-landscape"><strong>AI Interaction Patterns: Today’s Landscape</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Pattern</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Benefits</strong></th>
+<th><strong>Challenges</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standalone Web Interfaces</strong> <br><em>(e.g., ChatGPT, Claude)</em></td>
+<td>Accessed via browser or mobile interface, disconnected from enterprise tools or pipelines.</td>
+<td>✅ Easy to access <br> ✅ Fast iteration for prototyping and learning</td>
+<td>🔴 No integration with enterprise workflows <br> 🔴 No traceability or auditability <br> 🔴 Encourages “out-of-band” use</td>
+</tr>
+<tr>
+<td><strong>IDE Plugins and Adapters</strong> <br><em>(e.g., GitHub Copilot, Continue.Dev)</em></td>
+<td>Embedded directly into local development environments, offering in-line code suggestions.</td>
+<td>✅ Accelerates code scaffolding <br> ✅ Familiar developer UX</td>
+<td>⚠️ No architectural context <br> ⚠️ Little prompt/version control <br> ⚠️ Difficult to share prompts across teams</td>
+</tr>
+<tr>
+<td><strong>AI-First IDEs / Workspaces</strong> <br><em>(e.g., WindSurf, OpenHands)</em></td>
+<td>Full-stack environments built around natural language workflows and agentic collaboration.</td>
+<td>✅ Abstracts complexity <br> ✅ Integrated agents and tool orchestration</td>
+<td>⚠️ Redefines team roles <br> ⚠️ Harder to trace decisions <br> ⚠️ Challenges compliance and DevSecOps gates</td>
+</tr>
+<tr>
+<td><strong>Custom API Integrations</strong> <br><em>(e.g., OpenAI API, Bedrock, internal-hosted LLMs)</em></td>
+<td>Embedded into backend or infrastructure via programmatic callouts.</td>
+<td>✅ High control <br> ✅ Supports observability and prompt templating</td>
+<td>⚠️ Requires prompt governance <br> ⚠️ Must be securely integrated into pipelines</td>
+</tr>
+<tr>
+<td><strong>Agentic Platforms</strong> <br><em>(e.g., AutoGPT, DevAgent prototypes)</em></td>
+<td>Orchestrate multi-step tasks using AI agents with memory, planning, and autonomy.</td>
+<td>✅ Delegation of complex tasks <br> ✅ Can span across SDLC phases (e.g., testing, deployment)</td>
+<td>⚠️ Changes developer role to "AI supervisor" <br> ⚠️ Emergent behavior risk <br> ⚠️ Needs new trust models and calibration layers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="key-insight">📌 Key Insight</h3>
+<blockquote>
+<p>"Essentially, the human-in-the-loop approach reframes an automation problem as a Human-Computer Interaction (HCI) design problem. In turn, we've broadened the question of 'how do we build a smarter system?' to 'how do we incorporate useful, meaningful human interaction into the system?'"</p>
+<p>— <em>Ge Wang, Professor at Stanford University's Human-centered AI initiative</em></p>
+</blockquote>
+<hr />
+<h3 id="architectural-implication">Architectural Implication</h3>
+<p>Each interaction pattern affects:</p>
+<ul>
+<li>Data flow boundaries</li>
+<li>Prompt versioning and auditability</li>
+<li>Alignment with DevSecOps pipelines</li>
+<li>Calibrated trust for decision-making</li>
+</ul>
+<p>These choices must be made intentionally and architected accordingly—especially in regulated or mission-critical environments.</p>
+<hr />
+<h2 id="6-designing-for-trust-and-cybersecurity"><strong>6. Designing for Trust and Cybersecurity</strong></h2>
+<p>Incorporating GenAI into the SDLC isn’t just about innovation—it’s a redefinition of trust boundaries. Every prompt, every model call, and every AI-generated output introduces a new surface area for cyber risk, architectural drift, and decision-making opacity.</p>
+<p>To build <strong>mission-ready AI systems</strong>, we must <strong>design trust in from the start</strong>, not inspect it in after the fact.</p>
+<hr />
+<h3 id="trust-is-a-system-propertynot-a-feature">Trust Is a System Property—Not a Feature</h3>
+<p>In traditional systems, trust is built through validation, test coverage, logging, and code reviews. But AI changes the game:</p>
+<ul>
+<li>The same prompt may yield different results across time or models.</li>
+<li>Model updates may occur silently, breaking reproducibility.</li>
+<li>Human developers may unknowingly accept AI-generated errors or biased outputs.</li>
+</ul>
+<hr />
+<blockquote>
+<p><em>Trust in an AI-augmented system must be designed, measured, 
+and recalibrated—just like we do with human teammates.</em></p>
+</blockquote>
+<hr />
+<h3 id="use-the-calibrated-trust-lens">Use the Calibrated Trust Lens</h3>
+<p>To support responsible and mission-aligned integration of AI, apply the <strong>Calibrated Trust</strong> framework (Belief, Understanding, Intent, and Reliance):</p>
+<table>
+<thead>
+<tr>
+<th><strong>Dimension</strong></th>
+<th><strong>Design Questions</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Belief</strong></td>
+<td>Is this AI tool appropriate for this task? Is it performing as advertised?</td>
+</tr>
+<tr>
+<td><strong>Understanding</strong></td>
+<td>Can users and reviewers explain how the model was used and what data it touched?</td>
+</tr>
+<tr>
+<td><strong>Intent</strong></td>
+<td>Are we confident the model’s goals (training data, fine-tuning) align with mission objectives?</td>
+</tr>
+<tr>
+<td><strong>Reliance</strong></td>
+<td>Under what conditions should this output be trusted, used, or overridden?</td>
+</tr>
+</tbody>
+</table>
+<p>This framework helps system owners place the right trust in the right AI at the right time.</p>
+<hr />
+<h3 id="design-principles-for-secure-ai-augmented-systems">Design Principles for Secure AI-Augmented Systems</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Principle</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minimize Model Attack Surface</strong></td>
+<td>Restrict model exposure to only those workflows where it adds verifiable value. Apply egress filtering.</td>
+</tr>
+<tr>
+<td><strong>Enforce Prompt Governance</strong></td>
+<td>Treat prompts like code—require reviews, change control, and versioning.</td>
+</tr>
+<tr>
+<td><strong>Audit All Interactions</strong></td>
+<td>Log prompts, outputs, model version, and decision trails. Tie to existing DevSecOps audit logs.</td>
+</tr>
+<tr>
+<td><strong>Enable Model Locking</strong></td>
+<td>Freeze model versions in production systems. Defer updates until retested in staging.</td>
+</tr>
+<tr>
+<td><strong>Bound Emergent Behavior</strong></td>
+<td>Use runtime policies to define agent action scope, memory limits, and timeouts.</td>
+</tr>
+<tr>
+<td><strong>Secure the Data Plane</strong></td>
+<td>Encrypt context payloads, anonymize sensitive data, and validate all external callouts.</td>
+</tr>
+<tr>
+<td><strong>Continuous Evaluation</strong></td>
+<td>Monitor AI outputs against KPIs and known vulnerabilities. Watch for hallucination, bias, drift.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="enabling-controls-from-dod-strategy">Enabling Controls from DoD Strategy</h3>
+<ul>
+<li>Align to <strong>Zero Trust Architecture</strong> (ZTA) principles—identity, device, data, network, and workload segmentation</li>
+<li>Apply <strong>Supply Chain Risk Management (SCRM)</strong> to model sourcing, prompt datasets, and third-party APIs</li>
+<li>Adopt <strong>AI RMF (NIST SP 1270)</strong> and emerging <strong>DoD AI Governance</strong> practices for mission assurance</li>
+</ul>
+<hr />
+<h3 id="key-insight_1">📌 Key Insight</h3>
+<blockquote>
+<p>Calibrated trust is the 1:1 ratio between human trust and trustworthiness of the automation.</p>
+<p>— <em>Patricia L. McDermott</em></p>
+</blockquote>
+<hr />
+<h2 id="7-measures-and-success-indicators-measuring-what-matters"><strong>7: Measures and Success Indicators – Measuring What Matters</strong></h2>
+<p>Choosing the right AI hosting and usage model is only the first step. To ensure long-term success, teams must define and track <strong>key indicators</strong> that reflect not just adoption—but <strong>effectiveness, governance, and alignment with mission outcomes</strong>.</p>
+<p>This section outlines how to design meaningful measurements for GenAI use across the SDLC, recognizing that <strong>metrics will vary by task, tool, and maturity level</strong>. As organizations experiment and scale, <strong>early metric volatility is expected</strong> and should be proactively communicated to leadership to prevent misinterpretation as failure.</p>
+<hr />
+<h3 id="key-considerations">Key Considerations</h3>
+<h4 id="start-with-the-mission-goal"><strong>Start with the Mission Goal</strong></h4>
+<p>Metrics should be anchored to your use case. Is the goal to improve code quality? Accelerate delivery? Enhance documentation? Metrics must <strong>fit the outcome</strong>, not the novelty of the tool.</p>
+<h4 id="track-a-balanced-set-of-indicators"><strong>Track a Balanced Set of Indicators</strong></h4>
+<p>Avoid over-optimizing on a single metric. Instead, track multiple dimensions of performance—<strong>DevSecOps health, developer experience, code quality, trust posture, and mission impact.</strong></p>
+<h4 id="expect-experimentation-and-learning"><strong>Expect Experimentation and Learning</strong></h4>
+<p>GenAI adoption introduces learning curves. <strong>New metrics will fluctuate</strong> as teams adjust, and even traditional ones may temporarily dip. This is normal—and part of evaluating transformation.</p>
+<h4 id="maintain-a-comprehensive-sdlc-view"><strong>Maintain a Comprehensive SDLC View</strong></h4>
+<p>Adoption effects ripple across the lifecycle—from planning and testing to operations and compliance. Look beyond the IDE. Watch how workflows shift.</p>
+<h3 id="on-metric-targets-and-minimums">On Metric Targets and Minimums</h3>
+<p>While some metrics may have industry benchmarks or compliance thresholds, blindly aiming for generic targets can lead to shallow improvements—or worse, gaming the system.</p>
+<p><strong>Instead</strong>:</p>
+<ul>
+<li>
+<p>If the metric is new to your organization (e.g., % of AI-generated code accepted), the priority is to establish a baseline—not chase a number.</p>
+</li>
+<li>
+<p>Use that baseline to understand behavior, not to assign judgment.</p>
+</li>
+<li>
+<p>Focus on trendlines, deltas, and alignment with mission goals—especially for metrics related to DevEx, prompt governance, or ML model trust.</p>
+</li>
+<li>
+<p>Qualitative context matters—metrics like Code Coverage or Churn require understanding of how and why those numbers move.</p>
+</li>
+</ul>
+<hr />
+<h3 id="metric-categories-and-indicators">Metric Categories and Indicators</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Measure Area</strong></th>
+<th><strong>Sample Metric / Indicator</strong></th>
+<th><strong>Why It Matters</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security Posture</strong></td>
+<td>% of AI interactions logged and reviewed <br> # of model version rollbacks initiated</td>
+<td>Ensures traceability, detects misuse, and supports post-incident forensics</td>
+</tr>
+<tr>
+<td><strong>Hosting Alignment</strong></td>
+<td>% of AI tools hosted in IL4/5+ environments <br> # of tools outside approved environments</td>
+<td>Highlights shadow IT, supports ATOs, and enforces classification policy</td>
+</tr>
+<tr>
+<td><strong>Prompt Governance</strong></td>
+<td>% of prompts versioned and stored <br> Time to detect/respond to unsafe prompt behavior</td>
+<td>Promotes secure-by-design usage and trust calibration</td>
+</tr>
+<tr>
+<td><strong>Operational Effectiveness</strong></td>
+<td>Time to integrate GenAI into CI/CD <br> % of outputs accepted without modification</td>
+<td>Tracks tooling maturity, usefulness, and risk of over-reliance</td>
+</tr>
+<tr>
+<td><strong>Mission Impact</strong></td>
+<td>Estimated hours saved by automation <br> % of teams actively using AI in at least one SDLC phase</td>
+<td>Supports ROI discussions and shows adoption maturity</td>
+</tr>
+<tr>
+<td><strong>Developer Experience (DevEx)</strong></td>
+<td>Sentiment survey scores <br> Time saved on routine coding tasks</td>
+<td>Signals morale, tool fit, and efficiency in daily work</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="traditional-metrics-still-matter">Traditional Metrics Still Matter</h3>
+<p>Keep tracking foundational metrics—they often reveal subtle shifts in quality or risk:</p>
+<ul>
+<li><strong>Change Failure Rate (CFR)</strong>: % of code changes causing production issues. GenAI should reduce CFR with better tests and cleaner code.</li>
+<li><strong>Code Churn</strong>: Measures how often code is changed. GenAI might reduce churn or, conversely, increase it during prompt tuning.</li>
+<li><strong>Code Coverage</strong>: GenAI-generated tests can improve this—but quality, not just quantity, must be monitored.</li>
+</ul>
+<h3 id="how-to-use-these-metrics">How to Use These Metrics</h3>
+<ol>
+<li>
+<p><strong>Pre-Adoption Baseline</strong><br />
+   Capture a snapshot of SDLC practices and outcomes before GenAI integration.</p>
+</li>
+<li>
+<p><strong>Post-Adoption Comparison</strong><br />
+   Reassess metrics after each AI-Augmented tool rollout to evaluate measurable impact.</p>
+</li>
+<li>
+<p><strong>Scorecard Reporting</strong><br />
+   Aggregate metrics into an <strong>AI Integration Score</strong> for quarterly leadership briefings, ATO artifacts, or cyber posture reviews.</p>
+</li>
+</ol>
+<h3 id="chasing-the-right-metrics">Chasing the Right Metrics</h3>
+<p><strong>Don’t chase metrics—calibrate them.</strong>
+When introducing new metrics to track AI-augmented work, your first goal isn’t to hit a target—it’s to understand your starting point.</p>
+<ul>
+<li><strong>If it’s a new metric:</strong> Establish a baseline. Don’t assign judgment yet.</li>
+<li><strong>If it’s a legacy metric:</strong> Expect movement. Track trends and context, not just the number.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>A Code Coverage rate of 10% means developers are checking a box—not delivering testable systems.</li>
+<li>A spike in Code Churn after AI adoption may indicate misaligned prompts or low-quality suggestions.</li>
+<li>A drop in CFR might reflect better testing—or developers overriding useful feedback to “improve” the number.</li>
+</ul>
+<hr />
+<p>📌 <em>Metrics don’t create value—insight does.</em> Use metrics to tell a story about your transformation, not to perform for one.</p>
+<hr />
+<h3 id="expect-metric-volatilityand-plan-for-it">Expect Metric Volatility—And Plan for It</h3>
+<p>One of the most important truths about measuring AI-augmented SDLC performance is this: <em>metrics will waver</em>.</p>
+<ul>
+<li>If you’re tracking existing metrics (like Change Failure Rate, deployment frequency, or code review coverage), they may dip or spike as teams adopt new tooling, rewire their workflows, and recalibrate what “good” looks like.</li>
+<li>If you introduce net-new metrics (like prompt reuse rates or AI-generated output acceptance), expect early variability as teams build familiarity and establish baseline behaviors.</li>
+</ul>
+<p>This is <em>normal</em>—and it does <em>not</em> mean the adoption is failing.</p>
+<p>Instead, use this “metrics turbulence” as a signal:</p>
+<ul>
+<li>Is the team adjusting well to the AI-augmented workflow?</li>
+<li>Are quality or trust issues driving dips?</li>
+<li>Do we need to shift training, modify prompts, or adjust where the tool is used?</li>
+</ul>
+<p>Teams should anticipate a learning curve and pair metrics with context: surveys, interviews, human-in-the-loop feedback, and AI-SWEC evaluations. This helps distinguish between signal and noise, and supports a calibrated trust journey rather than a binary success/failure view.</p>
+<hr />
+<p><em>📌 A dip in metrics doesn’t mean you made the wrong architectural choice. It means you’re watching transformation in real time—and transformation takes iteration.</em></p>
+<hr />
+<p>Early metric volatility is expected during AI adoption and should be proactively communicated to leadership to prevent misinterpretation as failure rather than part of the transformation curve.</p>
+<hr />
+<h2 id="8-five-common-missteps"><strong>8. Five Common Missteps</strong></h2>
+<p>Even well-intentioned teams can run into trouble when integrating GenAI into the SDLC. Without an architecture-first, trust-aware approach, the AI can accelerate risk just as fast as it accelerates productivity.</p>
+<p>Here are the most common missteps observed in early adopters across government and industry—and how to avoid them:</p>
+<hr />
+<h3 id="1-using-public-saas-models-for-sensitive-workloads">1. <strong>Using Public SaaS Models for Sensitive Workloads</strong></h3>
+<p><strong>The Mistake</strong>: Teams use OpenAI.com or other public endpoints for code review, test generation, or design suggestions on mission or export-controlled projects.</p>
+<p><strong>Why It Happens</strong>: Accessibility and ease of use. It “just works.”</p>
+<p><strong>Consequence</strong>: Potential data exfiltration, policy violations, and untrackable model influence.</p>
+<p><strong>Preventive Action</strong>: Enforce hosting tiers with strict boundary rules. Train teams on model provenance and data classification constraints.</p>
+<hr />
+<h3 id="2-treating-prompts-like-ephemeral-artifacts">2. <strong>Treating Prompts Like Ephemeral Artifacts</strong></h3>
+<p><strong>The Mistake</strong>: Prompts are created ad hoc, modified on the fly, and never versioned or reviewed.</p>
+<p><strong>Why It Happens</strong>: Developers see prompts as “inputs” rather than “code.”</p>
+<p><strong>Consequence</strong>: No reproducibility, no audit trail, and no trust calibration.</p>
+<p><strong>Preventive Action</strong>: Establish PromptOps practices. Version and log prompts like source code.</p>
+<hr />
+<h3 id="3-bypassing-human-in-the-loop-checks">3. <strong>Bypassing Human-in-the-Loop Checks</strong></h3>
+<p><strong>The Mistake</strong>: Generated code, test cases, or documentation are automatically merged or published without review.</p>
+<p><strong>Why It Happens</strong>: Pressure for speed or belief that “AI knows best.”</p>
+<p><strong>Consequence</strong>: Introduces hallucinated logic, security vulnerabilities, or compliance violations into the system.</p>
+<p><strong>Preventive Action</strong>: Require human checkpoints or policy-as-code gates before AI outputs influence production.</p>
+<hr />
+<h3 id="4-ignoring-model-update-drift">4. <strong>Ignoring Model Update Drift</strong></h3>
+<p><strong>The Mistake</strong>: Teams don’t track when a model updates in the background (especially true for SaaS models).</p>
+<p><strong>Why It Happens</strong>: Lack of visibility into vendor-side operations.</p>
+<p><strong>Consequence</strong>: Regression bugs, inconsistent results, broken compliance artifacts.</p>
+<p><strong>Preventive Action</strong>: Lock versions in production. Test new versions in staging. Create an AI model bill of materials (MLBOM).</p>
+<hr />
+<h3 id="5-over-reliance-on-tooling-without-calibrated-trust">5. <strong>Over-Reliance on Tooling Without Calibrated Trust</strong></h3>
+<p><strong>The Mistake</strong>: Teams accept all AI suggestions as truth or assume AI always improves quality.</p>
+<p><strong>Why It Happens</strong>: Trust by default rather than trust by design.</p>
+<p><strong>Consequence</strong>: Increased risk of low-quality or misleading results, especially in decision support or automation contexts.</p>
+<p><strong>Preventive Action</strong>: Evaluate confidence and risk—not just performance.</p>
+<hr />
+<h3 id="strategic-insight">📌 Strategic Insight</h3>
+<blockquote>
+<p>As we start moving beyond what's possible with GenAI, solid opportunities are emerging to help solve a number of perennial issues plaguing cybersecurity, particularly the skills shortage and unsecure human behavior.</p>
+<p><em>- Deepti Gopal, Director Analyst at Gartner, speaking at Gartner Security &amp; Risk Management Summit 2024</em></p>
+</blockquote>
+<hr />
+<h2 id="9-recommendations-next-best-play"><strong>9. Recommendations &amp; Next Best Play</strong></h2>
+<p>Choosing the right AI hosting and usage model is foundational—it’s not a one-time configuration but an evolving architectural and cybersecurity commitment. As AI tools become more deeply integrated into the SDLC, organizations must treat them as <strong>first-class citizens in the software ecosystem</strong>, subject to the same rigor as any mission-critical capability.</p>
+<p>Below are actionable recommendations for DoD technical teams, leadership, and acquisition stakeholders.</p>
+<hr />
+<h3 id="recommendations-for-today"><strong>Recommendations for Today</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Action</strong></th>
+<th><strong>Why It Matters</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Establish an internal AI Hosting Tier Policy</strong></td>
+<td>Define approved hosting patterns (e.g., IL5 SaaS, enclave-only, hybrid), aligned to data classification and mission sensitivity.</td>
+</tr>
+<tr>
+<td><strong>Use a decision support framework with each major AI integration decision</strong></td>
+<td>Enables consistent evaluation of value, risk, effort, and trust—helps justify model/tool selection to stakeholders.</td>
+</tr>
+<tr>
+<td><strong>Adopt PromptOps practices</strong></td>
+<td>Treat prompts and context injections like source code: version them, test them, audit them.</td>
+</tr>
+<tr>
+<td><strong>Create an AI Model Bill of Materials (MLBOM)</strong></td>
+<td>Track what models were used, when, where, and how—critical for reproducibility and post-incident forensics.</td>
+</tr>
+<tr>
+<td><strong>Align with Zero Trust and DoD AI Risk Frameworks</strong></td>
+<td>Incorporate AI usage into existing DevSecOps, Zero Trust, and Supply Chain Risk Management strategies.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="next-best-play-code-generation-and-completion"><strong>Next Best Play: Code Generation and Completion</strong></h3>
+<p>This play focused on <em>where</em> GenAI capabilities live—exploring hosting models, usage patterns, and architectural integration. The next play turns to <em>how</em> GenAI is reshaping one of the most immediate and visible SDLC tasks: <strong>writing code</strong>.</p>
+<p>Code generation and completion tools like Copilot, TabNine, and open-source agentic assistants are rapidly entering developer workflows. But adoption is often ahead of understanding.</p>
+<p>The next play will explore:</p>
+<ul>
+<li>Leading practices for integrating GenAI into coding workflows</li>
+<li>Human-in-the-loop patterns for safe and productive use</li>
+<li>Guardrails for quality, maintainability, and team alignment</li>
+<li>Prompting strategies, telemetry, and testing approaches</li>
+<li>Real-world lessons from DoD and commercial teams</li>
+</ul>
+<p>Whether your team is experimenting with AI-assisted code suggestions or looking to streamline scaffolding and unit test generation, this next play will help you answer:<br />
+<strong>“How do we use GenAI for code responsibly, repeatably, and at scale?”</strong></p>
+<hr />
+<p><strong>End of Play</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
