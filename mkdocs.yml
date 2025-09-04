@@ -24,7 +24,7 @@ nav:
   - Plays:
     - Toolchain Fundamentals: plays/fundamentals-play.md
   - Tools & Templates:
-    - Play Template: plays/template.md
+    - Play Template: resources/template.md
     - Architectural Decision Records: resources/ArchitecturalDecisionRecord.md
   - Reference:
      - Glossary: glossary.md
