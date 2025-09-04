@@ -4,6 +4,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  logo: images/fulcrum_seal.png
+  favicon: images/fulcrum_seal.png  
   include_homepage_in_sidebar: False
   palette:
     scheme: default  # Options: default (light) or slate (dark mode)
