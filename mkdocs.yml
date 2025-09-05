@@ -31,5 +31,10 @@ nav:
   - Reference:
      - Glossary: glossary.md
 
+extra_css:
+  - stylesheets/wordwrap.css
+  - stylesheets/extra.css
+
 plugins:
   - search
+  # - awesome-pages  # Enables structured navigation
