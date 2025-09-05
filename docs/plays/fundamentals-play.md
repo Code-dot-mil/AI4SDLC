@@ -42,7 +42,7 @@ In DoD and other high-assurance environments, augmenting the toolchain introduce
 - Trust boundaries between human, model, and action
 - Prompt design and versioning as code artifacts
 - Feedback loops that must be observable and auditable
-- Emergent behavior that must be bounded or governed
+- Emergent behavior that must be bounded or governed (e.g., AI agents bypassing security gates to optimize for speed)
 
 ----
 
@@ -82,18 +82,22 @@ For agent-based systems (e.g., AutoGPT, Crew.AI, OpenHands), introduce runtime c
 - Tool usage boundaries  
 These guardrails reduce the risk of emergent or uncontrolled AI behaviors.
 
-#### **E. Software Bill of Materials (SBOM) + Model BOM (MLBOM)**  
-Track not only your traditional open-source dependencies, but also:
-- The **models** you're using  
-- The **datasets** they were trained or fine-tuned on  
-- The **versioning** and update dates  
+#### **E. AI Supply Chain Transparency: SBOMs, Model BOMs, and Data Cards**  
+Track not only your traditional software dependencies (SBOM), but also AI-specific components:
+- **Model BOMs**: The models you're using, their architecture, weights, and versioning
+- **Data Cards**: Documentation for training and fine-tuning datasets  
+- **AI BOMs**: Broader AI system dependencies and integration points
 
-This transparency supports reproducibility, compliance, and secure software supply chain practices.
+This multi-layered transparency supports reproducibility, compliance, and secure AI supply chain practices.
+
+For detailed implementation guidance on Model BOMs, Data Cards, and AI supply chain documentation, see the companion **[AI Supply Chain Transparency Guide](AI_supply_chain_transparency_guide.md)**
+
 
 ----
 
 ### 📌 Recommendation  
-These components are not one-size-fits-all. Start small—map one toolchain, identify one use case—and apply these patterns incrementally as trust and complexity grow.
+
+>These components are not one-size-fits-all. Start small—map one toolchain, identify one use case—and apply these patterns incrementally as trust and complexity grow.
 
 ----
 
@@ -256,7 +260,9 @@ For each decision, teams should record:
 A sample architectural decision record template is available[here].(https://ArchitecturalDecisionRecord.md) 
 
 
-## **5. How Humans Interact with AI-Augmented Tools**
+## **5. How Humans Interact with AI-Augmented Development Tools**
+
+This play focuses specifically on AI-augmented workflows where humans retain decision-making authority and AI tools provide suggestions, analysis, or assistance. This represents the current state of most GenAI tools in the SDLC—from code completion to test generation—where human oversight and validation remain essential. For guidance on autonomous AI systems and levels of autonomy, see the companion [Navigating the AI Autonomy Continuum](ai-autonomy_continuum_play.md) play.
 
 As organizations adopt GenAI, they're not just choosing models or hosting platforms—they're defining how humans and machines will collaborate. These **interaction patterns** vary widely across environments, each bringing different levels of traceability, auditability, and risk.
 
@@ -308,13 +314,15 @@ To build **mission-ready AI systems**, we must **design trust in from the start*
 
 ----
 
-### Trust Is a System Property—Not a Feature
+### Trust and Assurance Are System Properties—Not Features
 
 In traditional systems, trust is built through validation, test coverage, logging, and code reviews. But AI changes the game:
 
 - The same prompt may yield different results across time or models.
 - Model updates may occur silently, breaking reproducibility.
 - Human developers may unknowingly accept AI-generated errors or biased outputs.
+
+**Trust and assurance in AI-augmented systems must be designed, measured, and recalibrated—just like we do with human teammates.** The non-deterministic nature of AI algorithms means we need both trust (confidence in the system's reliability) and assurance (evidence-based confidence in the system's behavior and controls).
 
 ----
 
@@ -348,7 +356,7 @@ This framework helps system owners place the right trust in the right AI at the 
 | **Enable Model Locking**          | Freeze model versions in production systems. Defer updates until retested in staging.              |
 | **Bound Emergent Behavior**       | Use runtime policies to define agent action scope, memory limits, and timeouts.                     |
 | **Secure the Data Plane**         | Encrypt context payloads, anonymize sensitive data, and validate all external callouts.             |
-| **Continuous Evaluation**         | Monitor AI outputs against KPIs and known vulnerabilities. Watch for hallucination, bias, drift.    |
+| **Continuous Evaluation**         | Monitor AI outputs against KPIs, ground truths, benchmarks, and known vulnerabilities. Watch for hallucination, bias, drift.   |
 
 ----
 
