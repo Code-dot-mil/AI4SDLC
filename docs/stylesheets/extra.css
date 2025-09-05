@@ -1,19 +1,15 @@
-/* Keep the logo size (this is working) */
-.md-header .md-header__inner .md-header__button.md-logo img,
-.md-header .md-header__inner .md-header__button.md-logo svg {
+/* Logo styling */
+.md-header .md-header__button.md-logo img,
+.md-header .md-header__button.md-logo svg {
     height: 4rem !important;
     width: 4rem !important;
-    max-height: none !important;
-    max-width: none !important;
 }
 
-/* Keep header height */
+/* Header container */
 .md-header {
     height: 5rem !important;
-    min-height: 5rem !important;
 }
 
-/* Force inner container alignment */
 .md-header .md-header__inner {
     height: 5rem !important;
     display: flex !important;
@@ -21,34 +17,11 @@
     padding: 0.5rem 1rem !important;
 }
 
-/* Keep logo container */
-.md-header .md-header__button.md-logo {
-    height: 4rem !important;
-    width: 4rem !important;
-    padding: 0 !important;
-    margin: 0 1rem 0 0 !important;
+/* Title styling with font changes */
+.md-header .md-header__title {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-}
-
-/* Nuclear option for title alignment */
-.md-header .md-header__inner .md-header__title {
-    height: 5rem !important;
-    display: flex !important;
-    align-items: center !important;
-    line-height: 5rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: relative !important;
-    top: 0 !important;
-}
-
-/* Force the actual text element */
-.md-header .md-header__title .md-ellipsis {
-    line-height: 5rem !important;
-    vertical-align: middle !important;
-    display: flex !important;
-    align-items: center !important;
-    height: 5rem !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 1.75rem !important;
+    font-weight: 600 !important;
 }
