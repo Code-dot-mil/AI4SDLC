@@ -28,6 +28,8 @@ nav:
     - Toolchain Fundamentals: plays/fundamentals-play.md
   - Plays:
     - Toolchain Fundamentals: plays/fundamentals-play.md
+  - Patterns:
+      - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Tools & Templates:
     - Play Template: resources/template.md
     - Architectural Decision Records: resources/ArchitecturalDecisionRecord.md
