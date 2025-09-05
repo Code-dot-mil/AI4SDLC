@@ -4,8 +4,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  logo: images/Seal-DoDCIO-Fulcrum.png
-  favicon: images/Seal-DoDCIO-Fulcrum.png 
+  logo: images/Seal-DoDCIO-Fulcrum_large.png
+  favicon: images/Seal-DoDCIO-Fulcrum_small.png 
   include_homepage_in_sidebar: False
   palette:
     scheme: default  # Options: default (light) or slate (dark mode)
