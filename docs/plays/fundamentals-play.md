@@ -82,7 +82,9 @@ For agent-based systems (e.g., AutoGPT, Crew.AI, OpenHands), introduce runtime c
 These guardrails reduce the risk of emergent or uncontrolled AI behaviors.
 
 #### **E. AI Supply Chain Transparency: SBOMs, Model BOMs, and Data Cards**  
+
 Track not only your traditional software dependencies (SBOM), but also AI-specific components:
+
 - **Model BOMs**: The models you're using, their architecture, weights, and versioning
 - **Data Cards**: Documentation for training and fine-tuning datasets  
 - **AI BOMs**: Broader AI system dependencies and integration points
