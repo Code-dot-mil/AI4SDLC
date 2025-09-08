@@ -1,4 +1,3 @@
-
 # **Play: Fundamentals for Designing an AI-Augmented Tool Chain**
 
 ## Executive Summary (The Play in Brief)
