@@ -26,6 +26,7 @@ markdown_extensions:
 nav:
   - Home:
     - Overview: index.md
+    - Guidance Lifecycle: lifecycle.md
     - Toolchain Fundamentals: plays/fundamentals-play.md
   - Plays:
     - Toolchain Fundamentals: plays/fundamentals-play.md
