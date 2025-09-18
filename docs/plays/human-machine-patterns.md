@@ -1,3 +1,9 @@
+---
+# automatic badge generation
+lifecycle: ga
+last_updated: "2025-07-15"
+---
+
 # Human-Machine Interaction Patterns (HMT)
 
 This reference defines common interaction models between humans and Generative AI tools across the software development lifecycle. These patterns shape team roles, trust boundaries, traceability, and governance posture.

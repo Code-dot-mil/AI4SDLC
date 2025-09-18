@@ -1,3 +1,8 @@
+---
+# automatic badge generation
+lifecycle: beta
+last_updated: "2025-07-15"
+---
 # **Play: AI Development Tool Supply Chain Transparency Guide**
 
 ## **🚧 COMING SOON 🚧**

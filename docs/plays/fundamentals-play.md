@@ -1,3 +1,8 @@
+---
+# automatic badge generation
+lifecycle: ga
+last_updated: "2025-07-15"
+---
 # **Play: Fundamentals for Designing an AI-Augmented Tool Chain**
 
 ## Executive Summary (The Play in Brief)
@@ -66,16 +71,21 @@ Just as we embrace *DevSecOps as a mindset, we must extend it to AI-Augmented De
 To build mission-ready, AI-augmented pipelines, organizations must rethink how data, models, and logic interact across the software development lifecycle. The following architectural patterns provide building blocks for trustworthy, scalable, and observable GenAI integrations:
 
 #### **A. PromptOps Layer**  
+
 Establish a dedicated layer in your pipeline to manage prompts as code—including reusable templates, version control, parameter injection, and governance. This improves traceability and reproducibility of AI-generated outputs.  *Think of it like CI/CD for prompts.*
 
 #### **B. Retrieval-Augmented Generation (RAG) Broker**  
+
 When external models (like LLMs) are used, a RAG broker retrieves internal, curated context (e.g., knowledge bases, architecture docs, ticket history) to send along with the prompt. This reduces hallucination risk and increases model relevance—without retraining the model itself.
 
 #### **C. Policy-as-Code for AI**  
+
 Use policy engines (e.g., Open Policy Agent, Conftest) to inspect and enforce rules around where and how AI is used. For example: block certain model types in production, restrict prompt content, or require logging before execution.   AI needs to be governed just like infrastructure.
 
 #### **D. Agent Execution Guardrails**  
+
 For agent-based systems (e.g., AutoGPT, Crew.AI, OpenHands), introduce runtime controls that constrain behavior. Examples include:
+
 - Memory limits  
 - Execution timeouts  
 - Tool usage boundaries  
@@ -92,7 +102,6 @@ Track not only your traditional software dependencies (SBOM), but also AI-specif
 This multi-layered transparency supports reproducibility, compliance, and secure AI supply chain practices.
 
 For detailed implementation guidance on Model BOMs, Data Cards, and AI supply chain documentation, see the companion **[AI Supply Chain Transparency Guide](AI_supply_chain_transparency_guide.md)**
-
 
 ----
 
@@ -131,11 +140,13 @@ Let’s say your team adopts GitHub Copilot or integrates an internal LLM for co
 ----
 
 ## **3. Define the Hosting and Usage Models**
+
 Before selecting a tool, service, model, or vendor, it’s essential to understand the distinct hosting and usage patterns available for GenAI across the SDLC. Each model comes with architectural, security, and operational implications—especially in the context of federal classification levels, cATO pipelines, and Zero Trust mandates.
 
 The primary categories are:
 
 ### **Public SaaS Model**
+
 *Examples: ChatGPT via OpenAI.com, Claude, Bard, Gemini (unclassified public interfaces)*
 
 - ✅ **Pros**: Immediate access, broad community knowledge, rapid iteration

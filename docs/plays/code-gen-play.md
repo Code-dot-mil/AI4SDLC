@@ -1,3 +1,8 @@
+---
+# automatic badge generation
+lifecycle: rc
+last_updated: "2025-08-15"
+---
 # **Play: Leading Practices for Code Completion and Generation**
 
 ## **Executive Summary**
