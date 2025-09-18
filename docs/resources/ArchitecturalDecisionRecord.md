@@ -1,4 +1,8 @@
-
+---
+# automatic badge generation
+lifecycle: rc
+last_updated: "2025-05-10"
+---
 # Architectural Decision Record (ADR)
 
 **Title**: AI Model Hosting and Usage Decision  

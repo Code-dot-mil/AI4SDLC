@@ -1,4 +1,8 @@
-
+---
+# automatic badge generation
+lifecycle: ga
+last_updated: "2025-06-22"
+---
 # Glossary of Terms and Acronyms**
 
 | **Term / Acronym** | **Definition** |

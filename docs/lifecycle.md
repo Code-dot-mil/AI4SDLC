@@ -1,4 +1,9 @@
-## Document Lifecycle
+---
+# automatic badge generation
+lifecycle: ga
+last_updated: "2025-09-18"
+---
+# Guidance Lifecycle
 
 This site uses a four-stage lifecycle system to indicate content maturity and help you identify the most appropriate guidance for your team's needs:
 

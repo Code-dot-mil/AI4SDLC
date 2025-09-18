@@ -1,4 +1,8 @@
-
+---
+# automatic badge generation
+lifecycle: ga
+last_updated: "2025-05-10"
+---
 # **[Play Title]**
 
 _(Example: Foundations – Hosting Options & Usage Models)_
