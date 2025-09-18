@@ -5,7 +5,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-    font:
+  custom_dir: docs/overrides/
+  font:
     text: Source Sans Pro
   logo: images/Seal-DoDCIO-Fulcrum_large.png
   favicon: images/Seal-DoDCIO-Fulcrum_small.png 
