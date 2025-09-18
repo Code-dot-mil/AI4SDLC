@@ -1,0 +1,31 @@
+<!-- overrides/main.html -->
+{% extends "base.html" %}
+
+<!-- This extends Material's base template -->
+<!-- We're going to override the "content" block -->
+
+{% block content %}
+  <!-- Check if the page has lifecycle metadata -->
+  {% if page.meta.lifecycle %}
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge {{ page.meta.lifecycle }}" 
+         role="img" 
+         aria-label="{{ page.meta.lifecycle | capitalize }} stage{% if page.meta.lifecycle == 'alpha' %} - Early development{% elif page.meta.lifecycle == 'beta' %} - Core guidance available{% elif page.meta.lifecycle == 'rc' %} - Final validation{% elif page.meta.lifecycle == 'ga' %} - Approved stable guidance{% endif %}">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>{{ page.meta.lifecycle | upper }}</span>
+      
+      <!-- Optional timestamp -->
+      {% if page.meta.last_updated %}
+        <span class="lifecycle-timestamp">Updated: {{ page.meta.last_updated }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  {{ super() }}
+{% endblock %}

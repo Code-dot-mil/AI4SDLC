@@ -1,3 +1,6 @@
+/* Import Source Sans Pro font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 /* Logo styling */
 .md-header .md-header__button.md-logo img,
 .md-header .md-header__button.md-logo svg {
@@ -17,11 +20,126 @@
     padding: 0.5rem 1rem !important;
 }
 
-/* Title styling with font changes */
+/* Title styling with Source Sans Pro */
 .md-header .md-header__title {
     display: flex !important;
     align-items: center !important;
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
     font-size: 1.75rem !important;
     font-weight: 600 !important;
+}
+
+/* Optional: Apply Source Sans Pro to navigation tabs for consistency */
+.md-tabs__list {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Add to docs/stylesheets/extra.css */
+
+.lifecycle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background: #f8f9fa;
+  font-weight: bold;
+  font-size: 0.85em;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.lifecycle-badge .shape {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #333;
+  display: inline-block;
+}
+
+/* Alpha - Triangle */
+.lifecycle-badge.alpha .shape {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #8B0000;
+  border-top: none;
+  background: none;
+}
+
+.lifecycle-badge.alpha {
+  border-color: #8B0000;
+  background: #fdf2f2;
+}
+
+/* Beta - Square */
+.lifecycle-badge.beta .shape {
+  background: #B8860B;
+  border-color: #B8860B;
+}
+
+.lifecycle-badge.beta {
+  border-color: #B8860B;
+  background: #fef9e7;
+}
+
+/* RC - Diamond */
+.lifecycle-badge.rc .shape {
+  width: 10px;
+  height: 10px;
+  background: #000080;
+  border-color: #000080;
+  transform: rotate(45deg);
+}
+
+.lifecycle-badge.rc {
+  border-color: #000080;
+  background: #f0f4ff;
+}
+
+/* GA - Circle */
+.lifecycle-badge.ga .shape {
+  border-radius: 50%;
+  background: #006400;
+  border-color: #006400;
+}
+
+.lifecycle-badge.ga {
+  border-color: #006400;
+  background: #f0f8f0;
+}
+
+.lifecycle-timestamp {
+  font-size: 0.75em;
+  color: #666;
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lifecycle-badge {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+  
+  .lifecycle-timestamp {
+    display: block;
+    margin-left: 0;
+    margin-top: 2px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .lifecycle-badge {
+    background: white;
+    border-width: 3px;
+  }
+  
+  .lifecycle-badge .shape {
+    border-width: 3px;
+  }
 }

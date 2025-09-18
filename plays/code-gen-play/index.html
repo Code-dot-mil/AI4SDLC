@@ -1,0 +1,2603 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../fundamentals-play/">
+      
+      
+        <link rel="next" href="../human-machine-patterns/">
+      
+      
+      <link rel="icon" href="../../images/Seal-DoDCIO-Fulcrum_small.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Code Generation & Completion - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#play-leading-practices-for-code-completion-and-generation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/Seal-DoDCIO-Fulcrum_large.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Code Generation & Completion
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../fundamentals-play/" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/template/" class="md-tabs__link">
+          
+  
+  
+  Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/Seal-DoDCIO-Fulcrum_large.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Plays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Code Generation & Completion
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code Generation & Completion
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why this play matters.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-the-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of the Play
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-and-applicability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope and Applicability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-we-are-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where We Are Today
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-generative-ai-in-software-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Generative AI in Software Engineering?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prerequisites-and-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Prerequisites and Foundations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Prerequisites and Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devsecops-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevSecOps Baseline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DevSecOps Baseline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-machine-interaction-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human-Machine Interaction Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. The Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Awareness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context Awareness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Prompt?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Prompt?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leading-practices-for-writing-ai-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leading Practices for Writing AI Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leading Practices for Writing AI Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-patterns-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Patterns Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upcoming-dod-prompting-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upcoming DoD Prompting Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#industry-prompting-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry Prompting Guides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-important-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Important Definitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Important Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shifting-roles-from-creators-to-reviewers-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shifting Roles: From Creators to Reviewers and Beyond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-changing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What’s Changing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risks-without-role-reframing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Risks Without Role Reframing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-teams-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Teams Can Do
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-use-cases-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Use Cases and Boundaries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Use Cases and Boundaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appropriate-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appropriate Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-risk-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Risk Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-trust-verification-and-devsecops-pipeline-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Trust, Verification, and DevSecOps Pipeline Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Trust, Verification, and DevSecOps Pipeline Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-trust-must-be-engineered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Trust Must Be Engineered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-behavior-and-model-variability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Behavior and Model Variability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-human-in-the-loop-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Human-in-the-Loop Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-measures-and-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Measures and Feedback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Measures and Feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-swec-grounding-your-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI-SWEC: Grounding Your “Why”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devsecops-aligned-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevSecOps-Aligned Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DevSecOps-Aligned Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline &amp; Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance &amp; Traceability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-feedback-review-confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Feedback &amp; Review Confidence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-adoption-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Adoption Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-what-to-track-across-the-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: What to Track Across the Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-governance-and-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Governance and Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-training-and-workforce-enablement" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Training and Workforce Enablement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-whats-emerging" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. What’s Emerging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-risks-and-red-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Risks and Red Flags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human-Machine Interaction Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools & Templates
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tools & Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Play Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architectural Decision Records
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why this play matters.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-the-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of the Play
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-and-applicability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope and Applicability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-we-are-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where We Are Today
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-generative-ai-in-software-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Generative AI in Software Engineering?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prerequisites-and-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Prerequisites and Foundations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Prerequisites and Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devsecops-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevSecOps Baseline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DevSecOps Baseline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-machine-interaction-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Human-Machine Interaction Patterns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. The Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context Awareness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context Awareness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a Prompt?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is a Prompt?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leading-practices-for-writing-ai-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leading Practices for Writing AI Prompts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leading Practices for Writing AI Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Takeaway:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-patterns-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Patterns Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upcoming-dod-prompting-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upcoming DoD Prompting Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#industry-prompting-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Industry Prompting Guides
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-important-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Important Definitions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Important Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shifting-roles-from-creators-to-reviewers-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shifting Roles: From Creators to Reviewers and Beyond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-changing" class="md-nav__link">
+    <span class="md-ellipsis">
+      What’s Changing?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risks-without-role-reframing" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Risks Without Role Reframing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-teams-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Teams Can Do
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-use-cases-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Use Cases and Boundaries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Use Cases and Boundaries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appropriate-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appropriate Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-risk-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Risk Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-trust-verification-and-devsecops-pipeline-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Trust, Verification, and DevSecOps Pipeline Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Trust, Verification, and DevSecOps Pipeline Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-trust-must-be-engineered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Trust Must Be Engineered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-behavior-and-model-variability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tool Behavior and Model Variability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Recommendations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-human-in-the-loop-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Human-in-the-Loop Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-measures-and-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Measures and Feedback
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Measures and Feedback">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai-swec-grounding-your-why" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI-SWEC: Grounding Your “Why”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devsecops-aligned-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      DevSecOps-Aligned Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DevSecOps-Aligned Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline &amp; Flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Quality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance &amp; Traceability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-feedback-review-confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Feedback &amp; Review Confidence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-adoption-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Adoption Guidance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-what-to-track-across-the-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: What to Track Across the Lifecycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-governance-and-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Governance and Policy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-training-and-workforce-enablement" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Training and Workforce Enablement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-whats-emerging" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. What’s Emerging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-risks-and-red-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Risks and Red Flags
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge rc" 
+         role="img" 
+         aria-label="Rc stage - Final validation">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>RC</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2025-08-15</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="play-leading-practices-for-code-completion-and-generation"><strong>Play: Leading Practices for Code Completion and Generation</strong></h1>
+<h2 id="executive-summary"><strong>Executive Summary</strong></h2>
+<p>The use of Generative AI (GenAI) for code completion and generation is accelerating across public and private sectors. These tools promise faster delivery, improved maintainability, and even enhanced security—but they also introduce new risks. In fact, some leading technology firms that develop GenAI capabilities restrict their own engineers from using these tools for production code, underscoring the need for measured, policy-aligned adoption.</p>
+<p>This play provides DoD-aligned guidance on current leading practices, risk mitigation strategies, and governance approaches—with an eye toward emerging agentic platforms and the evolving role of human-machine teaming in software creation.</p>
+<p>GenAI-powered code completion and generation tools are transforming software engineering in the DoD. However, ensuring reliability, traceability, compliance, and mission assurance is essential when integrating any AI-generated code into DoD software pipelines. This play outlines secure usage patterns, appropriate boundaries, and validation mechanisms to support intentional, auditable integration.</p>
+<hr />
+<h2 id="1-introduction"><strong>1. Introduction</strong></h2>
+<h3 id="why-this-play-matters"><strong>Why this play matters.</strong></h3>
+<p>Generative AI (GenAI) tools for code completion and code generation are transforming how DoD software teams design, write, and test code. These tools offer measurable gains in productivity, maintainability, and even security—if used correctly.  Recent studies show gains ranging from <strong>4% in sustained engineering productivity</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> to <strong>55% in task completion speed for specific use cases</strong>.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> But without structured oversight, they also introduce risks: incorrect or hallucinated code, trust boundary violations, and amplification of bad practices at scale.  Additional risks include security vulnerabilities, data privacy exposures, ethical and legal liabilities, and reduced human accountability for generated outputs—especially when operating at speed and scale within classified or operational environments.</p>
+<hr />
+<p>📌 <strong>Clarifying Scope:</strong> Human Augmentation, Not Full Automation</p>
+<blockquote>
+<p>This play focuses on augmenting human developers—not replacing them. While fully autonomous agents may emerge in future workflows, this guidance centers on GenAI tools that assist and accelerate human-led coding practices. Future plays will address autonomous agents explicitly.</p>
+</blockquote>
+<hr />
+<p>This play begins to clarify how to securely integrate GenAI capabilities—from autocomplete-style suggestions to full-function code generation—into the SDLC. These tools are not intended to replace human developers, but to augment them—accelerating development and improving maintainability while reinforcing accountability and security. These tools are not intended to replace human developers, but to augment them—accelerating development and improving maintainability while reinforcing accountability and security. .</p>
+<h3 id="purpose-of-the-play"><strong>Purpose of the Play</strong></h3>
+<p>Clarify  safe and intentional practices for integrating GenAI-powered code completion and generation into the SDLC:</p>
+<ul>
+<li>Promote responsible use of GenAI-augmented coding tools in DoD environments.</li>
+<li>Establish boundaries between assistive automation and autonomous decision-making.</li>
+<li>Build Establish traceability as a foundation for building trust in AI-augmented software practices.</li>
+</ul>
+<h3 id="scope-and-applicability"><strong>Scope and Applicability</strong></h3>
+<p>This play focuses on GenAI-driven capabilities used to assist with authoring and modifying code artifacts, including both inline completions and prompt-driven generation. The term “code” includes application logic, infrastructure scripts, tests, and pipeline definitions—spanning the work of developers, testers, SREs, and platform engineers.</p>
+<p>To guide safe and auditable use, this play references two common usage patterns: CHop (Chat-Oriented Programming), a structured approach emphasizing prompt governance, and VIBE programming, a less formal and higher-risk pattern often used during prototyping.<br />
+See [Section 4 – Key Definitions] for full descriptions and associated risk guidance.</p>
+<p><strong>In-Scope</strong>:</p>
+<ul>
+<li>IDE-based code completion tools (e.g., GitHub Copilot, Continue.dev)</li>
+<li>Prompt-driven code generation workflows using LLM-based tools such as TabNine and Codestral</li>
+<li>Test generation and static analysis using GenAI in CI/CD pipelines</li>
+<li>AI-augmented pair programming and assistant models</li>
+</ul>
+<p><strong>Out-of-Scope (for now)</strong>: Fully autonomous agents will be addressed in future plays</p>
+<blockquote>
+<p>📌 <strong>Scope and Role Diversity</strong>:</p>
+<p>While this play focuses on code generation, the term “code” encompasses a wide variety of artifact types beyond traditional software functions. In modern delivery pipelines, infrastructure code, test automation, pipeline definitions, and security scripts are all authored—and increasingly generated—by a variety of roles. This play applies wherever GenAI tools are used to generate structured logic or configuration artifacts, regardless of whether the author identifies as a developer, tester, SRE, or platform engineer. Role-specific guidance appears in future plays.</p>
+</blockquote>
+<h3 id="where-we-are-today"><strong>Where We Are Today</strong></h3>
+<ul>
+<li>Experimentation with prompt-based GenAI tools is rapidly advancing across industry and academia, with selected adoption pilots underway in U.S. government and defense organizations.</li>
+<li>Current DoD guidance focuses on augmentation—keeping a human in the loop—while establishing safeguards for responsible use.</li>
+<li>Fully autonomous code agents are an emerging area but are not yet ready for widespread adoption or mission-critical use.</li>
+</ul>
+<p>Despite trailing other sectors by 10% in current GenAI adoption (44% in government vs. 54% across industries), public sector interest is rapidly growing. <strong>84% of government organizations plan to invest in GenAI within the next year</strong>, even as strategic readiness, policy clarity, and workforce skills lag.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>   For the Department of Defense, this gap reinforces the importance of intentional adoption. This play emphasizes <strong>safe, augmented use</strong> of GenAI for code completion and generation—<strong>prioritizing mission assurance, trust, and traceability</strong> over speed or full automation.</p>
+<h3 id="what-is-generative-ai-in-software-engineering"><strong>What is Generative AI in Software Engineering?</strong></h3>
+<p>Generative AI models—such as OpenAI Codex, GitHub Copilot, and Meta’s Code Llama—assist software teams by:</p>
+<ul>
+<li>Suggesting code snippets, functions, or entire scripts.  This is for both core software code as well as for the necessary automated unit testing requisite for strong CI/CD pipeline practices.</li>
+<li>Automating boilerplate coding tasks.</li>
+<li>Enhancing code documentation and suggestions for focused refactoring.</li>
+</ul>
+<hr />
+<h2 id="2-prerequisites-and-foundations"><strong>2. Prerequisites and Foundations</strong></h2>
+<p>Before introducing GenAI-based code completion and generation tools into a DoD software environment, teams must establish foundational practices that enable secure, auditable, and mission-aligned integration. This play assumes the presence of key DevSecOps capabilities and an understanding of evolving human-machine interaction patterns, as outlined in Play: Fundamentals.</p>
+<h3 id="devsecops-baseline"><strong>DevSecOps Baseline</strong></h3>
+<p>This play builds on the assumption that your software team or organization has achieved baseline DevSecOps capabilities. GenAI tooling must not be treated as standalone or informal—it must be integrated into trusted delivery pipelines with visibility and traceability to enable auditability, reduce risk, and uphold mission assurance.</p>
+<p><strong>Why?</strong> Because ungoverned GenAI use can bypass traditional security gates, propagate unvetted code, and obscure accountability. Without visibility and traceability, teams cannot verify provenance, assess performance, or respond to emerging threats—placing both the mission and the organization at risk.</p>
+<p>Key prerequisites include:</p>
+<ul>
+<li>
+<p><strong>CI/CD Automation</strong> - Automated pipelines that support linting, testing, artifact signing, and environment promotion—allowing GenAI outputs to flow securely into trusted paths.  Online materials and guidance such as <a href="https://minimumcd.org">MinimumCD.org</a> provide guidance on the base essentials or the minimums necessary to implement continuous delivery.</p>
+</li>
+<li>
+<p><strong>Secure Software Supply Chain</strong> - Adoption of frameworks like the <strong>Secure Software Development Framework (SSDF)</strong>, as defined in <a href="https://csrc.nist.gov/publications/detail/sp/800-218/final">NIST Special Publication 800-218</a>, or the <strong>Supply-chain Levels for Software Artifacts (SLSA)</strong>, maintained by the Open Source Security Foundation at <a href="https://slsa.dev">slsa.dev</a>, enables provenance, dependency control, and vulnerability scanning—even for AI-generated code.</p>
+</li>
+<li>
+<p><strong>Infrastructure-as-Code (IaC)</strong> - GenAI may suggest or write IaC templates (e.g., Terraform, CloudFormation). While these may be created by an infrastructure engineer less familiar with software engineering principles, these generated scripts must be treated these as critical assets, subject to the same secure design and validation workflows.</p>
+</li>
+<li>
+<p><strong>SBOM / MLBOM / AIBOM Practices</strong> - Generated code must be tracked and attributed in the software bill of materials. Prompt provenance and model source should be considered part of an emerging Machine Learning Bill of Materials (MLBOM) and Artificial Intelligence Bill of materials (AIBOM).</p>
+</li>
+</ul>
+<p>Note: This mirrors traceability expectations in model-based engineering workflows, where executable artifacts generated from tools like CAMEO (SysML) or MATLAB/Simulink are documented. GenAI artifacts must meet the same bar for lineage, compliance, and mission assurance.</p>
+<blockquote>
+<h5 id="takeaway">📌 Takeaway</h5>
+<p>GenAI tools for code generation and completion must be treated as components of the DevSecOps ecosystem—not as shortcuts or sidecar helpers. Integrating these tools requires automated validation, traceability, and aligned governance. Their use must reinforce—not bypass—the secure, auditable, and mission-assured delivery principles already established in modern software pipelines.</p>
+</blockquote>
+<h3 id="human-machine-interaction-patterns">Human-Machine Interaction Patterns</h3>
+<p>How teams interact with GenAI tools shapes traceability, validation, and alignment with mission assurance goals. Interaction patterns determine whether generated outputs can be audited, governed, and integrated into secure DevSecOps workflows.</p>
+<p>This play references patterns introduced in <a href="../fundamentals-play/">Fundamentals for Designing an AI-Augmented Tool Chain</a>:</p>
+<ul>
+<li><strong>Standalone Interfaces</strong> (e.g., ChatGPT browser use): Not recommended—no traceability or policy enforcement.</li>
+<li><strong>IDE Plugins</strong> (e.g., Copilot, Continue.dev): Inline suggestions with limited visibility. Use only with strong local controls and peer review.</li>
+<li><strong>API-Based Integrations</strong>: Enable prompt logging, CI/CD control, and SBOM/MLBOM support. Ideal for structured GenAI use. These are well-suited for structured GenAI use, especially in environments requiring auditability, observability, and policy enforcement.</li>
+<li><strong>Agentic Platforms</strong>: High capability and autonomy, but require guardrails, execution limits, and policy-as-code enforcement.</li>
+</ul>
+<p>Select interaction patterns that align with your <strong>trust boundaries, observability needs, and pipeline maturity</strong>. See <a href="../fundamentals-play/">Fundamentals for Designing an AI-Augmented Tool Chain</a>  for detailed architectural recommendations.</p>
+<hr />
+<h2 id="3-the-basics"><strong>3. The Basics</strong></h2>
+<p>Effective use of GenAI for code completion and generation starts with practical discipline. This section introduces two foundational techniques that shape GenAI output: providing relevant technical context and crafting precise, structured prompts. These skills help teams produce consistent, trustworthy results while reinforcing traceability and intent.</p>
+<h3 id="context-awareness"><strong>Context Awareness</strong></h3>
+<p>GenAI models operate within constrained "context windows"—meaning they can only “see” a limited amount of input (code, comments, architecture notes) at a time. Without the right context, outputs may be incomplete, incorrect, or misaligned with system goals.</p>
+<p>To improve relevance and reduce hallucination in GenAI-generated code:</p>
+<ul>
+<li><strong>Provide scoped architectural context</strong><br />
+<em>Specify the layer, framework, and purpose of the code</em></li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> Instead of saying “generate a login component,” say “generate an Angular frontend login component that calls a Flask-based API endpoint for JWT token authentication.”<br />
+<strong>Tip:</strong> Paste relevant architectural stubs (e.g., existing interface definitions or service contracts) to guide completions.</p>
+</blockquote>
+<ul>
+<li><strong>Inject domain-specific terms</strong><br />
+<em>Reinforce military or mission-relevant semantics the model might not know by default</em></li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> “Generate a parser for a tactical data link message using the Link-16 protocol” will produce better results than “generate a network message parser.”<br />
+<strong>Tip:</strong> Maintain a glossary or prompt library of key mission-specific terms and phrases for prompt reuse.</p>
+</blockquote>
+<ul>
+<li><strong>Include security constraints</strong><br />
+<em>Explicitly call out rules for data handling, encryption, and access control</em></li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> “Write a Python function that logs access attempts and enforces RBAC using DoD CAC authentication.”<br />
+<strong>Tip:</strong> Pair prompts with brief in-line comments or notes on required compliance standards (e.g., FIPS 140-3, NIST 800-53).</p>
+</blockquote>
+<ul>
+<li><strong>Avoid prompts that assume global awareness or full-system understanding</strong><br />
+<em>Keep prompts focused and bounded to specific tasks with provided context</em></li>
+</ul>
+<blockquote>
+<p><strong>Pitfall:</strong> “Generate the backend for our logistics app” is too vague.<br />
+<strong>Better:</strong> “Create a Flask route for submitting transport requests using the existing <code>RequestForm</code> class and storing data in PostgreSQL.”</p>
+<h5 id="takeaway_1">📌 Takeaway</h5>
+<p>Treat GenAI more like an unseasoned contributor than a trusted teammate—it can be remarkably helpful, but only when guided with precision. Think of prompting as mentoring: you need to set clear expectations, define boundaries, and provide architectural and domain context. Just as junior staff need coaching, these tools benefit from examples, constraints, and continuous review.</p>
+<p>Effective use means articulating the "why" and "how" behind tasks, not just the "what."
+</p>
+</blockquote>
+<h3 id="prompting"><strong>Prompting</strong></h3>
+<h3 id="what-is-a-prompt">What is a Prompt?</h3>
+<p>A <strong>prompt</strong> is the input provided to a Generative AI model that directs it to produce a specific output.</p>
+<p>In software engineering contexts, a prompt typically includes:</p>
+<ul>
+<li><strong>Instructions or tasks</strong> (e.g., “Write a Python function to hash passwords using SHA-256.”)</li>
+<li><strong>Code context or examples</strong> (e.g., function headers or config templates)</li>
+<li><strong>Constraints</strong> (e.g., required language, security policies)</li>
+<li><strong>Expected outcome</strong> (e.g., unit-testable code, secure configuration)</li>
+</ul>
+<h5 id="takeaway_2">📌 Takeaway:</h5>
+<blockquote>
+<p>Think of prompting as giving direction to a capable but inexperienced teammate. The more clearly you describe the task—including relevant context, boundaries, and constraints—the more useful and trustworthy the output will be. Precision isn't optional—it's the difference between noise and value.</p>
+<p>You wouldn’t ask a new hire to “just write some code.” Don’t do that with GenAI either.</p>
+</blockquote>
+<h3 id="leading-practices-for-writing-ai-prompts"><strong>Leading Practices for Writing AI Prompts</strong></h3>
+<p>Writing high-quality prompts is critical to ensuring that AI-generated code is useful, secure, and aligned with system intent. Prompts should be treated as <strong>governed artifacts</strong>, subject to peer review, reuse, and revision over time.</p>
+<p>Even though GenAI outputs can vary between runs, storing and governing prompts still enables:
+-   Traceability of design decisions
+-   Reviewability for alignment with policy or coding standards
+-   Feedback loops to improve future prompt effectiveness</p>
+<blockquote>
+<h5 id="takeaway_3">📌 Takeaway:</h5>
+<p>Think of prompts less like natural conversation and more like test cases for generative systems: they should be scoped, structured, and explainable.
+</p>
+</blockquote>
+<p>Emerging tools such as Helicone, PromptLayer, and LangSmith enable observability, version control, and feedback tracking for prompt engineering. These capabilities are especially valuable in mission environments where reproducibility, traceability, and auditability are required.</p>
+<p>Here are key leading practices for operational use:</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Practice Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Be Specific</strong></td>
+<td>Instead of “generate a login function,” say “write a Python login function using JWT and RBAC.”</td>
+</tr>
+<tr>
+<td><strong>Set Constraints</strong></td>
+<td>Define what libraries, standards, or DoD policies must be followed.</td>
+</tr>
+<tr>
+<td><strong>State Expected Output</strong></td>
+<td>Describe the format (e.g., JSON, Bash script, Python function with docstring).</td>
+</tr>
+<tr>
+<td><strong>Avoid Ambiguity</strong></td>
+<td>Avoid vague verbs (“optimize,” “improve”) without clear criteria.</td>
+</tr>
+<tr>
+<td><strong>Reference Context</strong></td>
+<td>Include domain, service boundaries, file structure, or architectural decisions if relevant.</td>
+</tr>
+<tr>
+<td><strong>Use Declarative Language</strong></td>
+<td>Ask for outcomes (“validate all user inputs”) rather than low-level steps.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ Tip: Prompts that are too open-ended lead to hallucination or overly verbose outputs. Precision and clarity are key to reliability and reuse.</p>
+</blockquote>
+<hr />
+<h3 id="prompt-patterns-table"><strong>Prompt Patterns Table</strong></h3>
+<p>Below is a set of example prompts for common use cases relevant to DoD software engineering:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Use Case</strong></th>
+<th><strong>Effective Prompt</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Algorithm Generation</strong></td>
+<td>“Write a Python function that implements merge sort for a list of integers and returns a new sorted list.”</td>
+</tr>
+<tr>
+<td><strong>Secure Coding</strong></td>
+<td>“Generate a Java login method using OAuth 2.0 and input validation to prevent SQL injection.”</td>
+</tr>
+<tr>
+<td><strong>Test Generation</strong></td>
+<td>“Create a set of JUnit tests for a function that calculates flight duration given departure and arrival times.”</td>
+</tr>
+<tr>
+<td><strong>CI/CD Integration</strong></td>
+<td>“Write a GitHub Actions workflow that runs unit tests and performs a SAST scan on each pull request.”</td>
+</tr>
+<tr>
+<td><strong>IaC Template</strong></td>
+<td>“Create a Terraform script that provisions a public/private subnet pair in an AWS VPC.”</td>
+</tr>
+<tr>
+<td><strong>Logging &amp; Monitoring</strong></td>
+<td>“Add structured JSON logging to a Python API handler for DoD telemetry collection.”</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🚫 <strong>Avoid</strong>: “Make a script for user auth.”</p>
+<p>✅ <strong>Prefer</strong>: “Generate a Python script for user authentication using JWT, with comments and input validation.”</p>
+</blockquote>
+<hr />
+<h2 id="upcoming-dod-prompting-guide">Upcoming DoD Prompting Guide</h2>
+<p>Check back soon for the upcoming prompting guide tailored to software value streams for DoD software. This guide will include a description of what prompting is, how to construct a prompt, and examples based on the many roles—from product owners to software engineers, testers, and operations personnel.</p>
+<hr />
+<h2 id="industry-prompting-guides">Industry Prompting Guides</h2>
+<p>The following resources offer practical and evolving guidance for writing effective AI prompts. While tailored for different use cases, many principles (e.g., specificity, context-setting, declarative language) are applicable across DoD environments.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Guide Title</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft</td>
+<td><a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-copilot/">Prompt engineering 101</a></td>
+<td>Practical patterns, risk considerations, and use case structure for GitHub Copilot</td>
+</tr>
+<tr>
+<td>Google DeepMind</td>
+<td><a href="https://cloud.google.com/discover/what-is-prompt-engineering">What is Prompt Engineering? (Google Cloud)</a></td>
+<td>Emphasizes examples, constraints, and prompt testing in code generation</td>
+</tr>
+<tr>
+<td>LangChain / LangSmith</td>
+<td><a href="https://docs.smith.langchain.com/prompt_engineering/quickstarts/quickstart_ui">Prompt Engineering Quick Start (LangSmith UI)</a></td>
+<td>Versioning, testing, and observability in structured pipelines</td>
+</tr>
+</tbody>
+</table>
+<p>✅ These guides reinforce that prompting is not just an art—it's an engineering discipline, especially in regulated or mission-critical environments.</p>
+<h2 id="4-important-definitions"><strong>4. Important Definitions</strong></h2>
+<p>To align understanding across diverse teams and stakeholders, this section defines foundational terms used throughout this play.</p>
+<ul>
+<li>
+<p><strong>Code Completion</strong><br />
+  Token-level or line-level suggestions provided inline as a developer types. Completions typically leverage the immediate code context (e.g., variable names, function signatures) and are most effective in IDE environments. Tools like GitHub Copilot and Continue.dev fall into this category.</p>
+</li>
+<li>
+<p><strong>Code Generation</strong><br />
+  The use of prompts to produce complete code blocks, files, or configurations. Generation often spans multiple lines and may include functions, classes, test scaffolds, IaC templates, or documentation. It requires clear intent and validation, especially when used for production workflows.</p>
+</li>
+<li>
+<p><strong>CHop Programming</strong> (<em>Chat-Oriented Programming</em>)<br />
+  A structured, intentional approach where prompts are engineered to reliably produce high-quality, mission-aligned code. CHop emphasizes prompt versioning, reuse, and governance. It aligns with secure-by-design practices by treating prompts as first-class artifacts.</p>
+</li>
+<li>
+<p><strong>VIBE Programming</strong><br />
+  A casual, exploratory mode of working with GenAI, where developers iterate quickly by "vibing" with the model—adjusting prompts on the fly without formal structure or traceability. </p>
+</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Warning:</strong> While this pattern may accelerate prototyping, it poses serious risks in high-assurance environments, including unvetted logic, hallucinated code, policy violations, and the inability to trace how decisions were made. VIBE should be explicitly restricted or bounded by policy, with strict gating before any output is promoted to shared environments or production workflows.</p>
+</blockquote>
+<hr />
+<h3 id="shifting-roles-from-creators-to-reviewers-and-beyond">Shifting Roles: From Creators to Reviewers and Beyond</h3>
+<p>As GenAI capabilities become integrated into daily software workflows, the role of the developer is shifting—from a focus on <strong>hand-coding logic</strong> to one of <strong>curating, reviewing, and validating machine-generated code</strong>.This isn’t just a tooling change—it’s a cognitive and cultural shift</p>
+<p>This is not just a tooling change—it’s a cognitive and cultural transformation.</p>
+<hr />
+<h3 id="whats-changing">What’s Changing?</h3>
+<p>Traditional software development emphasizes problem decomposition, algorithm design, and precise implementation. Now with GenAI:</p>
+<ul>
+<li>Developers often <strong>describe intent in structured natural language</strong>, not just code.</li>
+<li>GenAI fills in boilerplate, scaffolding, and sometimes entire methods or configurations. </li>
+<li>
+<p>The human becomes a reviewer, risk manager, and design validator, evaluating:</p>
+</li>
+<li>
+<p>Logical correctness</p>
+</li>
+<li>Security and performance implications</li>
+<li>Fit to architecture, coding standards, and domain norms</li>
+</ul>
+<p><strong>Emerging dynamic:</strong> In addition to reviewing GenAI output, developers are also leveraging GenAI to critique their own code—identifying vulnerabilities, anti-patterns, or performance issues. This bi-directional review loop is becoming part of modern DevSecOps workflows.</p>
+<hr />
+<h3 id="risks-without-role-reframing">⚠️ Risks Without Role Reframing</h3>
+<p>Without acknowledging this shift, teams risk:
+- Mis-calibrated trust: over-trusting GenAI output when it “looks right,” or under-trusting it when it could be helpful.Over-trusting model output, especially when it “looks right”</p>
+<ul>
+<li><strong>Skill atrophy</strong>, as deeper logic design and design thinking are is outsourced too early</li>
+<li><strong>Undertraining reviewers</strong>, especially newer engineers unfamiliar with system-level tradeoffs</li>
+<li>Ambiguity in accountability when machine-generated code enters production pipelines</li>
+</ul>
+<hr />
+<h3 id="what-teams-can-do">What Teams Can Do</h3>
+<ul>
+<li><strong>Treat GenAI output like a pull request from a junior developer</strong>: always review, never assume.</li>
+<li><strong>Introduce peer-pairing and AI-pairing</strong> for both generation and validation.</li>
+<li><strong>Encourage structured prompt reuse</strong> (see: CHop Programming).</li>
+<li><strong>Define ownership expectations</strong>—who is accountable for what’s committed?</li>
+<li><strong>Train teams in critical review</strong>, not just prompting—and begin exploring GenAI tools that review human-written code as part of CI/CD.</li>
+<li><strong>Prioritize training</strong> for both early-career and experienced engineers—covering prompt design, GenAI use, system-level validation, and architectural reasoning—to prevent skill atrophy and ensure mission-aligned decision-making.</li>
+</ul>
+<hr />
+<blockquote>
+<p>The future of software engineering isn’t just faster coding—it’s smarter reviewing.
+Let’s make sure our teams are equipped for the role they now play.</p>
+</blockquote>
+<hr />
+<h2 id="5-use-cases-and-boundaries"><strong>5. Use Cases and Boundaries</strong></h2>
+<p>Not all code is equal when it comes to applying GenAI. This section outlines where AI-generated code offers clear value—and where the risk outweighs the reward.</p>
+<hr />
+<h3 id="appropriate-use-cases"><strong>Appropriate Use Cases</strong></h3>
+<p>These use cases are well-suited for GenAI assistance because they typically involve low to moderate risk, are bounded in scope, and have well-understood intent—making human oversight easier and more effective. When paired with review, validation, and pipeline-integrated governance, they deliver efficiency gains without compromising mission assurance.</p>
+<ul>
+<li>
+<p><strong>Infrastructure as Code (IaC)</strong><br />
+  Generating Terraform, CloudFormation, or Ansible templates to scaffold cloud infrastructure or policy-as-code declarations. These follow predictable patterns and benefit from repeatable structure.</p>
+</li>
+<li>
+<p><strong>Unit and Integration Test Scaffolding</strong><br />
+  Creating boilerplate tests based on function signatures or example inputs/outputs. While initial scaffolding is safe, human augmentation is required for completeness and correctness.</p>
+</li>
+<li>
+<p><strong>Boilerplate and Repetitive Code Generation</strong><br />
+  Reducing time spent writing repetitive accessors, data transfer objects (DTOs), API wrappers, and data mapping layers. These tasks are pattern-based and present limited functional risk.</p>
+</li>
+<li>
+<p><strong>Documentation Support</strong><br />
+  Generating inline comments, method docstrings, or markdown files to support code clarity and maintainability. Prompts should reinforce clarity, not just verbosity.</p>
+</li>
+<li>
+<p><strong>Code Refactoring Suggestions</strong><br />
+⚠️ Use with caution. While GenAI can propose modularization or naming improvements, automated refactoring—especially on production or system-critical code—requires careful human review and regression testing</p>
+</li>
+</ul>
+<blockquote>
+<p>✅ These scenarios benefit from AI acceleration while preserving human accountability and mission alignment.</p>
+</blockquote>
+<hr />
+<h2 id="high-risk-use-cases">High-Risk Use Cases</h2>
+<p>These categories pose elevated risk for <strong>hallucination, incomplete logic</strong>, or <strong>critical vulnerabilities</strong>. GenAI tools should generally not be used for <strong>generation or modification</strong> of source code in these areas—though they may be appropriate for <strong>review, analysis</strong>, or <strong>documentation</strong> in a controlled setting:</p>
+<ul>
+<li>
+<p><strong>Authentication and Authorization Logic (AuthN/AuthZ)</strong><br />
+  Mistakes in access control or identity management can compromise the entire system. These functions merit expert design, human review, and rigorous validation.</p>
+</li>
+<li>
+<p><strong>Encryption or Cryptographic Implementations</strong><br />
+  GenAI must not generate or modify crypto routines. Always use vetted libraries and defer implementation to trained professionals.</p>
+</li>
+<li>
+<p><strong>Safety- or Mission-Critical Software</strong><br />
+  Software tied to life, safety, kinetic effects, or weapons systems must follow formal methods and certified workflows. GenAI may assist in reviewing logs or documentation, but not generating executable logic.</p>
+</li>
+</ul>
+<blockquote>
+<p><em><strong>NOTE:</strong> This is a draft and should not be disseminated yet. Work group members are asked to provide feedback and may share with select individuals who can provide additional expertise.</em></p>
+</blockquote>
+<ul>
+<li><strong>Export-Controlled or Classified Domains</strong><br />
+  Prompts involving ITAR, EAR, CUI, or classified topics must not be entered into commercial GenAI tools. Doing so may violate DoD policy and emerging CIO guidance related to data sharing and model boundary protections.</li>
+</ul>
+<p>❌ <strong>While GenAI should not be used to author code in these domains, it may play a role in <em>reviewing or critiquing human-authored logic</em>—under the same validation and audit controls used in high-assurance environments.</strong></p>
+<h2 id="6-trust-verification-and-devsecops-pipeline-integration"><strong>6. Trust, Verification, and DevSecOps Pipeline Integration</strong></h2>
+<p>The trustworthiness of AI-generated code is not a static property—it must be <strong>earned</strong>, <strong>validated</strong>, and <strong>maintained</strong> through repeatable processes. Within secure software delivery environments like those in the DoD, trust is achieved not by assuming GenAI is correct, but by designing workflows that <strong>verify and trace every output</strong>.</p>
+<p>This section outlines how teams can integrate GenAI-assisted code generation into existing DevSecOps pipelines, applying rigorous verification practices that preserve mission assurance and accountability.</p>
+<hr />
+<h3 id="why-trust-must-be-engineered"><strong>Why Trust Must Be Engineered</strong></h3>
+<p>AI-generated code is often syntactically correct but semantically wrong. It may pass initial tests but:</p>
+<ul>
+<li>Contain subtle security vulnerabilities</li>
+<li>Misuse libraries or APIs</li>
+<li>Violate architectural conventions</li>
+<li>Drift from mission-specific requirements</li>
+</ul>
+<p>But let’s be clear: these risks are not unique to GenAI. Human-generated code also requires validation at time of creation—not deferred to a late-stage review. That’s the essence of DevSecOps: embedding trust, security, and accountability throughout the pipeline, regardless of who (or what) wrote the code.</p>
+<hr />
+<h3 id="verification-practices"><strong>Verification Practices</strong></h3>
+<p>To establish trust in GenAI-generated code, apply multiple layers of validation:</p>
+<ul>
+<li>
+<p><strong>Automated Tests</strong><br />
+  Ensure generated functions are covered by unit and integration tests. When test scaffolds are generated alongside code, review both before inclusion.</p>
+</li>
+<li>
+<p><strong>Static and Dynamic Analysis (SAST/DAST)</strong><br />
+  Scan all generated code as if it were human-authored. Treat it with zero-trust assumptions until verified.</p>
+</li>
+<li>
+<p><strong>Peer Review</strong><br />
+  AI-assisted code must undergo human review. Focus on logic correctness, boundary conditions, and consistency with mission goals.</p>
+</li>
+<li>
+<p><strong>Prompt and Output Logging</strong><br />
+  Capture the prompt, model used, and output version. Associate each with a commit or CI/CD build ID for traceability.</p>
+</li>
+<li>
+<p><strong>IP &amp; License Validation</strong>
+  Treat GenAI-generated code as potentially tainted until proven otherwise. Apply SBOM scanning tools and license validators (e.g., FOSSA, ScanCode) to detect unapproved open-source license patterns or reuse of protected content.</p>
+</li>
+</ul>
+<hr />
+<h3 id="pipeline-integration"><strong>Pipeline Integration</strong></h3>
+<p>Trust must be enforced through the pipeline, not just during local development.</p>
+<ul>
+<li>
+<p><strong>IDE + Pre-Commit Hooks</strong><br />
+  Warn or block commits with unreviewed or untagged AI-generated code.</p>
+</li>
+<li>
+<p><strong>CI/CD Controls</strong><br />
+  Validate prompts and responses against policy (e.g., permitted models, classification labels). Run tests and scans in automated jobs.</p>
+</li>
+<li>
+<p><strong>Prompt Artifact Management</strong><br />
+  Store reusable prompts in Git, tag by function (e.g., <code>generate-test-prompt-v3</code>), and associate with model version.</p>
+</li>
+<li>
+<p><strong>Generated Code Labeling</strong><br />
+  Include inline comments to mark generated code (e.g., <code>// Generated by GitHub Copilot</code>). Support downstream analysis and SBOM inclusion.</p>
+</li>
+<li>
+<p><strong>SBOM/MLBOM Integration</strong><br />
+  Track model usage and prompt lineage as part of SBOM or emerging MLBOM practices. Link to secure model registries where possible.</p>
+</li>
+</ul>
+<hr />
+<h3 id="tool-behavior-and-model-variability">Tool Behavior and Model Variability</h3>
+<p>Not all GenAI tools behave the same way—even when using similar model families. Developers and reviewers must account for meaningful differences in:</p>
+<ul>
+<li><strong>IDE plugin behavior</strong> (e.g., GitHub Copilot vs. Continue.dev)</li>
+<li><strong>Backend models</strong> (e.g., GPT-4 vs. Claude vs. open-source LLMs)</li>
+<li><strong>Deployment context</strong> (e.g., SaaS vs. on-prem vs. air-gapped instances)</li>
+</ul>
+<p>These variations can affect everything from code style and verbosity to security filters and prompt interpretation.</p>
+<blockquote>
+<p>A prompt that generates clean, testable output in one context may produce noisy or unsafe results in another.</p>
+</blockquote>
+<h3 id="practical-recommendations">Practical Recommendations</h3>
+<ul>
+<li><strong>Maintain a vetted tool registry</strong> with approved GenAI tools, known limitations, and recommended usage patterns or guardrails for each (e.g., prompt libraries, constrained output types, acceptable use cases).</li>
+<li><strong>Log prompt/model metadata</strong> with every commit or pipeline run to ensure traceability, reproducibility, and model lifecycle control.</li>
+<li><strong>Evaluate tools in representative mission environments</strong> before widespread adoption—especially for offline use or deployment on classified or air-gapped systems.</li>
+<li><strong>Flag and test for version drift</strong> in IDE extensions, plugins, or model interpreters to prevent silent changes in behavior or output.</li>
+<li><strong>Provide role-specific tradecraft guidance</strong> for approved tools, including prompt examples, review checklists, and lessons learned from secure use in operational contexts.</li>
+</ul>
+<blockquote>
+<p>For systemic risk guidance, see the upcoming <a href="../resources/risk-reference.md">Risk Reference Companion</a> where “Tool Drift”, “Model Fragmentation”, and "Prompt Misuse" are addressed in more depth.</p>
+</blockquote>
+<hr />
+<h3 id="example-human-in-the-loop-workflow"><strong>Example Human-in-the-Loop Workflow</strong></h3>
+<p>A simple, secure-by-design workflow might look like:</p>
+<blockquote>
+<p><code>AI Suggests</code> → <code>Automated Test Runs</code> → <code>Human Reviews &amp; Approves</code> → <code>Secure Deploy</code></p>
+</blockquote>
+<p>This pattern reinforces accountability and allows teams to scale GenAI usage without weakening their software assurance posture.</p>
+<h2 id="7-measures-and-feedback"><strong>7. Measures and Feedback</strong></h2>
+<p>Before adopting GenAI tools for code generation, teams must clarify:  </p>
+<blockquote>
+<p><em>What are we trying to improve—and why?</em></p>
+</blockquote>
+<p>This section introduces system-aligned metrics that support trustable, explainable, and secure GenAI integration, guided by the <strong>AI-SWEC (AI Software Evaluation Criteria Framework)</strong>.  Check back for the upcoming guidance and deeper dive into the AI-SWEC.</p>
+<hr />
+<h3 id="ai-swec-grounding-your-why"><strong>AI-SWEC: Grounding Your “Why”</strong></h3>
+<p>The AI-SWEC framework helps teams evaluate the fit and effectiveness of GenAI tools using four dimensions:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Sample Questions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Value Delivered</strong></td>
+<td>Did GenAI meaningfully reduce lead time or cognitive burden? Did it support reuse?</td>
+</tr>
+<tr>
+<td><strong>Effort Required</strong></td>
+<td>How much prompting, revision, or integration work was needed?</td>
+</tr>
+<tr>
+<td><strong>Risk Introduced</strong></td>
+<td>Did the tool create any insecure code, incorrect logic, or hallucinated output?</td>
+</tr>
+<tr>
+<td><strong>Confidence Gained</strong></td>
+<td>Can the output be reviewed, tested, and trusted? Was traceability preserved?</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="devsecops-aligned-metrics"><strong>DevSecOps-Aligned Metrics</strong></h3>
+<p>To assess adoption and system health, consider:</p>
+<h4 id="pipeline-flow">Pipeline &amp; Flow</h4>
+<ul>
+<li>Time-to-merge for GenAI-generated code</li>
+<li>Percentage of PRs with GenAI attribution</li>
+<li>Prompt reuse rate (from prompt library or versioned prompts)</li>
+</ul>
+<h4 id="security-quality">Security &amp; Quality</h4>
+<ul>
+<li>Post-generation defect rate (e.g., bugs detected in review or testing)</li>
+<li>Security issue density in GenAI-authored code (e.g., via SAST/DAST)</li>
+<li>Review delta: manual changes after GenAI suggestions</li>
+</ul>
+<h4 id="compliance-traceability">Compliance &amp; Traceability</h4>
+<ul>
+<li>SBOM/MLBOM inclusion of GenAI-generated artifacts</li>
+<li>Model source attribution logged (e.g., which model, version)</li>
+<li>Commit tags or inline comments indicating generated code</li>
+</ul>
+<hr />
+<h3 id="team-feedback-review-confidence"><strong>Team Feedback &amp; Review Confidence</strong></h3>
+<p>Encourage structured team reflection:</p>
+<ul>
+<li>Did using GenAI improve the <em>experience</em> of coding, or just shift the work?</li>
+<li>What percentage of GenAI-generated code was accepted without revision?</li>
+<li>Do reviewers trust the output? Why or why not?</li>
+</ul>
+<hr />
+<h3 id="pre-adoption-guidance"><strong>Pre-Adoption Guidance</strong></h3>
+<p>Before experimenting with GenAI tools, define your “why”:</p>
+<ul>
+<li>What phase of the SDLC are we targeting?</li>
+<li>Are we aiming to improve delivery speed, quality, or knowledge sharing?</li>
+<li>How will we know if it worked?</li>
+</ul>
+<p>Use the AI-SWEC to create a shared hypothesis and evaluation plan.</p>
+<blockquote>
+<p>📌 <em>Measure what matters. Don’t mistake code generation volume for mission progress.</em></p>
+</blockquote>
+<p>MITRE’s <strong>AI Software Evaluation Criteria (AI-SWEC)</strong> framework is a public-good resource developed to support this type of intentional, mission-aligned experimentation. Created by MITRE as part of its work as a Federally Funded Research and Development Center (FFRDC), AI-SWEC is freely available to U.S. government teams, allied partners, and the broader software engineering community.</p>
+<p>AI-SWEC is not a productivity tracker or tool comparison matrix—it is a lightweight, outcome-focused decision support framework. It helps teams evaluate the adoption of GenAI tools based on:</p>
+<ul>
+<li><strong>Value Delivered</strong></li>
+<li><strong>Effort Required</strong></li>
+<li><strong>Risk Introduced</strong></li>
+<li><strong>Confidence Gained</strong></li>
+</ul>
+<p>This framework is already in use by government and industry software teams to frame pilots, capture pre/post comparisons, and support trustable integration of GenAI tooling.</p>
+<p>For facilitation support or templates, contact <strong>ArchAITecture@mitre.org</strong>.</p>
+<hr />
+<h3 id="summary-what-to-track-across-the-lifecycle"><strong>Summary: What to Track Across the Lifecycle</strong></h3>
+<p>To evaluate GenAI-assisted code generation effectively, ensure your measures address:</p>
+<ul>
+<li><strong>Time-to-value vs. time-to-rework</strong> – Are we gaining speed or just creating cleanup?</li>
+<li><strong>Prompt reuse and effectiveness</strong> – Are teams learning and sharing effective interactions?</li>
+<li><strong>Code quality metrics</strong> – Are GenAI outputs helping or harming code reliability and security?</li>
+<li><strong>Feedback into training and governance</strong> – Are lessons learned shaping future tool use and policy?</li>
+</ul>
+<p>These metrics complement AI-SWEC and reinforce mission-focused, evidence-based adoption.</p>
+<h2 id="8-governance-and-policy"><strong>8. Governance and Policy</strong></h2>
+<p>Governance is essential, but beyond the scope of this play. Full guidance on usage policies, enforcement mechanisms, audit trails, and Zero Trust alignment for GenAI-assisted development will be covered in a dedicated play: <strong>Governance for Responsible GenAI Adoption</strong> (coming soon).</p>
+<blockquote>
+<p>In the meantime, refer to <strong>Home / Basics</strong> and <strong>Fundamentals for Designing an AI-Augmented Tool Chain</strong> for baseline traceability and security design principles.</p>
+</blockquote>
+<hr />
+<h2 id="9-training-and-workforce-enablement"><strong>9. Training and Workforce Enablement</strong></h2>
+<p>Effectively adopting GenAI tools means developing fluency across roles—not just for software engineers.</p>
+<p>A full guidance play titled <strong>Building an AI-Augmented Workforce</strong> will expand on how to grow capability across the AI-Curious to AI-Native spectrum, pairing, mentoring, and preventing skill atrophy.</p>
+<blockquote>
+<p>For now, see <strong>Fundamentals for Designing an AI-Augmented Tool Chain</strong> for prompt engineering and human-in-the-loop patterns.</p>
+</blockquote>
+<hr />
+<h2 id="11-whats-emerging"><strong>11. What’s Emerging</strong></h2>
+<p>Agentic platforms, secure software platforms with embedded GenAI, and the shift to low-code and no-code generation are reshaping how code is authored, tested, and deployed.</p>
+<p>A separate <strong>Futures Watch</strong> play will explore the implications of these patterns for architectural control, lifecycle governance, and workforce transformation.</p>
+<blockquote>
+<p>This play focuses on today’s practices. Refer to <strong>Code Generation &amp; Completion</strong> for current implementation guidance.</p>
+</blockquote>
+<hr />
+<h2 id="12-risks-and-red-flags"><strong>12. Risks and Red Flags</strong></h2>
+<p>This play touches on common risks—hallucinated code, overreliance on opaque models, and IP concerns—but a more detailed exploration will be available in the <strong>Risk Reference Companion</strong> play.</p>
+<blockquote>
+<p>For architectural guidance on identifying and mitigating early-stage risks, refer to <strong>Fundamentals for Designing an AI-Augmented Tool Chain</strong> and the traceability patterns in <strong>Code Generation &amp; Completion</strong>.</p>
+</blockquote>
+<hr />
+<p><strong>End of Play</strong></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>BlueOptima. (2024). <em>The Impact of Generative AI on Software Developer Performance (v8)</em>. BlueOptima Ltd. Internal Report.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>GitHub Copilot Research. (2022). <em>Quantifying Productivity Gains from AI-Powered Code Completion.</em> Retrieved from: https://github.blog/2022-09-14-research-how-github-copilot-helps-developers/&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>SAS and Coleman Parkes, Your Journey to a GenAI Future: A Strategic Path to Success for Government, SAS Institute Inc., 2024. [Online]. Available: https://www.sas.com/en_us/whitepapers/genai-future-government-114056.html&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
