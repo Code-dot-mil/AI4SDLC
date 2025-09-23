@@ -1,0 +1,1321 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../images/Seal-DoDCIO-Fulcrum_small.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>AI Autonomy Implementation Guide - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-autonomy-implementation-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/Seal-DoDCIO-Fulcrum_large.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI Autonomy Implementation Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fundamentals-play/" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/template/" class="md-tabs__link">
+          
+  
+  
+  Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/Seal-DoDCIO-Fulcrum_large.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guidance Lifecycle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Plays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-gen-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code Generation & Completion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy_continuum_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI-Autonomy continuum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human-Machine Interaction Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools & Templates
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tools & Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Play Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architectural Decision Records
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#companion-to-navigating-the-ai-autonomy-continuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Companion to: Navigating the AI Autonomy Continuum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-should-use-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who Should Use This Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use This Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cross-references-to-main-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-References to Main Play
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-guide-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guide Contents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Guide Contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-i-pattern-specific-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part I: Pattern-Specific Implementation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-ii-multi-pattern-operations-coming-soon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part II: Multi-Pattern Operations (Coming Soon)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-iii-troubleshooting-and-optimization-coming-soon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part III: Troubleshooting and Optimization (Coming Soon)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge beta" 
+         role="img" 
+         aria-label="Beta stage - Core guidance available">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>BETA</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2025-07-15</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="ai-autonomy-implementation-guide"><strong>AI Autonomy Implementation Guide</strong></h1>
+<h2 id="companion-to-navigating-the-ai-autonomy-continuum"><strong>Companion to: Navigating the AI Autonomy Continuum</strong></h2>
+<p>This implementation guide provides the tactical details needed to successfully deploy AI autonomy patterns across your software development lifecycle. While the main play focuses on strategic decision-making and pattern selection, this guide contains the operational checklists, monitoring frameworks, and implementation procedures required to execute those decisions safely and effectively.</p>
+<h2 id="who-should-use-this-guide"><strong>Who Should Use This Guide</strong></h2>
+<p>This guide is designed for implementation teams who need to translate strategic AI autonomy decisions into operational reality:</p>
+<ul>
+<li><strong>DevSecOps Leads</strong> implementing pattern-specific governance and monitoring</li>
+<li><strong>Software Factory Architects</strong> designing infrastructure to support AI autonomy patterns</li>
+<li><strong>AI/ML Engineers</strong> deploying and maintaining AI agents and orchestration systems</li>
+<li><strong>Security Engineers</strong> establishing audit trails and compliance controls</li>
+<li><strong>Platform Engineers</strong> building the foundational capabilities for multi-pattern environments</li>
+</ul>
+<h2 id="how-to-use-this-guide"><strong>How to Use This Guide</strong></h2>
+<p><strong>Start with the Pattern You're Implementing:</strong> Each pattern section is self-contained, so you can focus on the specific autonomy approach your team has selected.</p>
+<p><strong>Use Readiness Assessment First:</strong> Before deploying any pattern, complete the readiness indicators to ensure your organization has the necessary capabilities.</p>
+<p><strong>Implement Monitoring from Day One:</strong> The health metrics and warning signs are designed to be deployed alongside your AI systems, not added later.</p>
+<p><strong>Iterate and Improve:</strong> The continuous improvement actions help you refine your implementation based on real-world experience.</p>
+<h2 id="cross-references-to-main-play"><strong>Cross-References to Main Play</strong></h2>
+<p>For strategic guidance on <strong>when and why</strong> to use each pattern, see <strong><a href="../ai-autonomy_continuum_play/">Navigating the AI Autonomy Continuum</a></strong>:</p>
+<ul>
+<li><strong>Pattern Selection Framework</strong>: Section 3 of the main play</li>
+<li><strong>Risk Considerations</strong>: Section 4 (Cross-Cutting Considerations)</li>
+<li><strong>Multi-Pattern Architecture</strong>: Section 5 (How to Use This Play)</li>
+</ul>
+<hr />
+<h2 id="implementation-guide-contents"><strong>Implementation Guide Contents</strong></h2>
+<h3 id="part-i-pattern-specific-implementation"><strong>Part I: Pattern-Specific Implementation</strong></h3>
+<ul>
+<li>Pattern 1 - Assistive Tools Implementation</li>
+<li>Pattern 2 - Delegated Agents Implementation  </li>
+<li>Pattern 3 - Orchestrated Systems Implementation</li>
+<li>Pattern 4 - Adaptive Ecosystems Implementation</li>
+</ul>
+<h3 id="part-ii-multi-pattern-operations-coming-soon"><strong>Part II: Multi-Pattern Operations</strong> <em>(Coming Soon)</em></h3>
+<ul>
+<li>Cross-Pattern Governance</li>
+<li>Integrated Monitoring and Alerting</li>
+<li>Pattern Interaction Management</li>
+</ul>
+<h3 id="part-iii-troubleshooting-and-optimization-coming-soon"><strong>Part III: Troubleshooting and Optimization</strong> <em>(Coming Soon)</em></h3>
+<ul>
+<li>Common Implementation Challenges</li>
+<li>Shadow AI Detection and Response</li>
+<li>Trust Calibration Techniques</li>
+<li>Continuous Improvement Processes</li>
+</ul>
+<hr />
+<h1 id="part-i-pattern-specific-implementation_1"><strong>Part I: Pattern-Specific Implementation</strong></h1>
+<h2 id="pattern-1-assistive-tools-implementation"><strong>Pattern 1 - Assistive Tools Implementation</strong></h2>
+<h3 id="pattern-1-readiness-indicators"><strong>Pattern 1 Readiness Indicators</strong></h3>
+<p>Before implementing assistive AI tools, ensure your organization has the foundational capabilities to use them safely and effectively:</p>
+<p><strong>Infrastructure &amp; Integration:</strong></p>
+<ul>
+<li>[ ] IDE environments support approved AI plug-ins or extensions</li>
+<li>[ ] Network policies allow controlled access to AI services (on-prem or approved SaaS)</li>
+<li>[ ] Logging infrastructure can capture AI tool interactions and outputs</li>
+</ul>
+<p><strong>Governance &amp; Policy:</strong></p>
+<ul>
+<li>[ ] Approved AI tools list established and communicated</li>
+<li>[ ] Data classification policies cover AI tool usage restrictions</li>
+<li>[ ] Incident response procedures include AI-related scenarios</li>
+<li>[ ] Procurement processes evaluate AI tools for security and compliance</li>
+</ul>
+<p><strong>Workforce &amp; Culture:</strong></p>
+<ul>
+<li>[ ] Teams trained on appropriate AI tool usage and limitations</li>
+<li>[ ] Human review practices established for AI-generated outputs</li>
+<li>[ ] Clear escalation paths when AI suggestions are unclear or concerning</li>
+<li>[ ] Trust calibration understanding: treating AI as assistant, not authority</li>
+</ul>
+<p><strong>Security &amp; Compliance:</strong></p>
+<ul>
+<li>[ ] AI tool usage aligns with Zero Trust architecture principles</li>
+<li>[ ] Audit trails capture sufficient detail for compliance requirements</li>
+<li>[ ] Shadow AI detection and prevention mechanisms in place</li>
+</ul>
+<h3 id="pattern-1-health-metrics"><strong>Pattern 1 Health Metrics</strong></h3>
+<p>Monitor these indicators to ensure Pattern 1 implementation remains effective and secure:</p>
+<p><strong>Usage &amp; Adoption Metrics:</strong></p>
+<ul>
+<li><strong>Human Review Rate</strong>: % of AI-generated outputs reviewed before implementation (target: ≥95% for substantive outputs)<sup id="fnref:smartbear"><a class="footnote-ref" href="#fn:smartbear">2</a></sup></li>
+<li><strong>Tool Utilization</strong>: % of approved teams actively using sanctioned AI tools</li>
+<li><strong>Shadow AI Incidents</strong>: Number of unauthorized AI tool usage events detected</li>
+<li><strong>Prompt Reuse</strong>: % of prompts following approved templates or patterns</li>
+</ul>
+<p><strong>Quality &amp; Effectiveness Metrics:</strong></p>
+<ul>
+<li><strong>Output Acceptance Rate</strong>: % of AI suggestions accepted without modification</li>
+<li><strong>Time to Review</strong>: Average time spent reviewing AI-generated content</li>
+<li><strong>Defect Escape Rate</strong>: % of AI-assisted code changes that introduce bugs</li>
+<li><strong>Developer Satisfaction</strong>: Team sentiment scores regarding AI tool usefulness</li>
+</ul>
+<p><strong>Security &amp; Governance Metrics:</strong></p>
+<ul>
+<li><strong>Audit Completeness</strong>: % of AI interactions properly logged and attributable</li>
+<li><strong>Policy Compliance</strong>: % of AI tool usage following approved guidelines</li>
+<li><strong>Escalation Response</strong>: Time to address AI-related security or quality concerns</li>
+<li><strong>Trust Calibration</strong>: Ratio of appropriate acceptance vs. rejection of AI suggestions</li>
+</ul>
+<p><strong>Warning Signs to Monitor:</strong></p>
+<ul>
+<li>🔴 <strong>Over-reliance</strong>: Teams accepting AI outputs without adequate review</li>
+<li>🔴 <strong>Under-utilization</strong>: Low adoption rates suggesting tool-mission mismatch</li>
+<li>🔴 <strong>Shadow AI Growth</strong>: Increasing use of unauthorized tools or services</li>
+<li>🔴 <strong>Review Fatigue</strong>: Declining quality of human review over time</li>
+<li>🔴 <strong>Trust Drift</strong>: Teams becoming overly skeptical or overly trusting of AI outputs</li>
+</ul>
+<p><strong>Continuous Improvement Actions:</strong>
+- Quarterly review of approved tool effectiveness and team feedback
+- Regular updates to prompt libraries based on lessons learned
+- Adjustment of review requirements based on trust calibration data
+- Enhancement of training programs based on observed usage patterns</p>
+<p>This aligns with NIST AI RMF's principle of maintaining human control and oversight in AI workflows.<sup id="fnref:NIST-rmf"><a class="footnote-ref" href="#fn:NIST-rmf">1</a></sup></p>
+<hr />
+<h2 id="pattern-2-delegated-agents-implementation"><strong>Pattern 2 - Delegated Agents Implementation</strong></h2>
+<h3 id="pattern-2-readiness-indicators"><strong>Pattern 2 Readiness Indicators</strong></h3>
+<p>Before implementing delegated AI agents, ensure your organization can support scoped autonomy safely:</p>
+<p><strong>Infrastructure &amp; Integration:</strong></p>
+<ul>
+<li>[ ] Agent execution platforms (IDEs, CI/CD systems) support controlled agent deployment</li>
+<li>[ ] Permission management systems can enforce least-privilege agent access</li>
+<li>[ ] Comprehensive logging captures all agent actions and their human triggers</li>
+<li>[ ] Rollback mechanisms can quickly revert agent-generated changes</li>
+</ul>
+<p><strong>Governance &amp; Policy:</strong></p>
+<ul>
+<li>[ ] Agent registration and approval processes established</li>
+<li>[ ] Clear scope definitions for what agents can and cannot do</li>
+<li>[ ] Human review requirements defined for different agent outputs</li>
+<li>[ ] Escalation procedures when agents exceed intended scope</li>
+</ul>
+<p><strong>Workforce &amp; Culture:</strong></p>
+<ul>
+<li>[ ] Teams trained on supervising and reviewing agent outputs</li>
+<li>[ ] Clear accountability models for agent-generated artifacts</li>
+<li>[ ] Trust calibration practices for evaluating agent reliability</li>
+<li>[ ] Skills for prompt engineering and agent task definition</li>
+</ul>
+<p><strong>Security &amp; Compliance:</strong></p>
+<ul>
+<li>[ ] Agent access controls integrated with existing security frameworks</li>
+<li>[ ] Supply chain scanning covers agent-generated dependencies and code</li>
+<li>[ ] Audit trails meet compliance requirements for traceability</li>
+<li>[ ] Incident response procedures cover agent-related security events</li>
+</ul>
+<h3 id="pattern-2-health-metrics"><strong>Pattern 2 Health Metrics</strong></h3>
+<p>Monitor these indicators to ensure Pattern 2 agents operate safely and effectively:</p>
+<p><strong>Agent Performance Metrics:</strong></p>
+<ul>
+<li><strong>Task Completion Rate</strong>: % of agent-initiated tasks completed successfully</li>
+<li><strong>Human Intervention Rate</strong>: % of agent tasks requiring human correction or completion</li>
+<li><strong>Output Acceptance Rate</strong>: % of agent outputs accepted without modification</li>
+<li><strong>Time to Task Completion</strong>: Agent efficiency compared to human baseline</li>
+</ul>
+<p><strong>Governance &amp; Security Metrics:</strong></p>
+<ul>
+<li><strong>Agent Registration Compliance</strong>: % of active agents properly registered and approved</li>
+<li><strong>Scope Adherence</strong>: % of agent actions staying within defined boundaries</li>
+<li><strong>Audit Trail Completeness</strong>: % of agent actions properly logged and attributable</li>
+<li><strong>Permission Violation Incidents</strong>: Number of agents attempting unauthorized actions</li>
+</ul>
+<p><strong>Quality &amp; Trust Metrics:</strong>
+- <strong>Defect Injection Rate</strong>: % of agent outputs introducing bugs or issues
+- <strong>Review Effectiveness</strong>: % of problematic agent outputs caught during human review
+- <strong>Trust Calibration Score</strong>: Alignment between team confidence and actual agent reliability
+- <strong>Escalation Response Time</strong>: Speed of human intervention when agents encounter problems</p>
+<p><strong>Warning Signs to Monitor:</strong>
+- 🔴 <strong>Scope Creep</strong>: Agents attempting tasks beyond their defined boundaries
+- 🔴 <strong>Review Bypass</strong>: Agent outputs being accepted without proper human oversight
+- 🔴 <strong>Error Amplification</strong>: Agent mistakes propagating through multiple workflows
+- 🔴 <strong>Shadow Agent Activity</strong>: Use of unauthorized agents or SaaS services
+- 🔴 <strong>Trust Miscalibration</strong>: Teams over- or under-trusting agent capabilities</p>
+<p><strong>Continuous Improvement Actions:</strong>
+- Regular review of agent scope definitions and success criteria
+- Refinement of prompt libraries and agent task templates
+- Enhancement of human review processes based on error patterns
+- Updates to agent permissions and controls based on observed behavior
+- Training adjustments based on trust calibration and supervision effectiveness</p>
+<hr />
+<h2 id="pattern-3-orchestrated-systems-implementation"><strong>Pattern 3 - Orchestrated Systems Implementation</strong></h2>
+<h3 id="pattern-3-readiness-indicators"><strong>Pattern 3 Readiness Indicators</strong></h3>
+<p>Before implementing orchestrated multi-agent systems, ensure your organization can manage coordinated AI autonomy:</p>
+<p><strong>Infrastructure &amp; Architecture:</strong></p>
+<ul>
+<li>[ ] Orchestration platform capable of managing multi-agent workflows</li>
+<li>[ ] Service mesh or API gateway supporting secure agent-to-agent communication</li>
+<li>[ ] Comprehensive observability stack tracking cross-agent interactions</li>
+<li>[ ] Circuit breakers and fault isolation to prevent cascading failures</li>
+<li>[ ] Rollback capabilities for multi-agent workflow states</li>
+</ul>
+<p><strong>Governance &amp; Policy:</strong></p>
+<ul>
+<li>[ ] Multi-agent coordination policies and approval processes</li>
+<li>[ ] Inter-agent trust and verification protocols established</li>
+<li>[ ] Escalation triggers and human intervention procedures defined</li>
+<li>[ ] Agent lifecycle management (deployment, updates, retirement)</li>
+<li>[ ] Cross-functional governance covering all participating agent roles</li>
+</ul>
+<p><strong>Workforce &amp; Culture:</strong></p>
+<ul>
+<li>[ ] Teams skilled in multi-agent system supervision and debugging</li>
+<li>[ ] Orchestration platform administration and monitoring capabilities</li>
+<li>[ ] Incident response procedures for multi-agent system failures</li>
+<li>[ ] Understanding of emergent behaviors in agent interactions</li>
+</ul>
+<p><strong>Security &amp; Compliance:</strong></p>
+<ul>
+<li>[ ] Zero Trust principles applied to agent-to-agent communications</li>
+<li>[ ] End-to-end audit trails across all agent interactions</li>
+<li>[ ] Security controls preventing unauthorized agents from joining workflows</li>
+<li>[ ] Compliance validation that spans multi-agent processes</li>
+</ul>
+<h3 id="pattern-3-health-metrics"><strong>Pattern 3 Health Metrics</strong></h3>
+<p>Monitor these indicators to ensure orchestrated multi-agent systems operate safely and effectively:</p>
+<p><strong>Orchestration Performance Metrics:</strong></p>
+<ul>
+<li><strong>Workflow Completion Rate</strong>: % of multi-agent workflows completed successfully end-to-end</li>
+<li><strong>Agent Coordination Efficiency</strong>: Time and resource overhead of agent coordination vs. single-agent alternatives</li>
+<li><strong>Escalation Rate</strong>: % of workflows requiring human intervention</li>
+<li><strong>Cross-Agent Verification Success</strong>: % of agent outputs properly validated by peer agents</li>
+</ul>
+<p><strong>System Resilience Metrics:</strong></p>
+<ul>
+<li><strong>Fault Isolation Effectiveness</strong>: % of agent failures contained without cascading effects</li>
+<li><strong>Circuit Breaker Activation Rate</strong>: Frequency of automatic failsafes preventing system-wide issues</li>
+<li><strong>Recovery Time</strong>: Speed of system recovery from multi-agent failures</li>
+<li><strong>Rollback Success Rate</strong>: % of successful rollbacks when multi-agent workflows fail</li>
+</ul>
+<p><strong>Governance &amp; Security Metrics:</strong></p>
+<ul>
+<li><strong>Agent Registry Compliance</strong>: % of active agents properly registered in orchestration system</li>
+<li><strong>Inter-Agent Trust Validation</strong>: % of agent-to-agent communications properly authenticated and authorized</li>
+<li><strong>Audit Trail Completeness</strong>: % of cross-agent interactions properly logged and traceable</li>
+<li><strong>Unauthorized Agent Detection</strong>: Number of rogue or unauthorized agents detected and blocked</li>
+</ul>
+<p><strong>Warning Signs to Monitor:</strong></p>
+<ul>
+<li>🔴 <strong>Cascading Failures</strong>: Agent errors propagating across multiple workflow stages</li>
+<li>🔴 <strong>Orchestration Bottlenecks</strong>: Single points of failure in agent coordination</li>
+<li>🔴 <strong>Trust Chain Breaks</strong>: Agent outputs being consumed without proper validation</li>
+<li>🔴 <strong>Emergent Behaviors</strong>: Unexpected interactions between agents leading to unintended outcomes</li>
+<li>🔴 <strong>Supervision Gaps</strong>: Human operators losing visibility into multi-agent system state</li>
+</ul>
+<p><strong>Continuous Improvement Actions:</strong></p>
+<ul>
+<li>Regular testing of multi-agent failure scenarios and recovery procedures</li>
+<li>Refinement of agent coordination protocols based on observed interaction patterns</li>
+<li>Enhancement of observability tools to better track cross-agent dependencies</li>
+<li>Updates to orchestration logic based on workflow efficiency analysis</li>
+<li>Training programs for human supervisors on multi-agent system management</li>
+</ul>
+<hr />
+<h2 id="pattern-4-adaptive-ecosystems-implementation"><strong>Pattern 4 - Adaptive Ecosystems Implementation</strong></h2>
+<h3 id="pattern-4-readiness-indicators"><strong>Pattern 4 Readiness Indicators</strong></h3>
+<p>Before considering self-optimizing AI systems, organizations must demonstrate mastery of adaptive governance and autonomous system stewardship:</p>
+<p><strong>Infrastructure &amp; Architecture:</strong></p>
+<ul>
+<li>[ ] Fully autonomous CI/CD pipelines with comprehensive safety controls</li>
+<li>[ ] Real-time telemetry and feedback loops integrated across entire SDLC</li>
+<li>[ ] Advanced AI/ML infrastructure capable of continuous model training and deployment</li>
+<li>[ ] Comprehensive rollback and circuit breaker systems tested under failure conditions</li>
+<li>[ ] Observability stack providing full visibility into autonomous system behavior</li>
+</ul>
+<p><strong>Governance &amp; Policy:</strong></p>
+<ul>
+<li>[ ] Adaptive governance frameworks that can evolve with system behavior</li>
+<li>[ ] Continuous compliance monitoring and enforcement mechanisms</li>
+<li>[ ] Emergent behavior detection and response protocols</li>
+<li>[ ] Human override capabilities with tested escalation procedures</li>
+<li>[ ] Mission alignment monitoring and course correction systems</li>
+</ul>
+<p><strong>Workforce &amp; Culture:</strong></p>
+<ul>
+<li>[ ] Teams skilled in autonomous system stewardship and governance</li>
+<li>[ ] Platform engineering capabilities for managing self-optimizing systems</li>
+<li>[ ] Incident response expertise for autonomous system failures</li>
+<li>[ ] Deep understanding of AI safety and alignment principles</li>
+</ul>
+<p><strong>Security &amp; Compliance:</strong></p>
+<ul>
+<li>[ ] Autonomous security controls that adapt to emerging threats</li>
+<li>[ ] Continuous compliance validation across all optimization loops</li>
+<li>[ ] Advanced threat detection for AI-specific attack vectors</li>
+<li>[ ] Secure autonomous decision-making with full audit capabilities</li>
+</ul>
+<h3 id="pattern-4-health-metrics"><strong>Pattern 4 Health Metrics</strong></h3>
+<p>Monitor these indicators to ensure self-optimizing systems remain aligned and safe:</p>
+<p><strong>Autonomous Operation Metrics:</strong></p>
+<ul>
+<li><strong>Optimization Effectiveness</strong>: Measurable improvements in target metrics (performance, security, user satisfaction)</li>
+<li><strong>Human Intervention Rate</strong>: % of optimization cycles requiring human override or correction</li>
+<li><strong>Goal Alignment</strong>: Consistency between autonomous optimizations and defined mission objectives</li>
+<li><strong>Feedback Loop Integrity</strong>: Quality and reliability of telemetry driving optimization decisions</li>
+</ul>
+<p><strong>Safety &amp; Governance Metrics:</strong></p>
+<ul>
+<li><strong>Emergent Behavior Detection</strong>: Number of unexpected system behaviors identified and addressed</li>
+<li><strong>Compliance Maintenance</strong>: % of autonomous changes maintaining regulatory and policy compliance</li>
+<li><strong>Rollback Effectiveness</strong>: Success rate and speed of reverting problematic autonomous changes</li>
+<li><strong>Human Override Response</strong>: Time and effectiveness of human intervention when triggered</li>
+</ul>
+<p><strong>System Resilience Metrics:</strong></p>
+<ul>
+<li><strong>Circuit Breaker Activation</strong>: Frequency and effectiveness of automated safety controls</li>
+<li><strong>Drift Detection</strong>: Ability to identify when system behavior diverges from expected patterns</li>
+<li><strong>Explainability Maintenance</strong>: Continued ability to interpret and explain autonomous decisions</li>
+<li><strong>Trust Calibration</strong>: Alignment between system confidence and actual performance</li>
+</ul>
+<p><strong>Warning Signs to Monitor:</strong></p>
+<ul>
+<li>🔴 <strong>Goal Drift</strong>: Autonomous optimizations moving away from mission objectives</li>
+<li>🔴 <strong>Compliance Violations</strong>: System changes bypassing required regulatory or security controls</li>
+<li>🔴 <strong>Emergent Failures</strong>: Unexpected system behaviors leading to degraded performance or failures</li>
+<li>🔴 <strong>Explanation Gaps</strong>: Inability to understand or explain autonomous system decisions</li>
+<li>🔴 <strong>Override Failures</strong>: Human intervention systems failing to work when needed</li>
+</ul>
+<p><strong>Continuous Improvement Actions:</strong></p>
+<ul>
+<li>Regular evaluation of optimization effectiveness and mission alignment</li>
+<li>Enhancement of emergent behavior detection and response capabilities</li>
+<li>Refinement of governance frameworks based on autonomous system evolution</li>
+<li>Updates to safety controls and human override mechanisms</li>
+<li>Ongoing training for human stewards managing autonomous systems</li>
+</ul>
+<p><strong>End of Implementation Guide</strong></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:NIST-rmf">
+<p>National Institute of Standards and Technology, <em>Artificial Intelligence Risk Management Framework (AI RMF) 1.0</em>, Gaithersburg, MD, USA, 2023. [Online]. Available: https://nvlpubs.nistpubs/ai/nist.ai.100-1.pdf. [Accessed: Aug. 18, 2025]&#160;<a class="footnote-backref" href="#fnref:NIST-rmf" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:smartbear">
+<p>SmartBear Software, "State of Software Quality | Code Review," 2022. [Online]. Available: https://smartbear.com/state-of-software-quality/code-review/. [Accessed: Aug. 18, 2025]&#160;<a class="footnote-backref" href="#fnref:smartbear" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
