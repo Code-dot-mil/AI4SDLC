@@ -27,10 +27,10 @@ nav:
   - Home:
     - Overview: index.md
     - Guidance Lifecycle: lifecycle.md
-    - Toolchain Fundamentals: plays/fundamentals-play.md
   - Plays:
     - Toolchain Fundamentals: plays/fundamentals-play.md
     - Code Generation & Completion: plays/code-gen-play.md
+    - AI-Autonomy continuum: plays/ai-autonomy_continuum_play.md
   - Patterns:
       - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Tools & Templates:
