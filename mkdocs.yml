@@ -34,6 +34,9 @@ nav:
     - AI-Autonomy Continuum: plays/ai-autonomy_continuum_play.md
   - Patterns:
       - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
+  - Practices:
+     #- Governance: plays/governance-play.md
+      - Emerging Practices: plays/emerging-practices.md
   - Tools & Templates:
     - Play Template: resources/template.md
     - Architectural Decision Records: resources/ArchitecturalDecisionRecord.md
