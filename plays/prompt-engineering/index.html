@@ -1,0 +1,3861 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../code-gen-play/">
+      
+      
+        <link rel="next" href="../ai-autonomy_continuum_play/">
+      
+      
+      <link rel="icon" href="../../images/Seal-DoDCIO-Fulcrum_small.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Prompt Engineering - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#play-prompt-engineering-play" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/Seal-DoDCIO-Fulcrum_large.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prompt Engineering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../fundamentals-play/" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/template/" class="md-tabs__link">
+          
+  
+  
+  Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/Seal-DoDCIO-Fulcrum_large.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guidance Lifecycle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plays
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Plays
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Toolchain Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-gen-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Code Generation & Completion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Prompt Engineering
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompt Engineering
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-purpose-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      I. Purpose &amp; Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-introduction-to-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      II. Introduction to Prompt Engineering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II. Introduction to Prompt Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Prompt Engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters-in-the-sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters in the SDLC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-policy-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Policy Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security &amp; Policy Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#responsible-use-of-commercial-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsible Use of Commercial Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-approved-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leverage Approved Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-protection-and-access-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Protection and Access Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditability-and-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditability and Traceability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adversarial-prompting-and-red-teaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adversarial prompting and red-teaming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-how-to-write-an-effective-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      III. How to Write an Effective Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III. How to Write an Effective Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-engineering-principles-for-the-mission-focused-sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering Principles for the Mission-Focused SDLC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-a-high-quality-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of a High-Quality Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-style-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints, Style, and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-optional-reinforce-with-examples-and-delimiters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. (Optional) Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembly Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-advanced-prompting-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV. Advanced Prompting Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV. Advanced Prompting Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-cognitive-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Core Cognitive Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Core Cognitive Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-chain-of-thought-cot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Chain-of-Thought (CoT) Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tree-of-thought-tot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tree-of-Thought (ToT) Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-self-critique-self-refinement-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Self-Critique / Self-Refinement Prompting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structured-context-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Structured Context Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ Structured Context Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-chop-pattern-context-history-objective-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. CHOP Pattern (Context, History, Objective, Prompt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-context-windowing-embedded-context-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Context Windowing / Embedded Context Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-rag-enhanced-prompting-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. RAG-Enhanced Prompting (Retrieval-Augmented Generation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-and-format-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Workflow and Format Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Workflow and Format Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-prompt-chaining-pipeline-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Prompt Chaining / Pipeline Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-zero-shot-few-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Zero-shot / Few-shot Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-schemaformat-constrained-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Schema/Format-Constrained Prompting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-cutting-enhancement-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀 Cross-Cutting Enhancement Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔀 Cross-Cutting Enhancement Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-role-based-prompt-pattern-rbpp-a-cross-cutting-modifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      **10. Role-Based Prompt Pattern (RBPP): A Cross-Cutting Modifier **
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-selection-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern Selection Guidance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-common-pitfalls-and-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      V. Common Pitfalls and Anti-Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V. Common Pitfalls and Anti-Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vague-role-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Vague Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-missing-audience-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Missing Audience Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-unrestricted-output-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Unrestricted Output Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ignoring-output-format-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ignoring Output Format Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mixing-classification-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Mixing Classification Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-no-constraints-or-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. No Constraints or Guardrails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-single-shot-complex-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Single-Shot Complex Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-assuming-model-knowledge-currency" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Assuming Model Knowledge Currency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-mitigation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-applying-the-framework-by-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      VI. Applying the Framework by Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VI. Applying the Framework by Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples "At-a-Glance"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-capability-sponsor-requirements-owner-sample-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Capability Sponsor / Requirements Owner Sample Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Capability Sponsor / Requirements Owner Sample Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-developer-sample-prompt-infrastructure-as-code-security-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Developer Sample Prompt: Infrastructure-as-Code Security Review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Developer Sample Prompt: Infrastructure-as-Code Security Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-security-analyst-sample-prompt-stigfisma-compliance-checklist-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Security Analyst Sample Prompt: STIG/FISMA Compliance Checklist Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Security Analyst Sample Prompt: STIG/FISMA Compliance Checklist Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-program-manager-sample-prompt-cmmc-status-report-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Program Manager Sample Prompt: CMMC Status Report Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. Program Manager Sample Prompt: CMMC Status Report Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-operations-engineer-sample-prompt-diagnosing-runtime-issues-in-containerized-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      E. Operations Engineer Sample Prompt: Diagnosing Runtime Issues in Containerized Workloads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E. Operations Engineer Sample Prompt: Diagnosing Runtime Issues in Containerized Workloads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-practices-tools-patterns-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      VII. Practices, Tools, Patterns, and Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VII. Practices, Tools, Patterns, and Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-review-and-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Review and Reuse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-prompt-engineering-effectiveness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring Prompt Engineering Effectiveness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measuring Prompt Engineering Effectiveness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-quality-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Quality Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-iteration-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Iteration Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-governance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Governance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-library-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Library Maturity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guidance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-resources-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII. Resources and References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy_continuum_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI-Autonomy Continuum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human-Machine Interaction Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools & Templates
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Tools & Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Play Template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architectural Decision Records
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy-implementation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Autonomy Implementation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-purpose-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      I. Purpose &amp; Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-introduction-to-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      II. Introduction to Prompt Engineering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II. Introduction to Prompt Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Prompt Engineering?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters-in-the-sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why It Matters in the SDLC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-policy-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Policy Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security &amp; Policy Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#responsible-use-of-commercial-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsible Use of Commercial Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-approved-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leverage Approved Platforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-protection-and-access-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Protection and Access Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditability-and-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditability and Traceability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adversarial-prompting-and-red-teaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adversarial prompting and red-teaming
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-how-to-write-an-effective-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      III. How to Write an Effective Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III. How to Write an Effective Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-engineering-principles-for-the-mission-focused-sdlc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering Principles for the Mission-Focused SDLC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-a-high-quality-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anatomy of a High-Quality Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-style-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints, Style, and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-optional-reinforce-with-examples-and-delimiters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. (Optional) Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assembly Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-advanced-prompting-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV. Advanced Prompting Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV. Advanced Prompting Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-cognitive-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Core Cognitive Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Core Cognitive Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-chain-of-thought-cot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Chain-of-Thought (CoT) Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tree-of-thought-tot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Tree-of-Thought (ToT) Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-self-critique-self-refinement-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Self-Critique / Self-Refinement Prompting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#structured-context-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Structured Context Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ Structured Context Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4-chop-pattern-context-history-objective-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. CHOP Pattern (Context, History, Objective, Prompt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-context-windowing-embedded-context-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Context Windowing / Embedded Context Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-rag-enhanced-prompting-retrieval-augmented-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. RAG-Enhanced Prompting (Retrieval-Augmented Generation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-and-format-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Workflow and Format Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Workflow and Format Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7-prompt-chaining-pipeline-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Prompt Chaining / Pipeline Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-zero-shot-few-shot-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Zero-shot / Few-shot Prompting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-schemaformat-constrained-prompting" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Schema/Format-Constrained Prompting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-cutting-enhancement-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀 Cross-Cutting Enhancement Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔀 Cross-Cutting Enhancement Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-role-based-prompt-pattern-rbpp-a-cross-cutting-modifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      **10. Role-Based Prompt Pattern (RBPP): A Cross-Cutting Modifier **
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pattern-selection-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern Selection Guidance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-common-pitfalls-and-anti-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      V. Common Pitfalls and Anti-Patterns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V. Common Pitfalls and Anti-Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-vague-role-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Vague Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-missing-audience-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Missing Audience Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-unrestricted-output-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Unrestricted Output Scope
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ignoring-output-format-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ignoring Output Format Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mixing-classification-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Mixing Classification Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-no-constraints-or-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. No Constraints or Guardrails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-single-shot-complex-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Single-Shot Complex Tasks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-assuming-model-knowledge-currency" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Assuming Model Knowledge Currency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-mitigation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation Checklist
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-applying-the-framework-by-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      VI. Applying the Framework by Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VI. Applying the Framework by Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples "At-a-Glance"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-capability-sponsor-requirements-owner-sample-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Capability Sponsor / Requirements Owner Sample Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A. Capability Sponsor / Requirements Owner Sample Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-developer-sample-prompt-infrastructure-as-code-security-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Developer Sample Prompt: Infrastructure-as-Code Security Review
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="B. Developer Sample Prompt: Infrastructure-as-Code Security Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-security-analyst-sample-prompt-stigfisma-compliance-checklist-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Security Analyst Sample Prompt: STIG/FISMA Compliance Checklist Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C. Security Analyst Sample Prompt: STIG/FISMA Compliance Checklist Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-program-manager-sample-prompt-cmmc-status-report-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      D. Program Manager Sample Prompt: CMMC Status Report Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="D. Program Manager Sample Prompt: CMMC Status Report Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-operations-engineer-sample-prompt-diagnosing-runtime-issues-in-containerized-workloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      E. Operations Engineer Sample Prompt: Diagnosing Runtime Issues in Containerized Workloads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="E. Operations Engineer Sample Prompt: Diagnosing Runtime Issues in Containerized Workloads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-role-definition_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Role Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-define-the-goal_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Define the Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-specify-the-audience_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Specify the Audience
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-provide-context-and-input_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Provide Context and Input
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-set-constraints-and-compliance_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Set Constraints and Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-format-the-result_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Format the Result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-reinforce-with-examples-and-delimiters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Reinforce with Examples and Delimiters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-practices-tools-patterns-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      VII. Practices, Tools, Patterns, and Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VII. Practices, Tools, Patterns, and Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-review-and-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Review and Reuse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measuring-prompt-engineering-effectiveness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measuring Prompt Engineering Effectiveness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measuring Prompt Engineering Effectiveness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt-quality-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Quality Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-iteration-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Iteration Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-governance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Governance Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-library-maturity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Library Maturity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guidance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-resources-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII. Resources and References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge rc" 
+         role="img" 
+         aria-label="Rc stage - Final validation">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>RC</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2025-08-15</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="play-prompt-engineering-play">Play: Prompt Engineering Play</h1>
+<h2 id="i-purpose-scope">I. Purpose &amp; Scope</h2>
+<p><strong>Objective</strong>: To establish foundational prompt engineering practices for DoD software teams, enabling secure, consistent, and auditable use of large language models (LLMs) in software development workflows.</p>
+<p><strong>Primary Audience</strong>: Software developers, security analysts, and program managers who are integrating or evaluating LLM tools within their development processes.</p>
+<p><strong>Secondary Audience</strong>: DevSecOps engineers, test leads, operations teams, and acquisition professionals using AI-assisted tools for documentation, compliance, or technical analysis.</p>
+<p><strong>What This Playbook Covers</strong>:
+- Core principles and anatomy of effective prompts
+- Security and compliance considerations for DoD environments<br />
+- Advanced prompting techniques and when to apply them
+- Role-specific examples across the software development lifecycle
+- Risk mitigation strategies and common pitfalls</p>
+<p><strong>What This Playbook Does NOT Cover</strong>:
+- AI model deployment, fine-tuning, or infrastructure management
+- Organization-wide AI governance frameworks or policy development
+- Procurement guidance and vendor evaluation for AI platforms
+- Advanced topics like model training, embeddings, or vector databases</p>
+<p><strong>Alignment</strong>: This guidance supports the Department's strategic objectives including Zero Trust Architecture, DoD AI Ethical Principles, and secure software development practices outlined in DoDI 5000.82.</p>
+<p><strong>Why This Matters Now</strong>: DoD teams are rapidly adopting LLMs for code review, documentation generation, compliance assessment, and technical analysis. Without structured prompting practices, teams risk inconsistent outputs, security vulnerabilities, and compliance gaps. Early adoption of disciplined prompt engineering prevents these issues and establishes secure-by-design AI integration.</p>
+<p><strong>Expected Outcomes</strong>: After applying this guidance, teams will be able to:
+- Write structured, repeatable prompts that produce consistent, mission-aligned outputs
+- Apply appropriate security controls and risk mitigation strategies<br />
+- Integrate prompt engineering into existing SDLC processes and tooling
+- Avoid common prompting pitfalls that lead to hallucinations or compliance issues</p>
+<p>This playbook provides the foundational knowledge needed to use LLMs effectively and securely within DoD software development constraints. For advanced topics like model deployment or enterprise AI governance, refer to specialized guidance documents.</p>
+<blockquote>
+<p>📌 <strong>Note</strong>: This playbook covers prompt engineering across the entire software development lifecycle—not just code generation. Effective prompting is equally important for documentation, security assessment, infrastructure configuration, and compliance activities.</p>
+</blockquote>
+<hr />
+<h2 id="ii-introduction-to-prompt-engineering">II. Introduction to Prompt Engineering</h2>
+<h3 id="what-is-prompt-engineering">What Is Prompt Engineering?</h3>
+<p>In the context of Generative AI (GenAI), a prompt is text input in natural language provided to a large language model (LLM) to guide its behavior and generate a relevant, useful output. It is both the instruction and the context. <strong>This is the critical mechanism</strong> through which we shape model responses to support technical, analytical, and operational tasks.</p>
+<p>Prompt engineering is the practice of crafting those inputs with precision and intentionality. A well-structured prompt provides the LLM with clear instructions, sufficient context, defined constraints, and an expected format—allowing it to produce more accurate, secure, and mission-aligned outputs.</p>
+<blockquote>
+<p>“Without clear and precise instructions, these models can produce irrelevant, biased, or overly general outputs.”
+— IBM Prompt Engineering Guide <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">2</a></sup></p>
+</blockquote>
+<p>In modern software value streams, prompt engineering is no longer an experimental skill—it is an operational discipline. From writing IaC policies to summarizing acquisition artifacts, prompts are increasingly how we interact with AI systems to support the SDLC.</p>
+<p>There are three common structural approaches to prompting<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup>:</p>
+<ul>
+<li><strong>Direct Instructions</strong> – Specific, task-oriented commands that tell the model what to do (e.g., “Summarize this technical report in under 150 words.”). These are concise and do not assume domain context.</li>
+<li><strong>Task-Specific Instructions</strong> – Tailored prompts aligned to domain processes or roles (e.g., “Convert this JCIDS Capability Document into MoSCoW-prioritized user stories.”). These assume deeper context and are ideal for repeatable mission or enterprise tasks.</li>
+<li><strong>Open-Ended Instructions</strong> – Used for ideation or exploratory analysis (e.g., “List risks associated with deploying LLMs in IL5 environments.”). These prompts leave room for the model to explore possible directions.</li>
+</ul>
+<blockquote>
+<p>📌 <strong>Clarification</strong>: Task-specific prompts differ from direct instructions in that they assume and embed domain context. A direct instruction tells the model <em>what to do</em> in a general sense; a task-specific instruction frames the request in terms of an existing process, role, or structured artifact (e.g., acquisition workflow, STIG review, mission thread).</p>
+</blockquote>
+<p>As with any engineering discipline, effectiveness improves with structure, governance, and iteration. This playbook provides the foundational techniques and patterns to apply prompt engineering with confidence across DoD software value streams.</p>
+<h3 id="why-it-matters-in-the-sdlc">Why It Matters in the SDLC</h3>
+<p>Prompt engineering is crucial for the software development lifecycle (SDLC).  It directly impacts the quality, reliability, and efficiency of Generative AI functionality.  Well defined prompts enable AI models to understand user intent and produce the desired outcomes. This becomes particularly important as AI-augmentation is integrated into more stages of the SDLC, from requirements through deployment. </p>
+<p>Benefits to the AI-Augmented SDLC:</p>
+<ul>
+<li><strong>Reduces ambiguity</strong> - Effective prompt engineering eliminates confusion between the human intent and the AI interpretation. This minimizes rework.</li>
+<li><strong>Accelerates documentation</strong> - Concise prompt engineering streamlines the generation of documentation saving time and improving consistency. They can be used to quickly summarize technical documents as well.</li>
+<li><strong>Codifies expertise</strong> - Prompt engineering captures domain knowledge and leading practices in a reusable format. This can help less experience team members to learn from an leverage collective knowledge from experienced team members. It also builds a reusable library of prompts for future projects.</li>
+<li><strong>Improves human/machine teaming</strong> - The process of prompting and the assets created act as a shared language between the humans and the language models (the machine.) The iterative nature of prompt refinement and continuous feedback can make the workflow between humans and machines more intuitive.  </li>
+</ul>
+<h3 id="security-policy-considerations">Security &amp; Policy Considerations</h3>
+<p>Prompt engineering, like all use of AI-Augmentation,  must be approached as a <strong>security-sensitive activity</strong>. In the DoD software environment, careless prompting could lead to unauthorized disclosures, model misuse, or generation of insecure artifacts. This section outlines key considerations to protect mission integrity, enforce compliance, and align with DoD cybersecurity strategy.</p>
+<h4 id="responsible-use-of-commercial-models"><strong>Responsible Use of Commercial Models</strong></h4>
+<p>A primary concern is preventing data leakage through commercial AI models that may train on government inputs. DoD organizations must establish contractual guarantees with vendors that government data remains isolated from training processes, commercial analysis.  In some instances, it may require implementation of  air-gapped solutions for classified environments.</p>
+<p>It is an important step to carefully reviewing <strong>End User License Agreements (EULAs)</strong> and establish contractual controls that restrict commercial AI models from retaining government data and from training models based on inputs.  You should also understand any retention and secondary use.</p>
+<h4 id="leverage-approved-platforms"><strong>Leverage Approved Platforms</strong></h4>
+<p>Use government-authorized LLM deployments that meet IL-level hosting and accreditation requirements. Prompts should be tested and deployed on platforms that align with DoD security and compliance standards, especially when used in mission, weapon, or enterprise environments. </p>
+<blockquote>
+<p>==Do we have a list of approved platforms and LLMs? for DoD --&gt; Check with Navy and HPC==</p>
+</blockquote>
+<h4 id="data-protection-and-access-controls"><strong>Data Protection and Access Controls</strong></h4>
+<p>To prevent leakage of sensitive or classified information,  prompts must never include Controlled Unclassified Information (CUI), Personally Identifiable Information (PII), or mission-sensitive details unless processed within appropriately cleared and accredited environments.  It is also imperative to respect classification boundaries, that is, do not rely on model outputs to infer or verify classification status.  Always confirm user access controls are enforced.  </p>
+<p>Individuals also have a responsibility to honor  access controls and classification of data and documents</p>
+<h4 id="auditability-and-traceability"><strong>Auditability and Traceability</strong></h4>
+<p>Audit logs play an important role when leveraging AU-augmentation. It is important to log both inputs and outputs and include data such as userID and model version.  Remember that a prompt is an electronic asset.  Prompts used across the SDLC should support traceability and be linkable to tickets, commits, documents, or delivery artifacts.  </p>
+<p>In some instances, you may be using and integrated development environment (IDE) which has AI-augmentation configured, installed or available withing the IDE. The IDE is the workbench tool where software engineers and developers create/generate software code, automated tests, and documentation. When operating within a local IDE, consider the following:</p>
+<ul>
+<li>Structuring code comments that include prompt references</li>
+<li>Configure tools to automatically include prompt metadata in commit messages / notes </li>
+<li>Establish centralized prompt repositories</li>
+</ul>
+<p>Additional IDE related guidance available for applying security principles when using in-IDE AI augmentation here: <a href="../ide-security/">IDE Security</a>.</p>
+<h4 id="adversarial-prompting-and-red-teaming"><strong>Adversarial prompting and red-teaming</strong></h4>
+<p>Adversarial prompting refers to deliberately crafted inputs designed to bypass safeguards, extract sensitive information, or manipulate outputs in unintended ways or even induce unsafe behavior from AI systems.</p>
+<p>In the DoD context, the technique called Red-teaming applies systematic testing methodologies to identify these vulnerabilities and simulate misuse as well as test the robustness of prompt guards that may be in place.  Security teams security teams attempt to exploit AI systems, and in the case of the SDLC, exploit Ai-augmented tooling through carefully constructed prompts that circumvent built-in protections. Regular red-teaming helps validate that prompt engineering practices and AI tools withstand manipulation and remain compliant with security policies.</p>
+<p>In addition to defending against attacks, proactive security measures in prompt design are equally important:</p>
+<ul>
+<li><strong>Incorporate prompt red-teaming.</strong> Test prompts for potential leakage, injection, or manipulation by adversaries.</li>
+<li><strong>Embed security-focused prefixes.</strong> According to Kim et al. [^3], adding a security-focused prompt prefix reduced generated vulnerabilities by up to 56% in benchmark tasks.</li>
+<li><strong>Avoid anti-patterns.</strong> Prompts that encourage shortcutting authentication, bypassing validation, or using deprecated cryptographic libraries must be flagged and rejected.</li>
+</ul>
+<p>Detailed guidance on designing prompts is covered under Section <a href="#iii-how-to-write-an-effective-prompt">III. How to Write an Effective Prompt</a> below.</p>
+<p>Prompt engineering is foundational to secure and privacy-preserving AI integration in the SDLC. By embedding security and privacy considerations directly into prompt design and workflow, organizations can reduce ambiguity, accelerate documentation, codify expertise, and improve human-machine teaming—all while maintaining strict compliance with DoD standards and safeguarding sensitive information</p>
+<p>These key frameworks—<strong>Zero Trust</strong>, <strong>DoD AI Ethics</strong>, <strong>NIST RMF</strong>, and <strong>DoDI 5000.82</strong>—must also be considered during prompt engineering. See <a href="../prompt-engineering-and-security-policy/">Mapping Prompt Engineering to DoD Cyber and AI Governance</a></p>
+<p>Advanced techniques can include incorporating encryption into prompt design and designing prompting workflows that are secure by default.Prompt engineering is a secure-by-design behavior. Embedding secure-by-design behavior into the fabric of software value streams verifies that the benefits of LLMs are realized without introducing new operational or cybersecurity risks.</p>
+<p>[^3] H. Kim, L. Wang, T. Kim, and S. Lee, “Benchmarking Prompt Engineering Techniques for Secure Code Generation with GPT Models,” in <em>Proceedings of the 2nd International Conference on Foundations of Responsible Generative AI (FORGE 2025)</em>, 2025. [Online]. Available: https://conf.researchr.org/details/forge-2025/forge-2025-papers/11/Benchmarking-Prompt-Engineering-Techniques-for-Secure-Code-Generation-with-GPT-Models. [Accessed: 20-Jun-2025]</p>
+<blockquote>
+<p>📌 <em>Prompts shape model behavior. Better prompts lead to better outcomes—securely, repeatably, and transparently.</em></p>
+</blockquote>
+<h2 id="iii-how-to-write-an-effective-prompt">III. How to Write an Effective Prompt</h2>
+<p>Now that we understand the importance of prompting and the risks involved, let’s get specific. This section outlines how to author high-quality prompts that drive mission alignment, increase explainability, and ensure reuse.</p>
+<p>Prompt engineering is the practice of crafting precise, structured inputs that guide large language models (LLMs) to generate reliable, relevant, and secure outputs. In DoD environments, prompts must be treated as governed artifacts—subject to review, refinement, and reuse. A well-written prompt improves traceability, reduces risk, and ensures that generated artifacts support mission assurance.</p>
+<h3 id="prompt-engineering-principles-for-the-mission-focused-sdlc">Prompt Engineering Principles for the Mission-Focused SDLC</h3>
+<p>Principles represent conceptual guidelines and create a framework for thinking about a topic like prompt engineering.  Principles enable practitioners to adapt their approach based on context and objectives while maintaining consistency with underlying quality factors. Stated differently, principles are the rules of engagements.  Let's start with a core set of prompt engineering principles:</p>
+<ul>
+<li><strong>Be Specific and Complete</strong> – Provide precise instructions and sufficient context to reduce ambiguity and improve outcome quality.</li>
+<li><strong>Define Role and Intent</strong> – Establish the AI’s role, expertise, and purpose to align responses with mission needs.</li>
+<li><strong>Clear Objectives and Boundaries</strong> – Define the desired outcome and set explicit constraints for format, tone, and scope. When the goal is exploration or ideation, use open-ended prompts to broaden insight. When precision and compliance are critical, use tightly scoped directives.</li>
+<li><strong>Tailor to the Audience</strong> – Adjust technical depth, language, and tone based on whether the output is for developers, analysts, operators, or decision-makers.</li>
+<li><strong>Use Structured Context and Output</strong> – Organize inputs and expected outputs using lists, delimiters, or structured formats like JSON/YAML to guide response shape.</li>
+<li><strong>Refine Through Iteration and Versioning</strong> – Continuously improve prompt effectiveness with testing and maintain version control for traceability and reproducibility.</li>
+<li><strong>Treat Prompts as Artifacts</strong> – Manage prompts and output as part of the SDLC: link to issues, commits, and documentation to support Zero Trust and compliance.</li>
+</ul>
+<h3 id="anatomy-of-a-high-quality-prompt">Anatomy of a High-Quality Prompt</h3>
+<p>A well-engineered prompt is more than a question—it’s a structured input that acts like a design artifact. In the DoD context, where prompts may influence everything from Infrastructure-as-Code (IaC) to CONOPS summaries or cyber policy generation, <strong>clarity, control, and context</strong> are essential. The components below can be combined to build consistently effective prompts for mission-focused outcomes.</p>
+<blockquote>
+<p>📌 <strong>Tip</strong>: Think of prompts like test cases—they must be understandable, reproducible, and reviewable. They are design artifacts, not one-off conversations.</p>
+</blockquote>
+<h3 id="1-role-definition">1. Role Definition</h3>
+<p><strong>What to do:</strong> Assign the AI a role to establish its point of view and domain expertise.</p>
+<p><strong>Why it matters:</strong> This frames the model’s tone, terminology, and assumptions. In mission systems, role identity helps align AI reasoning with the expectations of security engineers, test leads, PMs, or policy authors.</p>
+<p><strong>Prompt Pattern:</strong><br />
+<code>You are a [specific role] with expertise in [domain]. Your primary responsibility is [function].</code></p>
+<p><strong>Example:</strong><br />
+<code>You are a cybersecurity analyst trained on NIST 800-53 and DoD STIGs.</code></p>
+<hr />
+<h3 id="2-define-the-goal">2. Define the Goal</h3>
+<p><strong>What to do:</strong> State the specific task using action verbs. Describe the intended outcome and, when helpful, include context or dependencies.</p>
+<p><strong>Why it matters:</strong> Action-oriented prompts reduce ambiguity and focus the model on a mission-aligned outcome.</p>
+<p><strong>Prompt Pattern:</strong><br />
+<code>Your task is to [action] that supports [objective].</code></p>
+<p><strong>Example:</strong><br />
+<code>Evaluate this infrastructure-as-code file for security misconfigurations within a cloud-native container platform.</code></p>
+<hr />
+<h3 id="3-specify-the-audience">3. Specify the Audience</h3>
+<p><strong>What to do:</strong> Tailor the language, technical depth, and tone based on the expected consumer of the output.</p>
+<p><strong>Why it matters:</strong> Models adapt output style and complexity better when the audience is clear—this avoids wasted cycles or confusing jargon.</p>
+<p><strong>Prompt Pattern:</strong><br />
+<code>This output is intended for [audience].</code></p>
+<p><strong>Example:</strong><br />
+<code>Prepare this response for a cross-functional engineering team familiar with DevSecOps practices.</code></p>
+<hr />
+<h3 id="4-provide-context-and-input">4. Provide Context and Input</h3>
+<p><strong>What to do:</strong> Describe the scenario, system, or constraints and define the input structure.</p>
+<p><strong>Why it matters:</strong> Background enables better relevance and accuracy. Precise input formats prevent model confusion and increase reliability.</p>
+<p><strong>Prompt Pattern:</strong><br />
+<code>Given [situation/environment], process the following input [format]...</code></p>
+<p><strong>Example:</strong><br />
+<code>This operates within an IL5 Kubernetes environment. The following input is a YAML deployment manifest.</code></p>
+<hr />
+<h3 id="5-set-constraints-style-and-compliance">5. Set Constraints, Style, and Compliance</h3>
+<p><strong>What to do:</strong> Define policies, formatting rules, or prohibited content.</p>
+<p><strong>Why it matters:</strong> Explicit constraints help reduce hallucination, keep outputs mission-safe, and enforce internal quality standards.</p>
+<p><strong>Prompt Pattern:</strong><br />
+<code>Do not [restrictions]. Limit to [format/style/length].</code></p>
+<p><strong>Example:</strong><br />
+<code>Do not reference public GitHub repos. Limit response to 300 words. Use only DoD-approved terminology.</code></p>
+<hr />
+<h3 id="6-format-the-result">6. Format the Result</h3>
+<p><strong>What to do:</strong> Request specific formats such as JSON, checklist, or markdown.</p>
+<p><strong>Why it matters:</strong> Structured output enables immediate use, especially when integrated into tooling or compliance workflows. Output formatting should reflect the audience’s needs—for example, structured formats for engineers, or narrative summaries for policy leads.</p>
+<p><strong>Prompt Pattern:</strong><br />
+<code>Return the results as [format] with [fields].</code></p>
+<p><strong>Example:</strong><br />
+<code>Return the results as a markdown checklist with inline annotations.</code></p>
+<hr />
+<h3 id="7-optional-reinforce-with-examples-and-delimiters">7. (Optional) Reinforce with Examples and Delimiters</h3>
+<p><strong>What to do:</strong> Add illustrative examples or delimiter scaffolds.</p>
+<p><strong>Why it matters:</strong> Examples improve clarity and help models generalize the pattern. Delimiters improve parseability and prompt reuse.</p>
+<p><strong>Prompt Pattern:</strong>  </p>
+<pre><code>### INPUT ###
+[structured example input]
+
+### OUTPUT ###
+[desired structured output]
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>### INPUT ###
+[Insert Terraform configuration]
+
+### OUTPUT ###
+- Detected STIG violations
+- Remediation steps
+</code></pre>
+<h3 id="assembly-pattern">Assembly Pattern</h3>
+<p><strong>You don’t need every element every time</strong>—but following this pattern improves reliability, security, and reproducibility.</p>
+<pre><code>[Role Definition]  
+You are a [specific role] with expertise in [domain]. Your primary responsibility is [function].
+
+[Define the Goal]  
+Your task is to [action] that supports [objective].
+
+[Specify the Audience]  
+This output is intended for [audience].
+
+[Provide Context and Input]  
+Given [situation/environment], process the following input [format]...
+
+[Set Constraints, Style, and Compliance]  
+Do not [restrictions]. Limit to [format/style/length].
+
+[Format the Result]  
+Return the results as [format] with [fields].
+
+[Optional: Examples and Delimiters]  
+### INPUT ###  
+[structured example input]  
+### OUTPUT ###  
+[desired structured output]
+</code></pre>
+<p>This pattern enables repeatable, compliant prompting across use cases—whether you're working on acquisition strategies, system modeling, or defensive cybersecurity tools.</p>
+<blockquote>
+<p>For readers applying prompt engineering to generate or complete code, refer to the dedicated Play: <a href="../code-gen-play/">Leading Practices for Code Completion and Generation</a>. It contains additional role-specific guidance, architectural guardrails, and usage patterns for secure software delivery in DoD environments.</p>
+</blockquote>
+<h2 id="iv-advanced-prompting-techniques">IV. Advanced Prompting Techniques</h2>
+<p>Advanced prompting techniques enhance the 7-component anatomy for specific cognitive tasks and complex scenarios. These patterns can be combined and modified to address sophisticated requirements in DoD environments.</p>
+<h3 id="core-cognitive-patterns">⚙️ <strong>Core Cognitive Patterns</strong></h3>
+<h4 id="1-chain-of-thought-cot-prompting"><strong>1. Chain-of-Thought (CoT) Prompting</strong></h4>
+<p>A reasoning-based pattern that encourages the AI to "think out loud" through step-by-step logic. This increases transparency in complex problem-solving and mitigates hallucinations by making the reasoning process visible.</p>
+<ul>
+<li><strong>Use case</strong>: Risk analysis, defect triage, threat modeling</li>
+<li><strong>Example</strong>: <code>Walk through the logic of how a buffer overflow could occur in this C code.</code></li>
+</ul>
+<h4 id="2-tree-of-thought-tot-prompting"><strong>2. Tree-of-Thought (ToT) Prompting</strong></h4>
+<p>An expansion of CoT that branches into multiple reasoning paths, enabling the AI to evaluate tradeoffs or alternatives. Particularly useful for decision analysis where multiple criteria must be balanced.</p>
+<ul>
+<li><strong>Use case</strong>: Architectural decision analysis, requirements negotiation</li>
+<li><strong>Example</strong>: <code>Generate 3 architectural options for IL5 Kubernetes deployment, then evaluate based on cost, security, and maintainability.</code></li>
+</ul>
+<h4 id="3-self-critique-self-refinement-prompting"><strong>3. Self-Critique / Self-Refinement Prompting</strong></h4>
+<p>This technique asks the AI to review and improve its own outputs, enabling higher-quality generation, especially in technical or compliance-sensitive contexts.</p>
+<ul>
+<li><strong>Use case</strong>: ATO packages, quality assurance</li>
+<li><strong>Example</strong>: <code>Review the following Bash script for STIG compliance and suggest improvements based on DoD IA controls.</code></li>
+</ul>
+<h3 id="structured-context-patterns">🏗️ <strong>Structured Context Patterns</strong></h3>
+<h4 id="4-chop-pattern-context-history-objective-prompt"><strong>4. CHOP Pattern (Context, History, Objective, Prompt)</strong></h4>
+<p>A structured prompting technique that explicitly defines the task context, relevant history, the user's objective, and the core prompt. This structure improves clarity and reduces ambiguity in outputs, especially for complex or multi-stage requests.</p>
+<ul>
+<li><strong>Use case</strong>: Mission thread generation, architectural analysis</li>
+<li><strong>Example</strong>:
+  <code>CONTEXT: A Flask-based DoD logistics API
+  HISTORY: Uses JWT authentication, FIPS 140-3 encryption required
+  OBJECTIVE: Add a new `/request/submit` endpoint that logs all access attempts
+  PROMPT: Generate a secure Flask route that uses role-based access control and logs each submission in JSON.</code></li>
+</ul>
+<h4 id="5-context-windowing-embedded-context-prompting"><strong>5. Context Windowing / Embedded Context Prompting</strong></h4>
+<p>Embedding supporting documents or code within the prompt, usually framed by delimiters. This keeps context tightly scoped and prevents the model from straying from the intended source material.</p>
+<ul>
+<li><strong>Use case</strong>: Policy Q&amp;A, source code interpretation</li>
+<li><strong>Example</strong>:
+  <code>### DoD Policy Extract ###
+  [Policy content here]
+  ###
+  Based on this, what documentation is needed for RMF Step 4?</code></li>
+</ul>
+<h4 id="6-rag-enhanced-prompting-retrieval-augmented-generation"><strong>6. RAG-Enhanced Prompting (Retrieval-Augmented Generation)</strong></h4>
+<p>A pattern that combines LLM reasoning with external knowledge retrieved from a vector database or document index. Ideal for high-assurance, mission-critical use where answers must be grounded in validated sources.</p>
+<ul>
+<li><strong>Use case</strong>: Classified references, MBSE model interaction</li>
+<li><strong>Example</strong>: <code>Using the mission thread stored in this vector index, summarize constraints affecting EW operations.</code></li>
+</ul>
+<h3 id="workflow-and-format-patterns">🔗 <strong>Workflow and Format Patterns</strong></h3>
+<h4 id="7-prompt-chaining-pipeline-prompting"><strong>7. Prompt Chaining / Pipeline Prompting</strong></h4>
+<p>A technique where multiple linked prompts handle sequential tasks (e.g., requirements → user stories → tests). Chaining improves traceability, modularity, and reuse across SDLC phases.</p>
+<ul>
+<li><strong>Use case</strong>: Requirements-to-code-to-test transformation</li>
+<li><strong>Example</strong>:</li>
+<li>Extract features from transcript</li>
+<li>Generate user stories</li>
+<li>Generate unit tests for each story</li>
+</ul>
+<h4 id="8-zero-shot-few-shot-prompting"><strong>8. Zero-shot / Few-shot Prompting</strong></h4>
+<p>These techniques involve prompting the model with no (zero-shot) or minimal (few-shot) examples. Few-shot methods are helpful when the task format needs to be inferred through pattern recognition.</p>
+<ul>
+<li><strong>Use case</strong>: Test case generation, bug triage, regex generation</li>
+<li><strong>Example (Few-shot)</strong>:
+  <code>Input: '123-45-6789' → Output: SSN
+  Input: 'john.doe@af.mil' → Output: Email
+  Input: '10.10.10.1' → Output: ?</code></li>
+</ul>
+<h4 id="9-schemaformat-constrained-prompting"><strong>9. Schema/Format-Constrained Prompting</strong></h4>
+<p>A pattern that explicitly requests outputs in a structured format, such as tables, JSON, or YAML. Useful for downstream parsing or integrations with dashboards and pipelines.</p>
+<ul>
+<li><strong>Use case</strong>: Integrations, dashboards, output parsing</li>
+<li><strong>Example</strong>: <code>Output a table in Markdown with columns: Risk ID, Severity, Mitigation.</code></li>
+</ul>
+<h3 id="cross-cutting-enhancement-techniques">🔀 <strong>Cross-Cutting Enhancement Techniques</strong></h3>
+<h4 id="10-role-based-prompt-pattern-rbpp-a-cross-cutting-modifier">**10. Role-Based Prompt Pattern (RBPP): A Cross-Cutting Modifier **</h4>
+<p>RBPP is not a standalone prompt pattern. It’s a powerful modifier that enhances other techniques. By assigning the model a specific <strong>mission-relevant role</strong>, it shapes tone, domain language, compliance expectations, and the scope of acceptable reasoning.</p>
+<ul>
+<li><strong>Use case</strong>: Adding domain expertise to any prompting pattern</li>
+<li><strong>Enhancement example</strong>: </li>
+<li><strong>Basic CoT</strong>: <code>Walk through how this vulnerability occurs</code></li>
+<li><strong>Role-Enhanced CoT</strong>: <code>Act as a DoD cybersecurity analyst and walk through how this vulnerability could be exploited in an IL5 environment</code></li>
+</ul>
+<blockquote>
+<p><strong>Role-based enhancement works with all patterns</strong>. It can be combined with CoT for expert reasoning, CHOP for domain-specific context, or RAG for authoritative role-based retrieval. Think of it as a multiplier that adds domain credibility and context to any cognitive pattern.</p>
+</blockquote>
+<h3 id="pattern-selection-guidance"><strong>Pattern Selection Guidance</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>When you need...</strong></th>
+<th><strong>Use this pattern</strong></th>
+<th><strong>Consider enhancing with</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step-by-step reasoning</td>
+<td>Chain-of-Thought (CoT)</td>
+<td>Role-based enhancement</td>
+</tr>
+<tr>
+<td>Multiple solution evaluation</td>
+<td>Tree-of-Thought (ToT)</td>
+<td>Schema formatting</td>
+</tr>
+<tr>
+<td>Complex background context</td>
+<td>CHOP or Context Windowing</td>
+<td>Role-based enhancement</td>
+</tr>
+<tr>
+<td>Authoritative source grounding</td>
+<td>RAG-Enhanced</td>
+<td>Format constraints</td>
+</tr>
+<tr>
+<td>Multi-stage workflows</td>
+<td>Prompt Chaining</td>
+<td>Self-critique validation</td>
+</tr>
+<tr>
+<td>Consistent output format</td>
+<td>Schema/Format-Constrained</td>
+<td>Role-based enhancement</td>
+</tr>
+<tr>
+<td>Quality improvement</td>
+<td>Self-Critique</td>
+<td>Any base pattern</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v-common-pitfalls-and-anti-patterns">V. Common Pitfalls and Anti-Patterns</h2>
+<p>Understanding what <strong>not</strong> to do is as important as following best practices. These anti-patterns frequently undermine prompt effectiveness in DoD environments, leading to inconsistent outputs, security risks, or compliance failures.</p>
+<h3 id="1-vague-role-definition"><strong>1. Vague Role Definition</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Using generic expertise without domain specificity  </li>
+<li><strong>Anti-pattern:</strong> "Act as an expert and review this code"  </li>
+<li><strong>Why it fails:</strong> The AI has no context for what type of expertise or standards to apply  </li>
+<li><strong>Better approach:</strong> <code>"Act as a DoD cybersecurity analyst certified in NIST 800-53 and familiar with DISA STIGs"</code></li>
+</ul>
+<h3 id="2-missing-audience-context"><strong>2. Missing Audience Context</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Producing outputs without considering the consumer  </li>
+<li><strong>Anti-pattern:</strong> Technical implementation details for executive briefings  </li>
+<li><strong>Why it fails:</strong> Misaligned complexity and terminology waste stakeholder time  </li>
+<li><strong>Better approach:</strong> <code>"Format this for senior leadership (GS-15/SES) requiring executive summary with risk implications"</code></li>
+</ul>
+<h3 id="3-unrestricted-output-scope"><strong>3. Unrestricted Output Scope</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Open-ended prompts that encourage hallucination  </li>
+<li><strong>Anti-pattern:</strong> "Tell me about security vulnerabilities"  </li>
+<li><strong>Why it fails:</strong> Leads to generic, potentially inaccurate information without actionable specifics  </li>
+<li><strong>Better approach:</strong> <code>"Identify OWASP Top 10 vulnerabilities in this Node.js application with specific remediation steps"</code></li>
+</ul>
+<h3 id="4-ignoring-output-format-requirements"><strong>4. Ignoring Output Format Requirements</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Requesting analysis without specifying structure  </li>
+<li><strong>Anti-pattern:</strong> "Analyze this system for compliance issues"  </li>
+<li><strong>Why it fails:</strong> Produces narrative text that's difficult to integrate into reports or track  </li>
+<li><strong>Better approach:</strong> <code>"Return compliance findings as a table with Control ID, Status, Risk Level, and Remediation Steps"</code></li>
+</ul>
+<h3 id="5-mixing-classification-levels"><strong>5. Mixing Classification Levels</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Including sensitive context in prompts for commercial models  </li>
+<li><strong>Anti-pattern:</strong> Referencing specific mission names, locations, or system details  </li>
+<li><strong>Why it fails:</strong> Potential unauthorized disclosure and policy violations  </li>
+<li><strong>Better approach:</strong> <code>Use sanitized examples or process within appropriate IL-level environments</code></li>
+</ul>
+<h3 id="6-no-constraints-or-guardrails"><strong>6. No Constraints or Guardrails</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Failing to set boundaries on AI behavior  </li>
+<li><strong>Anti-pattern:</strong> Allowing suggestions of unapproved tools or non-compliant practices  </li>
+<li><strong>Why it fails:</strong> Outputs may recommend solutions outside DoD policy or procurement constraints  </li>
+<li><strong>Better approach:</strong> <code>"Use only DISA-approved tools and reference FedRAMP-authorized solutions"</code></li>
+</ul>
+<h3 id="7-single-shot-complex-tasks"><strong>7. Single-Shot Complex Tasks</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Asking for multiple complex deliverables in one prompt  </li>
+<li><strong>Anti-pattern:</strong> "Generate requirements, design the architecture, and create test plans"  </li>
+<li><strong>Why it fails:</strong> Reduces quality of each deliverable and makes validation difficult  </li>
+<li><strong>Better approach:</strong> <code>Use prompt chaining for sequential tasks with validation points between steps</code></li>
+</ul>
+<h3 id="8-assuming-model-knowledge-currency"><strong>8. Assuming Model Knowledge Currency</strong></h3>
+<ul>
+<li><strong>Problem:</strong> Expecting AI to know the latest policies or technical updates  </li>
+<li><strong>Anti-pattern:</strong> "Apply the latest CMMC requirements" without providing current guidance  </li>
+<li><strong>Why it fails:</strong> Models may reference outdated information or hallucinate recent changes  </li>
+<li><strong>Better approach:</strong> <code>Provide current policy extracts or explicit version references</code></li>
+</ul>
+<h2 id="risk-mitigation-checklist"><strong>Risk Mitigation Checklist</strong></h2>
+<p>Before deploying prompts in production workflows, verify:
+- [ ] Role and domain expertise clearly defined
+- [ ] Audience and output format specified<br />
+- [ ] Appropriate constraints and compliance boundaries set
+- [ ] No sensitive information included in prompt text
+- [ ] Expected output scope is bounded and testable
+- [ ] Authoritative sources referenced when needed
+- [ ] Prompt is versioned and traceable to requirements</p>
+<hr />
+<h2 id="vi-applying-the-framework-by-role">VI. Applying the Framework by Role</h2>
+<p>This introduces role-specific guidance for designing effective prompts across the software development lifecycle (SDLC). Each role brings unique mission objectives, technical touchpoints, and trust boundaries. Each <em>example</em> follows this structure:</p>
+<ul>
+<li><strong>Role</strong> – The SDLC stakeholder (e.g., Developer, Security Analyst) whose responsibilities shape the prompt’s tone, detail, and purpose.  </li>
+<li>
+<p><strong>Use Case</strong> – A real task or mission scenario where prompting improves speed, quality, or compliance.  </p>
+</li>
+<li>
+<p><strong>Leading Practice</strong> – A proven prompting technique that enables structured, secure, and reusable outputs.</p>
+</li>
+<li>
+<p><strong>Risk Mitigation</strong> – Guardrails to reduce hallucination, data leakage, noncompliance, or deviation from standards.</p>
+</li>
+</ul>
+<p>This structure moves prompting from ad hoc experimentation toward structured, repeatable design..</p>
+<h3 id="examples-at-a-glance">Examples "At-a-Glance"</h3>
+<p>This is a quick summary of the five role-based examples that will be detailed subsequently.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Role</strong></th>
+<th><strong>Use Case</strong></th>
+<th><strong>Key Emphasis Areas</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A - Capability Sponsor / Requirements Owner</td>
+<td>Drafting capability statements aligned with JP 3-0 and IL5 hosting constraints</td>
+<td>Doctrine, Goal Clarity, Compliance Language, Audience</td>
+</tr>
+<tr>
+<td>B - Developer</td>
+<td>IaC security review with Terraform</td>
+<td>Role, Task, Format, Compliance</td>
+</tr>
+<tr>
+<td>C - Security Analyst</td>
+<td>Log anomaly detection for IL5 environments</td>
+<td>Constraints, Format, Examples</td>
+</tr>
+<tr>
+<td>D - Project Manager</td>
+<td>Executive-ready AI-generated SITREP or progress update</td>
+<td>Audience, Goal, Output Control</td>
+</tr>
+<tr>
+<td>E - Operations Engineer</td>
+<td>Diagnosing runtime issues in containerized workloads</td>
+<td>Context, Role, Task, Structured Input/Output</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📌 Note: Each example will include all 7 prompt components of the prompt framework.  All components are not always necessary.  These are intended to provide holistic examples.</p>
+</blockquote>
+<h3 id="a-capability-sponsor-requirements-owner-sample-prompt">A. Capability Sponsor / Requirements Owner Sample Prompt</h3>
+<ul>
+<li><strong>Role</strong> – Capability Sponsor / Requirements Owner  </li>
+<li><strong>Use Case</strong> – Operational Capability Statement Generation – Drafting requirements aligned to doctrinal sources like JP 3-0, incorporating mission-specific constraints such as IL5 compliance  </li>
+<li><strong>Leading Practice</strong> – Use doctrinal vocabulary and outcome-focused tasking to frame capabilities in mission-aligned language  </li>
+<li><strong>Risk Mitigation</strong> – Ground outputs in authoritative sources to reduce doctrinal drift and clarify dependencies or environmental assumptions  </li>
+</ul>
+<h4 id="1-role-definition_1">1. Role Definition</h4>
+<pre>
+You are a capability sponsor responsible for articulating mission-aligned requirements and translating operational needs into formal capability statements. You are fluent in joint doctrine, including JP 3-0 and CJCSI 3170.01I, and understand the technical and hosting constraints of DoD IL5 cloud environments.
+</pre>
+
+<h4 id="2-define-the-goal_1">2. Define the Goal</h4>
+<pre>
+Draft a capability requirement aligned with joint operational doctrine that describes the mission objective and includes relevant constraints such as IL5 hosting. Incorporate considerations for availability, resilience, and integration with existing mission systems.
+</pre>
+
+<h4 id="3-specify-the-audience_1">3. Specify the Audience</h4>
+<pre>
+This requirement will be reviewed by both acquisition strategy leads and system architects responsible for downstream technical decomposition and risk evaluation.
+</pre>
+
+<h4 id="4-provide-context-and-input_1">4. Provide Context and Input</h4>
+<pre>
+The sponsoring command has identified a capability gap in rapid, theater-wide coordination of logistics assets across Joint and Coalition partners. The goal is to define a cloud-native decision support capability that operates in disconnected, intermittent, and limited (DIL) connectivity conditions and complies with IL5 hosting and data handling constraints.
+
+### INPUT ###
+[Insert operational context or mission scenario]
+### OUTPUT ###
+</pre>
+
+<h4 id="5-set-constraints-and-compliance">5. Set Constraints and Compliance</h4>
+<pre>
+- Reference only authoritative sources such as JP 3-0 and CJCSI 5123.01
+- Use plain language with embedded doctrinal terms where appropriate
+- Do not suggest acquisition solutions or specific vendors
+- Ensure compliance language aligns with DoD IL5 security requirements
+</pre>
+
+<h4 id="6-format-the-result_1">6. Format the Result</h4>
+<pre>
+Return the requirement as a structured narrative with:
+- Capability Title
+- Operational Need Statement
+- Capability Description
+- Mission Threads or Use Scenarios
+- Known Constraints and Assumptions
+</pre>
+
+<h4 id="7-reinforce-with-examples-and-delimiters">7. Reinforce with Examples and Delimiters</h4>
+<pre>
+### EXAMPLE OUTPUT ###
+**Capability Title:** Joint Logistics Situational Awareness (JLSA)  
+**Operational Need:** Enable synchronized, real-time tracking and planning of Joint logistics operations across domains in contested environments  
+**Capability Description:** A cloud-native platform that aggregates multi-domain logistics data and enables decision-makers to plan, reallocate, and prioritize sustainment under IL5 constraints  
+**Constraints:** Must operate in DIL environments, support IL5-compliant hosting, and integrate with GCCS-J and Global Combat Support System (GCSS) APIs
+</pre>
+<hr />
+<h3 id="b-developer-sample-prompt-infrastructure-as-code-security-review">B. Developer Sample Prompt: Infrastructure-as-Code Security Review</h3>
+<ul>
+<li><strong>Role</strong> – Developer  </li>
+<li><strong>Use Case</strong> – Code Security Review – Evaluating Terraform configuration for compliance with DoD cloud security standards  </li>
+<li><strong>Leading Practice</strong> – Multi-stage prompting with specific domain expertise  </li>
+<li><strong>Risk Mitigation</strong> – Prevent hallucination of security standards and ensure alignment with compliance requirements  </li>
+</ul>
+<h4 id="1-role-definition_2">1. Role Definition</h4>
+<pre>
+You are a senior DevSecOps engineer with expertise in NIST 800-53 controls, DoD STIGs, and cloud security best practices. Your primary responsibility is identifying security misconfigurations in infrastructure-as-code that could create compliance violations or operational vulnerabilities.
+</pre>
+
+<h4 id="2-define-the-goal_2">2. Define the Goal</h4>
+<pre>
+Analyze the provided Terraform configuration for security misconfigurations, policy violations, and STIG compliance issues. Identify specific violations and provide actionable remediation steps.
+</pre>
+
+<h4 id="3-specify-the-audience_2">3. Specify the Audience</h4>
+<pre>
+This analysis is intended for a development team with intermediate Terraform experience working on IL4/IL5 systems requiring FedRAMP compliance.
+</pre>
+
+<h4 id="4-provide-context-and-input_2">4. Provide Context and Input</h4>
+<pre>
+This Terraform configuration deploys a microservices architecture to AWS GovCloud for a mission-critical application processing CUI data. The environment must comply with NIST 800-53 moderate baseline and relevant DoD STIGs.
+
+### INPUT ###
+[Insert Terraform configuration file]
+### OUTPUT ###
+</pre>
+
+<h4 id="5-set-constraints-and-compliance_1">5. Set Constraints and Compliance</h4>
+<pre>
+- Reference only authoritative sources (NIST 800-53, DoD STIGs, FedRAMP baselines)
+- Do not suggest commercial tools without explicit approval
+- Limit response to 500 words
+- Use DoD-approved terminology for security controls
+- Flag any findings that could impact Authority to Operate (ATO)
+</pre>
+
+<h4 id="6-format-the-result_2">6. Format the Result</h4>
+<pre>
+Return results as a structured markdown report with:
+- Executive summary of critical findings
+- Detailed findings table with STIG/NIST control references
+- Remediation code snippets
+- Risk severity ratings (Critical/High/Medium/Low)
+</pre>
+
+<h4 id="7-reinforce-with-examples-and-delimiters_1">7. Reinforce with Examples and Delimiters</h4>
+<pre>
+### FINDING EXAMPLE ###
+**Control:** NIST 800-53 SC-7 (Boundary Protection)  
+**Issue:** Security group allows unrestricted inbound access (0.0.0.0/0) on port 22  
+**Risk:** Critical  
+**Remediation:** Restrict SSH access to specific IP ranges or VPN endpoints
+</pre>
+<hr />
+<h3 id="c-security-analyst-sample-prompt-stigfisma-compliance-checklist-generation">C. Security Analyst Sample Prompt: STIG/FISMA Compliance Checklist Generation</h3>
+<ul>
+<li><strong>Role</strong> – Security Analyst</li>
+<li><strong>Use Case</strong> – STIG/FISMA Checklist Generation for ATO Support</li>
+<li><strong>Leading Practice</strong> – Use structured prompts to generate repeatable, auditable checklists based on authoritative controls</li>
+<li><strong>Risk Mitigation</strong> – Reduce hallucination by anchoring to approved STIG families and DoD guidance; limit output scope and enforce checklist formats</li>
+</ul>
+<h4 id="1-role-definition_3">1. Role Definition</h4>
+<pre>
+You are a cybersecurity analyst supporting DoD system ATO preparation. You specialize in interpreting STIG guidance, FISMA requirements, and DISA controls to assess compliance posture and generate audit-ready artifacts.
+</pre>
+
+<h4 id="2-define-the-goal_3">2. Define the Goal</h4>
+<pre>
+Generate a detailed compliance checklist based on the latest DISA STIGs for a RHEL 8 server, aligned with FISMA moderate controls. Identify unmet requirements and include mitigation notes for open items.
+</pre>
+
+<h4 id="3-specify-the-audience_3">3. Specify the Audience</h4>
+<pre>
+This output is intended for an ISSO preparing documentation for an RMF package and presenting findings to the security controls assessor (SCA).
+</pre>
+
+<h4 id="4-provide-context-and-input_3">4. Provide Context and Input</h4>
+<pre>
+The system is hosted in an IL5 cloud environment and supports processing of CUI data. The checklist must reflect Red Hat Enterprise Linux 8 STIG v3r2 requirements.
+
+### INPUT ###
+[Insert scanned configuration or assessment output]
+### OUTPUT ###
+</pre>
+
+<h4 id="5-set-constraints-and-compliance_2">5. Set Constraints and Compliance</h4>
+<pre>
+- Reference only official DISA STIG guidance (https://public.cyber.mil/stigs/)
+- Do not suggest unapproved tools or remediation outside the DISA ecosystem
+- Output should use checklist format with Control ID, Description, Status, and Comments
+- Limit total length to 1,000 words
+</pre>
+
+<h4 id="6-format-the-result_3">6. Format the Result</h4>
+<pre>
+Return results as a markdown-formatted checklist including:
+- STIG ID (e.g., RHEL-08-010010)
+- Control description
+- Compliance status (Compliant, Not Compliant, Not Applicable)
+- Comments and mitigation strategy (if not compliant)
+</pre>
+
+<h4 id="7-reinforce-with-examples-and-delimiters_2">7. Reinforce with Examples and Delimiters</h4>
+<pre>
+### CHECKLIST ENTRY EXAMPLE ###
+**STIG ID:** RHEL-08-010010  
+**Description:** The operating system must enable FIPS mode.  
+**Status:** Not Compliant  
+**Comments:** System FIPS mode is disabled. Remediation scheduled in Q3 maintenance window.
+</pre>
+<hr />
+<h3 id="d-program-manager-sample-prompt-cmmc-status-report-generation">D. Program Manager Sample Prompt: CMMC Status Report Generation</h3>
+<ul>
+<li><strong>Role</strong> – Program Manager</li>
+<li><strong>Use Case</strong> – Compliance Reporting – Drafting weekly updates on CMMC progress and blocker resolutions</li>
+<li><strong>Leading Practice</strong> – Time-box prompts and define desired output formats (bullet summary, table, narrative)</li>
+<li><strong>Risk Mitigation</strong> – Reduce verbosity, hallucinated milestones, or misrepresented compliance posture through scoped, auditable responses</li>
+</ul>
+<h4 id="1-role-definition_4">1. Role Definition</h4>
+<pre>
+You are a Program Manager responsible for overseeing technical delivery, risk management, and compliance reporting across multiple workstreams in a DoD Agile acquisition program. You are familiar with CMMC Level 2 requirements, RMF workflows, and stakeholder communications for IL5 systems.
+</pre>
+
+<h4 id="2-define-the-goal_4">2. Define the Goal</h4>
+<pre>
+Generate a weekly status update highlighting progress toward CMMC Level 2 compliance, including resolved blockers, active risks, and any new artifacts generated this sprint. Summarize this in a format suitable for executive review.
+</pre>
+
+<h4 id="3-specify-the-audience_4">3. Specify the Audience</h4>
+<pre>
+This output is intended for senior leadership (GS-15/SES) overseeing cybersecurity compliance, as well as contracting officers and government leads tracking milestone alignment and authorization readiness.
+</pre>
+
+<h4 id="4-provide-context-and-input_4">4. Provide Context and Input</h4>
+<pre>
+The system is undergoing phased CMMC readiness and has completed 6 of 17 domains. Recent sprint activities included control implementation reviews, POA&M updates, and team onboarding to a new security automation platform.
+
+### INPUT ###
+[List of sprint accomplishments, unresolved risks, and artifacts generated]
+### OUTPUT ###
+</pre>
+
+<h4 id="5-set-constraints-and-compliance_3">5. Set Constraints and Compliance</h4>
+<pre>
+- Limit the output to 400 words
+- Organize information by domain (Access Control, Configuration Management, etc.)
+- Avoid speculative claims or unstated assumptions about control maturity
+- Use CMMC-defined terminology and reference relevant control identifiers
+- Include only verified artifacts or actions completed during the reporting period
+</pre>
+
+<h4 id="6-format-the-result_4">6. Format the Result</h4>
+<pre>
+Return results as an executive summary containing:
+- Overall compliance status (numeric and narrative)
+- Sectioned highlights by CMMC domain
+- Tabular risk summary (risk, impact, mitigation status)
+- Bullet list of artifacts submitted this week
+</pre>
+
+<h4 id="7-reinforce-with-examples-and-delimiters_3">7. Reinforce with Examples and Delimiters</h4>
+<pre>
+### CMMC WEEKLY STATUS EXAMPLE ###
+**Compliance Summary:**  
+- Completed: 6 of 17 domains  
+- In Progress: 4 domains  
+- Risks: 2 open, 1 mitigated
+
+**Access Control:**  
+- Completed AC.1.001 and AC.1.002  
+- Risk: Delayed MFA integration for contractor systems  
+- Artifact: Access Policy v1.3 (uploaded to eMASS)
+
+**Risk Summary Table:**  
+| Risk ID | Domain | Description                        | Impact | Mitigation Status |
+|---------|--------|------------------------------------|--------|-------------------|
+| R-019   | AC     | MFA delay on external systems      | High   | In Progress       |
+| R-020   | CM     | Incomplete change tracking policy  | Medium | Mitigated         |
+</pre>
+
+<hr />
+<h3 id="e-operations-engineer-sample-prompt-diagnosing-runtime-issues-in-containerized-workloads">E. Operations Engineer Sample Prompt: Diagnosing Runtime Issues in Containerized Workloads</h3>
+<ul>
+<li><strong>Role</strong> – Operations Engineer</li>
+<li><strong>Use Case</strong> – Diagnosing runtime issues in containerized workloads across IL environments</li>
+<li><strong>Leading Practice</strong> – Use role-defined context with structured logs and environment metadata to focus diagnostic reasoning</li>
+<li><strong>Risk Mitigation</strong> – Limit scope to in-scope logs, constrain external references, and enforce consistent output structure to avoid drift or unsupported assumptions</li>
+</ul>
+<h4 id="1-role-definition_5">1. Role Definition</h4>
+<pre>
+You are a site reliability engineer supporting containerized workloads running in IL5 Kubernetes clusters. Your primary responsibility is diagnosing service disruptions, latency spikes, and resource contention across application pods.
+</pre>
+
+<h4 id="2-define-the-goal_5">2. Define the Goal</h4>
+<pre>
+Analyze runtime logs and environment metadata to identify root cause of service degradation impacting container startup and response times. Recommend next troubleshooting steps and possible mitigation actions.
+</pre>
+
+<h4 id="3-specify-the-audience_5">3. Specify the Audience</h4>
+<pre>
+This output is intended for a cross-functional incident response team including developers, operations engineers, and security monitors during post-incident review.
+</pre>
+
+<h4 id="4-provide-context-and-input_5">4. Provide Context and Input</h4>
+<pre>
+The environment includes a Kubernetes cluster hosted in AWS GovCloud with IL5 controls enabled. The affected service is a mission-support API used during operational readiness assessments.
+
+### INPUT ###
+- Container logs (last 5 minutes)
+- Pod metadata (CPU/mem limits, restart count)
+- Deployment YAML
+- Service mesh (Envoy) metrics
+
+### OUTPUT ###
+</pre>
+
+<h4 id="5-set-constraints-and-compliance_4">5. Set Constraints and Compliance</h4>
+<pre>
+- Do not reference commercial SaaS observability tools unless pre-cleared
+- Limit response to 750 words
+- Flag any issues that might trigger a continuity of operations (COOP) response
+- Provide plain language summary for non-engineers
+</pre>
+
+<h4 id="6-format-the-result_5">6. Format the Result</h4>
+<pre>
+Return a structured report including:
+- Root cause hypothesis
+- Timeline of relevant log events
+- System components impacted
+- Suggested next steps (e.g., isolate pod, restart container, modify autoscaler thresholds)
+</pre>
+
+<h4 id="7-reinforce-with-examples-and-delimiters_4">7. Reinforce with Examples and Delimiters</h4>
+<pre>
+### DIAGNOSTIC SUMMARY ###
+**Root Cause:** Resource limits exceeded due to unthrottled initialization routines  
+**Log Evidence:** Init container terminated with OOMKill at 10:42:17 UTC  
+**Impacted Components:** api-service pod (namespace: ops-readiness)  
+**Recommended Action:** Adjust memory limits, instrument retry backoff for init tasks
+</pre>
+
+<hr />
+<h2 id="vii-practices-tools-patterns-and-resources">VII. Practices, Tools, Patterns, and Resources</h2>
+<h3 id="prompt-review-and-reuse">Prompt Review and Reuse</h3>
+<p>Prompts are not disposable. They should be versioned, shared, and curated over time to improve effectiveness and reduce redundant experimentation.</p>
+<p>Consider using tools like:</p>
+<ul>
+<li><strong>LangSmith</strong> or <strong>PromptLayer</strong> for prompt observability and versioning</li>
+<li><strong>Git repositories</strong> to track prompt evolution</li>
+<li><strong>Prompt libraries</strong> for team-wide reuse and learning</li>
+</ul>
+<h3 id="measuring-prompt-engineering-effectiveness">Measuring Prompt Engineering Effectiveness</h3>
+<p>Effective prompt engineering should be measurable and continuously improved. Track these key indicators to validate your team's prompt engineering effectiveness:</p>
+<h4 id="prompt-quality-metrics"><strong>Prompt Quality Metrics</strong></h4>
+<ul>
+<li><strong>Prompt clarity score</strong>: How often prompts require clarification or additional context from users</li>
+<li><strong>Instruction completeness</strong>: Percentage of prompts that include all 7 framework components (role, goal, audience, context, constraints, format, examples)</li>
+<li><strong>Prompt reusability rate</strong>: How often prompts can be adapted across similar use cases without major revision</li>
+<li><strong>Component effectiveness</strong>: Which prompt elements (role definition, constraints, examples) most improve output quality</li>
+</ul>
+<h4 id="prompt-iteration-metrics"><strong>Prompt Iteration Metrics</strong></h4>
+<ul>
+<li><strong>Revision cycles per prompt</strong>: Average number of refinements needed before a prompt produces consistent, quality outputs</li>
+<li><strong>First-attempt success rate</strong>: Percentage of new prompts that produce usable output on initial deployment</li>
+<li><strong>Prompt refinement velocity</strong>: Time from initial prompt draft to production-ready version</li>
+<li><strong>Template adoption rate</strong>: How quickly teams adopt and customize proven prompt patterns</li>
+</ul>
+<h4 id="prompt-governance-metrics"><strong>Prompt Governance Metrics</strong></h4>
+<ul>
+<li><strong>Security compliance rate</strong>: Percentage of prompts that follow DoD security guidelines (no CUI, proper constraints, approved platforms)</li>
+<li><strong>Version control adoption</strong>: How consistently teams version and document prompt changes</li>
+<li><strong>Anti-pattern detection</strong>: Frequency of prompts exhibiting known anti-patterns (vague roles, missing constraints, etc.)</li>
+<li><strong>Prompt review coverage</strong>: Percentage of prompts that undergo peer review before production use</li>
+</ul>
+<h4 id="prompt-library-maturity"><strong>Prompt Library Maturity</strong></h4>
+<ul>
+<li><strong>Cross-team reuse</strong>: How often prompts developed by one team are successfully adopted by others</li>
+<li><strong>Pattern standardization</strong>: Consistency in applying the 7-component framework across different roles and use cases</li>
+<li><strong>Knowledge capture</strong>: How effectively prompts codify domain expertise for reuse</li>
+<li><strong>Template coverage</strong>: Percentage of common SDLC tasks with standardized, tested prompt templates</li>
+</ul>
+<h4 id="implementation-guidance"><strong>Implementation Guidance</strong></h4>
+<ul>
+<li>
+<p><strong>Start Simple</strong>: Begin by tracking prompt revision cycles and reuse rates before expanding to comprehensive measurement.</p>
+</li>
+<li>
+<p><strong>Baseline Establishment</strong>: Document current prompting practices (if any) and time spent on prompt creation vs. refinement.</p>
+</li>
+<li>
+<p><strong>Regular Review</strong>: Conduct monthly prompt retrospectives focusing on which patterns work best for different roles and use cases.</p>
+</li>
+<li>
+<p><strong>Version Control Integration</strong>: Track prompt evolution alongside code changes to understand what prompt modifications correlate with better outcomes.</p>
+</li>
+</ul>
+<!--  > 📊 **For detailed measurement frameworks, prompt testing strategies, and advanced prompt analytics, see**: [Measuring AI Effectiveness in Software Development](ai-metrics-measurement.md) -->
+
+<h2 id="viii-resources-and-references">VIII. Resources and References</h2>
+<p>The following resources offer practical and evolving guidance for writing effective AI prompts. While tailored for different use cases, many principles (e.g., specificity, context-setting, declarative language) are applicable across DoD environments.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Source</strong></th>
+<th><strong>Guide Title</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microsoft</td>
+<td><a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-copilot/">Prompt engineering 101</a></td>
+<td>Practical patterns, risk considerations, and use case structure for GitHub Copilot</td>
+</tr>
+<tr>
+<td>Google DeepMind</td>
+<td><a href="https://cloud.google.com/discover/what-is-prompt-engineering">What is Prompt Engineering? (Google Cloud)</a></td>
+<td>Emphasizes examples, constraints, and prompt testing in code generation</td>
+</tr>
+<tr>
+<td>LangChain / LangSmith</td>
+<td><a href="https://docs.smith.langchain.com/prompt_engineering/quickstarts/quickstart_ui">Prompt Engineering Quick Start (LangSmith UI)</a></td>
+<td>Versioning, testing, and observability in structured pipelines</td>
+</tr>
+<tr>
+<td>AcqBot (GovPrompt)</td>
+<td><a href="https://acqbot.com/blog/prompt-engineering-crash-course-for-government">Prompt Engineering Crash Course for Government</a></td>
+<td>Role-based prompt walkthroughs tailored to government use cases; emphasizes structure and risk mitigation</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td><a href="https://docs.anthropic.com/en/resources/prompt-library/library">Anthropic Prompt Library</a></td>
+<td>Library of categorized prompts for Claude models with secure design examples</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><a href="https://platform.openai.com/docs/examples">OpenAI Prompt Examples</a></td>
+<td>Code-focused examples showing real-world prompting for common use cases</td>
+</tr>
+<tr>
+<td>West Point</td>
+<td><a href="https://library.westpoint.edu/GenAI/prompting">GenAI Prompting Library</a></td>
+<td>Educational resource with prompt structure examples aligned to military education</td>
+</tr>
+</tbody>
+</table>
+<p>These guides reinforce that prompting is not just an art.  It's an engineering discipline, especially in regulated or mission-critical environments.</p>
+<hr />
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:2">
+<p>IBM, “Prompt Engineering Techniques,” <em>IBM Think Blog</em>. [Online]. Available: <a href="https://www.ibm.com/think/topics/prompt-engineering-techniques">https://www.ibm.com/think/topics/prompt-engineering-techniques</a>. [Accessed: 15-Jun-2025].&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1">
+<p>IBM, “The Prompt Engineering Guide,” <em>IBM Think Blog</em>. [Online]. Available: <a href="https://www.ibm.com/think/topics/prompt-engineering-guide">https://www.ibm.com/think/topics/prompt-engineering-guide</a>. [Accessed: 20-Jun-2025].&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
