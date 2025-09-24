@@ -8,8 +8,8 @@ theme:
   custom_dir: docs/overrides/
   font:
     text: Source Sans Pro
-  logo: images/Seal-DoDCIO-Fulcrum_large.png
-  favicon: images/Seal-DoDCIO-Fulcrum_small.png 
+  logo: images/DOW_CIO_Seal.png
+  favicon: images/DOW_CIO_Seal.png
   include_homepage_in_sidebar: False
   palette:
     scheme: default  # Options: default (light) or slate (dark mode)
