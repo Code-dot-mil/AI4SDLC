@@ -34,16 +34,16 @@ nav:
     - Prompt Engineering: plays/prompt-engineering.md
     - AI-Autonomy Continuum: plays/ai-autonomy_continuum_play.md
   - Patterns:
-      - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
+    - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Practices:
-     #- Governance: plays/governance-play.md
-      - Emerging Practices: plays/emerging-practices.md
+    #- Governance: plays/governance-play.md
+    - Emerging Practices: plays/emerging-practices.md
   - Tools & Templates:
     - Play Template: resources/template.md
     - Architectural Decision Records: resources/ArchitecturalDecisionRecord.md
     - AI Autonomy Implementation Guide: plays/ai-autonomy-implementation-guide.md    
   - Reference:
-     - Glossary: glossary.md
+    - Glossary: glossary.md
 
 extra_css:
   - stylesheets/wordwrap.css
