@@ -5,8 +5,7 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  custom_dir: docs/overrides/
-  
+  custom_dir: docs/overrides/ 
   font:
     text: Source Sans Pro
   logo: images/DOW_CIO_Seal.png
