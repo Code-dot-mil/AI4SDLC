@@ -4,11 +4,79 @@ on:
   push:
     branches:
       - main
-      - '**'   
-jobs:
-  build:
-    runs-on: ubuntu-latest
+      - "*"
 
+  pull_request:
+    types: [opened, ready_for_review, synchronize]
+
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
+jobs:
+  auto_assign:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::677043464939:role/GitHubAction-AssumeRoleWithAction
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: STS GetCallerIdentity
+        run: aws sts get-caller-identity
+
+      - name: Print repo structure
+        run: |
+          pwd
+          ls -al
+          ls -al .github || echo ".github directory does not exist"
+          cat .github/auto_assign.yml || echo "No .github/auto_assign.yml found"
+
+      - name: Print working directory and files
+        run: |
+          pwd
+          ls -al .github
+          cat .github/auto_assign.yml || echo "No auto_assign.yml found"
+
+      - name: Assign assignee via GitHub API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -X POST \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github+json" \
+          https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/assignees \
+          -d "{\"assignees\":[\"${{ github.actor }}\"]}"
+
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          COMMENT="Preview your changes at: http://${{ secrets.S3_BUCKET_NAME }}/mergeRequest/${PR_NUMBER}/index.html"
+          curl -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -d "{\"body\": \"$COMMENT\"}" \
+            https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments
+
+      - name: Assign team reviewer via GitHub API
+        env:
+          ORG_PAT: ${{ secrets.ORG_PAT }}
+        run: |
+          curl -X POST \
+            -H "Authorization: token $ORG_PAT" \
+            -H "Accept: application/vnd.github+json" \
+            -H "Content-Type: application/json" \
+            -d '{"team_reviewers":["ai4sdlc-reviewers"]}' \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/requested_reviewers
+
+  convert_md_to_html:
+    runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/main'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -18,19 +86,96 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Install MkDocs and dependencies
         run: |
           pip install mkdocs mkdocs-material
 
-      - name: Build MkDocs site
-        run: mkdocs build
+      - name: Build project with MkDocs
+        run: |
+          echo "Building your project..."
+          mkdocs build
+          echo "pwd in build project with MkDocs"
+          pwd
 
-      - name: Add .nojekyll
-        run: touch site/.nojekyll   
+      - name: Debug MkDocs Build Output
+        run: |
+          echo "Contents of site directory:"
+          ls -l site
 
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Save artifacts
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          name: site
+          path: site
+
+  deploy_to_test:
+    needs: convert_md_to_html
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.ref != 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::677043464939:role/GitHubAction-AssumeRoleWithAction
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to Test Environment
+        env:
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "pr_number while deploying =$PR_NUMBER"
+          pwd
+          aws s3 ls
+          aws s3 sync site/ s3://$S3_BUCKET_NAME/test
+          aws s3 sync site/ s3://$S3_BUCKET_NAME/mergeRequest/$PR_NUMBER
+
+  deploy_to_production:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::677043464939:role/GitHubAction-AssumeRoleWithAction
+          role-session-name: GitHub_to_AWS_via_FederatedOIDC
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Get PR number from GitHub API
+        id: pr
+        run: |
+          echo "Before pr_number=$PR_NUMBER"
+          PR_API_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls"
+          PR_NUMBER=$(curl -s -H "Accept: application/vnd.github.groot-preview+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            $PR_API_URL | jq '.[0].number')
+          echo "after pr_number=$PR_NUMBER"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to Production Environment
+        env:
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "inside pr_number=$PR_NUMBER"
+          echo "Before pr_number=$PR_NUMBER"
+          PR_API_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls"
+          PR_NUMBER=$(curl -s -H "Accept: application/vnd.github.groot-preview+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            $PR_API_URL | jq '.[0].number')
+          echo "after pr_number=$PR_NUMBER"
+          aws s3 sync s3://$S3_BUCKET_NAME/mergeRequest/$PR_NUMBER s3://$S3_BUCKET_NAME/production/
+          echo "deploy complete to production !!!"
+          aws s3 rm s3://$S3_BUCKET_NAME/mergeRequest/$PR_NUMBER --recursive
+          echo "PR folder deleted successfully !!!"
