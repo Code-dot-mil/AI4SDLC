@@ -29,22 +29,6 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: STS GetCallerIdentity
-        run: aws sts get-caller-identity
-
-      - name: Print repo structure
-        run: |
-          pwd
-          ls -al
-          ls -al .github || echo ".github directory does not exist"
-          cat .github/auto_assign.yml || echo "No .github/auto_assign.yml found"
-
-      - name: Print working directory and files
-        run: |
-          pwd
-          ls -al .github
-          cat .github/auto_assign.yml || echo "No auto_assign.yml found"
-
       - name: Assign assignee via GitHub API
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -97,11 +81,6 @@ jobs:
           echo "pwd in build project with MkDocs"
           pwd
 
-      - name: Debug MkDocs Build Output
-        run: |
-          echo "Contents of site directory:"
-          ls -l site
-
       - name: Save artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -134,9 +113,7 @@ jobs:
           S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
-          echo "pr_number while deploying =$PR_NUMBER"
-          pwd
-          aws s3 ls
+          echo "deploying to test and mergeRequest buckets for pr_number =$PR_NUMBER"
           aws s3 sync site/ s3://$S3_BUCKET_NAME/test
           aws s3 sync site/ s3://$S3_BUCKET_NAME/mergeRequest/$PR_NUMBER
 
@@ -154,12 +131,10 @@ jobs:
       - name: Get PR number from GitHub API
         id: pr
         run: |
-          echo "Before pr_number=$PR_NUMBER"
           PR_API_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls"
           PR_NUMBER=$(curl -s -H "Accept: application/vnd.github.groot-preview+json" \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
             $PR_API_URL | jq '.[0].number')
-          echo "after pr_number=$PR_NUMBER"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -168,14 +143,13 @@ jobs:
           S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "inside pr_number=$PR_NUMBER"
-          echo "Before pr_number=$PR_NUMBER"
           PR_API_URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls"
           PR_NUMBER=$(curl -s -H "Accept: application/vnd.github.groot-preview+json" \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
             $PR_API_URL | jq '.[0].number')
-          echo "after pr_number=$PR_NUMBER"
+          echo "deploying to production !!!"  
           aws s3 sync s3://$S3_BUCKET_NAME/mergeRequest/$PR_NUMBER s3://$S3_BUCKET_NAME/production/
           echo "deploy complete to production !!!"
+          echo "Deleting PR folder !!!"
           aws s3 rm s3://$S3_BUCKET_NAME/mergeRequest/$PR_NUMBER --recursive
           echo "PR folder deleted successfully !!!"
