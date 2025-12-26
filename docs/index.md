@@ -1,25 +1,25 @@
-# **Welcome to the United States Department of Defense's #AI4SDLC Site**
+# **Welcome to the United States Department of War's #AI4SDLC Site**
 
-## **The Future of Software Development in the DoD Starts Here**
+## **The Future of Software Development in the DoW Starts Here**
 
-Artificial Intelligence (AI) is reshaping how software is designed, built, tested, and deployed. In the DoD, where security, compliance, and mission impact are paramount, AI must be **harnessed responsibly, strategically, and effectively.**
+Artificial Intelligence (AI) is reshaping how software is designed, built, tested, and deployed. In the DoW, where security, compliance, and mission impact are paramount, AI must be **harnessed responsibly, strategically, and effectively.**
 
-\#AI4SDLC is your **playbook for integrating AI into the Software Development Lifecycle (SDLC)**—providing clear, actionable guidance tailored to **DoD software value streams.** Whether you’re a **developer, security engineer, acquisition professional, or program manager**, this is where you’ll find the insights and strategies to make AI work **for** mission success.  
+\#AI4SDLC is your **playbook for integrating AI into the Software Development Lifecycle (SDLC)**—providing clear, actionable guidance tailored to **DoW software value streams.** Whether you’re a **developer, security engineer, acquisition professional, or program manager**, this is where you’ll find the insights and strategies to make AI work **for** mission success.  
 
-Our goal is to provide **practical guidance** while also linking to **relevant and helpful content from across the DoD and industry**, helping teams can access the latest policies, frameworks, and best practices.  
+Our goal is to provide **practical guidance** while also linking to **relevant and helpful content from across the DoW and industry**, helping teams can access the latest policies, frameworks, and best practices.  
 
 ![Core Loop Diagram](images/01_CORE_LOOP_4x.png)
 ----
 
 ##  **\#AI4SDLC?**
-AI is already transforming software engineering, but the **DoD can’t afford to adopt AI blindly.** To be effective, AI integration must align with:
+AI is already transforming software engineering, but the **DoW can’t afford to adopt AI blindly.** To be effective, AI integration must align with:
 
-- **Mission Readiness** – AI must enhance, not disrupt, DoD software pipelines.  
-- **Security & Compliance** – AI tools must meet strict **DoD security standards** and Zero Trust principles.  
+- **Mission Readiness** – AI must enhance, not disrupt, DoW software pipelines.  
+- **Security & Compliance** – AI tools must meet strict **DoW security standards** and Zero Trust principles.  
 - **Human-AI Teaming** – AI should augment and empower **software teams, not replace them.**  
-- **Operational Resilience** – AI models must be **governable, explainable, and adaptable** to DoD requirements.  
+- **Operational Resilience** – AI models must be **governable, explainable, and adaptable** to DoW requirements.  
 
- **That’s where #AI4SDLC comes in.** We deliver **practical, tested plays** to guide AI adoption at every stage of the SDLC. What's more important is that we are collaborating with programs across the DoD making sure our hands on guidance aligns with their on-the-ground experiences.
+ **That’s where #AI4SDLC comes in.** We deliver **practical, tested plays** to guide AI adoption at every stage of the SDLC. What's more important is that we are collaborating with programs across the DoW making sure our hands on guidance aligns with their on-the-ground experiences.
 
 ----
 
@@ -58,7 +58,7 @@ When thoughtfully integrated, GenAI supports:
 Each **Play** in #AI4SDLC provides structured, no-nonsense guidance on adopting AI in secure, scalable, and mission-driven ways. Our plays cover:
 
 - **Hosting AI** – Should you run AI **on-prem, in the cloud, or hybrid?** We break it down.  
-- **AI for Development** – AI copilots, IDE plugins, and agentic workflows—**what works for DoD teams?**  
+- **AI for Development** – AI copilots, IDE plugins, and agentic workflows—**what works for DoW teams?**  
 - **Security & Trust** – How to **govern AI tools, mitigate risk, and enforce compliance** without slowing innovation.  
 - **AI for DevSecOps** – Automating testing, security, and compliance while maintaining **human oversight**.  
 - **Operational Impact** – AI isn’t just a tool—it’s part of **your mission execution strategy.**
@@ -117,12 +117,12 @@ As teams integrate GenAI into their workflows, they aren't just choosing tools�
 ----
 
 ## **Who Should Use This Playbook?**
-This isn’t just for software developers. If you’re part of **any software value stream** in the DoD, AI is already impacting your world.
+This isn’t just for software developers. If you’re part of **any software value stream** in the DoW, AI is already impacting your world.
 
 - **Developers & Engineers** – AI-powered tools to accelerate coding & debugging.  
 - **Security & Compliance Teams** – AI governance & risk mitigation strategies.  
-- **Program & Acquisition Managers** – Links to Guidance on AI adoption and procurement within DoD policies.  
-- **AI Researchers & Policy Leaders** – Insights into AI’s evolving role in DoD software.  
+- **Program & Acquisition Managers** – Links to Guidance on AI adoption and procurement within DoW policies.  
+- **AI Researchers & Policy Leaders** – Insights into AI’s evolving role in DoW software.  
 
 
 **If AI touches your software mission, #AI4SDLC is for you.**
@@ -131,12 +131,12 @@ This isn’t just for software developers. If you’re part of **any software va
 
 ## **Get Started with #AI4SDLC**
 
-1. **Explore Plays** – Browse AI guidance tailored for DoD SDLC.  
-2. **New to AI in DoD? Start Here** – Foundational insights to build your knowledge.  
-3. **Latest AI Trends** – Emerging AI use cases shaping DoD software development.  
+1. **Explore Plays** – Browse AI guidance tailored for DoW SDLC.  
+2. **New to AI in DoW? Start Here** – Foundational insights to build your knowledge.  
+3. **Latest AI Trends** – Emerging AI use cases shaping DoW software development.  
 
 
-**AI is not the future. It’s now.** Equip yourself with the right strategies to make it work for DoD missions.
+**AI is not the future. It’s now.** Equip yourself with the right strategies to make it work for DoW missions.
 
 **Mission-driven. Security-first. AI-powered.** Welcome to #AI4SDLC.
 
