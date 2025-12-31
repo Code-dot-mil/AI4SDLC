@@ -1,16 +1,18 @@
 ---
 # automatic badge generation
-lifecycle: rc
-last_updated: "2025-05-10"
+lifecycle: beta
+last_updated: "2025-12-31"
 ---
 # Architectural Decision Record (ADR)
 
-**Title**: AI Model Hosting and Usage Decision  
-**ADR ID**: ADR-00X  
-**Status**: Proposed / Approved / Superseded  
-**Date**: [YYYY-MM-DD]  
-**Author(s)**: [Name(s), Org, Contact Info]  
-**Reviewer(s)**: [Architecture board, cyber lead, PM, etc.]
+| Field | Value |
+|-------|-------|
+| **Title** | _GAI Tool/Model Integration Decision_ |
+| **ADR ID** | ADR-### |
+| **Status** | Proposed / Approved / Superseded |
+| **Date** | YYYY-MM-DD |
+| **Author(s)** | Name(s), Org, Contact Info |
+| **Reviewer(s)** | Architecture board, cyber lead, PM, etc. |
 
 ----
 
@@ -36,9 +38,9 @@ We have selected the following model hosting and usage pattern:
   - ☐ Self-Hosted / Open Source (e.g., LLaMA 2, Mistral)
   - ☐ Hybrid / RAG with Controlled External Model Access
 
-- **Model(s) Chosen**:  
-- **Access Method**: (e.g., API call, RAG via broker, IDE plugin)  
-- **Environment of Use**: (e.g., Platform One, air-gapped enclave, GovCloud pipeline)  
+- **Model(s) Chosen**: _Specify model name(s) and version(s)_
+- **Access Method**: (e.g., API call, RAG via broker, IDE plugin)
+- **Environment of Use**: (e.g., Platform One, air-gapped enclave, GovCloud pipeline)
 
 ----
 
@@ -48,15 +50,15 @@ Provide justification for the selected model and hosting choice:
 
 | Factor | Consideration | Notes |
 |--------|---------------|-------|
-| **Mission Risk & Classification** | |  
-| **Required Trust Level** | |  
-| **Pipeline Integration Capability** | |  
-| **Model Transparency / Versioning Needs** | |  
-| **Sustainment Capacity** | |  
-| **Vendor Compliance (FedRAMP, IL4/5)** | |  
-| **Security & Privacy Constraints** | |  
-| **Performance Requirements** | |  
-| **Prompt / Output Governance Maturity** | |  
+| **Mission Risk & Classification** | | _(add justification here)_ |
+| **Required Trust Level** | | |
+| **Pipeline Integration Capability** | | |
+| **Model Transparency / Versioning Needs** | | |
+| **Sustainment Capacity** | | |
+| **Vendor Compliance (FedRAMP, IL4/5)** | | |
+| **Security & Privacy Constraints** | | |
+| **Performance Requirements** | | |
+| **Prompt / Output Governance Maturity** | | |  
 
 ----
 
@@ -86,8 +88,9 @@ Describe potential consequences or tradeoffs of this decision:
 
 ## **6. Related Records or References**
 
-- [Link to system architecture doc]  
-- [Trust calibration checklist or framework alignment]  
-- [Supply Chain Risk Management record]  
-- [DoD AI Strategy / AI RMF mapping]  
+- [Link to system architecture documentation]
+- [Trust calibration checklist or framework alignment]
+- [Supply Chain Risk Management record]
+- [DoD AI Strategy / AI RMF mapping]
 - [Testing and evaluation results, if any]
+- [Related ADRs or dependency documentation]
