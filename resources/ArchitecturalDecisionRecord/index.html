@@ -583,6 +583,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../plays/testing-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GAI-Augmented Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../plays/prompt-engineering/" class="md-nav__link">
         
   
@@ -1262,19 +1290,19 @@
   
     
     <!-- Generate the appropriate badge based on lifecycle stage -->
-    <div class="lifecycle-badge rc" 
+    <div class="lifecycle-badge beta" 
          role="img" 
-         aria-label="Rc stage - Final validation">
+         aria-label="Beta stage - Core guidance available">
       
       <!-- Shape indicator -->
       <span class="shape"></span>
       
       <!-- Stage name (uppercase) -->
-      <span>RC</span>
+      <span>BETA</span>
       
       <!-- Optional timestamp -->
       
-        <span class="lifecycle-timestamp">Updated: 2025-05-10</span>
+        <span class="lifecycle-timestamp">Updated: 2025-12-31</span>
       
     </div>
   
@@ -1289,12 +1317,40 @@
 
 
 <h1 id="architectural-decision-record-adr">Architectural Decision Record (ADR)</h1>
-<p><strong>Title</strong>: AI Model Hosting and Usage Decision<br />
-<strong>ADR ID</strong>: ADR-00X<br />
-<strong>Status</strong>: Proposed / Approved / Superseded<br />
-<strong>Date</strong>: [YYYY-MM-DD]<br />
-<strong>Author(s)</strong>: [Name(s), Org, Contact Info]<br />
-<strong>Reviewer(s)</strong>: [Architecture board, cyber lead, PM, etc.]</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td><em>GAI Tool/Model Integration Decision</em></td>
+</tr>
+<tr>
+<td><strong>ADR ID</strong></td>
+<td>ADR-###</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>Proposed / Approved / Superseded</td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>YYYY-MM-DD</td>
+</tr>
+<tr>
+<td><strong>Author(s)</strong></td>
+<td>Name(s), Org, Contact Info</td>
+</tr>
+<tr>
+<td><strong>Reviewer(s)</strong></td>
+<td>Architecture board, cyber lead, PM, etc.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="1-context"><strong>1. Context</strong></h2>
 <p>Briefly describe the context in which the AI model will be used:</p>
@@ -1317,10 +1373,10 @@
 <p>☐ Hybrid / RAG with Controlled External Model Access</p>
 </li>
 <li>
-<p><strong>Model(s) Chosen</strong>:  </p>
+<p><strong>Model(s) Chosen</strong>: <em>Specify model name(s) and version(s)</em></p>
 </li>
-<li><strong>Access Method</strong>: (e.g., API call, RAG via broker, IDE plugin)  </li>
-<li><strong>Environment of Use</strong>: (e.g., Platform One, air-gapped enclave, GovCloud pipeline)  </li>
+<li><strong>Access Method</strong>: (e.g., API call, RAG via broker, IDE plugin)</li>
+<li><strong>Environment of Use</strong>: (e.g., Platform One, air-gapped enclave, GovCloud pipeline)</li>
 </ul>
 <hr />
 <h2 id="3-rationale"><strong>3. Rationale</strong></h2>
@@ -1337,7 +1393,7 @@
 <tr>
 <td><strong>Mission Risk &amp; Classification</strong></td>
 <td></td>
-<td></td>
+<td><em>(add justification here)</em></td>
 </tr>
 <tr>
 <td><strong>Required Trust Level</strong></td>
@@ -1404,11 +1460,12 @@
 <hr />
 <h2 id="6-related-records-or-references"><strong>6. Related Records or References</strong></h2>
 <ul>
-<li>[Link to system architecture doc]  </li>
-<li>[Trust calibration checklist or framework alignment]  </li>
-<li>[Supply Chain Risk Management record]  </li>
-<li>[DoD AI Strategy / AI RMF mapping]  </li>
+<li>[Link to system architecture documentation]</li>
+<li>[Trust calibration checklist or framework alignment]</li>
+<li>[Supply Chain Risk Management record]</li>
+<li>[DoD AI Strategy / AI RMF mapping]</li>
 <li>[Testing and evaluation results, if any]</li>
+<li>[Related ADRs or dependency documentation]</li>
 </ul>
 
 
