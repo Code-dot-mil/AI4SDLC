@@ -29,6 +29,7 @@ nav:
     - Guidance Lifecycle: lifecycle.md
   - Plays:
     - Toolchain Fundamentals: plays/fundamentals-play.md
+    - Requirements Engineering: plays/requirements_engineering_play.md
     - Code Generation & Completion: plays/code-gen-play.md
     - GAI-Augmented Testing: plays/testing-play.md
     - Prompt Engineering: plays/prompt-engineering.md
