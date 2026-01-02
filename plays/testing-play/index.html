@@ -560,6 +560,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../requirements_engineering_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../code-gen-play/" class="md-nav__link">
         
   
@@ -2744,7 +2772,7 @@
 <hr />
 <h2 id="executive-summary-the-play-in-brief">Executive Summary (The Play in Brief)</h2>
 <p>Generative AI (GenAI) is redefining how software teams plan, design, and execute tests across the software development lifecycle (SDLC).  When used correctly, it amplifies coverage, speeds triage, and improves confidence in system behavior. When applied recklessly, it introduces new risks such as hallucinated assertions, loss of traceability, and decision fatigue.</p>
-<p>This play defines <strong>trusted, auditable practices</strong> for applying GenAI within Department of War (DoW) and other high-assurance software environments. It builds on the <a href="../fundamentals-play/"><em>Fundamentals</em></a> and <a href="requirements_engineering_play.md"><em>Requirements Engineering</em></a> plays, emphasizing <strong>secure augmentation</strong>, <strong>traceability</strong>, and <strong>evidence-as-code</strong>.  The outcome is not automation for its own sake.  The outcome is improved quality and <strong>continuous assurance</strong> that aligns testing rigor with mission criticality.</p>
+<p>This play defines <strong>trusted, auditable practices</strong> for applying GenAI within Department of War (DoW) and other high-assurance software environments. It builds on the <a href="../fundamentals-play/"><em>Fundamentals</em></a> and <a href="../requirements_engineering_play/"><em>Requirements Engineering</em></a> plays, emphasizing <strong>secure augmentation</strong>, <strong>traceability</strong>, and <strong>evidence-as-code</strong>.  The outcome is not automation for its own sake.  The outcome is improved quality and <strong>continuous assurance</strong> that aligns testing rigor with mission criticality.</p>
 <p>📌 <strong>Key takeaway:</strong> Let the <em>requirements drive the tests</em>, not the source code.  Maintain human-in-the-loop validation to preserve trust, compliance, and mission assurance.</p>
 <p>As described in the <a href="../fundamentals-play/">Fundamentals Play</a>, software health depends on continuous evidence of reliability, security, and resilience. AI-augmented testing improves these indicators and provides measurable input for AI software engineering evaluation criteria (AI-SWEC) based assessments. Early implementations within DoD—including the US Air Force's NIPRGPT system and GAO's pilot chatbot—demonstrate<sup id="fnref:Wong24"><a class="footnote-ref" href="#fn:Wong24">1</a></sup> that when applied with appropriate security controls and human oversight, GenAI-augmented testing can improve test accuracy by up to 57%, increase code coverage by 12%, and enhance bug detection by 24% compared to manual approaches.<sup id="fnref:Yu24"><a class="footnote-ref" href="#fn:Yu24">2</a></sup> These improvements directly address the persistent challenge that inadequate test coverage contributes to 29% of project failures, with 50-70% of defects remaining undetected until production in traditionally-tested systems.<sup id="fnref:BS2024"><a class="footnote-ref" href="#fn:BS2024">3</a></sup></p>
 <!--
@@ -2798,7 +2826,7 @@ TODO (Exec Summary):
 <p>Before introducing GenAI-augmented testing, teams should demonstrate basic SDLC maturity:</p>
 <ul>
 <li>[ ] <strong>Automated CI/CD pipeline</strong> with reproducible builds and signed artifacts.</li>
-<li>[ ] <strong>Requirements traceability</strong> from user stories through validation (see <a href="requirements_engineering_play.md"><em>Requirements Engineering Play</em></a> ).</li>
+<li>[ ] <strong>Requirements traceability</strong> from user stories through validation (see <a href="../requirements_engineering_play/"><em>Requirements Engineering Play</em></a> ).</li>
 <li>[ ] <strong>Secure environment</strong> (IL-aligned enclave or approved on-prem capability).</li>
 <li>[ ] <strong>Synthetic or anonymized data</strong> ready for test data generation.</li>
 <li>[ ] <strong>Prompt and evidence governance</strong>: prompts and outputs logged for traceability (see <a href="../prompt-engineering/"><em>Prompt Engineering Play</em></a>).</li>
@@ -2818,7 +2846,7 @@ TODO (Exec Summary):
 <tbody>
 <tr>
 <td><strong>Requirements-Driven Testing</strong></td>
-<td>Tests must originate from requirements, not code. Prompts reference requirement artifacts to avoid bias. Requirements take precedence during evaluation. See the <a href="requirements_engineering_play.md">Requirements Engineering Play</a></td>
+<td>Tests must originate from requirements, not code. Prompts reference requirement artifacts to avoid bias. Requirements take precedence during evaluation. See the <a href="../requirements_engineering_play/">Requirements Engineering Play</a></td>
 </tr>
 <tr>
 <td><strong>Data Exposure</strong></td>
@@ -3410,7 +3438,7 @@ TODO (Implementation Guidance):
 <tr>
 <td>Hallucinated Assertions</td>
 <td>Require human approval and tie every test to a requirement ID</td>
-<td><a href="requirements_engineering_play.md">Requirements Engineering</a></td>
+<td><a href="../requirements_engineering_play/">Requirements Engineering</a></td>
 </tr>
 <tr>
 <td>Prompt Drift</td>
@@ -3466,7 +3494,7 @@ TODO (Implementation Guidance):
 <h4 id="related-ai4sdlc-plays">Related AI4SDLC Plays</h4>
 <ul>
 <li><a href="../fundamentals-play/">Fundamentals for Building an AI-Augmented Toolchain</a></li>
-<li><a href="requirements_engineering_play.md">Requirements Engineering</a></li>
+<li><a href="../requirements_engineering_play/">Requirements Engineering</a></li>
 <li><a href="../prompt-engineering/">Prompt Engineering</a></li>
 <li><a href="../code-gen-play/">Leading Practices for Code Completion and Generation</a></li>
 <li><a href="../ai-autonomy_continuum_play/">Navigating the AI Autonomy Continuum</a></li>
