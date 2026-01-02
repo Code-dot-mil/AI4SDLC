@@ -1,8 +1,8 @@
-----
+---
 # automatic badge generation
 lifecycle: beta
 last_updated: "2025-12-31"
-----
+---
 
 # Play: AI-Augmented Requirements Engineering
 
