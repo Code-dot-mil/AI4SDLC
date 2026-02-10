@@ -1,0 +1,2234 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/DOW_CIO_Seal.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Play: AI-Assisted Documentation Across the SDLC - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#play-ai-assisted-documentation-across-the-sdlc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Play: AI-Assisted Documentation Across the SDLC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../fundamentals-play/" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../emerging-practices/" class="md-tabs__link">
+          
+  
+  
+  Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/template/" class="md-tabs__link">
+          
+  
+  
+  Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidance Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plays
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plays
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolchain Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements_engineering_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-gen-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Generation & Completion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GAI-Augmented Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy_continuum_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Autonomy Continuum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Patterns
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human-Machine Interaction Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emerging-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emerging Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools & Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools & Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Play Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectural Decision Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy-implementation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Autonomy Implementation Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#right-sizing-documentation-through-intelligent-augmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Right-sizing documentation through intelligent augmentation"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary-the-play-in-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary (The Play in Brief)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Why This Play Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-prerequisites-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Prerequisites and Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-guiding-principles-or-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Guiding Principles (or Guardrails)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-ai-augmentation-spectrum-for-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The AI Augmentation Spectrum for Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. The AI Augmentation Spectrum for Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-genai-augmentation-ai-assists-humans-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 GenAI Augmentation: AI Assists, Humans Own
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-genai-generation-ai-creates-humans-refine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 GenAI Generation: AI Creates, Humans Refine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-genai-completion-ai-handles-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 GenAI Completion: AI Handles End-to-End
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-future-direction-documentation-in-agentic-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Future Direction: Documentation in Agentic Orchestration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-documentation-across-devsecops-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Documentation Across DevSecOps Phases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Documentation Across DevSecOps Phases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-plan-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Plan Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-develop-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Develop Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-build-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Build Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-test-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Test Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-release-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Release Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#66-deliver-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Deliver Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#67-deploy-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 Deploy Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#68-operate-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8 Operate Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#69-monitor-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9 Monitor Phase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-decision-framework-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Decision Framework and Trade-offs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Decision Framework and Trade-offs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-selecting-the-right-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Selecting the Right Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-artifact-specific-guidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Artifact-Specific Guidance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-implementation-guidance-how-to-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Implementation Guidance (How to Start)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Implementation Guidance (How to Start)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-pilot-with-low-risk-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: Pilot with Low-Risk Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-expand-to-genai-generation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: Expand to GenAI Generation Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-scale-to-genai-augmentation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Scale to GenAI Augmentation Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-continuous-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Continuous Improvement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#templates-and-starter-kits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates and Starter Kits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-key-considerations-risks-metrics-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Key Considerations (Risks, Metrics, Pitfalls)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Key Considerations (Risks, Metrics, Pitfalls)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-companion-plays-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Companion Plays and References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge beta" 
+         role="img" 
+         aria-label="Beta stage - Core guidance available">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>BETA</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2026-02-09</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="play-ai-assisted-documentation-across-the-sdlc"><strong>Play: AI-Assisted Documentation Across the SDLC</strong></h1>
+<h3 id="right-sizing-documentation-through-intelligent-augmentation"><em>"Right-sizing documentation through intelligent augmentation"</em></h3>
+<blockquote>
+<p>"Documentation is architecture made visible. AI helps us capture it without the traditional burden." — AI4SDLC Working Group</p>
+</blockquote>
+<hr />
+<h2 id="executive-summary-the-play-in-brief"><strong>Executive Summary (The Play in Brief)</strong></h2>
+<p>Organizations across the Department of War face a persistent tension in software documentation. Legacy approaches like the Department of Defense Architecture Framework (DoDAF) created comprehensive documentation requirements that often resulted in bloated, difficult-to-maintain artifacts disconnected from actual development.<sup id="fnref:DTIC14"><a class="footnote-ref" href="#fn:DTIC14">1</a></sup> The DoW CIO has acknowledged this challenge, formally recognizing the "document-centric limitations of DoDAF" and initiating a transition toward computable, data-driven architecture models.<sup id="fnref:DOWCIO26"><a class="footnote-ref" href="#fn:DOWCIO26">2</a></sup> Teams responded by minimizing documentation efforts, prioritizing velocity over knowledge capture. This created a false choice: either drown in documentation overhead or operate without critical architectural and operational knowledge.</p>
+<p>AI-assisted documentation generation and maintenance offers a path forward: creating the right documentation at the right time without the traditional resource burden. Rather than forcing teams to choose between velocity and knowledge capture, AI can help generate, synchronize, and maintain documentation artifacts that support both greenfield innovation and brownfield modernization—without the DoDAF overhead.</p>
+<p>This play provides comprehensive guidance on applying AI to documentation creation throughout the software development lifecycle, addressing both net new (greenfield) and modernization (brownfield) efforts. It maps documentation needs across all nine DevSecOps phases and establishes clear patterns for AI augmentation, generation, and completion workflows.</p>
+<p>📌 <strong>Key takeaway:</strong> Right-size documentation to capture architectural intent and operational knowledge. AI removes the resource excuse—the question is no longer <em>whether</em> to document, but <em>how well</em>.</p>
+<hr />
+<h2 id="1-why-this-play-matters"><strong>1. Why This Play Matters</strong></h2>
+<p>Documentation debt undermines mission readiness.<sup id="fnref:Gartner24"><a class="footnote-ref" href="#fn:Gartner24">3</a></sup> Greenfield projects frequently inherit uncertainty about documentation requirements—teams either replicate heavy documentation practices from legacy systems, creating unnecessary overhead that slows delivery, or adopt minimal documentation approaches that leave future maintainers without foundational understanding.<sup id="fnref:GAO23"><a class="footnote-ref" href="#fn:GAO23">4</a></sup></p>
+<p>Brownfield efforts face an additional burden: modernizing systems while simultaneously recovering lost institutional knowledge about legacy architecture, design decisions, and operational constraints.</p>
+<p>The risks compound in both contexts. Under-documented greenfield systems become tomorrow's legacy nightmares, with architectural decisions lost to personnel turnover.<sup id="fnref:CIO22"><a class="footnote-ref" href="#fn:CIO22">5</a></sup><sup id="fnref:Mass23"><a class="footnote-ref" href="#fn:Mass23">6</a></sup> Under-documented modernization efforts perpetuate the same knowledge gaps that made the legacy system difficult to maintain in the first place.</p>
+<p>Over-documented approaches consume resources without proportional value, delaying delivery and creating maintenance burdens that rival the code itself.</p>
+<p>This play addresses the documentation challenge through AI augmentation, helping teams capture essential knowledge without traditional resource constraints. It provides clear guidance on what to document, when to document it, and how AI's role ranges from assistance to generation across different artifact types and lifecycle phases. By right-sizing documentation through intelligent augmentation, teams can maintain architectural knowledge, support IT modernization, and enable effective knowledge transfer—all while sustaining delivery velocity. </p>
+<p>Well-maintained documentation also provides the evidence trail required for ATO and continuous authorization<sup id="fnref:NIST37"><a class="footnote-ref" href="#fn:NIST37">7</a></sup>. AI helps teams produce that evidence as a byproduct of development, not as a separate compliance exercise.<sup id="fnref:ATARC25"><a class="footnote-ref" href="#fn:ATARC25">9</a></sup> NIST SP 800-53A establishes documentation as essential evidence for security control assessment, requiring artifacts that demonstrate control implementation and effectiveness.<sup id="fnref:NIST53A"><a class="footnote-ref" href="#fn:NIST53A">8</a></sup> Research on software maintainability identifies documentation as a key determinant of long-term system health, with comprehensive technical documentation enabling future maintenance and preserving understanding of design decisions.<sup id="fnref:Borg24"><a class="footnote-ref" href="#fn:Borg24">10</a></sup> Across all these dimensions, documentation directly supports software health by preserving the architectural knowledge, operational context, and security posture that reliable, resilient systems depend on.</p>
+<hr />
+<h2 id="2-purpose-and-scope"><strong>2. Purpose and Scope</strong></h2>
+<p>This play defines how to leverage AI for documentation creation and maintenance across all nine DevSecOps lifecycle phases: plan, develop, build, test, release, deliver, deploy, operate, and monitor. It addresses documentation needs for both greenfield (net new capabilities) and brownfield (modernization and legacy system transformation) contexts. The AI capabilities referenced throughout this play are primarily generative (large language models for drafting, summarizing, and structuring content), though some analytical capabilities (consistency checking, gap identification, traceability validation) also apply.</p>
+<p><strong>In Scope:</strong></p>
+<ul>
+<li>Documentation artifacts required across the DevSecOps lifecycle</li>
+<li>AI augmentation patterns for different documentation types</li>
+<li>Greenfield and brownfield documentation differentiation</li>
+<li>Integration with DoD software factory practices</li>
+<li>Right-sizing guidance to avoid DoDAF-style overhead</li>
+<li>Cross-references to related AI4SDLC plays</li>
+</ul>
+<p><strong>Out of Scope:</strong></p>
+<ul>
+<li>Detailed AI tool selection or vendor recommendations</li>
+<li>Specific human-machine interaction patterns (see companion play)</li>
+<li>Comprehensive requirements engineering guidance (see Requirements play)</li>
+<li>Detailed testing documentation (see Testing play)</li>
+<li>Policy or governance frameworks (covered in other DoD guidance)</li>
+</ul>
+<p><strong>Target Audience:</strong></p>
+<ul>
+<li>Software engineering teams in DoD software factories</li>
+<li>Technical leads and architects supporting greenfield or modernization efforts</li>
+<li>Program managers balancing documentation requirements with delivery velocity</li>
+<li>DevSecOps practitioners working across the software lifecycle</li>
+</ul>
+<hr />
+<h2 id="3-prerequisites-and-readiness"><strong>3. Prerequisites and Readiness</strong></h2>
+<p>Before applying AI-assisted documentation patterns, teams should establish foundational capabilities:</p>
+<ul>
+<li>[ ] <strong>DevSecOps Environment</strong>: CI/CD pipeline with artifact repositories and version control</li>
+<li>[ ] <strong>Data Classification</strong>: Clear understanding of information impact levels and data handling requirements</li>
+<li>[ ] <strong>Template Library</strong>: Documented templates for key artifact types (Capability Needs Statements, Architecture Decision Records, API specs, operational runbooks)</li>
+<li>[ ] <strong>Source of Truth</strong>: Defined authoritative sources for architecture, requirements, and operational state</li>
+<li>[ ] <strong>Human Validation Workflow</strong>: Established review processes for AI-generated content</li>
+<li>[ ] <strong>Tool Access</strong>: Approved AI capabilities available within the development environment or accessible via secure interfaces</li>
+<li>[ ] <strong>Skills Foundation</strong>: Team familiarity with prompt engineering and AI interaction patterns (reference Human-Machine Interaction play)</li>
+</ul>
+<p>For brownfield modernization efforts, additional readiness includes:</p>
+<ul>
+<li>[ ] <strong>Legacy System Documentation</strong>: Existing documentation cataloged and accessible</li>
+<li>[ ] <strong>Knowledge Capture</strong>: Subject matter experts identified and available for consultation</li>
+<li>[ ] <strong>Migration Strategy</strong>: High-level modernization approach documented</li>
+</ul>
+<hr />
+<h2 id="4-guiding-principles-or-guardrails"><strong>4. Guiding Principles (or Guardrails)</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Principle / Risk Area</strong></th>
+<th><strong>Expected Practice</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Protection</strong></td>
+<td>Never expose classified, CUI, or PII data to unapproved AI systems. Use synthetic data or sanitized examples for documentation generation.</td>
+</tr>
+<tr>
+<td><strong>Human Oversight</strong></td>
+<td>All AI-generated documentation requires human review and approval before publication.<sup id="fnref:PMC24"><a class="footnote-ref" href="#fn:PMC24">11</a></sup> Technical accuracy and security implications must be validated.</td>
+</tr>
+<tr>
+<td><strong>Source of Truth</strong></td>
+<td>Documentation must trace to authoritative sources (code, architecture models, operational data). AI assists capture—it doesn't create truth.</td>
+</tr>
+<tr>
+<td><strong>Right-Sizing</strong></td>
+<td>Document what provides value for future maintainers and mission continuity. Avoid both DoDAF-style overhead and documentation debt.</td>
+</tr>
+<tr>
+<td><strong>Lifecycle Alignment</strong></td>
+<td>Documentation follows DevSecOps phases. Each phase produces specific artifacts relevant to that stage of development and operations.</td>
+</tr>
+<tr>
+<td><strong>Modernization Support</strong></td>
+<td>For brownfield efforts, documentation must bridge legacy understanding to modernized systems while capturing institutional knowledge.</td>
+</tr>
+<tr>
+<td><strong>Traceability</strong></td>
+<td>Maintain clear lineage from requirements through implementation to operational artifacts. Documentation supports mission assurance.</td>
+</tr>
+<tr>
+<td><strong>Continuous Update</strong></td>
+<td>Documentation is a living artifact. AI helps maintain currency as systems evolve rather than creating point-in-time snapshots.</td>
+</tr>
+<tr>
+<td><strong>Tool Accreditation</strong></td>
+<td>Verify AI tools used for documentation generation are approved for the appropriate DoD network and impact level. Document tool provenance.</td>
+</tr>
+<tr>
+<td><strong>Sustainment &amp; Knowledge Continuity</strong></td>
+<td>Documentation should enable future teams to sustain systems even when original contributors transition. Capture "why" not just "what."</td>
+</tr>
+<tr>
+<td><strong>Docs-as-Code</strong></td>
+<td>Store documentation in version control alongside source code.<sup id="fnref:WTD"><a class="footnote-ref" href="#fn:WTD">12</a></sup> Use merge requests for review, CI/CD pipelines for validation, and structured formats (Markdown, YAML) that enable AI-assisted generation and automated quality checks.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-the-ai-augmentation-spectrum-for-documentation"><strong>5. The AI Augmentation Spectrum for Documentation</strong></h2>
+<p>AI's role in documentation creation exists on a spectrum from GenAI Augmentation to GenAI Completion. Understanding this spectrum helps teams select appropriate patterns for different artifact types and contexts.</p>
+<h3 id="51-genai-augmentation-ai-assists-humans-own">5.1 GenAI Augmentation: AI Assists, Humans Own</h3>
+<p><strong>When to Use</strong>: Complex documentation requiring significant domain expertise, architectural judgment, or security considerations.</p>
+<p><strong>AI's Role</strong>: </p>
+<ul>
+<li>Suggests structure and sections based on templates</li>
+<li>Provides initial content drafts that humans heavily revise</li>
+<li>Identifies missing sections or incomplete coverage</li>
+<li>Helps maintain consistency across related documents</li>
+</ul>
+<p><strong>Human's Role</strong>:</p>
+<ul>
+<li>Owns the architectural decisions and technical accuracy</li>
+<li>Validates security and compliance implications</li>
+<li>Provides domain expertise and context</li>
+<li>Makes final editorial decisions</li>
+</ul>
+<p><strong>Examples</strong>: ADRs, Capability Needs Statements, security accreditation documents, migration strategies</p>
+<p><strong>Integration Pattern</strong>: Conversational workflows where teams collaborate with AI through iterative refinement, using templates as anchors.</p>
+<h3 id="52-genai-generation-ai-creates-humans-refine">5.2 GenAI Generation: AI Creates, Humans Refine</h3>
+<p><strong>When to Use</strong>: Structured documentation with clear inputs where AI can generate substantial content that requires validation but minimal rework.</p>
+<p><strong>AI's Role</strong>:</p>
+<ul>
+<li>Generates complete draft documents from code, configurations, or structured data</li>
+<li>Maintains formatting and template compliance</li>
+<li>Ensures consistency with organizational standards</li>
+<li>Updates documentation when source artifacts change</li>
+</ul>
+<p><strong>Human's Role</strong>:</p>
+<ul>
+<li>Reviews generated content for accuracy and completeness</li>
+<li>Adds context or nuance AI cannot infer</li>
+<li>Validates technical correctness</li>
+<li>Approves for publication</li>
+</ul>
+<p><strong>Examples</strong>: API documentation from code, release notes from commit history, configuration documentation from infrastructure-as-code, deployment guides from runbooks</p>
+<p><strong>Integration Pattern</strong>: Template-driven workflows with code repository access, where AI generates drafts that humans validate and approve.</p>
+<h3 id="53-genai-completion-ai-handles-end-to-end">5.3 GenAI Completion: AI Handles End-to-End</h3>
+<p><strong>When to Use</strong>: Highly structured, repetitive documentation where inputs are well-defined and outputs follow clear patterns.</p>
+<p><strong>AI's Role</strong>:</p>
+<ul>
+<li>Fully generates documentation from authoritative sources</li>
+<li>Maintains synchronization with source artifacts</li>
+<li>Handles formatting, versioning, and publication</li>
+<li>Alerts humans to significant changes requiring attention</li>
+</ul>
+<p><strong>Human's Role</strong>:</p>
+<ul>
+<li>Establishes the template and automation rules</li>
+<li>Spot-checks output for correctness</li>
+<li>Reviews exceptions flagged by AI</li>
+<li>Maintains the documentation generation pipeline</li>
+</ul>
+<p><strong>Examples</strong>: Software Bill of Materials (SBOMs), build configurations, container specifications, monitoring dashboards, test coverage reports</p>
+<p><strong>Integration Pattern</strong>: Fully automated pipelines that generate documentation as part of CI/CD workflows, with human oversight via exception handling.</p>
+<h3 id="54-future-direction-documentation-in-agentic-orchestration">5.4 Future Direction: Documentation in Agentic Orchestration</h3>
+<p>This play focuses on AI assistance for creating documentation. A companion play (forthcoming) will address how <strong>documentation integrates with AI orchestration systems</strong>—where docs become machine-readable artifacts that flow through multi-agent workflows, trigger coordinated updates, and maintain traceability automatically.</p>
+<p>This extends into <strong>Pattern 3 (Orchestrated Systems)</strong> and <strong>Pattern 4 (Adaptive Ecosystems)</strong> of the <a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a>, where documentation shifts from static outputs to dynamic inputs consumed by orchestrated agents across the toolchain. Key concepts include:</p>
+<ul>
+<li><strong>Documentation as observable infrastructure</strong>: Version-controlled, automatically deployed, continuously validated</li>
+<li><strong>Event-driven updates</strong>: Development events trigger coordinated documentation changes across git, issue trackers, and wikis</li>
+<li><strong>Workflow specifications</strong>: Formal trigger-action-artifact patterns that encode documentation requirements</li>
+<li><strong>Adaptive automation</strong>: Systems learn from approval patterns to auto-execute low-risk updates while flagging high-risk changes</li>
+</ul>
+<p>Teams should select orchestration capabilities based on workflow requirements and risk tolerance—consistent with the pattern-based approach of the AI Autonomy Continuum.</p>
+<hr />
+<h2 id="6-documentation-across-devsecops-phases"><strong>6. Documentation Across DevSecOps Phases</strong></h2>
+<p>This section provides phase-by-phase guidance on essential documentation artifacts, differentiating greenfield and brownfield needs. Each phase links to detailed subsection guidance for implementation.</p>
+<h3 id="61-plan-phase">6.1 Plan Phase</h3>
+<p><strong>Core Artifacts:</strong></p>
+<ul>
+<li>Capability Needs Statement (CNS)</li>
+<li>User Agreement</li>
+<li>Acquisition Strategy</li>
+<li>Test Strategy</li>
+<li>Cost and Schedule Narrative</li>
+</ul>
+<p><strong>Additional for Brownfield:</strong></p>
+<ul>
+<li>Migration Strategy</li>
+<li>Legacy Interface Documentation</li>
+</ul>
+<p><strong>AI Application</strong>: Primarily GenAI Augmentation pattern. AI helps structure documents and suggest content, but humans drive strategic and mission-level decisions.</p>
+<p><a href="../documentation-types/plan-phase-documentation/">See detailed subsection: Plan Phase Documentation →</a></p>
+<h3 id="62-develop-phase">6.2 Develop Phase</h3>
+<p><strong>Core Artifacts:</strong>
+- Architecture Decision Records (ADRs)
+- API Specifications
+- Design and Coding Standards (leveraging DoD baselines)
+- Design Rationale Documentation</p>
+<p><strong>Additional for Brownfield:</strong></p>
+<ul>
+<li>Reverse-Engineered Legacy Architecture</li>
+<li>Integration Point Documentation</li>
+</ul>
+<p><strong>AI Application</strong>: Mix of GenAI Augmentation and GenAI Generation. AI can generate API docs and standard templates while humans focus on architectural decisions and rationale.</p>
+<p><a href="../documentation-types/develop-phase-documentation/">See detailed subsection: Develop Phase Documentation →</a></p>
+<h3 id="63-build-phase">6.3 Build Phase</h3>
+<p><strong>Core Artifacts:</strong></p>
+<ul>
+<li>Build Configurations</li>
+<li>Container Specifications</li>
+<li>Software Bill of Materials (SBOM)</li>
+</ul>
+<p><strong>Additional for Brownfield:</strong></p>
+<ul>
+<li>Legacy Build Process Documentation</li>
+<li>Compatibility Constraints</li>
+</ul>
+<p><strong>AI Application</strong>: Primarily GenAI Generation and GenAI Completion patterns. AI excels at creating SBOMs and build documentation from code and configuration artifacts.</p>
+<p><a href="../documentation-types/build-phase-documentation/">See detailed subsection: Build Phase Documentation →</a></p>
+<h3 id="64-test-phase">6.4 Test Phase</h3>
+<p><strong>Core Artifacts:</strong>
+- Test Plans
+- Test Coverage Reports
+- Security Test Results
+- Performance Baselines</p>
+<p><strong>Additional for Brownfield:</strong></p>
+<ul>
+<li>Legacy Test Coverage Gap Analysis</li>
+<li>Validation Against Original Requirements</li>
+</ul>
+<p><strong>AI Application</strong>: GenAI Generation pattern with human validation. AI generates test documentation from test code and execution results.</p>
+<p><strong>Note</strong>: This phase cross-references the comprehensive <a href="../testing-play/">AI4SDLC Testing Play</a> for detailed guidance on test documentation and AI-assisted testing patterns.</p>
+<p><a href="../documentation-types/test-phase-documentation/">See detailed subsection: Test Phase Documentation →</a></p>
+<h3 id="65-release-phase">6.5 Release Phase</h3>
+<p><strong>Core Artifacts:</strong>
+- Release Notes
+- Version Management Documentation
+- Deployment Readiness Checklists
+- Security Certification Records</p>
+<p><strong>Additional for Brownfield:</strong>
+- Migration Validation Documentation
+- Legacy System Decommissioning Plans</p>
+<p><strong>AI Application</strong>: GenAI Generation pattern. AI synthesizes release notes from commits, issues, and pull requests, with human review for accuracy and messaging.</p>
+<p><a href="../documentation-types/release-phase-documentation/">See detailed subsection: Release Phase Documentation →</a></p>
+<h3 id="66-deliver-phase">6.6 Deliver Phase</h3>
+<p><strong>Core Artifacts:</strong></p>
+<ul>
+<li>Deployment Procedures</li>
+<li>Environment Configurations</li>
+<li>Infrastructure-as-Code Documentation</li>
+<li>Rollback and Recovery Procedures</li>
+<li>Deployment Verification Logs</li>
+</ul>
+<p><strong>Additional for Brownfield:</strong></p>
+<ul>
+<li>Cutover Strategies</li>
+<li>Parallel Run Procedures</li>
+<li>Validation Against Existing Operational Systems</li>
+</ul>
+<p><strong>AI Application</strong>: GenAI Generation and GenAI Completion patterns from infrastructure code and deployment automation. Deterministic outputs from structured IaC inputs trend toward Completion; deployment strategies requiring contextual judgment use Generation. Humans validate deployment strategies and rollback procedures.</p>
+<p><a href="../documentation-types/deliver-phase-documentation/">See detailed subsection: Deliver Phase Documentation →</a></p>
+<h3 id="67-deploy-phase">6.7 Deploy Phase</h3>
+<p><strong>Core Artifacts:</strong>
+- Operational Runbooks
+- Incident Response Procedures
+- Configuration Management Records
+- Monitoring Dashboards
+- End User Documentation and Guidance</p>
+<p><strong>Additional for Brownfield:</strong>
+- User Transition Guides (Legacy to Modern)
+- System Cutover Procedures</p>
+<p><strong>AI Application</strong>: Mix of GenAI Generation (runbooks from operations code) and GenAI Augmentation (user documentation requiring human tone and pedagogy).</p>
+<p><a href="../documentation-types/deploy-phase-documentation/">See detailed subsection: Deploy Phase Documentation →</a></p>
+<h3 id="68-operate-phase">6.8 Operate Phase</h3>
+<p><strong>Core Artifacts:</strong>
+- Operational Procedures
+- Scaling Policies
+- Backup and Recovery Strategies
+- Change Logs
+- Performance Baselines</p>
+<p><strong>Additional for Brownfield:</strong>
+- Transition Validation
+- Legacy System Retirement Planning</p>
+<p><strong>AI Application</strong>: GenAI Generation and GenAI Completion patterns for operational procedures from infrastructure code and operational scripts. Scaling policies and backup schedules derived directly from configurations trend toward Completion; procedures requiring operational judgment use Generation. Humans validate operational strategies.</p>
+<p><a href="../documentation-types/operate-phase-documentation/">See detailed subsection: Operate Phase Documentation →</a></p>
+<h3 id="69-monitor-phase">6.9 Monitor Phase</h3>
+<p><strong>Core Artifacts:</strong>
+- Monitoring Dashboards and Alerts
+- Performance Metrics
+- Security Event Logs
+- Continuous Compliance Tracking
+- Capacity Planning Documentation</p>
+<p><strong>Additional for Brownfield:</strong>
+- Legacy vs. Modern Performance Comparison
+- Retirement Validation</p>
+<p><strong>AI Application</strong>: GenAI Completion pattern. AI generates monitoring documentation and dashboards from observability platforms with minimal human intervention.</p>
+<p><a href="../documentation-types/monitor-phase-documentation/">See detailed subsection: Monitor Phase Documentation →</a></p>
+<hr />
+<h2 id="7-decision-framework-and-trade-offs"><strong>7. Decision Framework and Trade-offs</strong></h2>
+<p>Selecting the appropriate GenAI pattern depends on artifact complexity, required domain expertise, and risk tolerance.</p>
+<h3 id="71-selecting-the-right-pattern">7.1 Selecting the Right Pattern</h3>
+<p>When encountering a new artifact type, use these criteria to determine which GenAI pattern applies:</p>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Augmentation</th>
+<th>Generation</th>
+<th>Completion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Human judgment required</strong></td>
+<td>High — strategic decisions, nuanced trade-offs</td>
+<td>Medium — technical accuracy, tone</td>
+<td>Low — formatting, structure</td>
+</tr>
+<tr>
+<td><strong>Domain expertise needed</strong></td>
+<td>Mission/strategic context</td>
+<td>Technical domain knowledge</td>
+<td>Minimal — rules-based</td>
+</tr>
+<tr>
+<td><strong>Primary input source</strong></td>
+<td>Conversations, meetings, expert knowledge</td>
+<td>Structured data (code, commits, configs)</td>
+<td>Existing artifacts, schemas</td>
+</tr>
+<tr>
+<td><strong>Output characteristics</strong></td>
+<td>Each document unique, context-dependent</td>
+<td>Follows templates, predictable structure</td>
+<td>Deterministic, reproducible</td>
+</tr>
+<tr>
+<td><strong>Validation approach</strong></td>
+<td>Senior/domain expert review</td>
+<td>Technical review, spot-checks</td>
+<td>Automated checks, exception handling</td>
+</tr>
+<tr>
+<td><strong>Failure mode</strong></td>
+<td>Missing strategic nuance</td>
+<td>Technical inaccuracies</td>
+<td>Tool/pipeline failures</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision logic</strong>:</p>
+<ol>
+<li><strong>Can the artifact be fully derived from existing structured data?</strong> → Completion</li>
+<li><strong>Does the artifact follow a predictable template with technical content?</strong> → Generation</li>
+<li><strong>Does the artifact require strategic judgment or synthesizing unstructured input?</strong> → Augmentation</li>
+</ol>
+<h3 id="72-artifact-specific-guidance">7.2 Artifact-Specific Guidance</h3>
+<p>The following table provides pattern recommendations for common documentation artifacts:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Artifact Type</strong></th>
+<th><strong>GenAI Pattern</strong></th>
+<th><strong>Benefit</strong></th>
+<th><strong>Risk</strong></th>
+<th><strong>Mitigation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CNS, Acquisition Strategy</td>
+<td>GenAI Augmentation</td>
+<td>Structure and consistency</td>
+<td>Loss of strategic nuance</td>
+<td>Senior leader review required</td>
+</tr>
+<tr>
+<td>Architecture Decision Records</td>
+<td>GenAI Augmentation</td>
+<td>Document decisions with consistent structure</td>
+<td>Missing context or alternatives</td>
+<td>Architect validation mandatory</td>
+</tr>
+<tr>
+<td>API Documentation</td>
+<td>GenAI Generation</td>
+<td>Always current with code</td>
+<td>May miss usage patterns</td>
+<td>Include examples from actual usage</td>
+</tr>
+<tr>
+<td>SBOM, Build Configs</td>
+<td>GenAI Completion</td>
+<td>Automated and comprehensive</td>
+<td>Tool dependency risk</td>
+<td>Validate against security scanning tools</td>
+</tr>
+<tr>
+<td>Release Notes</td>
+<td>GenAI Generation</td>
+<td>Comprehensive change tracking</td>
+<td>May lack user-friendly messaging</td>
+<td>Product owner reviews for clarity</td>
+</tr>
+<tr>
+<td>User Documentation</td>
+<td>GenAI Augmentation</td>
+<td>Consistent structure and tone</td>
+<td>May not match user mental models</td>
+<td>User testing and feedback loops</td>
+</tr>
+<tr>
+<td>Monitoring Dashboards</td>
+<td>GenAI Completion</td>
+<td>Real-time accuracy</td>
+<td>Alert fatigue if not tuned</td>
+<td>Human-defined thresholds and escalation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-implementation-guidance-how-to-start"><strong>8. Implementation Guidance (How to Start)</strong></h2>
+<p>Teams new to AI-assisted documentation should adopt an incremental approach:</p>
+<h3 id="phase-1-pilot-with-low-risk-artifacts">Phase 1: Pilot with Low-Risk Artifacts</h3>
+<ol>
+<li><strong>Select</strong>: Choose GenAI Completion artifacts (SBOMs, build configs) for initial automation</li>
+<li><strong>Automate</strong>: Integrate AI generation into CI/CD pipeline</li>
+<li><strong>Validate</strong>: Spot-check outputs against manual processes</li>
+<li><strong>Measure</strong>: Track time savings and accuracy improvements</li>
+</ol>
+<h3 id="phase-2-expand-to-genai-generation-patterns">Phase 2: Expand to GenAI Generation Patterns</h3>
+<ol>
+<li><strong>Template</strong>: Establish standard templates for API docs, release notes, runbooks</li>
+<li><strong>Generate</strong>: Implement AI generation for these artifact types</li>
+<li><strong>Review Workflow</strong>: Define human validation and approval gates</li>
+<li><strong>Iterate</strong>: Refine prompts and templates based on reviewer feedback</li>
+</ol>
+<h3 id="phase-3-scale-to-genai-augmentation-patterns">Phase 3: Scale to GenAI Augmentation Patterns</h3>
+<ol>
+<li><strong>Train</strong>: Ensure team understands conversational AI workflows and prompt engineering</li>
+<li><strong>Pilot</strong>: Start with ADRs or design documentation on a single project</li>
+<li><strong>Collaborate</strong>: Work with AI to draft, refine, and finalize documents</li>
+<li><strong>Codify</strong>: Document effective prompts and workflows for team reuse</li>
+</ol>
+<h3 id="phase-4-continuous-improvement">Phase 4: Continuous Improvement</h3>
+<ol>
+<li><strong>Monitor</strong>: Track documentation quality metrics (completeness, currency, usability)</li>
+<li><strong>Feedback</strong>: Gather input from documentation consumers (developers, operators, users)</li>
+<li><strong>Adapt</strong>: Update templates, prompts, and automation based on lessons learned</li>
+<li><strong>Share</strong>: Contribute patterns and templates to AI4SDLC working group</li>
+</ol>
+<h3 id="templates-and-starter-kits">Templates and Starter Kits</h3>
+<p>Reusable templates for common documentation artifacts (ADRs, API specs, runbooks, release notes) are being developed for the AI4SDLC resource library. These will include prompt patterns and validation checklists aligned with the GenAI patterns in this play.</p>
+<p><em>See <a href="../resources/">Resources</a> for available templates as they are published.</em></p>
+<hr />
+<h2 id="9-key-considerations-risks-metrics-pitfalls"><strong>9. Key Considerations (Risks, Metrics, Pitfalls)</strong></h2>
+<h3 id="common-risks">Common Risks</h3>
+<p><strong>Overreliance on AI Without Validation</strong>
+- AI-generated documentation may contain technical inaccuracies or security implications
+- Mitigation: Mandatory human review gates, especially for security-critical or operational artifacts</p>
+<p><strong>Data Exposure Through Unapproved Tools</strong>
+- Using commercial AI services may leak sensitive information
+- Mitigation: Use only approved AI capabilities within secure environments; sanitize all inputs</p>
+<p><strong>Documentation Drift</strong>
+- AI-generated documentation can become stale if not continuously updated
+- Mitigation: Automate regeneration triggers based on source artifact changes</p>
+<p><strong>Loss of Institutional Knowledge</strong>
+- Over-automation may reduce human engagement with architectural decisions
+- Mitigation: Maintain GenAI Augmentation patterns for strategic and architectural documentation</p>
+<p><strong>Template Rigidity</strong>
+- Overly structured templates may constrain necessary documentation flexibility
+- Mitigation: Balance standardization with "fit-for-purpose" documentation principles from DoDAF 2.0</p>
+<h3 id="key-metrics">Key Metrics</h3>
+<p>These metrics help teams evaluate AI assistance effectiveness. Establish baselines before AI adoption, then track trends. Measure efficiency and quality together from the start—time savings without accuracy creates debt that compounds over time.</p>
+<p><strong>Documentation Coverage</strong>
+- Percentage of code modules with API documentation
+- Percentage of architectural decisions captured in ADRs
+- Percentage of operational procedures documented in runbooks</p>
+<p>Coverage establishes baseline completeness; quality metrics below measure whether documentation is actually useful.</p>
+<p><strong>Documentation Currency</strong>
+- Time lag between code changes and documentation updates
+- Percentage of documentation validated within last 90 days</p>
+<p><strong>AI Adoption and Efficiency</strong>
+- Percentage of documentation artifacts using AI augmentation
+- Time savings per artifact type (baseline vs. AI-assisted)
+- Human review time per AI-generated artifact</p>
+<p><strong>Quality and Usability</strong>
+- Documentation defect rate (inaccuracies reported)
+- User satisfaction scores from documentation consumers
+- Reduction in questions/support requests due to improved documentation</p>
+<p><strong>Modernization Support (Brownfield)</strong>
+- Legacy system knowledge capture completeness
+- Migration documentation coverage across all affected systems</p>
+<hr />
+<h2 id="10-key-takeaways"><strong>10. Key Takeaways</strong></h2>
+<ul>
+<li><strong>Right-size documentation</strong>: AI enables teams to capture essential knowledge without DoDAF-style overhead or documentation debt</li>
+<li><strong>Phase-appropriate artifacts</strong>: Each DevSecOps phase produces specific documentation—understand what's needed when</li>
+<li><strong>Spectrum of augmentation</strong>: Match AI patterns (augmentation, generation, completion) to artifact complexity and risk</li>
+<li><strong>Greenfield vs. brownfield</strong>: Modernization efforts require additional documentation to bridge legacy to modern systems</li>
+<li><strong>Human judgment remains critical</strong>: AI assists—it doesn't replace domain expertise, security validation, or strategic decisions</li>
+<li><strong>Templates anchor automation</strong>: Well-structured templates enable consistent, high-quality AI-generated documentation</li>
+<li><strong>Continuous evolution</strong>: Documentation is a living artifact that AI helps keep current as systems evolve</li>
+</ul>
+<hr />
+<h2 id="11-companion-plays-and-references"><strong>11. Companion Plays and References</strong></h2>
+<p><strong>Related Plays</strong></p>
+<ul>
+<li><a href="../fundamentals-play/">Fundamentals for Building an AI-Augmented Toolchain</a></li>
+<li><a href="../requirements_engineering_play/">Requirements Engineering</a></li>
+<li><a href="../testing-play/">AI-Augmented Testing</a></li>
+<li><a href="../code-gen-play/">Leading Practices for Code Completion and Generation</a></li>
+<li><a href="../prompt-engineering/">Prompt Engineering</a></li>
+<li><a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a></li>
+<li>Documentation in Agentic Orchestration <em>(Forthcoming)</em> — How documentation integrates with Pattern 3/4 multi-agent systems</li>
+</ul>
+<p><strong>Key References</strong></p>
+<ul>
+<li><a href="https://dodcio.defense.gov/Portals/0/Documents/DoD%20Enterprise%20DevSecOps%20Reference%20Design%20v1.0_Public%20Release.pdf">DoD Enterprise DevSecOps Reference Design v1.0</a></li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/37/r2/final">NIST SP 800-37 Rev. 2 Risk Management Framework</a> — Authoritative guidance for ATO authorization packages and continuous authorization</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/53a/r5/final">NIST SP 800-53A Rev. 5 Assessing Security Controls</a> — Defines documentation as evidence for security control assessment</li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/218/final">NIST SP 800-218 Secure Software Development Framework (SSDF)</a></li>
+<li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">NIST AI Risk Management Framework (AI RMF)</a></li>
+<li><a href="https://dodcio.defense.gov/Portals/0/Documents/Library/DoD-ZTStrategy.pdf">DoD Zero Trust Strategy</a></li>
+<li><a href="https://media.defense.gov/2022/Feb/02/2002932833/-1/-1/0/DEPARTMENT-OF-DEFENSE-SOFTWARE-MODERNIZATION-STRATEGY.PDF">DoD Software Modernization Strategy</a></li>
+<li><a href="https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/500087p.PDF">DoDI 5000.87 Software Acquisition Pathway</a></li>
+<li><a href="https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/851001p.pdf">DoDI 8510.01 Risk Management Framework for DoD Systems</a> — Governs RMF implementation and reciprocity</li>
+<li><a href="https://dodcio.defense.gov/Library/DoD-Architecture-Framework/">DoDAF 2.0 Architecture Framework</a></li>
+<li><a href="https://atarc.org/project/continuous-authorization-to-operate-cato-implementation-playbook/">ATARC cATO Implementation Playbook</a> — Federal guidance on continuous authorization and automated compliance evidence</li>
+</ul>
+<p><strong>Emerging Guidance</strong></p>
+<ul>
+<li>
+<p><strong>DoD Cybersecurity Risk Management Construct (CSRMC)</strong> — Announced September 2025, CSRMC introduces a five-phase approach emphasizing continuous monitoring over point-in-time assessments. Program deliverables will be affected: just as RMF drove production of SSPs and control evidence, CSRMC will likely require new forms of documentation evidence. Teams should monitor CSRMC implementation guidance as it may supersede some RMF documentation requirements.</p>
+</li>
+<li>
+<p><strong>DoDAF Evolution to Model-Based Architecture</strong> — A January 2026 DoW CIO memorandum formally establishes the Department's intent to evolve DoDAF from its document-centric approach toward computable, data-driven architecture models aligned with the Unified Architecture Framework (UAF). During transition, DoDAF remains the enterprise framework for capability definition and governance, while UAF pilots in FY26-27 will validate model-based traceability across mission and business areas. The five-year goal is generating required architecture views directly from federated UAF repositories, eliminating duplicative efforts. This reinforces the play's emphasis on right-sizing documentation and moving toward machine-readable, version-controlled artifacts.</p>
+</li>
+</ul>
+<!--
+---
+
+### ✅ **Architectural Intent**
+
+This play contributes to software health by enabling disciplined documentation capture across the SDLC without traditional resource constraints. By guiding teams through the AI augmentation spectrum and phase-specific documentation patterns, it prevents architectural amnesia while maintaining delivery velocity—essential for both greenfield innovation and brownfield modernization in DoD software factories.
+-->
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:DTIC14">
+<p>"Agile Software Development in the Department of Defense Environment," Defense Technical Information Center, 2014. [Online]. Available: https://apps.dtic.mil/sti/tr/pdf/AD1040327.pdf&#160;<a class="footnote-backref" href="#fnref:DTIC14" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:DOWCIO26">
+<p>DoW Chief Information Officer, "Evolving the Department of War Enterprise Architecture for a Digital Future," Memorandum for Senior Pentagon Leadership, Jan. 2026. The memo establishes the Department's intent to evolve DoDAF toward interoperable, data-driven architecture, with UAF pilots in FY26-27 to overcome document-centric limitations.&#160;<a class="footnote-backref" href="#fnref:DOWCIO26" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Gartner24">
+<p>Gartner, Inc., "Technical Debt: A Growing Threat to Business Agility," 2024. Organizations that ignore technical debt spend up to 40% more on maintenance than peers who address it early. Documentation debt specifically slows onboarding and creates knowledge silos that risk project continuity.&#160;<a class="footnote-backref" href="#fnref:Gartner24" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GAO23">
+<p>U.S. Government Accountability Office, "Software Acquisition: Additional Actions Needed to Help DOD Implement Future Modernization Efforts," GAO-23-105611, Jun. 2023. [Online]. Available: https://www.gao.gov/products/gao-23-105611&#160;<a class="footnote-backref" href="#fnref:GAO23" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:CIO22">
+<p>K. Tarasov, "The other problem with too much tech talent turnover: knowledge loss," CIO Dive, Aug. 2022. [Online]. Available: https://www.ciodive.com/news/IT-knowledge-gap-retention/629832/. Research indicates 70% of organizations reported the Great Resignation contributed to loss of institutional knowledge.&#160;<a class="footnote-backref" href="#fnref:CIO22" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Mass23">
+<p>P. Massingham, "Knowledge loss induced by organizational member turnover: a review of empirical literature, synthesis and future research directions," The Learning Organization, vol. 30, no. 2, pp. 109–136, Feb. 2023. [Online]. Available: https://www.emerald.com/insight/content/doi/10.1108/TLO-09-2022-0107/full/html. A systematic review of 75 empirical studies finds that employee turnover erodes organizational routines, damages organizational memory, and disrupts operations—effects that compound when undocumented knowledge leaves with departing members.&#160;<a class="footnote-backref" href="#fnref:Mass23" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:NIST37">
+<p>National Institute of Standards and Technology, "Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy," NIST SP 800-37 Rev. 2, Dec. 2018. [Online]. Available: https://csrc.nist.gov/pubs/sp/800/37/r2/final. Authorization packages require the System Security Plan (SSP), Security Assessment Report (SAR), and Plan of Action &amp; Milestones (POA&amp;M) as the body of evidence for authorization decisions.&#160;<a class="footnote-backref" href="#fnref:NIST37" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:NIST53A">
+<p>National Institute of Standards and Technology, "Assessing Security and Privacy Controls in Information Systems and Organizations," NIST SP 800-53A Rev. 5, Jan. 2022. [Online]. Available: https://csrc.nist.gov/pubs/sp/800/53a/r5/final. Functional specifications, system design documentation, and testing results provide evidence that systems are reliable and trustworthy.&#160;<a class="footnote-backref" href="#fnref:NIST53A" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ATARC25">
+<p>Advanced Technology Academic Research Center (ATARC), "Continuous Authorization to Operate (cATO) Implementation Playbook," Apr. 2025. [Online]. Available: https://atarc.org/project/continuous-authorization-to-operate-cato-implementation-playbook/. The playbook emphasizes producing compliance artifacts throughout all DevSecOps phases, with automation enabling timely risk mitigation and continuous compliance.&#160;<a class="footnote-backref" href="#fnref:ATARC25" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Borg24">
+<p>P. Borges et al., "Software Maintainability: A Systematic Review," Propulsion Technology Journal, 2024. [Online]. Available: https://www.propulsiontechjournal.com/index.php/journal/article/download/1530/1064/2631. Documentation is identified as a key factor affecting maintainability, supporting future maintenance and understanding of design decisions.&#160;<a class="footnote-backref" href="#fnref:Borg24" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:PMC24">
+<p>L. Huang et al., "Exploring and Evaluating Hallucinations in LLM-Powered Code Generation," arXiv:2404.00971, Apr. 2024. [Online]. Available: https://arxiv.org/abs/2404.00971. Research identified hallucination rates of approximately 4.44% in code samples, with 5-21% of AI suggestions including non-existent packages or incorrect APIs.&#160;<a class="footnote-backref" href="#fnref:PMC24" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:WTD">
+<p>Write the Docs Community, "Documentation as Code," Write the Docs Guide. [Online]. Available: https://www.writethedocs.org/guide/docs-as-code/. Docs-as-code treats documentation like software code, using version control, peer review, and continuous delivery.&#160;<a class="footnote-backref" href="#fnref:WTD" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1734 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../images/DOW_CIO_Seal.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Monitor Phase Documentation - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monitor-phase-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monitor Phase Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fundamentals-play/" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../emerging-practices/" class="md-tabs__link">
+          
+  
+  
+  Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../resources/template/" class="md-tabs__link">
+          
+  
+  
+  Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidance Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plays
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plays
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolchain Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements_engineering_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-gen-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Generation & Completion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GAI-Augmented Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-autonomy_continuum_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Autonomy Continuum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Patterns
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human-Machine Interaction Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../emerging-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emerging Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools & Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools & Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Play Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectural Decision Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-autonomy-implementation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Autonomy Implementation Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-in-this-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Happens in This Phase
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-types-of-monitor-phase-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Types of Monitor Phase Artifacts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Types of Monitor Phase Artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-monitoring-artifacts-observable-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Monitoring Artifacts (Observable Infrastructure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-documentation-traditional-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supporting Documentation (Traditional Docs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-ai-helps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where AI Helps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where AI Helps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-dynamic-artifacts-monitoring-as-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Dynamic Artifacts (Monitoring-as-Code)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-supporting-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Supporting Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-prometheus-alert-rules-dynamic-artifact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Prometheus Alert Rules (Dynamic Artifact)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Prometheus Alert Rules (Dynamic Artifact)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-alert-runbook-supporting-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Alert Runbook (Supporting Documentation)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: Alert Runbook (Supporting Documentation)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-setup_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observable-infrastructure-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observable Infrastructure Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-ai-generated-monitor-artifacts-often-miss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What AI-Generated Monitor Artifacts Often Miss
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What AI-Generated Monitor Artifacts Often Miss">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-dynamic-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Dynamic Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-supporting-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Supporting Docs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Governance Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Governance Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supporting-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supporting Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brownfield-additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Brownfield Additions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge beta" 
+         role="img" 
+         aria-label="Beta stage - Core guidance available">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>BETA</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2026-02-08</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="monitor-phase-documentation">Monitor Phase Documentation</h1>
+<p><a href="../../documentation-play/">← Back to Documentation Play</a></p>
+<hr />
+<h2 id="what-happens-in-this-phase">What Happens in This Phase</h2>
+<p>The Monitor phase provides continuous visibility into system health, performance, and security. Unlike other phases where documentation consists of static artifacts, <strong>monitoring "documentation" is fundamentally different</strong>—it includes live dashboards, real-time metrics, and automated alerts that function as observable infrastructure.</p>
+<p>This distinction matters: the dashboards and alert configurations themselves ARE documentation. They're version-controlled code (Grafana JSON, Prometheus YAML, Terraform modules) that should be automatically deployed and continuously validated against actual system behavior.</p>
+<hr />
+<h2 id="two-types-of-monitor-phase-artifacts">Two Types of Monitor Phase Artifacts</h2>
+<h3 id="dynamic-monitoring-artifacts-observable-infrastructure">Dynamic Monitoring Artifacts (Observable Infrastructure)</h3>
+<p>These are the configurations that define what gets monitored and how. They're code, not prose.</p>
+<table>
+<thead>
+<tr>
+<th>Artifact Type</th>
+<th>Examples</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dashboard definitions</td>
+<td>Service health, security events, SLO tracking</td>
+<td>Grafana JSON, Datadog YAML</td>
+</tr>
+<tr>
+<td>Alert rules</td>
+<td>Threshold alerts, anomaly detection</td>
+<td>Prometheus YAML, PagerDuty configs</td>
+</tr>
+<tr>
+<td>SLO/SLI definitions</td>
+<td>Availability targets, latency budgets</td>
+<td>OpenSLO YAML, service configs</td>
+</tr>
+<tr>
+<td>Log aggregation configs</td>
+<td>What gets collected, retention policies</td>
+<td>Fluentd configs, CloudWatch rules</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AI's role</strong>: Generate and maintain these configurations directly—dashboard-as-code, alerts-from-SLOs, observability-as-code.</p>
+<h3 id="supporting-documentation-traditional-docs">Supporting Documentation (Traditional Docs)</h3>
+<p>These explain the "why" behind monitoring decisions and guide human response.</p>
+<table>
+<thead>
+<tr>
+<th>Artifact Type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring strategy</td>
+<td>Why these metrics matter, coverage philosophy</td>
+</tr>
+<tr>
+<td>Alert response procedures</td>
+<td>What to do when alerts fire</td>
+</tr>
+<tr>
+<td>Threshold rationale</td>
+<td>Why specific values were chosen</td>
+</tr>
+<tr>
+<td>Runbook procedures</td>
+<td>Step-by-step incident response</td>
+</tr>
+<tr>
+<td>Compliance mapping</td>
+<td>Which metrics satisfy which requirements</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AI's role</strong>: Generate and maintain these docs, keeping them synchronized with the dynamic artifacts.</p>
+<hr />
+<h2 id="where-ai-helps">Where AI Helps</h2>
+<h3 id="for-dynamic-artifacts-monitoring-as-code">For Dynamic Artifacts (Monitoring-as-Code)</h3>
+<ul>
+<li><strong>Generating dashboard configurations</strong> from SLO definitions and service metadata</li>
+<li><strong>Creating alert rules</strong> from SLOs and operational requirements</li>
+<li><strong>Maintaining consistency</strong> across dashboard definitions as services evolve</li>
+<li><strong>Validating configurations</strong> against actual system behavior</li>
+</ul>
+<h3 id="for-supporting-documentation">For Supporting Documentation</h3>
+<ul>
+<li><strong>Generating runbook procedures</strong> when alert thresholds are defined</li>
+<li><strong>Documenting threshold rationale</strong> from operational history and SLO targets</li>
+<li><strong>Creating compliance mappings</strong> from metric definitions to requirements</li>
+<li><strong>Keeping docs synchronized</strong> when monitoring configs change</li>
+</ul>
+<hr />
+<h2 id="example-prometheus-alert-rules-dynamic-artifact">Example: Prometheus Alert Rules (Dynamic Artifact)</h2>
+<p>This example demonstrates <strong>GenAI Completion</strong>—AI generates alert configurations directly from SLO definitions, producing deterministic monitoring-as-code that requires validation against operational experience.</p>
+<h3 id="context-setup">Context Setup</h3>
+<p>Before prompting, the SRE provided:</p>
+<ul>
+<li>Service SLO definitions (99.9% availability, p99 &lt; 500ms, error rate &lt; 0.1%)</li>
+<li>Prometheus metric naming conventions for the service</li>
+<li>Runbook URL patterns for alert annotations</li>
+<li>Severity level standards from on-call policy</li>
+</ul>
+<h3 id="prompt">Prompt</h3>
+<blockquote>
+<p><em>"Generate Prometheus alerting rules for the logistics API based on these SLOs: 99.9% availability, p99 latency under 500ms, error rate below 0.1%. Include appropriate severity levels and annotations for runbook links."</em></p>
+</blockquote>
+<h3 id="output">Output</h3>
+<pre><code class="language-yaml"># logistics-api-alerts.yaml
+groups:
+  - name: logistics-api-slos
+    rules:
+      - alert: LogisticsAPIAvailabilityBreach
+        expr: |
+          (1 - (sum(rate(http_requests_total{service=&quot;logistics-api&quot;,code=~&quot;5..&quot;}[5m]))
+          / sum(rate(http_requests_total{service=&quot;logistics-api&quot;}[5m])))) &lt; 0.999
+        for: 5m
+        labels:
+          severity: critical
+          service: logistics-api
+        annotations:
+          summary: &quot;Logistics API availability below 99.9% SLO&quot;
+          runbook_url: &quot;https://runbooks.example.com/logistics-api/availability&quot;
+
+      - alert: LogisticsAPILatencyBreach
+        expr: |
+          histogram_quantile(0.99, rate(http_request_duration_seconds_bucket{service=&quot;logistics-api&quot;}[5m])) &gt; 0.5
+        for: 5m
+        labels:
+          severity: warning
+          service: logistics-api
+        annotations:
+          summary: &quot;Logistics API p99 latency exceeds 500ms SLO&quot;
+          runbook_url: &quot;https://runbooks.example.com/logistics-api/latency&quot;
+</code></pre>
+<hr />
+<h2 id="example-alert-runbook-supporting-documentation">Example: Alert Runbook (Supporting Documentation)</h2>
+<p>This example demonstrates <strong>GenAI Generation</strong>—AI synthesizes alert context and service architecture into operational procedures that require SRE validation but follow predictable structure.</p>
+<h3 id="context-setup_1">Context Setup</h3>
+<p>Before prompting, the SRE provided:</p>
+<ul>
+<li>Alert definition with threshold and severity</li>
+<li>Service architecture diagram showing dependencies</li>
+<li>Historical incident data for common failure patterns</li>
+<li>Escalation policy from on-call rotation</li>
+<li>Existing remediation scripts and kubectl commands</li>
+</ul>
+<h3 id="prompt_1">Prompt</h3>
+<blockquote>
+<p><em>"Generate a runbook for the LogisticsAPIAvailabilityBreach alert. Include triage steps, common causes, escalation paths, and recovery procedures based on our service architecture."</em></p>
+</blockquote>
+<h3 id="output_1">Output</h3>
+<pre><code class="language-markdown"># Runbook: LogisticsAPIAvailabilityBreach
+
+## Alert Context
+- **Severity**: Critical
+- **SLO**: 99.9% availability
+- **Threshold**: Fires when availability drops below 99.9% for 5 minutes
+
+## Immediate Triage (First 5 minutes)
+1. Check service health dashboard: [link]
+2. Verify alert is not a false positive (check upstream dependencies)
+3. Identify error pattern in logs: `kubectl logs -l app=logistics-api --tail=100`
+
+## Common Causes
+| Symptom | Likely Cause | Quick Fix |
+|---------|--------------|-----------|
+| 503 errors spike | Pod crashes | Check pod restarts, scale up |
+| Connection timeouts | Database overload | Check DB connections, consider read replica |
+| Intermittent 500s | Dependency failure | Check downstream service health |
+
+## Escalation
+- **15 min unresolved**: Page on-call SRE
+- **30 min unresolved**: Engage service owner
+- **Production impact confirmed**: Incident commander protocol
+</code></pre>
+<hr />
+<h2 id="observable-infrastructure-principles">Observable Infrastructure Principles</h2>
+<p>Monitor phase artifacts should be treated as infrastructure:</p>
+<ul>
+<li><strong>Version controlled</strong>: Dashboard JSON and alert YAML live in git alongside application code</li>
+<li><strong>Automatically deployed</strong>: CI/CD pipelines deploy monitoring configs, not manual UI changes</li>
+<li><strong>Continuously validated</strong>: Tests verify alerts fire correctly, dashboards load, metrics exist</li>
+<li><strong>Self-documenting</strong>: Well-structured configs with clear naming reduce need for separate docs</li>
+</ul>
+<p>This approach means monitoring documentation stays current because it IS the monitoring system—not a separate description that drifts out of sync.</p>
+<hr />
+<h2 id="what-ai-generated-monitor-artifacts-often-miss">What AI-Generated Monitor Artifacts Often Miss</h2>
+<h3 id="for-dynamic-artifacts">For Dynamic Artifacts</h3>
+<ul>
+<li><strong>Operational context</strong> - Alert thresholds that work in theory but cause alert fatigue in practice</li>
+<li><strong>Cross-service dependencies</strong> - Metrics that matter for end-to-end flows, not individual services</li>
+<li><strong>Environment differences</strong> - Thresholds that vary between dev, staging, and production</li>
+</ul>
+<h3 id="for-supporting-docs">For Supporting Docs</h3>
+<ul>
+<li><strong>Tribal knowledge</strong> - Why certain alerts exist based on past incidents</li>
+<li><strong>Team-specific escalation</strong> - Who actually responds vs. documented paths</li>
+<li><strong>Compliance nuances</strong> - Which metrics satisfy specific audit requirements</li>
+</ul>
+<p><strong>Human reviewers must validate that monitoring artifacts reflect operational reality, not theoretical ideals.</strong></p>
+<hr />
+<h2 id="governance-checklist">Governance Checklist</h2>
+<p>Before accepting AI-assisted Monitor phase artifacts:</p>
+<h3 id="dynamic-artifacts">Dynamic Artifacts</h3>
+<ul>
+<li>[ ] Alert thresholds validated against operational experience (not just SLO math)</li>
+<li>[ ] Dashboard configs tested in staging before production deployment</li>
+<li>[ ] Monitoring-as-code integrated into CI/CD pipeline</li>
+<li>[ ] Rollback procedures exist for monitoring config changes</li>
+</ul>
+<h3 id="supporting-documentation">Supporting Documentation</h3>
+<ul>
+<li>[ ] Runbooks tested during incident simulations</li>
+<li>[ ] Escalation paths current with team structure</li>
+<li>[ ] Compliance metrics mapped to specific ATO requirements</li>
+<li>[ ] Threshold rationale documented for future maintainers</li>
+</ul>
+<hr />
+<h2 id="brownfield-additions">Brownfield Additions</h2>
+<p>For modernization efforts, Monitor phase requires additional focus:</p>
+<ul>
+<li><strong>Legacy vs. modern performance comparison</strong> - Side-by-side dashboards demonstrating modernization success</li>
+<li><strong>Retirement validation metrics</strong> - Observable evidence that legacy system can be safely decommissioned</li>
+<li><strong>Unified monitoring</strong> - Single observability layer across legacy and modern systems during transition</li>
+<li><strong>Migration of monitoring-as-code</strong> - Converting legacy monitoring (manual UI configs) to version-controlled definitions</li>
+</ul>
+<hr />
+<p><a href="../../documentation-play/">← Back to Documentation Play</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
