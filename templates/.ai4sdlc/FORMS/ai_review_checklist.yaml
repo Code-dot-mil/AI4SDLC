@@ -1,0 +1,28 @@
+schema_version: "1.0"
+ai_review_checklist:
+  change_summary: "What changed?"
+  ai_usage:
+    used_ai: true
+    tool: "Duo|Ask Sage|ChatGPT|Claude|Local LLM|Other"
+    purpose: "drafting|review|test|triage|other"
+  boundaries:
+    repo_only_confirmed: true
+    no_secrets_confirmed: true
+    no_internal_identifiers_confirmed: true
+  reviewer:
+    name: "human reviewer"
+    role: "role/team"
+    date: "YYYY-MM-DD"
+  quality:
+    assumptions_labeled: true
+    risks_documented: true
+    verification_steps_present: true
+  evidence:
+    files_touched:
+      - "path/to/file"
+    tests_run:
+      - "command or pipeline job"
+    links:
+      - "MR/PR link"
+  decision: "approve|request_changes|reject"
+  notes: "Optional"

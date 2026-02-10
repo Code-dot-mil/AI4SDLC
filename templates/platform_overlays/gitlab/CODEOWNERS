@@ -1,0 +1,15 @@
+# CODEOWNERS (AI4SDLC-aligned)
+# Replace @security-team and @ai-governance with your actual GitLab groups/users.
+# Purpose: protect AI governance files so changes require accountable review.
+
+# Core AI governance
+AGENTS.md                         @security-team @ai-governance
+.ai4sdlc/POLICY/*                 @security-team @ai-governance
+.ai4sdlc/AGENTS/*                 @security-team
+.ai4sdlc/PROMPTS/*                @ai-governance
+
+# GitLab Duo configuration
+.gitlab/duo/*                     @security-team @ai-governance
+
+# Security artifacts (optional convention)
+docs/ai/security/*                @security-team

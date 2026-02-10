@@ -1,0 +1,52 @@
+name: AI Task Request
+description: Request AI assistance using standardized inputs and boundaries
+title: "[AI Task] <short title>"
+labels: ["ai-task"]
+body:
+  - type: input
+    id: objective
+    attributes:
+      label: Objective
+      description: What outcome do you want?
+      placeholder: "e.g., Draft acceptance criteria for feature X"
+    validations:
+      required: true
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task type
+      options:
+        - requirements
+        - design
+        - security
+        - codegen
+        - code_review
+        - test
+        - docs
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries & data handling
+      description: Repo-only? External sources allowed? Any prohibited content?
+      value: |
+        - Allowed sources: repo-only
+        - Prohibited: secrets/credentials/internal identifiers
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide the minimum context needed (no sensitive info).
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification plan
+      description: How will we confirm the output is correct?
+    validations:
+      required: true

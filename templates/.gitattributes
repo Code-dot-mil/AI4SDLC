@@ -1,0 +1,10 @@
+# Normalize text files
+* text=auto
+
+# Force LF for common text formats
+*.md  text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.txt text eol=lf
+*.py  text eol=lf
+*.sh  text eol=lf

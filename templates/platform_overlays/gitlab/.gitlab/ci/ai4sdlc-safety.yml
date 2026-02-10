@@ -1,0 +1,34 @@
+# AI4SDLC Safety Scan (GitLab CI include)
+# Purpose: fail fast if AI-assisted artifacts or governance files contain sensitive identifiers.
+# This is intentionally simple. Tune patterns/paths for your environment.
+
+ai4sdlc_safety_scan:
+  stage: test
+  image: registry1.dso.mil/ironbank/opensource/alpinelinux/alpine:3.20
+  rules:
+    - when: always
+  script:
+    - set -eu
+    - echo "Scanning for sensitive identifiers in AI governance + AI artifacts..."
+    # Email addresses (broad)
+    - EMAIL_RE='[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'
+    # Private IP ranges
+    - PRIVIP_RE='\b(10\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|192\.168\.[0-9]{1,3}\.[0-9]{1,3}|172\.(1[6-9]|2[0-9]|3[0-1])\.[0-9]{1,3}\.[0-9]{1,3})\b'
+    # Internal-ish hostnames / TLDs (customize!)
+    - INTDNS_RE='\b[A-Za-z0-9.-]+\.(lan|local|internal|corp)\b'
+    # Common "ID:" leak patterns
+    - ID_RE='\b(user_id|project_id|namespace_id)\b\s*[:=]\s*[0-9]+'
+    - SCAN_PATHS="AGENTS.md .ai4sdlc .gitlab/duo .gitlab/issue_templates .gitlab/merge_request_templates docs/ai"
+    - |
+      for p in $SCAN_PATHS; do
+        if [ -e "$p" ]; then
+          echo " - scanning $p"
+          if grep -RInE "$EMAIL_RE|$PRIVIP_RE|$INTDNS_RE|$ID_RE" "$p"; then
+            echo ""
+            echo "FAIL: Sensitive identifier pattern(s) detected above."
+            echo "Fix: redact to placeholders (<EMAIL_REDACTED>, <INTERNAL_HOSTNAME>, etc.) or remove."
+            exit 2
+          fi
+        fi
+      done
+    - echo "OK: no sensitive identifier patterns detected in scanned paths."
