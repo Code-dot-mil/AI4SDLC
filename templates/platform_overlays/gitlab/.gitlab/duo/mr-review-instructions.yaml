@@ -1,0 +1,83 @@
+---
+# GitLab Duo MR Review Instructions (AI4SDLC-aligned)
+# Goal: enforce consistent, actionable review standards for AI-assisted and human-authored changes.
+
+instructions:
+  - name: AI4SDLC Baseline Guardrails (All Files)
+    fileFilters:
+      - "**/*"
+    instructions: |
+      BLOCKER CHECKS:
+      1) Data boundaries:
+         - Flag any secrets, tokens, private keys, credentials, or internal identifiers.
+         - Flag any CUI/PII/PHI/export-controlled/classified content.
+      2) Truthfulness:
+         - If claims are not evidenced by the MR/diff/repo context, require **UNVERIFIED** labeling or removal.
+         - Do not accept invented references, standards, or “AI said so” reasoning.
+      3) Output redaction (do not leak identifiers):
+         - Do not output internal hostnames, instance URLs, clone URLs, usernames, emails, or numeric IDs.
+         - If you must reference them, use placeholders like <INTERNAL_URL> or <EMAIL_REDACTED>.
+      3) Human accountability:
+         - Confirm the MR description states what AI was used for (if applicable) and what verification was performed (tests/scans/repro steps).
+         - Ensure a human is accountable for the final result.
+
+  - name: PromptOps / Agent Artifacts (Treat Like Code)
+    fileFilters:
+      - "AGENTS.md"
+      - "**/AGENTS.md"
+      - ".ai4sdlc/AGENTS/**/*"
+      - ".ai4sdlc/PROMPTS/**/*"
+      - ".ai4sdlc/POLICY/**/*"
+      - ".gitlab/duo/**/*"
+    instructions: |
+      1) Instructions must be minimal, specific, and testable (avoid vague guidance).
+      2) Guardrails must explicitly prohibit secrets/internal identifiers and require UNVERIFIED labeling for unknowns.
+      3) Output contracts should require: Assumptions, Risks, Verification.
+      4) Escalation triggers must be present for high-risk domains (auth/crypto/policy/logging/data access).
+      5) Avoid “agent can do anything” language. Prefer read-only / draft-first posture.
+
+  - name: High-Risk Domains (Require Expert Human Review)
+    fileFilters:
+      - "**/*auth*.*"
+      - "**/*oauth*.*"
+      - "**/*jwt*.*"
+      - "**/*crypto*.*"
+      - "**/*encrypt*.*"
+      - "**/*decrypt*.*"
+      - "**/*rbac*.*"
+      - "**/*policy*.*"
+      - "**/*secrets*.*"
+    instructions: |
+      1) Require explicit authz checks, least privilege, and secure defaults.
+      2) Do not accept bespoke cryptography. Require vetted libraries/patterns.
+      3) Require negative tests/abuse cases and clear rollback considerations.
+      4) If context is insufficient, request a short design note or threat-model-lite before approval.
+
+  - name: CI/CD and Infrastructure as Code (Policy-as-Code + Least Privilege)
+    fileFilters:
+      - ".gitlab-ci.yml"
+      - ".gitlab/**/*.yml"
+      - ".gitlab/**/*.yaml"
+      - "**/k8s/**/*.yml"
+      - "**/k8s/**/*.yaml"
+      - "**/kubernetes/**/*.yml"
+      - "**/kubernetes/**/*.yaml"
+      - "**/*.tf"
+      - "**/*.tfvars"
+      - "**/helm/**/*.yml"
+      - "**/helm/**/*.yaml"
+    instructions: |
+      1) Enforce least privilege for tokens, jobs, and service accounts.
+      2) Flag new egress paths or external endpoints; require justification and data boundary statement.
+      3) Ensure pipelines do not leak sensitive info via logs or artifacts.
+      4) Require evidence-producing checks for security controls (tests/scans) where applicable.
+
+  - name: Documentation (No Hallucinations)
+    fileFilters:
+      - "**/*.md"
+      - "docs/**/*.md"
+      - "doc/**/*.md"
+    instructions: |
+      1) Factual claims must be verifiable from repo context or labeled UNVERIFIED.
+      2) Avoid promises or unsupported performance/security claims.
+      3) Ensure docs include verification steps and safe placeholders (no real tokens/hostnames).

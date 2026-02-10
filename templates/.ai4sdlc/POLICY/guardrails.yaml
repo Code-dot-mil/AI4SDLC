@@ -1,0 +1,150 @@
+version: "1.1"
+
+scope:
+  default_boundary: "repo-only"
+  allow_external_sources: false
+
+data_handling:
+  # Default stance: prohibited unless explicitly approved for the audience + channel.
+  prohibited_by_default: true
+
+  # High-level categories for consistent enforcement + reporting.
+  taxonomy:
+    secrets_and_auth_material:
+      description: "Credentials, tokens, keys, assertions, session material, or anything that can be used to authenticate/authorize."
+      prohibit: true
+    internal_identifiers_and_metadata:
+      description: "Anything that uniquely identifies internal systems, people, projects, environments, or tool metadata/IDs."
+      prohibit: true
+    regulated_or_personal_data:
+      description: "PII/PHI/CUI/export-controlled/classified content beyond what is already present AND allowed."
+      prohibit: true
+    proprietary_internals_external_share:
+      description: "Internal architecture/provider layouts or deep repo structure for external/unknown audiences."
+      prohibit_for_external_share: true
+
+  # Explicit patterns to detect and redact/refuse.
+  # NOTE: keep these conservative; CI scanning should be more comprehensive.
+  prohibited_patterns:
+    # --- Key material / PEM / certs / SSH ---
+    - "-----BEGIN( [A-Z0-9]+)? PRIVATE KEY-----"
+    - "-----BEGIN OPENSSH PRIVATE KEY-----"
+    - "-----BEGIN RSA PRIVATE KEY-----"
+    - "-----BEGIN EC PRIVATE KEY-----"
+    - "-----BEGIN DSA PRIVATE KEY-----"
+    - "-----BEGIN PGP PRIVATE KEY BLOCK-----"
+    - "-----BEGIN CERTIFICATE-----"
+
+    # --- Auth headers / cookies ---
+    - "(?i)\\bAuthorization\\s*:\\s*(Basic|Bearer)\\s+"
+    - "(?i)\\bProxy-Authorization\\s*:\\s*(Basic|Bearer)\\s+"
+    - "(?i)\\bCookie\\s*:\\s*[^\\n]+"
+    - "(?i)\\bSet-Cookie\\s*:\\s*[^\\n]+"
+
+    # --- JWT-like tokens (3 base64url-ish segments) ---
+    - "\\b[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+\\b"
+
+    # --- Common token / key prefixes (examples; extend as needed) ---
+    - "\\bAKIA[0-9A-Z]{16}\\b"           # AWS access key id
+    - "\\bASIA[0-9A-Z]{16}\\b"           # AWS temporary access key id
+    - "\\bglpat-[A-Za-z0-9_-]{10,}\\b"   # GitLab PAT
+    - "\\bghp_[A-Za-z0-9]{20,}\\b"       # GitHub PAT (classic)
+    - "\\bgithub_pat_[A-Za-z0-9_]{20,}\\b"
+    - "\\bxoxb-[0-9A-Za-z-]{10,}\\b"     # Slack bot token
+    - "\\bxoxa-[0-9A-Za-z-]{10,}\\b"
+    - "\\bAIza[0-9A-Za-z_-]{20,}\\b"     # Google API key
+
+    # --- .env style secrets (name suggests secret) ---
+    - "(?i)\\b(AUTH|TOKEN|SECRET|API[_-]?KEY|ACCESS[_-]?KEY|PRIVATE[_-]?KEY|PASSWORD|PASS|PWD|CRED(ENTIAL)?S?)\\b\\s*[=:]\\s*[^\\s]+"
+
+    # --- Tool numeric IDs / metadata leaks ---
+    - "(?i)\\b(project_id|namespace_id|user_id|runner_id|job_id|pipeline_id|merge_request_iid|issue_iid)\\b\\s*[:=]\\s*[0-9]+"
+
+    # --- Private IP ranges ---
+    - "\\b10\\.(?:[0-9]{1,3}\\.){2}[0-9]{1,3}\\b"
+    - "\\b192\\.168\\.(?:[0-9]{1,3}\\.)[0-9]{1,3}\\b"
+    - "\\b172\\.(?:1[6-9]|2[0-9]|3[0-1])\\.(?:[0-9]{1,3}\\.)[0-9]{1,3}\\b"
+
+    # --- Internal-ish TLDs (customize) ---
+    - "\\b[A-Za-z0-9.-]+\\.(lan|local|internal|corp)\\b"
+
+  internal_identifiers:
+    default: "disallow"
+    disallowed_examples:
+      - "internal hostnames/domains/URLs/clone URLs"
+      - "usernames/emails"
+      - "group/project paths that identify internal systems"
+      - "environment/cluster/node names"
+      - "ticket/incident numbers, device IDs, asset tags"
+      - "tool request/response payloads, headers, query params, internal refs"
+      - "numeric IDs (project_id, namespace_id, user_id, runner_id, job_id, pipeline_id)"
+    placeholders:
+      host: "<HOST_1>"
+      domain: "<INTERNAL_DOMAIN_1>"
+      ip: "<IP_1>"
+      url: "<INTERNAL_URL>"
+      user: "<USER_1>"
+      email: "<EMAIL_REDACTED>"
+      project: "<PROJECT_A>"
+      token: "<TOKEN_REDACTED>"
+      key: "<PRIVATE_KEY_REDACTED>"
+      tool_id: "<ID_REDACTED>"
+
+redaction:
+  # Mandatory behavior when prohibited patterns are present.
+  mode: "replace_with_placeholders"
+  forbid_partial_reveals: true
+  forbid_paraphrase_sanitization: true
+  allow_findings_report:
+    counts_and_locations_only: true
+    forbid_snippets: true
+
+output_scrub:
+  # Treat as a checklist the assistant must apply to its *drafted output* before sending.
+  enabled: true
+  on_match:
+    # If the user asked for the raw value or to reveal internal IDs -> refusal contract.
+    refuse_if_requested_raw: true
+    # Otherwise replace with placeholders and continue.
+    redact_if_incidental: true
+
+truthfulness:
+  require_unverified_label_when_no_evidence: true
+  forbid_invented_references: true
+  forbid_claiming_actions_without_evidence: true
+
+output:
+  require_sections:
+    - "Assumptions"
+    - "Risks"
+    - "Verification"
+  require_next_actions_section: true
+  architecture:
+    default_depth: 2
+    allow_deeper_only_if_explicitly_requested: true
+    forbid_tool_metadata_echo: true
+
+human_in_the_loop:
+  require_human_review_before_merge: true
+  require_accountable_owner: true
+
+refusal_response_contract:
+  enabled: true
+  max_words: 120
+  exact_structure:
+    - "Guardrail"
+    - "Decision"
+    - "Safe alternatives"
+    - "Question"
+  categories:
+    - "Secrets/Credentials"
+    - "Internal Identifiers/Metadata"
+    - "Regulated Data"
+    - "Tool/Action Boundary"
+    - "Unverified/Insufficient Evidence"
+
+external_sharing:
+  default_sanitized: true
+  require_external_share_note: true
+  forbid_internal_identifiers_for_clarity: true
+  depth_limit: 2

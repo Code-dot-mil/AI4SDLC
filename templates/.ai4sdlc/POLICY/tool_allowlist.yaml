@@ -1,0 +1,73 @@
+# .ai4sdlc/POLICY/tool_allowlist.yaml
+# Canonical tool gating for autonomy enforcement.
+
+max_autonomy: L2   # default ceiling for governed mode
+
+levels:
+  L0:
+    allow_tools: []
+
+  L1:
+    # L1 = draft artifacts using ONLY user-provided content. No tool use.
+    allow_tools: []
+
+  L2:
+    # L2 = read-only repo interrogation + propose changes.
+    allow_tools:
+      - Get Repository File
+      - Read File
+      - Read Files
+      - Find Files
+      - Grep
+      - Extract Lines From Text
+      - List Dir
+      - List Repository Tree
+      - Get Commit
+      - Get Commit Diff
+      - List Commits
+      - Gitlab Blob Search
+      - Gitlab Commit Search
+      - Gitlab Documentation Search
+      - Gitlab Group Project Search
+      - Gitlab Issue Search
+      - Gitlab Merge Request Search
+      - Gitlab Milestone Search
+      - Gitlab Note Search
+      - Gitlab User Search
+      - Gitlab Wiki Blob Search
+      - Get Issue
+      - Get Issue Note
+      - Get Merge Request
+      - List Merge Request Diffs
+      - List All Merge Request Notes
+      - Get Job Logs
+      - Get Pipeline Errors
+      - Get Pipeline Failing Jobs
+      - Get Security Finding Details
+      - Get Vulnerability Details
+      - Get Wiki Page
+      - Get Previous Session Context
+      - Get Current User
+      - Get Project
+
+# L3+ defined but DISABLED unless max_autonomy is raised explicitly in a sandbox policy.
+sandbox_levels:
+  L3:
+    allow_tools:
+      - Run Command
+      - Run Git Command
+      - Run Tests
+
+  L4:
+    allow_tools:
+      - Create Merge Request
+      - Update Merge Request
+      - Create Merge Request Note
+      - Create Commit
+      - Edit File
+      - Create File With Contents
+      - Mkdir
+
+  L5:
+    # Intentionally empty until you define a formal merge/deploy mechanism + safeguards.
+    allow_tools: []
