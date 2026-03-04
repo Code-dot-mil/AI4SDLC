@@ -31,17 +31,18 @@ nav:
     - Toolchain Fundamentals: plays/fundamentals-play.md
     - Requirements Engineering: plays/requirements_engineering_play.md
     - AI-Assisted Documentation: plays/documentation-play.md
-    - Code Generation & Completion: plays/code-gen-play.md
+    - Code Generation: plays/code-gen-play.md
     - GAI-Augmented Testing: plays/testing-play.md
     - Prompt Engineering: plays/prompt-engineering.md
     - AI-Autonomy Continuum: plays/ai-autonomy_continuum_play.md
+    - AI Workflow Design and Governance: plays/ai_sdlc_workflows.md
   - Patterns:
     - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Practices:
     #- Governance: plays/governance-play.md
     - Emerging Practices: plays/emerging-practices.md
   - Tools & Templates:
-    - Play Template: resources/template.md
+    - Create New Play Template: resources/template.md
     - Architectural Decision Records: resources/ArchitecturalDecisionRecord.md
     - AI Autonomy Implementation Guide: plays/ai-autonomy-implementation-guide.md    
   - Reference:
