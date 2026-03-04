@@ -1,0 +1,3026 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ai-autonomy_continuum_play/">
+      
+      
+        <link rel="next" href="../human-machine-patterns/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/DOW_CIO_Seal.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Play: AI Workflow Design and Governance - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#play-ai-workflow-design-and-governance" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Play: AI Workflow Design and Governance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../fundamentals-play/" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../emerging-practices/" class="md-tabs__link">
+          
+  
+  
+  Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/template/" class="md-tabs__link">
+          
+  
+  
+  Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidance Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plays
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plays
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolchain Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements_engineering_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Assisted Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-gen-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GAI-Augmented Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy_continuum_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Autonomy Continuum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Workflow Design and Governance
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Workflow Design and Governance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autonomy-is-earned-not-assumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Autonomy is earned, not assumed"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary-the-play-in-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary (The Play in Brief)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Why This Play Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Purpose and Scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Purpose and Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-dow-deployment-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 DoW Deployment Context
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 DoW Deployment Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rmf-and-authorization-to-operate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RMF and Authorization to Operate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-level-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact Level Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#government-contractor-accountability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Government / Contractor Accountability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-supply-chain-and-aibom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Supply Chain and AIBOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mission-criticality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mission Criticality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-factory-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Factory Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-prerequisites-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Prerequisites and Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-guiding-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Guiding Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-core-patterns-and-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Core Patterns and Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Core Patterns and Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-the-task-level-autonomy-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 The Task-Level Autonomy Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-agent-persona-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Agent Persona Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-synchronous-vs-asynchronous-workflow-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Synchronous vs. Asynchronous Workflow Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-designing-guardrails-that-hold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Designing Guardrails That Hold
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-multi-agent-systems-and-the-human-team-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Multi-Agent Systems and the Human Team Lead
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-the-reference-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 The Reference Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decision-framework-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Decision Framework and Trade-offs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Decision Framework and Trade-offs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-selecting-the-right-autonomy-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Selecting the Right Autonomy Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-choosing-the-workflow-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Choosing the Workflow Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-continuum-pattern-to-autonomy-level-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Continuum Pattern to Autonomy Level Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-implementation-guidance-how-to-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Implementation Guidance (How to Start)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-key-considerations-risks-metrics-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Key Considerations (Risks, Metrics, Pitfalls)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Key Considerations (Risks, Metrics, Pitfalls)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-companion-plays-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Companion Plays and References
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Companion Plays and References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bibliography-for-full-draft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliography for Full Draft
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bibliography for Full Draft">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dow-policy-and-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DoW Policy and Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nist-publications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NIST Publications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-and-attack-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and Attack Surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Code Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-agent-systems-and-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Agent Systems and Autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Supply Chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural intent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Patterns
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human-Machine Interaction Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emerging-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emerging Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools & Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools & Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create New Play Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectural Decision Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy-implementation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Autonomy Implementation Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autonomy-is-earned-not-assumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Autonomy is earned, not assumed"
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary-the-play-in-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary (The Play in Brief)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Why This Play Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Purpose and Scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Purpose and Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-dow-deployment-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 DoW Deployment Context
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 DoW Deployment Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rmf-and-authorization-to-operate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RMF and Authorization to Operate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-level-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impact Level Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#government-contractor-accountability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Government / Contractor Accountability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-supply-chain-and-aibom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Supply Chain and AIBOM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mission-criticality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mission Criticality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-factory-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Factory Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-prerequisites-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Prerequisites and Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-guiding-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Guiding Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-core-patterns-and-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Core Patterns and Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Core Patterns and Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-the-task-level-autonomy-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 The Task-Level Autonomy Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-agent-persona-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Agent Persona Patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-synchronous-vs-asynchronous-workflow-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Synchronous vs. Asynchronous Workflow Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-designing-guardrails-that-hold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Designing Guardrails That Hold
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-multi-agent-systems-and-the-human-team-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Multi-Agent Systems and the Human Team Lead
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-the-reference-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 The Reference Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-decision-framework-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Decision Framework and Trade-offs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Decision Framework and Trade-offs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-selecting-the-right-autonomy-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Selecting the Right Autonomy Level
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-choosing-the-workflow-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Choosing the Workflow Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-continuum-pattern-to-autonomy-level-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Continuum Pattern to Autonomy Level Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-implementation-guidance-how-to-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Implementation Guidance (How to Start)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-key-considerations-risks-metrics-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Key Considerations (Risks, Metrics, Pitfalls)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Key Considerations (Risks, Metrics, Pitfalls)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-companion-plays-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Companion Plays and References
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Companion Plays and References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bibliography-for-full-draft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliography for Full Draft
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bibliography for Full Draft">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dow-policy-and-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DoW Policy and Governance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nist-publications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NIST Publications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-and-attack-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security and Attack Surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-code-quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Code Quality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-agent-systems-and-autonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Agent Systems and Autonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-supply-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software Supply Chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architectural-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural intent
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge alpha" 
+         role="img" 
+         aria-label="Alpha stage - Early development">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>ALPHA</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2026-03-04</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="play-ai-workflow-design-and-governance"><strong>Play: AI Workflow Design and Governance</strong></h1>
+<h3 id="autonomy-is-earned-not-assumed"><em>"Autonomy is earned, not assumed"</em></h3>
+<blockquote>
+<p>"The question isn't whether to automate — it's where the human stays in the loop." — AI4SDLC Working Group</p>
+</blockquote>
+<hr />
+<blockquote>
+<p><strong>Outline for Workgroup Review — March 2026</strong></p>
+<p>This is a structured outline for working group feedback. Section descriptions indicate intended content; they are not final prose. Sections marked <strong>[FEEDBACK REQUESTED]</strong> are where your input is most needed before authoring begins.</p>
+<p><strong>Feedback focus areas:</strong>
+- Is the scope right? What's missing, what's out of place?
+- Does the autonomy level framework (Section 5.1) align with your team's practice?
+- Are the security risks in Section 8 complete for your context?
+- Are there additional patterns in Section 5 we should capture from the field?</p>
+</blockquote>
+<hr />
+<h2 id="executive-summary-the-play-in-brief"><strong>Executive Summary (The Play in Brief)</strong></h2>
+<p><em>Planned content: 2–3 paragraphs.</em></p>
+<ul>
+<li>
+<p><strong>Paragraph 1 — The problem</strong>: AI is entering the DoW software workflow at multiple levels simultaneously — inside the IDE, within CI/CD pipelines, and through coordinated agent workflows. Teams are adopting faster than governance can keep pace. The result is inconsistent practice, expanding attack surfaces, and uncertainty about where human accountability begins and ends.</p>
+</li>
+<li>
+<p><strong>Paragraph 2 — What this play does</strong>: Bridges the strategic framing of the <a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a> to the day-to-day decisions developers and DevSecOps teams actually face. Introduces a task-level autonomy framework that complements the Continuum's architectural patterns. Covers agent persona definition, guardrail design, synchronous vs. asynchronous workflow governance, and a reference implementation path.</p>
+</li>
+<li>
+<p><strong>Paragraph 3 — Key takeaway callout</strong>: AI workflow automation is most effective when autonomy is explicitly defined, guardrails are precisely specified, and humans retain clear accountability for all outcomes.</p>
+</li>
+</ul>
+<p>📌 <strong>Key takeaway:</strong> <em>[Final phrasing TBD after workgroup review]</em></p>
+<hr />
+<h2 id="1-why-this-play-matters"><strong>1. Why This Play Matters</strong></h2>
+<p><em>Planned content: 3–5 short paragraphs. Opens with the problem, closes with the opportunity.</em></p>
+<ul>
+<li>
+<p><strong>Speed-quality tension</strong>: Velocity gains from AI-assisted development are real and measurable. So is the observable decline in code quality and security posture when human oversight is insufficient. The DORA 2025 report found increased code duplication and declining quality indicators in teams with high AI output volume and thin human review capacity.</p>
+</li>
+<li>
+<p><strong>Governance lag</strong>: Tooling adoption is beginning to outrun governance across the DoW. Teams are establishing practices in the absence of policy and those practices calcify. This play provides a starting vocabulary that teams can adopt now, without waiting for comprehensive policy.</p>
+</li>
+<li>
+<p><strong>Expanded attack surface</strong>: Agent behavior files, system prompts, and persona definitions are active components of the development environment. Adversaries have demonstrated the ability to weaponize these artifacts by directing agents to perform unauthorized actions, exfiltrate data, or execute lateral movement. These are documented, not theoretical, risks.</p>
+</li>
+<li>
+<p><strong>The gap this play fills</strong>: The Autonomy Continuum play addresses architectural patterns at the system and team level. This play addresses the operational layer and what happens within a workflow, on a specific task, with a specific agent. Both are needed.</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-purpose-and-scope"><strong>2. Purpose and Scope</strong></h2>
+<p><em>Planned content: In-scope / out-of-scope lists, target audience.</em></p>
+<p><strong>Five workflow modes this play addresses:</strong></p>
+<p>The <a href="../human-machine-patterns/">Human-Machine Interaction Patterns</a> play defines five ways humans interact with AI tools — from standalone web interfaces to agentic platforms. This play builds on that foundation by addressing governance and autonomy <em>within</em> those interactions. The five workflow modes below form a progression from human-present to governance-by-exception, aligning with the four Continuum patterns.</p>
+<p><strong>Important</strong>: The workflow modes describe <em>how the human engages</em>, not <em>where the workflow runs</em>. Synchronous and asynchronous execution can both occur within an IDE. Tools like GitLab Duo and Claude Code support background agent execution that runs while the developer is doing other work. That execution is asynchronous regardless of the tooling surface. The HMT interaction patterns are the surfaces; the workflow modes are the governance dimensions. The relationship is many-to-many, not one-to-one.</p>
+<ol>
+<li><strong>Synchronous workflows</strong> — Real-time AI assistance where the developer is present, issuing prompts, and evaluating each response in sequence. <em>(HMT: any surface; Continuum: Pattern 1)</em></li>
+<li><strong>Asynchronous workflows</strong> — AI-driven execution triggered by events or initiated as a background task. The human reviews outputs after the fact. Occurs in CI/CD pipelines <em>and</em> increasingly within IDE-embedded agent tools. <em>(HMT: any surface supporting background execution — Custom API Integrations most commonly, but also AI-First IDEs and Agentic Platforms; Continuum: Pattern 2)</em></li>
+<li><strong>Agentic workflows</strong> — Multi-step, goal-directed behavior where a single agent selects and sequences actions toward a defined objective. Human checkpoints must be explicitly designed in. <em>(HMT: Agentic Platforms; Continuum: Pattern 2–3)</em></li>
+<li><strong>Orchestrated / swarm workflows</strong> — Multiple AI agents working in coordination toward a shared objective. The human's role shifts from task reviewer to team lead: setting objectives, monitoring outcomes, and handling exceptions. Governance operates at the orchestration layer, not the individual action layer. <em>(HMT: Agentic Platforms — advanced deployment; Continuum: Pattern 3; see Section 5.5)</em></li>
+<li><strong>Continuous / adaptive workflows</strong> — Always-on AI systems that monitor, analyze, and act without explicit human triggers. Human oversight operates by exception: defining success criteria, reviewing anomaly reports, and intervening when systems diverge from intent. Requires formal governance and executive authorization before deployment. <em>(HMT: Agentic Platforms — advanced deployment; Continuum: Pattern 4)</em></li>
+</ol>
+<p><strong>In Scope:</strong></p>
+<ul>
+<li>Task-level autonomy framework for individual and team use</li>
+<li>Agent persona definition using version-controlled behavior files</li>
+<li>Guardrail design, specification, and validation</li>
+<li>Synchronous vs. asynchronous governance design</li>
+<li>Security considerations specific to agent-driven workflows</li>
+<li>Reference implementation path for DoW adoption</li>
+</ul>
+<p><strong>Out of Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Where to Look</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI tool and vendor selection</td>
+<td><a href="../fundamentals-play/">Fundamentals</a></td>
+<td>Published; forthcoming expansion covers agentic platform selection</td>
+</tr>
+<tr>
+<td>Multi-agent platform architecture: inter-agent communication, agent state management, runtime infrastructure</td>
+<td><a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a> Patterns 3 and 4</td>
+<td>Published; inter-agent communication and state management detail is forthcoming</td>
+</tr>
+<tr>
+<td>CI/CD pipeline design</td>
+<td>Your software factory documentation</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Governance policy framework</td>
+<td><strong>Governance Play</strong> <em>(cs_governance-play.md)</em></td>
+<td>Forthcoming</td>
+</tr>
+</tbody>
+</table>
+<p>Governance and human accountability <em>within</em> multi-agent workflows is in scope. See Section 5.5.</p>
+<p><strong>Target Audience:</strong> Developers and DevSecOps engineers, technical leads defining team-level AI policy, security engineers assessing agent workflow risk, program managers establishing adoption boundaries.</p>
+<hr />
+<h3 id="21-dow-deployment-context">2.1 DoW Deployment Context</h3>
+<p><em>Planned content: A brief orientation that surfaces the DoW-specific constraints shaping this play. A practical framing for the audience that includes relevant policy references. These factors appear throughout the play; they are consolidated here so readers understand why certain recommendations are scoped or weighted as they are.</em></p>
+<h4 id="rmf-and-authorization-to-operate">RMF and Authorization to Operate</h4>
+<ul>
+<li>AI tools used in DoW workflows require authorization under the Risk Management Framework (DoDI 8510.01). AI-generated code artifacts, agent behavior files, and automated pipeline steps must fit within the system's ATO boundary — or trigger a formal ATO update.</li>
+<li>The emerging cATO (continuous Authorization to Operate) model creates new possibilities for iterative AI tool integration, but also requires continuous monitoring capability that many teams are still building.</li>
+<li>This play assumes AI tooling is operating within an authorized boundary. Teams that have not yet authorized their AI tools should begin there before implementing any pattern in Section 5.</li>
+</ul>
+<h4 id="impact-level-governance">Impact Level Governance</h4>
+<ul>
+<li>Autonomy levels do not carry the same risk at all Impact Levels. Autonomy level 3 (Sandbox Execute) in an IL-2 environment is materially different from the same autonomy level in an IL-5 or IL-6 environment.</li>
+<li>Recommended starting posture: teams operating above IL-2 should default to autonomy levels 0–1 until governance is established and tested against their specific data categories. AI-generated outputs should not interact with classified or CUI data until guardrails are validated for that data type.</li>
+<li><em>Author note: Section 6.1 should include a supplementary column or table mapping recommended autonomy level ceilings by impact level.</em></li>
+</ul>
+<h4 id="government-contractor-accountability">Government / Contractor Accountability</h4>
+<ul>
+<li>The principle that "the human holds accountability" takes a specific form in DoW. For government-contractor teams, the accountability chain runs through contracting officers, Contracting Officer's Representatives (CORs), program managers, and government technical leads and not the individual contractor developer.</li>
+<li>Review gate design should reflect this: approval authority for AI-generated artifacts should align with the program's government oversight structure, not just the nearest available technical reviewer.</li>
+<li>Programs should establish explicit policy specifying which approval roles must be filled by government personnel vs. contractor personnel for AI-generated work at each autonomy level.</li>
+</ul>
+<h4 id="software-supply-chain-and-aibom">Software Supply Chain and AIBOM</h4>
+<ul>
+<li>AI-generated code complicates software bill of materials (SBOM) attestation. When an agent generates or substantially modifies code, the provenance of that code differs from human-authored code. DoDI 8430.AA (draft) introduces AI Bill of Materials (AIBOM) requirements that will apply to AI-augmented software factories.</li>
+<li>Teams adopting AI code generation workflows should begin tracking AI tool involvement in their software supply chain records now, before formal AIBOM requirements are codified. The reference implementation in Section 5.6 should include a starter AIBOM record template.</li>
+<li>AIBOM scope extends beyond code. AI-generated test artifacts, configuration, infrastructure definitions, and documentation are also SDLC deliverables subject to provenance tracking. Teams should treat any AI-generated artifact that enters a controlled repository or delivery package as a supply chain event.</li>
+</ul>
+<h4 id="mission-criticality">Mission Criticality</h4>
+<ul>
+<li>The speed-quality inversion risk (Sections 1 and 8) is documented in commercial data. In DoW, quality failures in mission-critical software carry consequences that differ fundamentally from commercial failures: operational impact, personnel safety, mission degradation. The emphasis on human accountability and guardrail precision throughout this play is calibrated to that context and not just to software quality metrics.</li>
+</ul>
+<h4 id="software-factory-integration">Software Factory Integration</h4>
+<ul>
+<li>Most DoW development teams operate within an established software factory. Examples span the services and DISA: Platform One and Kessel Run (USAF), Kobayashi Maru (USSF), Army Software Factory, Black Pearl and The Forge (Navy), Marine Corps Software Factory, and DISA Citadel. The DoD Software Factory Coalition includes nearly 50 factories department-wide. This play is tool-agnostic by design, but the reference implementation in Section 5.6 should be validated against a factory's approved toolchain and ATO before adoption.</li>
+</ul>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: Is this scope framing correct? Are there workflow types teams are actively using that fall outside these five modes? Are there additional DoW-specific constraints — coalition/partner nation concerns, ITAR implications, or program-of-record constraints — that should be addressed in this section?</p>
+</blockquote>
+<hr />
+<h2 id="3-prerequisites-and-readiness"><strong>3. Prerequisites and Readiness</strong></h2>
+<p><em>Planned content: Pre-flight checklist format, consistent with other plays.</em></p>
+<ul>
+<li>[ ] <strong>Approved AI environment</strong>: AI tools and models approved for the relevant impact level (e.g., AWS Bedrock on GovCloud for IL-4)</li>
+<li>[ ] <strong>Foundational plays reviewed</strong>: Team has read <a href="../fundamentals-play/">Fundamentals</a>, <a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a>, and <a href="../human-machine-patterns/">Human-Machine Interaction Patterns</a></li>
+<li>[ ] <strong>Data classification boundaries defined</strong>: Clear rules on what data categories can be shared with AI systems</li>
+<li>[ ] <strong>CI/CD pipeline established</strong>: Event-driven automation infrastructure exists for asynchronous workflows</li>
+<li>[ ] <strong>Version control for behavior files</strong>: Agent personas and system prompts stored in version-controlled repositories <em>(Note: The AI4SDLC Working Group will publish reference agent personas, skills, and prompt templates in the coming weeks.)</em></li>
+<li>[ ] <strong>Human review gates defined</strong>: Approval checkpoints established for AI-generated artifacts before they reach production</li>
+<li>[ ] <strong>Guardrail policy drafted</strong>: Initial data handling and output restrictions documented in writing</li>
+</ul>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: What readiness conditions are your teams finding are actually blocking adoption? Are there prerequisites missing here?</p>
+</blockquote>
+<hr />
+<h2 id="4-guiding-principles"><strong>4. Guiding Principles</strong></h2>
+<p><em>Planned content: Principles table, 8–10 rows. Consistent with documentation and testing play format.</em></p>
+<p>Proposed principles — subject to workgroup refinement:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Principle / Risk Area</strong></th>
+<th><strong>Expected Practice</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Human Accountability</strong></td>
+<td>The human who reviews and approves AI-generated work is accountable for it. AI does not hold accountability. The reviewer does.</td>
+</tr>
+<tr>
+<td><strong>Explicit Autonomy</strong></td>
+<td>Autonomy granted to AI agents should be explicitly defined per task, not assumed. Default to the most restrictive level appropriate for the work.</td>
+</tr>
+<tr>
+<td><strong>Guardrail Precision</strong></td>
+<td>Vague behavioral instructions fail. Guardrails should use specific, mandatory language rather than conditional or approximate guidance.</td>
+</tr>
+<tr>
+<td><strong>Behavior as Code</strong></td>
+<td>Agent behavior definitions — personas, contracts, system prompts — should be version-controlled and reviewed with the same care as application code.</td>
+</tr>
+<tr>
+<td><strong>Data Protection</strong></td>
+<td>Do not expose classified, CUI, or sensitive system metadata (IP addresses, hostnames, API keys) to AI systems. Validator agents should enforce redaction.</td>
+</tr>
+<tr>
+<td><strong>Sync vs. Async Awareness</strong></td>
+<td>Synchronous workflows require real-time human judgment. Asynchronous workflows require pre-defined review gates. Design governance to match the interaction mode.</td>
+</tr>
+<tr>
+<td><strong>Approved Environments</strong></td>
+<td>Use only AI tools approved for your classification level. Verify model availability within approved services before deploying workflows.</td>
+</tr>
+<tr>
+<td><strong>Attack Surface Awareness</strong></td>
+<td>Agent behavior files are attack vectors. Treat them as security artifacts: restrict write access, validate provenance, and monitor for anomalous behavior.</td>
+</tr>
+<tr>
+<td><strong>Tenure-Aware Review</strong></td>
+<td>Do not assume that code review experience transfers automatically to AI output review. Establish explicit review criteria applicable regardless of reviewer seniority.</td>
+</tr>
+<tr>
+<td><strong>Human as Team Lead</strong></td>
+<td>In multi-agent and swarm contexts, the human's role shifts from reviewer of individual outputs to leader of a coordinated AI workforce. The skills required — objective-setting, outcome evaluation, exception handling — are distinct from those needed for single-agent oversight. <em>(See forthcoming companion: Leading Teams of AI Agents)</em></td>
+</tr>
+<tr>
+<td><strong>Outcome-Level Governance</strong></td>
+<td>At the swarm level, governance cannot operate action-by-action. Define expected outcomes, observable success criteria, and escalation conditions before execution begins. Govern by what the agent team produces, not by every step it takes.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: Are there additional principles your teams have found essential? Anything here that conflicts with your environment's constraints?</p>
+</blockquote>
+<hr />
+<h2 id="5-core-patterns-and-practices"><strong>5. Core Patterns and Practices</strong></h2>
+<p><em>Planned content: The "how." Six subsections, each describing a repeatable pattern with rationale, guidance, and examples.</em></p>
+<h3 id="51-the-task-level-autonomy-framework">5.1 The Task-Level Autonomy Framework</h3>
+<p><em>This is the centerpiece section.</em></p>
+<p><strong>Purpose</strong>: Introduce a six-level autonomy framework as the operational complement to the AI Autonomy Continuum's architectural patterns. Provide a shared vocabulary developers can apply task-by-task.</p>
+<p><strong>Planned content:</strong></p>
+<ul>
+<li><strong>Framing paragraph</strong>: The Continuum play answers "What kind of AI workflow have we architected?" This framework answers "What is this agent permitted to do right now, on this task?" They operate at different levels and are used together.</li>
+<li><strong>The six-level table</strong> (full version):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Level</strong></th>
+<th><strong>Label</strong></th>
+<th><strong>What the AI May Do</strong></th>
+<th><strong>Human Role</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Suggest</td>
+<td>Provide advice only. No file edits, no command execution.</td>
+<td>Reads, decides independently.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Draft Artifacts</td>
+<td>Draft text, code snippets, plans, checklists. Human applies changes.</td>
+<td>Reviews draft; applies changes manually.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Propose Changes</td>
+<td>Produce a patch/diff proposal plus a test plan. Human reviews and applies.</td>
+<td>Reviews diff and test plan; approves or rejects.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sandbox Execute</td>
+<td>May run commands in an isolated, non-production sandbox with explicit approval.</td>
+<td>Monitors execution; reviews outputs.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Create PR/MR</td>
+<td>May open a pull or merge request with changes and supporting evidence. Cannot merge.</td>
+<td>Reviews PR/MR; holds merge authority.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Autonomous Merge/Deploy</td>
+<td>Not recommended for most environments. Requires formal governance and executive authorization.</td>
+<td>Oversight via monitoring and exception handling.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Recommended baseline</strong>: Level 1–2 for broad adoption, with mandatory human review before changes are applied.</li>
+<li><strong>Reconciliation with Continuum patterns</strong>: Brief table mapping levels to patterns (Pattern 1 → Levels 0–1, Pattern 2 → Levels 1–4, Pattern 3 → Levels 3–4, Pattern 4 → Levels 4–5 with governance).</li>
+<li><strong>Key design principle</strong>: These levels apply per task, not per team or system. A developer can invoke Level 0 for sensitive refactoring and Level 2 for routine test generation in the same session.</li>
+</ul>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: Does this level framework match how your teams are thinking about and communicating autonomy limits? Are the labels and descriptions accurate to field experience?</p>
+</blockquote>
+<hr />
+<h3 id="52-agent-persona-patterns">5.2 Agent Persona Patterns</h3>
+<p><strong>Purpose</strong>: Define what agent personas are, how to write them, and what roles are most useful in an SDLC workflow.</p>
+<p><strong>Planned content:</strong></p>
+<ul>
+<li><strong>What a persona file is</strong> (Not a prompt.  A behavior definition written in human-readable Markdown, stored in version control, tool-agnostic)</li>
+<li><strong>Common SDLC persona types (not exhaustive)</strong> (table):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Persona</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code Reviewer</td>
+<td>Analyzes code for defects, standards violations, and security risks</td>
+</tr>
+<tr>
+<td>DevSecOps Control Mapper</td>
+<td>Maps code and configurations to applicable security controls</td>
+</tr>
+<tr>
+<td>Requirements Analyzer</td>
+<td>Decomposes requirements into acceptance criteria or user stories</td>
+</tr>
+<tr>
+<td>Test Planner</td>
+<td>Generates test strategies, test cases, and coverage analysis</td>
+</tr>
+<tr>
+<td>Security Analyst</td>
+<td>Identifies vulnerabilities, threat vectors, and misconfigurations</td>
+</tr>
+<tr>
+<td>Red Team Agent</td>
+<td>Generates adversarial test cases and boundary conditions</td>
+</tr>
+<tr>
+<td>Validator</td>
+<td>Cross-checks outputs from other personas for accuracy and policy compliance</td>
+</tr>
+<tr>
+<td>Orchestrator</td>
+<td>Coordinates task sequencing across multiple personas</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>What a persona file should include</strong>: Role description, behavioral constraints (mandatory language), output format, escalation conditions, data handling rules</li>
+<li><strong>The Validator pattern</strong>: Deserves dedicated callout. Serves as a quality and policy gate on outputs from other personas. Standard component of multi-persona workflows.</li>
+<li><strong>Tool portability</strong>: Markdown-based persona files work across GitLab Duo, Claude Code (CLAUDE.md files), Roo/Cline, Continue.dev, and other AI development toolchains. The current lingua franca of agent behavior definition is Markdown.</li>
+<li><strong>Scenario example</strong>: <em>[Planned : a developer invokes a Test Planner persona at Level 2, Validator confirms output meets guardrails before presenting to human for review.]</em></li>
+</ul>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: What personas are your teams actually using? Are there roles missing from this table? What has the Validator pattern looked like in practice?</p>
+</blockquote>
+<hr />
+<h3 id="53-synchronous-vs-asynchronous-workflow-design">5.3 Synchronous vs. Asynchronous Workflow Design</h3>
+<p><strong>Purpose</strong>: Help teams design governance to match the interaction mode, not just the capability.</p>
+<p><strong>Planned content:</strong></p>
+<ul>
+<li>
+<p><strong>Synchronous workflow characteristics</strong>: Developer present in real time; IDE or chat interface; tight human-AI loop; natural checkpoint at every response. Autonomy levels 0–2 appropriate for most interactions. Key risk: cognitive overload leading to rubber-stamp review of high-volume output.</p>
+</li>
+<li>
+<p><strong>Asynchronous workflow characteristics</strong>: Developer absent during execution; triggered by CI/CD events; human reviews after the fact. Levels 1–4 may apply. Key design requirement: review gates must be explicitly designed in, not assumed. Audit trails are essential.</p>
+</li>
+<li>
+<p><strong>HMT pattern mapping</strong> — The five HMT interaction patterns are <em>surfaces</em>; the workflow modes are <em>governance dimensions</em>. Any surface can support multiple workflow modes. The table below shows the most common mode per surface and flags where background/async execution is possible within the tool itself:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>HMT Interaction Pattern</strong></th>
+<th><strong>Primary Workflow Mode</strong></th>
+<th><strong>Also Supports</strong></th>
+<th><strong>Typical Autonomy Levels</strong></th>
+<th><strong>Primary Governance Concern</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standalone Web Interfaces</td>
+<td>Synchronous</td>
+<td>—</td>
+<td>0–1</td>
+<td>No traceability; out-of-band use; data exposure risk</td>
+</tr>
+<tr>
+<td>IDE Plugins and Adapters</td>
+<td>Synchronous</td>
+<td>—</td>
+<td>0–2</td>
+<td>Prompt versioning; limited shared oversight</td>
+</tr>
+<tr>
+<td>AI-First IDEs / Workspaces</td>
+<td>Synchronous</td>
+<td>Asynchronous (background agent tasks)</td>
+<td>1–4</td>
+<td>Human may not be present during agent execution; review gates needed even within the IDE</td>
+</tr>
+<tr>
+<td>Custom API Integrations</td>
+<td>Asynchronous</td>
+<td>—</td>
+<td>2–4</td>
+<td>Review gate design; audit trail completeness</td>
+</tr>
+<tr>
+<td>Agentic Platforms</td>
+<td>Agentic / Orchestrated</td>
+<td>Asynchronous; Continuous (advanced)</td>
+<td>3–5 (governed)</td>
+<td>Emergent behavior; trust calibration; formal governance required</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Key implication</strong>: When an IDE-embedded tool (GitLab Duo, Claude Code) runs a background agent task, the same asynchronous governance requirements apply — defined review gates, audit trails, and approval criteria — even though the developer is still "in the IDE." The interface does not determine the governance requirement; the human's presence during execution does.</p>
+</blockquote>
+<ul>
+<li><strong>Design guidance table</strong>:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Factor</strong></th>
+<th><strong>Synchronous</strong></th>
+<th><strong>Asynchronous</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Human presence</td>
+<td>Real-time</td>
+<td>Post-hoc</td>
+</tr>
+<tr>
+<td>Oversight model</td>
+<td>Continuous</td>
+<td>Checkpoint-based</td>
+</tr>
+<tr>
+<td>Appropriate autonomy levels</td>
+<td>0–2</td>
+<td>1–4 (with defined gates)</td>
+</tr>
+<tr>
+<td>Primary risk</td>
+<td>Cognitive overload; rubber-stamping</td>
+<td>Insufficient review gates; audit trail gaps</td>
+</tr>
+<tr>
+<td>Governance priority</td>
+<td>Guardrail precision</td>
+<td>Gate design and approval criteria</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Volume warning</strong>: As asynchronous AI output volume increases, human review capacity becomes the constraint. Monitor review-to-output ratios. If reviewers cannot keep pace, the human-in-the-loop provides compliance theater, not assurance.</li>
+</ul>
+<hr />
+<h3 id="54-designing-guardrails-that-hold">5.4 Designing Guardrails That Hold</h3>
+<p><strong>Purpose</strong>: Close the gap between "we have guardrails" and "our guardrails actually work."</p>
+<p><strong>Planned content:</strong></p>
+<ul>
+<li>
+<p><strong>The precision problem</strong>: Guardrail effectiveness depends almost entirely on specificity. Vague or conditional language produces inconsistent results.</p>
+</li>
+<li>
+<p><strong>What works vs. what fails</strong> (side-by-side examples):</p>
+</li>
+<li><em>Fails</em>: "Try not to include sensitive information."</li>
+<li>
+<p><em>Works</em>: "You must not output IP addresses, hostnames, or user credentials under any circumstances. If any token matches the pattern <code>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}</code>, replace it with <code>[REDACTED-IP]</code>."</p>
+</li>
+<li>
+<p><strong>Categories of guardrails to define</strong>: Data exposure (PII, credentials, hostnames), output format constraints, escalation triggers, scope boundaries.</p>
+</li>
+<li>
+<p><strong>Guardrail testing</strong>: Create synthetic test files containing known-sensitive patterns and verify agent behavior before deploying. Build these as pipeline tests alongside application code, not as one-time checks.</p>
+</li>
+<li>
+<p><strong>Layered approach</strong>: Persona-level guardrails (behavioral) + Validator persona (output check) + pipeline-level scanning (automated) = defense in depth.</p>
+</li>
+</ul>
+<hr />
+<h3 id="55-multi-agent-systems-and-the-human-team-lead">5.5 Multi-Agent Systems and the Human Team Lead</h3>
+<p><strong>Purpose</strong>: Address the emerging paradigm where multiple AI agents coordinate toward shared objectives — and where the human's role is no longer task reviewer but team lead to a digital workforce.</p>
+<p><strong>Scope note for author</strong>: This section addresses the governance and human accountability dimensions of multi-agent workflows. Architectural design of orchestration platforms — technology selection, inter-agent communication, agent state management, infrastructure provisioning — is out of scope here. For that layer, see the <a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a> — Patterns 3 and 4. Open the section with a sentence that makes this boundary explicit.</p>
+<p><strong>Planned content:</strong></p>
+<ul>
+<li>
+<p><strong>What changes at the multi-agent layer</strong>: In single-agent workflows, the human evaluates individual outputs: code diffs, test plans, security findings. In multi-agent systems, a coordinating orchestrator decomposes a goal into subtasks, assigns them to specialized agents, and aggregates results. The human interacts primarily at the objective and outcome layers, not at every intermediate step. This is not a reduction in accountability. It is a shift in <em>where</em> that accountability is exercised.</p>
+</li>
+<li>
+<p><strong>Two coordination patterns</strong> (table):</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Pattern</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Human Role</strong></th>
+<th><strong>Autonomy Level</strong></th>
+<th><strong>Governance Approach</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Orchestrated swarm</strong></td>
+<td>A designated Orchestrator agent decomposes tasks and coordinates specialized agents. Workflow is explicit and auditable.</td>
+<td>Sets objective; reviews orchestrator plan; approves outcomes; handles escalations.</td>
+<td>Levels 3–4 with defined gates</td>
+<td>Orchestrator persona contract; outcome-level review; full audit trail</td>
+</tr>
+<tr>
+<td><strong>Emergent swarm</strong></td>
+<td>Agents self-organize around a shared goal without a fixed orchestrator. Coordination arises from agent interaction.</td>
+<td>Sets objective and boundaries; monitors for anomalous behavior patterns; intervenes when agents diverge.</td>
+<td>Levels 4–5; requires formal governance</td>
+<td>Observable outcome criteria; behavioral monitoring; defined intervention triggers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended default</strong>: Orchestrated swarm. Emergent swarm patterns should be reserved for teams with established multi-agent governance and demonstrable calibrated trust.</p>
+<ul>
+<li><strong>The human team lead role — what it requires</strong>: Leading an agent team is a distinct capability from using an AI tool or reviewing an AI output. Key responsibilities include:</li>
+<li><strong>Objective-setting</strong>: Translating mission requirements into agent-executable goals with clear success criteria and explicit boundaries</li>
+<li><strong>Outcome evaluation</strong>: Assessing whether the agent team achieved the objective correctly, not just whether individual outputs look plausible</li>
+<li><strong>Exception handling</strong>: Recognizing when agents have diverged, are looping, or have produced outputs that require human course correction</li>
+<li><strong>Trust calibration</strong>: Knowing when to expand agent autonomy and when to tighten it, based on observed performance over time</li>
+<li><strong>Audit trail literacy</strong>: Reading multi-agent execution logs to reconstruct what happened and why</li>
+</ul>
+<p><em>These skills are the subject of the forthcoming companion play: </em><em>Leading Teams of AI Agents</em><em> </em>(ai-agent-team-leadership.md — Forthcoming)<em>.</em></p>
+<ul>
+<li><strong>Governance at the orchestration layer</strong>: Individual agent guardrails remain essential but are not sufficient. The Orchestrator persona requires additional governance:</li>
+<li>Define acceptable task decomposition boundaries (what the orchestrator may and may not assign to sub-agents)</li>
+<li>Establish escalation triggers: conditions under which the orchestrator must surface a decision to the human rather than proceeding</li>
+<li>Require outcome summaries: the orchestrator should produce a human-readable account of what the agent team did and why</li>
+<li>
+<p>Audit trail requirements: every agent action, sub-agent spawn, and tool call should be logged with the originating objective and orchestrator intent</p>
+</li>
+<li>
+<p><strong>Relationship to the Autonomy Continuum</strong>: Orchestrated swarms align with Pattern 3 (Orchestrated Systems). Emergent swarms approach Pattern 4 (Adaptive Ecosystems). Neither should be implemented without first demonstrating readiness at Patterns 1 and 2 for the relevant workflow. <em>(Cross-reference: <a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a>)</em></p>
+</li>
+<li>
+<p><strong>Scenario example</strong> <em>(planned)</em>: A technical lead assigns a feature development objective to an agent team. The Orchestrator decomposes it into requirements analysis, code generation, test planning, and security review subtasks. Specialized agents execute each. The Orchestrator aggregates results and flags one security finding for human decision. The human evaluates the summary and approves the PR. Total human interaction: objective-setting and one exception decision.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: Are teams in the working group operating orchestrated or emergent swarm patterns today? What oversight mechanisms are proving effective? What skills gaps are emerging in the human team lead role?</p>
+</blockquote>
+<hr />
+<h3 id="56-the-reference-implementation">5.6 The Reference Implementation</h3>
+<p><strong>Purpose</strong>: Address the "blank page problem" that stalls adoption. A starter set teams can download, adapt, and deploy.</p>
+<p><strong>Planned content:</strong></p>
+<ul>
+<li>
+<p><strong>What a reference implementation includes</strong>: Autonomy levels contract (the Level 0–5 framework as a standalone Markdown file), starter persona files (Validator, Code Reviewer, Test Planner as minimum viable set), sample orchestrator configuration, data protection guardrail templates.</p>
+</li>
+<li>
+<p><strong>Publishing path</strong>: Files published via code.mil as a versioned, open-contribution repository. Tool-agnostic by design. These are Markdown files that work with any compliant AI development toolchain.</p>
+</li>
+<li>
+<p><strong>Contribution model</strong>: Teams that develop effective persona files or improve the reference set should submit refinements through the working group. Applies the same open-source collaboration model to agent behavior that DoW already applies to software.</p>
+</li>
+<li>
+<p><strong>Scenario example</strong>: <em>[Planned — a team downloads the reference implementation, adapts the Validator persona for their environment, runs guardrail tests, and deploys to their pipeline in a defined number of steps.]</em></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: What should be in the minimum viable starter set? Is there anything from current field implementations that could contribute to the reference set?</p>
+</blockquote>
+<hr />
+<h2 id="6-decision-framework-and-trade-offs"><strong>6. Decision Framework and Trade-offs</strong></h2>
+<p><em>Planned content: Two decision tables helping teams select the right autonomy level and the right workflow mode.</em></p>
+<h3 id="61-selecting-the-right-autonomy-level">6.1 Selecting the Right Autonomy Level</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Task Type</strong></th>
+<th><strong>Recommended Level</strong></th>
+<th><strong>Rationale</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exploratory code review, learning</td>
+<td>0 — Suggest</td>
+<td>Developer needs context, not action</td>
+</tr>
+<tr>
+<td>Test case generation</td>
+<td>1–2 — Draft/Propose</td>
+<td>High volume; human validates coverage and logic</td>
+</tr>
+<tr>
+<td>Security vulnerability analysis</td>
+<td>1–2 — Draft/Propose</td>
+<td>High stakes; human validates every finding</td>
+</tr>
+<tr>
+<td>Documentation generation</td>
+<td>2 — Propose</td>
+<td>Structured output; human validates accuracy</td>
+</tr>
+<tr>
+<td>Dependency update</td>
+<td>4 — Create PR/MR</td>
+<td>Well-defined task; human holds merge authority</td>
+</tr>
+<tr>
+<td>Automated pipeline step</td>
+<td>2–3 — Propose/Sandbox</td>
+<td>Defined inputs/outputs; human reviews results</td>
+</tr>
+<tr>
+<td>Production deployment</td>
+<td>4 at most; prefer human-driven</td>
+<td>Human authorization required</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-choosing-the-workflow-mode">6.2 Choosing the Workflow Mode</h3>
+<p><em>[Table mapping task characteristics — sensitivity, volume, latency tolerance, consequence of error — to synchronous vs. asynchronous mode selection.]</em></p>
+<h3 id="63-continuum-pattern-to-autonomy-level-mapping">6.3 Continuum Pattern to Autonomy Level Mapping</h3>
+<p><em>[Cross-reference table bridging the two frameworks for readers who arrive from the Autonomy Continuum play.]</em></p>
+<hr />
+<h2 id="7-implementation-guidance-how-to-start"><strong>7. Implementation Guidance (How to Start)</strong></h2>
+<p><em>Planned content: 5–6 concrete steps. Consistent with testing and documentation play format.</em></p>
+<ol>
+<li>
+<p><strong>Define your autonomy baseline</strong> — Before deploying any AI workflow tooling, establish the organizational default level. Start with Level 1–2 for all developers. Document exceptions and the governance conditions that apply.</p>
+</li>
+<li>
+<p><strong>Build your first persona file</strong> — Start with the Validator persona. It provides immediate value by checking outputs for data exposure and policy compliance, requires no system integration, and is testable before it touches any production workflow.</p>
+</li>
+<li>
+<p><strong>Identify a bounded pilot workflow</strong> — Select one workflow (test case generation and code review are common starting points) and implement AI assistance at Level 1 or 2. Establish your baseline metrics before expanding.</p>
+</li>
+<li>
+<p><strong>Design review gates explicitly</strong> — For any asynchronous AI step in your pipeline, define: what outputs require human approval, what criteria define an acceptable output, and who holds approval authority. Document these gates in pipeline configuration and team practices.</p>
+</li>
+<li>
+<p><strong>Validate your guardrails</strong> — Test with synthetic artifacts before relying on guardrails in practice. Add guardrail validation tests to your pipeline alongside application tests.</p>
+</li>
+<li>
+<p><strong>Expand and contribute</strong> — Once the pilot is stable and measured, expand to additional personas or higher autonomy levels where risk and governance support it. Share effective patterns with the AI4SDLC Working Group.</p>
+</li>
+</ol>
+<hr />
+<h2 id="8-key-considerations-risks-metrics-pitfalls"><strong>8. Key Considerations (Risks, Metrics, Pitfalls)</strong></h2>
+<p><em>Planned content: Organized risks section and metrics section. Consistent with prior plays.</em></p>
+<h3 id="common-risks">Common Risks</h3>
+<p><strong>Prompt Injection via Agent Behavior Files</strong>
+Adversaries can embed malicious instructions in agent behavior files that redirect AI actions outside intended boundaries. Documented attacks have used agent instruction sets to orchestrate unauthorized system access, lateral movement, and data exfiltration. Mitigations: treat persona files as security artifacts, restrict write access, validate file provenance on load, and monitor agent behavior against expected patterns. <em>(Reference: MITRE ATLAS; DoD AI Cybersecurity Risk Management Tailoring Guide)</em></p>
+<p><strong>Governance Lag</strong>
+AI tooling adoption is outpacing governance development. Teams are establishing practices in the absence of policy — and those informal practices become the de facto standard. Mitigation: the autonomy level framework in Section 5.1 provides a lightweight starting point teams can formally adopt without waiting for comprehensive policy.</p>
+<p><strong>Review Capacity Saturation</strong>
+As AI-generated output volume increases, human review capacity becomes the binding constraint. Approving outputs without meaningful evaluation due to volume or time pressure converts the human-in-the-loop into compliance theater. Mitigations: monitor review-to-output ratios; establish review SLAs; apply Validator personas to automate secondary checks where appropriate.</p>
+<p><strong>Access Control to AI-Augmented Systems</strong>
+AI tools with repository, pipeline, or operational system access inherit significant privilege. Define access boundaries for AI agents the same way you would for service accounts: least privilege, explicitly scoped, regularly reviewed.</p>
+<p><strong>Speed-Quality Inversion</strong>
+Observable trends in large-scale repository data show increased duplication and decreased quality indicators alongside AI adoption, particularly when human oversight is thin. Monitor quality metrics, not just velocity, when evaluating AI workflow impact.</p>
+<p><strong>Shadow AI</strong>
+Developers using unapproved AI tools outside organizational visibility introduce data exposure and governance risks without leaving an audit trail. The autonomy framework only works if the tools themselves are governed. <em>(Cross-reference: <a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a> — Pattern 1, Shadow AI Risk)</em></p>
+<p><strong>Emergent Behavior in Swarm Systems</strong>
+Multi-agent systems can produce behaviors that no individual agent was designed to produce. When agents interact, share state, or spawn sub-agents, the collective behavior can diverge from intent in ways not apparent until outcomes are reviewed. Mitigations: prefer orchestrated over emergent swarm patterns; define observable success criteria before execution begins; monitor for outputs that exceed the intended scope of the objective.</p>
+<p><strong>Cascading Failures in Orchestrated Workflows</strong>
+A flawed output from one agent can propagate through the workflow as downstream agents treat it as valid input. Unlike a single-agent failure (caught by a human reviewer at one point), a cascading failure may compound across multiple steps before surfacing. Mitigations: design inter-agent validation checkpoints; require the Orchestrator to flag low-confidence handoffs for human review; test multi-agent workflows against known-bad inputs before production deployment.</p>
+<p><strong>Audit Trail Complexity at Scale</strong>
+In swarm systems, the audit trail grows with the number of agents and interactions. Actions taken by sub-agents spawned by other agents may be difficult to trace back to originating human intent, creating accountability gaps and compliance risk. Mitigations: require all agent actions to log the originating objective, the instructing agent, and the tool or resource accessed; treat the audit trail as a first-class artifact alongside code.</p>
+<p><strong>Human Skill Gap in the Team Lead Role</strong>
+As the human role shifts from individual output reviewer to agent team lead, the required skills change substantially. Teams that expand to multi-agent workflows without developing objective-setting, outcome evaluation, and exception-handling capabilities risk governance failures that task-level review would have caught. Mitigation: develop human skills in parallel with expanding agent autonomy. <em>(See forthcoming companion: </em><em>Leading Teams of AI Agents</em><em>)</em></p>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: Are there additional risks your teams have encountered — particularly around swarm governance, cascading failures, audit trail gaps, or the human team lead skill transition — that should be captured here? (The access control challenge raised in the working group is a candidate for expansion.)</p>
+</blockquote>
+<h3 id="key-metrics">Key Metrics</h3>
+<p><em>Planned: Organized into three categories — workflow health, code quality, and security.</em></p>
+<p><strong>Workflow Health</strong>
+- Autonomy level distribution (what levels are teams actually using in practice?)
+- Review-to-AI-output ratio (are humans reviewing in proportion to output volume?)
+- PR/MR rejection rate for AI-generated changes</p>
+<p><strong>Code Quality</strong>
+- Defect escape rate before and after AI workflow adoption
+- Security finding rate per 1,000 lines (from static and dynamic analysis tools)
+- Code duplication percentage over time</p>
+<p><strong>Security</strong>
+- Guardrail validation pass rate (results from synthetic test artifacts)
+- Anomalous agent behavior incidents per quarter
+- Percentage of AI-generated artifacts passing through a Validator persona before reaching human review</p>
+<hr />
+<h2 id="9-key-takeaways"><strong>9. Key Takeaways</strong></h2>
+<p><em>Planned content: 5–7 declarative statements. Final phrasing TBD.</em></p>
+<ul>
+<li>Autonomy is a choice, not a default. Define what agents are permitted to do before deploying them.</li>
+<li>Guardrails work when they are precise. Vague behavioral instructions produce inconsistent results.</li>
+<li>Persona files are security artifacts. Apply the same version control and access control discipline as application code.</li>
+<li>The human holds accountability. AI can draft, propose, execute, and generate. Responsibility for what reaches production belongs to the human who reviewed and approved it.</li>
+<li>Synchronous and asynchronous workflows need different governance. Design oversight for the interaction mode, not just the capability.</li>
+<li>Speed is not the measure of success. Monitor quality and security metrics alongside velocity to catch speed-quality inversions early.</li>
+<li>Reference implementations lower the cost of adoption. Genericized persona files reduce the setup burden for teams across the DoW.</li>
+<li>Multi-agent systems change the human role, not just the human workload. Leading a digital workforce requires skills distinct from reviewing individual AI outputs: objective-setting, outcome evaluation, and exception handling.</li>
+</ul>
+<hr />
+<h2 id="10-companion-plays-and-references"><strong>10. Companion Plays and References</strong></h2>
+<p><em>Planned content: Related plays, key references, emerging guidance.</em></p>
+<p><strong>Related Plays</strong></p>
+<ul>
+<li><a href="../fundamentals-play/">Fundamentals for Building an AI-Augmented Toolchain</a></li>
+<li><a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a> — Strategic architectural patterns (Patterns 1–4); this play is the operational complement governing autonomy within those patterns</li>
+<li><a href="../human-machine-patterns/">Human-Machine Interaction Patterns</a> — Defines the five ways humans interact with AI tools (standalone web, IDE plugins, AI-first IDEs, custom API integrations, agentic platforms). This play governs autonomy and behavior <em>within</em> those interaction modes; HMT governs the interaction design itself. Read together.</li>
+<li><a href="../testing-play/">AI-Augmented Testing</a> — Applying AI to test generation and analysis</li>
+<li><a href="../documentation-play/">AI-Assisted Documentation Across the SDLC</a> — Documentation workflows and agentic orchestration</li>
+<li><a href="../code-gen-play/">Leading Practices for Code Completion and Generation</a></li>
+<li><a href="../prompt-engineering/">Prompt Engineering</a></li>
+<li><strong>Leading Teams of AI Agents</strong> <em>(ai-agent-team-leadership.md — Forthcoming)</em> — Companion sub-play addressing the human skills required to lead coordinated AI agent teams: objective-setting in agent contexts, outcome evaluation, exception handling, audit trail literacy, and trust calibration at the team level. Addresses the shift from individual AI output reviewer to digital workforce team lead.</li>
+</ul>
+<p><strong>Key References</strong> <em>(IEEE citations to be formatted in full draft)</em></p>
+<ul>
+<li>DORA Team, <em>2025 State of AI-Assisted Software Development</em>, Google, 2025 — Research on AI adoption patterns, quality impacts, and team performance</li>
+<li>DoD CIO, <em>AI Cybersecurity Risk Management Tailoring Guide</em>, v2 (2025) — Maps AI-specific attack vectors using MITRE ATLAS; addresses assistant-only model category</li>
+<li>MITRE ATLAS — Adversarial threat landscape for AI systems; documented attack patterns for agent-driven workflows</li>
+<li>Anthropic, <em>Disrupting AI Espionage</em>, 2026 — Documented case of weaponized agent instruction sets used for unauthorized system access and lateral movement</li>
+<li>NIST SP 800-218 Secure Software Development Framework (SSDF)</li>
+<li>NIST AI Risk Management Framework (AI RMF)</li>
+</ul>
+<p><strong>Emerging Guidance</strong></p>
+<ul>
+<li><strong>DoDI 8430.AA (draft)</strong> — Introduces AIBOM (AI Bill of Materials) requirements alongside traditional SBOMs. As AI-assisted workflows become embedded in software factories, the models, training data, and behavioral definitions used will require traceable provenance documentation.</li>
+<li><strong>12-Factor methodology for agentic systems</strong> — Adapting established 12-factor application design principles (explicit dependency management, environment-specific configuration, stateless process design) to agent workflows is an emerging practitioner discussion. Teams building durable agent workflows should track this pattern.</li>
+</ul>
+<h3 id="bibliography-for-full-draft">Bibliography for Full Draft</h3>
+<p>Citation hooks to be placed during authoring — not yet referenced inline.</p>
+<h4 id="dow-policy-and-governance">DoW Policy and Governance</h4>
+<ul>
+<li>U.S. Deputy Secretary of Defense, <em>Implementing Responsible Artificial Intelligence in the Department of Defense</em>, Memorandum, May 27, 2021 — Foundational RAI accountability memo; policy basis for Section 4 human accountability principles</li>
+<li>U.S. DoD, <em>DoD Ethical Principles for Artificial Intelligence</em> (Responsible, Equitable, Traceable, Reliable, Governable), Office of the Secretary of Defense, Feb. 2020 — Normative foundation for all DoW AI governance</li>
+<li>U.S. DoD CDAO, <em>Responsible AI Strategy and Implementation Pathway</em>, Jun. 2022 — RAI implementation roadmap; accountability chain structure and AI evaluation standards</li>
+<li>U.S. DoD CIO, <em>DoDI 8510.01: Risk Management Framework for DoD Information Technology</em>, updated Jul. 2022 — Mandatory RMF/ATO framework; normative basis for Section 2.1 authorization requirements</li>
+<li>U.S. DoD CIO, <em>DevSecOps Continuous Authorization to Operate (cATO) Implementation Guide</em>, 2024 — cATO implementation; supports iterative AI tool integration into software factories</li>
+<li>U.S. DoD CIO, <em>DoD Enterprise DevSecOps Strategy Guide</em> — Software factory governance patterns; compatibility reference for Section 5.6 reference implementation</li>
+<li>U.S. DoD CIO, <em>The State of DevSecOps</em>, Mar. 2025 — Official DoW assessment of DevSecOps adoption; institutional documentation of governance lag claim in Section 1</li>
+<li>U.S. Deputy Secretary of Defense, <em>DoD Software Modernization Strategy</em>, Nov. 2021 — Strategic direction for DevSecOps and AI integration as core modernization priorities</li>
+<li>U.S. DoD CDAO, <em>DoD AI and Machine Learning Scaffolding and AI Assurance</em>, May 2023 — AI assurance framework; supports Section 5.4 guardrail validation and Section 5.6 reference implementation</li>
+<li>Defense Acquisition University, <em>Guidebook SWE0058: Overview of Artificial Intelligence in the DoD</em>, v2.3, Jan. 2024 — Primary acquisition workforce AI reference; supports program manager audience</li>
+<li>DoD Adaptive Acquisition Framework, <em>Software Acquisition Pathway</em> — Acquisition policy context for AI workflow governance in programs of record</li>
+</ul>
+<h4 id="nist-publications">NIST Publications</h4>
+<ul>
+<li>NIST AI 600-1, <em>Artificial Intelligence Risk Management Framework: Generative AI Profile</em>, Jul. 2024 — GenAI-specific companion to AI RMF; twelve risk categories applicable to Section 5.4 guardrail design and Section 8 risks</li>
+<li>NIST SP 800-218A, <em>Secure Software Development Practices for Generative AI and Dual-Use Foundation Models</em>, Jul. 2024 — AI-specific SSDF companion; agent behavior file governance and supply chain integrity</li>
+<li>NIST SP 800-53 Rev. 5, <em>Security and Privacy Controls for Information Systems</em>, Dec. 2020 — Control catalog underlying all RMF selections; AC, AU, and SI families apply to agent workflow access and audit requirements</li>
+<li>NIST SP 800-160 Vol. 2 Rev. 1, <em>Developing Cyber-Resilient Systems</em>, Dec. 2021 — Cyber resilience engineering principles; supports Section 8 mitigations for cascading failures and emergent behavior</li>
+<li>NIST SP 800-161 Rev. 1, <em>Cybersecurity Supply Chain Risk Management Practices</em>, May 2022 — C-SCRM framework; applies to AI model provenance and AIBOM tracking</li>
+<li>NIST SP 800-204D, <em>Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines</em>, Feb. 2024 — DevSecOps pipeline supply chain security; supports Section 2.1 AIBOM discussion and Section 5.3 asynchronous workflow governance</li>
+</ul>
+<h4 id="security-and-attack-surface">Security and Attack Surface</h4>
+<ul>
+<li>OWASP GenAI Security Project, <em>OWASP Top 10 for LLM Applications 2025</em>, v2025, Nov. 2024 — Practitioner-standard LLM security taxonomy; LLM01 (prompt injection), LLM05 (supply chain), LLM08 (excessive agency) directly map to Section 8 risks</li>
+<li>Y. Liu et al., "Prompt Injection Attack Against LLM-Integrated Applications," <em>arXiv:2306.05499</em>, Jun. 2023 — Foundational academic treatment of prompt injection as an attack vector; grounds Section 8 prompt injection risk</li>
+</ul>
+<h4 id="ai-code-quality">AI Code Quality</h4>
+<ul>
+<li>W. Harding and M. Vander Poel, <em>Coding on Copilot: 2023 Data Suggests Downward Pressure on Code Quality</em>, GitClear Research, Jan. 2024 — Empirical analysis of 153M changed lines; primary data citation for speed-quality inversion in Sections 1 and 8</li>
+</ul>
+<h4 id="multi-agent-systems-and-autonomy">Multi-Agent Systems and Autonomy</h4>
+<ul>
+<li>S. Cohen, N. Kolt et al., "Multi-Agent Risks from Advanced AI," <em>arXiv:2502.14143</em>, Feb. 2025 — Comprehensive treatment of emergent behaviors, cascading failures, and audit complexity in multi-agent AI systems; grounds Sections 5.5 and 8 swarm risks <em>(preprint)</em></li>
+<li>A. Kasirzadeh and I. Gabriel, "Characterizing AI Agents for Alignment and Governance," <em>arXiv:2504.21848</em>, Apr. 2025 — Four-dimensional agent characterization framework; autonomy dimension is academic analog to the play's task-level autonomy framework <em>(preprint)</em></li>
+</ul>
+<h4 id="software-supply-chain">Software Supply Chain</h4>
+<ul>
+<li>B. Zhan et al., "Trust in Software Supply Chains: Blockchain-Enabled SBOM and the AIBOM Future," in <em>Proc. ACM/IEEE EnCyCriS 2024</em> — Peer-reviewed academic treatment of AIBOM as SBOM extension; supports Section 2.1 supply chain discussion</li>
+</ul>
+<blockquote>
+<p><strong>[FEEDBACK REQUESTED]</strong>: Are there additional references — particularly SEI research on AI security, ITAR guidance for AI tools, coalition/partner nation AI governance sources, or other working group contacts' published work — that should be captured here?</p>
+</blockquote>
+<hr />
+<h3 id="architectural-intent">Architectural intent</h3>
+<p>The Autonomy Continuum establishes what kind of AI workflow a team has architected. This play fills in the operational layer: what agents are permitted to do on a specific task, how guardrails are specified and tested, and who is accountable for what reaches production. The intent is a workable framework teams can adopt now, without waiting for comprehensive policy.</p>
+<hr />
+<p><em>This outline was prepared for AI4SDLC Working Group review — March 2026. Feedback due prior to authoring the full play. Submit comments via MR or to the working group channel.</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
