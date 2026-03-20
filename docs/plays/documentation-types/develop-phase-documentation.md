@@ -1,7 +1,8 @@
 ---
+# automatic badge generation
 title: "Develop Phase Documentation"
 parent: "documentation-play.md"
-lifecycle: beta
+lifecycle: rc
 last_updated: "2026-01-26"
 ---
 

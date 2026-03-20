@@ -1,7 +1,8 @@
 ---
+# automatic badge generation
 title: "Monitor Phase Documentation"
 parent: "documentation-play.md"
-lifecycle: beta
+lifecycle: rc
 last_updated: "2026-02-08"
 ---
 

@@ -1,6 +1,6 @@
 ---
 # automatic badge generation
-lifecycle: beta
+lifecycle: rc
 last_updated: "2025-07-15"
 ---
 # **Play: Navigating the AI Autonomy Continuum**

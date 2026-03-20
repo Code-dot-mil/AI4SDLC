@@ -1,6 +1,6 @@
 ---
 # automatic badge generation
-lifecycle: ga
+lifecycle: rc
 last_updated: "2025-07-15"
 ---
 # **Play: Fundamentals for Designing an AI-Augmented Tool Chain**

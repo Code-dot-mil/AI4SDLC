@@ -1,7 +1,8 @@
 ---
+# automatic badge generation
 title: "System Testing with GenAI"
 parent: "testing-play.md"
-lifecycle: "beta"
+lifecycle: rc
 last_updated: "2025-12-30"
 ---
 

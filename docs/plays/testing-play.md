@@ -1,6 +1,6 @@
 ---
 title: "Play: GenAI-Augmented Testing"
-lifecycle: "beta"
+lifecycle: rc
 last_updated: "2025-12-26"
 ---
 

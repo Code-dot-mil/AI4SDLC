@@ -1,6 +1,6 @@
 ---
 # automatic badge generation
-lifecycle: beta
+lifecycle: rc
 last_updated: "2025-12-31"
 ---
 
