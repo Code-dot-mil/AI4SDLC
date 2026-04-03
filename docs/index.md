@@ -135,6 +135,10 @@ This isn’t just for software developers. If you’re part of **any software va
 2. **New to AI in DoW? Start Here** – Foundational insights to build your knowledge.  
 3. **Latest AI Trends** – Emerging AI use cases shaping DoW software development.  
 
+---
+
+## Get Involved
+The AI4SDLC initiative welcomes collaboration across the DoD community, industry, and academia. Whether you're a domain expert, an organization implementing AI in your SDLC, or part of a technical community, there are meaningful ways to contribute. Learn about work group membership, domain review roles, early adopter partnerships, and our collaborative links with other DoD initiatives. [Explore ways to get involved](ways_to_get_involved.md).
 
 **AI is not the future. It’s now.** Equip yourself with the right strategies to make it work for DoW missions.
 
