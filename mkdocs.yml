@@ -35,7 +35,8 @@ nav:
     - GAI-Augmented Testing: plays/testing-play.md
     - Prompt Engineering: plays/prompt-engineering.md
     - AI-Autonomy Continuum: plays/ai-autonomy_continuum_play.md
-    - AI Workflow Design and Governance: plays/ai_sdlc_workflows-play.md
+    - AI Workflow Design: plays/ai_sdlc_workflows-play.md
+    - IDE Security: plays/ide-security.md  
   - Patterns:
     - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Practices:
