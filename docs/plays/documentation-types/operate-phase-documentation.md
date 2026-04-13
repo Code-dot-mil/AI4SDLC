@@ -2,7 +2,7 @@
 # automatic badge generation
 title: "Operate Phase Documentation"
 parent: "documentation-play.md"
-lifecycle: rc
+lifecycle: ga
 last_updated: "2026-01-26"
 ---
 
