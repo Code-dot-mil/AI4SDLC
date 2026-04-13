@@ -1,6 +1,6 @@
 ---
 title: "Play: AI-Assisted Documentation Across the SDLC"
-lifecycle: rc
+lifecycle: ga
 last_updated: "2026-02-09"
 ---
 

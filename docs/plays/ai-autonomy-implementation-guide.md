@@ -1,6 +1,6 @@
 ---
 # automatic badge generation
-lifecycle: rc
+lifecycle: ga
 last_updated: "2025-07-15"
 ---
 # **AI Autonomy Implementation Guide**

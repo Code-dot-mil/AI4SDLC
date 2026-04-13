@@ -2,7 +2,7 @@
 # automatic badge generation
 title: "Integration Testing with GenAI"
 parent: "testing-play.md"
-lifecycle: rc
+lifecycle: ga
 last_updated: "2025-12-30"
 ---
 
