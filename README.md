@@ -1,6 +1,6 @@
-# AI4SDLC DoD CIO Guidance
+# AI4SDLC DoW CIO Guidance
 
-This repository supports the creation and publication of MkDocs-based guidance developed under the **AI for Software Development Lifecycle (AI4SDLC)** initiative led by the **DoD CIO**. It is part of an ongoing effort to provide secure, mission-aware adoption practices for Generative AI (GenAI) within U.S. Department of Defense software delivery environments.
+This repository supports the creation and publication of MkDocs-based guidance developed under the **AI for Software Development Lifecycle (AI4SDLC)** initiative led by the **DoW CIO**. It is part of an ongoing effort to provide secure, mission-aware adoption practices for Generative AI (GenAI) within U.S. Department of War software delivery environments.
 
 ## 📚 About This Site
 
