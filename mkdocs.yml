@@ -27,7 +27,7 @@ nav:
   - Home:
     - Overview: index.md
     - Guidance Lifecycle: lifecycle.md
-    - Get involved: ways-to-get-involved.md
+    - Get involved: ways_to_get_involved.md
   - Plays:
     - Toolchain Fundamentals: plays/fundamentals-play.md
     - Requirements Engineering: plays/requirements_engineering_play.md
