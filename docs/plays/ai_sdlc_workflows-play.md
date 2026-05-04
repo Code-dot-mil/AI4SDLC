@@ -1,10 +1,10 @@
 ---
-title: "Play: AI Workflow Design and Governance"
-lifecycle: beta
+title: "Play: AI & Agentic Workflow Design and Governance"
+lifecycle: release candidate
 last_updated: "2026-03-15"
 ---
 
-# **Play: AI Workflow Design and Governance**
+# **Play: AI & Agentic Workflow Design and Governance**
 
 > *"Autonomy is earned, not assumed"*
 >
