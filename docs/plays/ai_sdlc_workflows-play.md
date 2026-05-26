@@ -1,6 +1,6 @@
 ---
 title: "Play: AI & Agentic Workflow Design and Governance"
-lifecycle: release candidate
+lifecycle: ga
 last_updated: "2026-03-15"
 ---
 
