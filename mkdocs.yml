@@ -29,6 +29,7 @@ nav:
     - Guidance Lifecycle: lifecycle.md
     - Get involved: ways_to_get_involved.md
   - Plays:
+    - Defining Why: plays/defining_your_why_play-outline.md
     - Toolchain Fundamentals: plays/fundamentals-play.md
     - Requirements Engineering: plays/requirements_engineering_play.md
     - AI-Assisted Documentation: plays/documentation-play.md
@@ -43,10 +44,11 @@ nav:
   - Practices:
     #- Governance: plays/governance-play.md
     - Emerging Practices: plays/emerging-practices.md
-  - Tools & Templates:
+  - Resources, Tools & Templates:
+    - AI Autonomy Implementation Guide: plays/ai-autonomy-implementation-guide.md 
+    - AI Software Evaluation Criteria (AI-SWEC): plays/aiswec_play-outline.md   
     - Create New Play Template: resources/template.md
     - Architectural Decision Records: resources/ArchitecturalDecisionRecord.md
-    - AI Autonomy Implementation Guide: plays/ai-autonomy-implementation-guide.md    
   - Reference:
     - Glossary: glossary.md
 
