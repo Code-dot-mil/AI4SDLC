@@ -456,7 +456,7 @@ Teams new to AI-assisted documentation should adopt an incremental approach:
 
 Reusable templates for common documentation artifacts (ADRs, API specs, runbooks, release notes) are being developed for the AI4SDLC resource library. These will include prompt patterns and validation checklists aligned with the GenAI patterns in this play.
 
-*See [Resources](../resources/) for available templates as they are published.*
+*See the [Architectural Decision Record](../resources/ArchitecturalDecisionRecord.md) and [play template](../resources/template.md) for what is available so far.*
 
 ---
 

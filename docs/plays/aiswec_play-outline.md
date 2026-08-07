@@ -34,7 +34,7 @@ Play series: AI4SDLC | Status: Draft | Target publish: Late 2026
 
 This play is the AI-SWEC question set — the full pre-event (B-xx) and post-event (P-xx) instrument — with guidance on how to conduct the assessment and use the responses to build an ADR.
 
-Read the [Defining Your Why](../../docs/plays/defining_your_why_play-outline.md) play first. That play explains the Before/Measure/After arc, the Go/Slow/No-Go decision framework, and when and why to use AI-SWEC. This play is the instrument itself.
+Read the [Defining Your Why](defining_your_why_play-outline.md) play first. That play explains the Before/Measure/After arc, the Go/Slow/No-Go decision framework, and when and why to use AI-SWEC. This play is the instrument itself.
 
 ---
 
@@ -359,7 +359,7 @@ DORA — Team Process Metrics:
 
 *How AI-SWEC responses populate the ADR. The B-xx questions build it; the P-xx questions complete it.*
 
-The ADR is initiated at the Go/Slow/No-Go decision point — before the pilot begins. See the [Defining Your Why](../../docs/plays/defining_your_why_play-outline.md) play, Section 6.1 for the ADR Jumpstart fields and initiation logic. This section shows which AI-SWEC questions feed which ADR fields.
+The ADR is initiated at the Go/Slow/No-Go decision point — before the pilot begins. See the [Defining Your Why](defining_your_why_play-outline.md) play, Section 6.1 for the ADR Jumpstart fields and initiation logic. This section shows which AI-SWEC questions feed which ADR fields.
 
 | ADR Field | Pre-Event Source (B-xx) | Post-Event Source (P-xx) |
 | --- | --- | --- |
@@ -374,7 +374,7 @@ The ADR is initiated at the Go/Slow/No-Go decision point — before the pilot be
 | Human Impact | — | P-19, P-22, P-15, P-23, P-34, P-35 |
 | Solution Fit Assessment | — | P-27, P-12, P-13, P-16, P-17 |
 
-See the [ADR template](../../docs/resources/ArchitecturalDecisionRecord.md) in docs/resources.
+See the [ADR template](../resources/ArchitecturalDecisionRecord.md) in docs/resources.
 
 > **Author notes — Section 7:**
 >
@@ -425,11 +425,11 @@ See the [ADR template](../../docs/resources/ArchitecturalDecisionRecord.md) in d
 
 **Related Plays:**
 
-- [Defining Your Why](../../docs/plays/defining_your_why_play-outline.md) — read first; the adoption decision framework, Before/Measure/After arc, Go/Slow/No-Go, and ADR Jumpstart
+- [Defining Your Why](defining_your_why_play-outline.md) — read first; the adoption decision framework, Before/Measure/After arc, Go/Slow/No-Go, and ADR Jumpstart
 - [AI Autonomy Continuum](ai-autonomy_continuum_play.md) — pattern selection; agentic governance readiness; P1-P4 patterns
 - [AI Autonomy Implementation Guide](ai-autonomy-implementation-guide.md) — pattern-specific readiness checklists
 - [Fundamentals for Designing an AI-Augmented Tool Chain](fundamentals-play.md) — hosting models, tool selection
-- [AI Workflow Design and Governance](ai_sdlc_workflows_play.md) — workflow governance, skills file governance
+- [AI Workflow Design and Governance](ai_sdlc_workflows-play.md) — workflow governance, skills file governance
 
 **Key References:**
 
@@ -468,7 +468,7 @@ This play is the structured assessment instrument behind the AI4SDLC adoption de
 - **Copyright:** Copyright block is at the top of the document and on Sections 5 and 6 headers. Do not remove or weaken these notices in prose.
 - **Verification required:** All B-xx and P-xx question IDs and text must be verified against `AI-SWEC_Beta_DecisionTool.xlsx` in `local_working_files/defining_why/` before prose draft. The August 2025 PDF is the source for this outline; the Excel is authoritative.
 - **No duplication with Defining Your Why.** This play does not explain the Before/Measure/After arc, Go/Slow/No-Go logic, adoption prerequisites, DORA metrics, field examples, or the ADR initiation point. Reference and link to the Defining Your Why play for all of that.
-- **Link paths (update when moved to docs/plays/):** Links in this file are set for `local_working_files/defining_why/`. When moved to `docs/plays/`, shorten as follows: `../../docs/plays/defining_your_why_play-outline.md` → `defining_your_why_play-outline.md`; `../../docs/resources/ArchitecturalDecisionRecord.md` → `../resources/ArchitecturalDecisionRecord.md`. Companion play links (Section 10) will also need `../../docs/plays/` prefix removed once those plays exist in docs/plays/.
+- **Link paths:** This file now lives in `docs/plays/`, and its links are set for that location. Relative links to sibling plays are bare filenames; links to `docs/resources/` are prefixed `../resources/`.
 - **No score, no maturity model.** Never frame sections as scoring. Never imply a threshold that constitutes passing.
 - **Online tool:** Describe as "in development" with intended capability. Do not imply availability.
 - **Framework evolution:** AI-SWEC is Beta as of August 2025. State that the question set may be refined.

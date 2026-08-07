@@ -41,7 +41,7 @@ nav:
     - AI Workflow Design: plays/ai_sdlc_workflows-play.md
     - IDE Security: plays/ide-security.md 
   - Early Adopter Stories: 
-    - Army SMDCoE: plays/army-smdcoe-play.md
+    - Army SMDCoE: stories/army-smdcoe.md
   - Patterns:
     - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Practices:
