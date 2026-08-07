@@ -450,7 +450,7 @@ These variations can affect everything from code style and verbosity to security
 - **Provide role-specific tradecraft guidance** for approved tools, including prompt examples, review checklists, and lessons learned from secure use in operational contexts.
 
 
-> For systemic risk guidance, see the upcoming [Risk Reference Companion](../resources/risk-reference.md) where “Tool Drift”, “Model Fragmentation”, and "Prompt Misuse" are addressed in more depth.
+> For systemic risk guidance, see the upcoming Risk Reference Companion, where “Tool Drift”, “Model Fragmentation”, and "Prompt Misuse" are addressed in more depth.
 
 ----
 

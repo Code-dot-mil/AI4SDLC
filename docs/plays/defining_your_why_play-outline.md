@@ -443,7 +443,7 @@ The AI-SWEC B-xx question set maps directly to the Context, Decision, and Conseq
 - [AI Autonomy Continuum](ai-autonomy_continuum_play.md) — pattern selection, autonomy health index, shadow AI governance
 - [AI Autonomy Implementation Guide](ai-autonomy-implementation-guide.md) — pattern-specific readiness checklists, health metrics
 - [Fundamentals for Designing an AI-Augmented Tool Chain](fundamentals-play.md) — hosting models, trust architecture
-- [AI Workflow Design and Governance](ai_sdlc_workflows_play.md) — workflow governance, review gates, skills file governance
+- [AI Workflow Design and Governance](ai_sdlc_workflows-play.md) — workflow governance, review gates, skills file governance
 - [Requirements Engineering with AI Assistance](requirements_engineering_play.md) — maturity indicators, traceability
 - [AI-Augmented Testing](testing-play.md) — test coverage metrics, defect escape rate, test-from-code anti-pattern
 - [Code Completion and Generation](code-gen-play.md) — DevSecOps baseline requirements, code generation risk

@@ -39,7 +39,7 @@ Naming the artifact matters more than naming the activity. The governance questi
 
 ### 1.2 Comprehension Is Its Own Axis
 
-Proto-vibing is not a point on the task-level autonomy scale in the [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows_play.md) play. That scale governs what an agent is *permitted* to do. Comprehension describes what the human *understood*. Every autonomy level presumes a human who comprehends, so a developer at Level 1 who applies a draft without reading it has satisfied the framework and learned nothing. That play already flags the same hazard when it warns that approving outputs without meaningful evaluation turns human-in-the-loop review into a formality.
+Proto-vibing is not a point on the task-level autonomy scale in the [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md) play. That scale governs what an agent is *permitted* to do. Comprehension describes what the human *understood*. Every autonomy level presumes a human who comprehends, so a developer at Level 1 who applies a draft without reading it has satisfied the framework and learned nothing. That play already flags the same hazard when it warns that approving outputs without meaningful evaluation turns human-in-the-loop review into a formality.
 
 Agent count is likewise orthogonal. One agent whose output nobody reads produces a protovibe. Twelve agents orchestrated against a spec, with an engineer owning the design, do not. Scaling the mechanism does not change the comprehension question, though it does raise the containment requirement (Section 6).
 
@@ -179,7 +179,7 @@ Proto-vibing is groundbreaking potential with limitations and challenges. Run th
 ### Related Plays and Resources
 
 - [Leading Practices for Code Completion and Generation](code-gen-play.md)
-- [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows_play.md)
+- [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md)
 - [AI Autonomy Continuum](ai-autonomy_continuum_play.md)
 - [Requirements Engineering](requirements_engineering_play.md)
 - [Architectural Decision Records](../resources/ArchitecturalDecisionRecord.md)
