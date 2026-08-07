@@ -35,11 +35,13 @@ nav:
     - AI-Assisted Documentation: plays/documentation-play.md
     - Code Generation: plays/code-gen-play.md
     - GAI-Augmented Testing: plays/testing-play.md
-    Vibe Coding: plays/protovibe_play.md
+    - Vibe Coding: plays/protovibe_play.md
     - Prompt Engineering: plays/prompt-engineering.md
     - AI-Autonomy Continuum: plays/ai-autonomy_continuum_play.md
     - AI Workflow Design: plays/ai_sdlc_workflows-play.md
-    - IDE Security: plays/ide-security.md  
+    - IDE Security: plays/ide-security.md 
+  - Early Adopter Stories: 
+    - Army SMDCoE: plays/army-smdcoe-play.md
   - Patterns:
     - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Practices:
