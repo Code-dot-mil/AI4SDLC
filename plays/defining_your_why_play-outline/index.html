@@ -1,0 +1,2847 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../ways_to_get_involved/">
+      
+      
+        <link rel="next" href="../fundamentals-play/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/DOW_CIO_Seal.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Defining Why - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai4sdlc-play-defining-your-why-outline" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Defining Why
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../army-smdcoe-play.md" class="md-tabs__link">
+          
+  
+  
+  Early Adopter Stories
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../emerging-practices/" class="md-tabs__link">
+          
+  
+  
+  Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ai-autonomy-implementation-guide/" class="md-tabs__link">
+          
+  
+  
+  Resources, Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidance Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ways_to_get_involved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get involved
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plays
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plays
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Defining Why
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Defining Why
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#author-notes-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Notes Legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-play-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Play Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EXECUTIVE SUMMARY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 1 — Why This Play Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 2 — Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-prerequisites-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 3 — Prerequisites and Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-guiding-principles-and-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 4 — Guiding Principles and Guardrails
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-core-patterns-and-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 5 — Core Patterns and Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SECTION 5 — Core Patterns and Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-define-the-why-before-the-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Define the Why Before the What
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-sdlc-phase-adoption-sequencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 SDLC Phase Adoption Sequencing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-autonomy-scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Autonomy Scoping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-decision-framework-go-slow-no-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 6 — Decision Framework: Go / Slow / No-Go
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SECTION 6 — Decision Framework: Go / Slow / No-Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-record-the-decision-adr-jumpstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Record the Decision — ADR Jumpstart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-implementation-guidance-how-to-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 7 — Implementation Guidance: How to Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SECTION 7 — Implementation Guidance: How to Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-define-and-decide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before — Define and Decide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-baseline-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measure — Baseline and Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-pilot-and-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After — Pilot and Record
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-risks-metrics-and-adoption-health-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 8 — Risks, Metrics, and Adoption Health Composite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 9 — Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-10-companion-plays-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 10 — Companion Plays and References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architectural-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural Intent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-points-for-the-workgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISCUSSION POINTS FOR THE WORKGROUP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authoring-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTHORING NOTES
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolchain Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements_engineering_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Assisted Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-gen-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GAI-Augmented Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protovibe_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy_continuum_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Autonomy Continuum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai_sdlc_workflows-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Workflow Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ide-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDE Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Early Adopter Stories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Early Adopter Stories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../army-smdcoe-play.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Army SMDCoE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Patterns
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human-Machine Interaction Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emerging-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emerging Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources, Tools & Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources, Tools & Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy-implementation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Autonomy Implementation Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aiswec_play-outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Software Evaluation Criteria (AI-SWEC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create New Play Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectural Decision Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#author-notes-legend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Author Notes Legend
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-this-play-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What This Play Is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EXECUTIVE SUMMARY
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-why-this-play-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 1 — Why This Play Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 2 — Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-prerequisites-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 3 — Prerequisites and Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-guiding-principles-and-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 4 — Guiding Principles and Guardrails
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-core-patterns-and-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 5 — Core Patterns and Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SECTION 5 — Core Patterns and Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-define-the-why-before-the-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Define the Why Before the What
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-sdlc-phase-adoption-sequencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 SDLC Phase Adoption Sequencing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-autonomy-scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Autonomy Scoping
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-decision-framework-go-slow-no-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 6 — Decision Framework: Go / Slow / No-Go
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SECTION 6 — Decision Framework: Go / Slow / No-Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-record-the-decision-adr-jumpstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Record the Decision — ADR Jumpstart
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-implementation-guidance-how-to-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 7 — Implementation Guidance: How to Start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SECTION 7 — Implementation Guidance: How to Start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-define-and-decide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before — Define and Decide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measure-baseline-and-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measure — Baseline and Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-pilot-and-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After — Pilot and Record
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-risks-metrics-and-adoption-health-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 8 — Risks, Metrics, and Adoption Health Composite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 9 — Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-10-companion-plays-and-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SECTION 10 — Companion Plays and References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architectural-intent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural Intent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discussion-points-for-the-workgroup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISCUSSION POINTS FOR THE WORKGROUP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authoring-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTHORING NOTES
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge alpha" 
+         role="img" 
+         aria-label="Alpha stage - Early development">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>ALPHA</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2026-05-20</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="ai4sdlc-play-defining-your-why-outline">AI4SDLC Play: Defining Your Why Outline</h1>
+<p><em>This document serves two purposes. Workgroup reviewers: read the main content; skip the indented Author notes blocks. Authors: use the Author notes blocks for citations, framework alignments, field example detail, and agentic extensions when writing prose.</em></p>
+<p>Play series: AI4SDLC | Status: Draft | Target publish: Mid-2026</p>
+<hr />
+<h2 id="author-notes-legend">Author Notes Legend</h2>
+<p><em>Workgroup reviewers: skip this section. Authors: these shorthand tags appear inside the indented Author notes blocks throughout the document. They are prompts for citations, cross-references, and content extensions — not part of the play text itself.</em></p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[CDAO]</code></td>
+<td>Align to or cite the CDAO Pathway to AI Readiness, the DoD Responsible AI Toolkit (SHIELD/DAGR), or related CDAO guidance</td>
+</tr>
+<tr>
+<td><code>[NIST]</code></td>
+<td>Align to or cite NIST AI Risk Management Framework 1.0 (2023) or NIST.AI.600-1 GenAI Profile (2024)</td>
+</tr>
+<tr>
+<td><code>[MITRE AMM]</code></td>
+<td>Reference the MITRE AI Maturity Model — as a job aid diagnostic only, not as the core framework</td>
+</tr>
+<tr>
+<td><code>[AI4SDLC:play-name]</code></td>
+<td>Cross-reference the named AI4SDLC play in docs/plays/ — link to it in prose</td>
+</tr>
+<tr>
+<td><code>[FIELD:Army]</code></td>
+<td>Pull detail from the Army SMDCOE early adopter story draft</td>
+</tr>
+<tr>
+<td><code>[FIELD:Navy]</code></td>
+<td>Pull detail from the Navy Forge early adopter story draft</td>
+</tr>
+<tr>
+<td><code>*agentic*</code></td>
+<td>Extend this content to address agentic AI and autonomous workflows — woven into existing risk framing, not a separate section</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-this-play-is">What This Play Is</h2>
+<p>Most AI4SDLC plays assume the adoption decision is already made — and treat every expansion decision the same way. This play is the cycle that comes before each of those decisions.</p>
+<p>The play follows a three-part arc built on the MITRE AI Software Engineering Evaluation Criteria (AI-SWEC) framework:</p>
+<pre><code class="language-text">BEFORE              →    MEASURE             →    AFTER
+Define the why           Capture baselines        Run the pilot
+Assess readiness         Scope the pilot          Evaluate results
+Decide Go/Slow/No-Go     Set success threshold    Produce the ADR
+</code></pre>
+<p><strong>The arc repeats.</strong> Two triggers re-enter the cycle: adopting something new (new tool, new SDLC phase, new autonomy level), or revisiting a prior decision to pause or not adopt. A "No-Go" is not permanent — conditions change, tooling matures, governance catches up. When it does, start the cycle again.</p>
+<p><strong>The output of this play is a deliberate adoption decision</strong> — to continue, adjust, or pause — made with evidence and documented in an <a href="../../resources/ArchitecturalDecisionRecord/">Architectural Decision Record (ADR)</a>. The goal is the quality of the decision and the evidence behind it. The ADR is how that decision becomes traceable, justifiable, and defensible.</p>
+<hr />
+<h2 id="executive-summary">EXECUTIVE SUMMARY</h2>
+<p><em>This section frames the problem and states the arc, the output, and the core framework.</em></p>
+<p>Key claims:</p>
+<ul>
+<li>Mandated AI adoption without defined intent produces blind adoption — inconsistent, untrustworthy, and sometimes costly</li>
+<li>The play is a repeating discipline — applied at first adoption and again at every tool change, phase expansion, or autonomy level shift</li>
+<li>The primary output is a deliberate adoption decision — to continue, adjust, or pause — documented in an ADR. The goal is the decision and the evidence behind it, not the document itself.</li>
+<li>MITRE AI-SWEC is the core framework: two structured question sets (B-xx before the pilot; P-xx after) that produce the evidence this play uses to build the ADR. It is not a maturity model. Explained briefly in this section.</li>
+</ul>
+<blockquote>
+<p><strong>Author notes — Executive Summary:</strong></p>
+<ul>
+<li>[CDAO] CDAO Pathway to AI Readiness and NIST AI RMF briefly referenced as governing frameworks; this play operationalizes the "why" question that precedes CDAO pathway navigation</li>
+<li>[NIST] NIST AI RMF GOVERN + MAP underlie the Before phase; MEASURE + MANAGE underlie the After phase</li>
+<li>AI-SWEC explainer block (write into prose): "B-xx questions define intent before the pilot starts; P-xx questions assess outcomes after the pilot closes. Those answers are the structured evidence that builds the ADR. If your team has not encountered AI-SWEC before, this play is the entry point."</li>
+<li>Audience note: primary = practitioners and technical leads; secondary = executives and acquisition stakeholders (Sections 6 and 8 most relevant to them)</li>
+<li><strong>MITRE AI-SWEC copyright:</strong> On first use of "MITRE AI-SWEC" in prose, add a footnote: "MITRE AI Software Engineering Evaluation Criteria (AI-SWEC). Copyright MITRE Corporation. All rights reserved." Use IEEE-style footnote format consistent with other plays.</li>
+<li>Repeating cycle framing is the distinctive claim of this play vs. other readiness frameworks — every section should reinforce it, not compete with it</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-1-why-this-play-matters">SECTION 1 — Why This Play Matters</h2>
+<p><em>The cost of "just use it," why intentionality is the differentiator, and where most DoW teams sit on the adoption curve.</em></p>
+<p>Three failure modes from mandated-but-unintentional adoption:</p>
+<ol>
+<li>Unused tooling — investment waste with no measurable outcome</li>
+<li>Wrong phase adoption — AI introduced in high-risk phases before governance exists</li>
+<li>Quality and security regression — speed-quality inversion; faster delivery of worse output</li>
+</ol>
+<p>Gartner (2024): AI-augmented software engineering teams take 2–5 years to reach the productivity plateau. Teams that sprint into adoption without readiness spend those years recovering, not accelerating.</p>
+<p>Teams that define the why first succeed more often:</p>
+<ul>
+<li><em>Army SMDCOE:</em> Six-person team. Pain point: unit testing and security scanning pushed right in the sprint. Targeted one tool for those two tasks specifically. Scoped tightly. Expanded only after trust was established.</li>
+<li><em>Navy Forge:</em> Built an evaluation around nine use cases relevant to the program's own release cycle. For each use case, defined success criteria before testing. Measured time savings only when quality criteria were met.</li>
+</ul>
+<p><strong>Where most DoW teams sit on the Technology Adoption Life Cycle (TALC):</strong></p>
+<table>
+<thead>
+<tr>
+<th>TALC Segment</th>
+<th>DoW Parallel</th>
+<th>What They Need From This Play</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Innovators / Early Adopters</td>
+<td>Already experimenting</td>
+<td>Structured evidence to document what is working</td>
+</tr>
+<tr>
+<td>Early Majority — Pragmatists</td>
+<td>Primary audience</td>
+<td>ADR and baselines as proof before committing further</td>
+</tr>
+<tr>
+<td>Late Majority</td>
+<td>Adopting under mandate</td>
+<td>Governance infrastructure, not just tools</td>
+</tr>
+<tr>
+<td>Skeptics / Constrained Programs</td>
+<td>Adoption when directed or constraints resolve</td>
+<td>Not the conversion target; governance built for the majority serves them when their time comes</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Author notes — Section 1:</strong></p>
+<ul>
+<li>Geoffrey Moore, <em>Crossing the Chasm</em> (1991) — TALC framing. Most DoW delivery teams sit in the Early Majority. Pragmatists cross the chasm on evidence from comparable contexts, not on hype. The ADR this play produces is exactly that evidence.</li>
+<li>"Skeptics" is Moore's preferred alternative to Rogers' "Laggards." For DoW contexts, add parenthetical: <em>(often constraint-driven — policy, accreditation, or mission risk — rather than posture-driven)</em></li>
+<li>GitClear 2025: code churn and duplication trending up alongside AI adoption in large repos [AI4SDLC:ai_sdlc_workflows_play]</li>
+<li>DORA 2025 "State of AI-Assisted Software Development": highest-performing teams measured before they adopted [AI4SDLC:fundamentals-play]</li>
+<li>[CDAO] DoD RAI S&amp;I Pathway, p. 9 — "Overview Depicting RAI's Journey to Trust" — frame the why as the first step in the trust arc, not a compliance exercise</li>
+<li>Two audiences framing: the practitioner author of the why (specific pain point, specific phase) vs. the executive audience of the why (strategic alignment, mission readiness, acquisition defensibility) — address both in prose but keep primary focus on the practitioner</li>
+<li><em>agentic</em> extension: same "just use it" pressure now applies to agentic workflows at proportionally higher risk. Pattern 3/4 workflows deployed without Pattern 1/2 governance in place create systemic risk: cascading errors, shadow agent activity, compliance gaps. Key line to write: "The same discipline that applies to adopting a code assistant applies to deploying an autonomous pipeline — and the cost of skipping it scales with the autonomy level." [AI4SDLC:ai-autonomy_continuum_play]</li>
+<li>[FIELD:Army] additional: phased rollout gave time to build shared context files before usage fragmented across individuals — not accidental, deliberate governance choice</li>
+<li>[FIELD:Navy] additional: evaluation produced concrete data before any tool selection decision; tool selection must still clear hosting and security approval for the mission's impact level</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-2-purpose-and-scope">SECTION 2 — Purpose and Scope</h2>
+<p><em>What this play covers and what it explicitly does not — organized by arc phase.</em></p>
+<table>
+<thead>
+<tr>
+<th>Covered in This Play</th>
+<th>Covered Elsewhere</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Readiness assessment across four dimensions</td>
+<td>Tool selection and procurement → AI4SDLC Fundamentals play</td>
+</tr>
+<tr>
+<td>SDLC phase targeting and sequencing</td>
+<td>Post-adoption model governance → AI4SDLC Workflow Design and Governance play</td>
+</tr>
+<tr>
+<td>Autonomy pattern scoping</td>
+<td>Agentic pipeline architecture → AI4SDLC Autonomy Continuum play and Implementation Guide</td>
+</tr>
+<tr>
+<td>Go/Slow/No-Go decision</td>
+<td>AI policy development → DoD/DoW AI policy guidance</td>
+</tr>
+<tr>
+<td>Baseline metric capture</td>
+<td>Acquisition strategy for AI tools → Defense acquisition pathway and DAU guidance</td>
+</tr>
+<tr>
+<td>Adoption health composite evaluation</td>
+<td>Skills file architecture → AI4SDLC Agentic Workflow Design play (forthcoming)</td>
+</tr>
+<tr>
+<td>Deliberate adoption decision, documented as an ADR</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Audience note:</strong> Primary — software engineers, DevSecOps engineers, technical leads, product owners. Secondary — executives and acquisition stakeholders (Sections 6 and 8 most relevant to them).</p>
+<blockquote>
+<p><strong>Author notes — Section 2:</strong></p>
+<ul>
+<li>[NIST] GOVERN + MAP = Before phase; MEASURE + MANAGE = After phase</li>
+<li>Out-of-scope cross-references:</li>
+<li>Post-adoption model governance → [AI4SDLC:ai_sdlc_workflows_play]</li>
+<li>Agentic pipeline architecture → [AI4SDLC:ai-autonomy_continuum_play] + [AI4SDLC:ai-autonomy-implementation-guide]</li>
+<li>Tool selection and hosting models → [AI4SDLC:fundamentals-play]</li>
+<li>Skills file architecture → [AI4SDLC:ai_sdlc_workflows_play]</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-3-prerequisites-and-readiness">SECTION 3 — Prerequisites and Readiness</h2>
+<p><em>Four dimensions — gaps are documented and addressed, not used to block all adoption. Teams with gaps should target lower-autonomy, lower-risk phases first.</em></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Key Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DevSecOps</strong></td>
+<td>CI/CD established and used; automated testing in at least one phase; source control with MR/PR workflows; IaC practiced; secrets management via vault; vulnerability scanning (SAST/DAST/SCA)</td>
+</tr>
+<tr>
+<td><strong>Governance</strong></td>
+<td>GAI strategic plan (even if in development); disruption tolerance defined; data classification rules for AI inputs known; IL-level alignment confirmed; policy review completed; ADR practice exists or adoptable</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>SDLC methodology documented; DORA baselines capturable; trust-building measures in place or planned; AI limitations and failure modes discussed; training plan exists</td>
+</tr>
+<tr>
+<td><strong>Environment</strong></td>
+<td>Architecture type documented; GAI platform access identified (SaaS, self-hosted, IDE plugin); security constraints understood; data handling for sensitive code defined</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Author notes — Section 3:</strong></p>
+<ul>
+<li>[CDAO] Pathway to AI Readiness maps to these four dimensions: Responsible AI + Risk Management → Governance; Data Management → Environment; Workforce Talent + Training → Team; Oversight → cross-cutting</li>
+<li>[MITRE AMM] MITRE AI Maturity Model — job aid diagnostic only, NOT the core framework. Strategy and Resources pillar = Governance readiness. Technology Enablers = DevSecOps + Environment. Workforce Development = Team. Use for "where are we now?" assessment, not as a scoring target.</li>
+<li><em>agentic</em> additions to DevSecOps: prompt and skills file version control (same rigor as source code); agent registration process exists or adoptable; rollback mechanisms can revert agent-generated changes [AI4SDLC:ai-autonomy-implementation-guide]</li>
+<li><em>agentic</em> additions to Governance: skills file governance policy exists (reviewed, version-controlled, audited); agent approval process defined; escalation rules exist for when agents exceed intended scope [AI4SDLC:ai_sdlc_workflows_play]</li>
+<li><em>agentic</em> additions to Team: team understands difference between assistive (P1/P2) and orchestrated (P3/P4) patterns; team has discussed agentic failure modes — prompt injection, skills file manipulation, shadow agent risk [AI4SDLC:ai-autonomy_continuum_play]</li>
+<li><em>agentic</em> additions to Environment: sandbox capability separate from production pipelines; network policies govern outbound traffic to AI services [FIELD:Army] Army used Bedrock GovCloud specifically to keep code inside the GovCloud boundary</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-4-guiding-principles-and-guardrails">SECTION 4 — Guiding Principles and Guardrails</h2>
+<p><em>Seven non-negotiable starting points. No action under this play should contradict them.</em></p>
+<ol>
+<li><strong>Human Oversight</strong> — AI outputs must be validated by a human before integration into any artifact. No autonomous action without a defined approval gate.</li>
+<li><strong>Intentionality Before Tooling</strong> — No AI tool introduced without a defined why, targeted phase, success threshold, and pre-capture baseline.</li>
+<li><strong>Trust Calibration</strong> — Reliance must match demonstrated capability in context. Trust is earned incrementally and revisited.</li>
+<li><strong>Model Boundary Awareness</strong> — All team members must understand what the model can and cannot do. Overconfidence is a leading cause of defect introduction and security regression.</li>
+<li><strong>Agent Auditability</strong> — Any autonomous or semi-autonomous AI action must be traceable and reversible. If you cannot audit what an agent did, you cannot trust what it produced.</li>
+<li><strong>Data Classification Discipline</strong> — Never use classified, CUI, or PII data as AI input unless the tool and hosting environment are explicitly approved for that classification level.</li>
+<li><strong>Policy Alignment</strong> — All AI tool usage must be assessed against DoD AI RMF, Zero Trust, SSDF, and DoW-specific policy. Industry tools do not inherit DoD compliance posture automatically.</li>
+</ol>
+<blockquote>
+<p><strong>Author notes — Section 4:</strong></p>
+<ul>
+<li>[NIST] NIST AI RMF GOVERN function underpins all seven principles</li>
+<li>[CDAO] DoD AI Ethical Principles (2020) align to principles 1, 6, and 7</li>
+<li>Principle 3 Trust Calibration: [AI4SDLC:calibrated-trust]</li>
+<li>Prompt Hygiene is out of scope for this play's principles — it governs how teams use AI tools operationally, not whether or how carefully to adopt. Cross-reference <code>[AI4SDLC:prompt-engineering]</code> in the companion plays section.</li>
+<li>Principle 5 Agent Auditability: [AI4SDLC:ai-autonomy_continuum_play] [AI4SDLC:ai-autonomy-implementation-guide]; [FIELD:Navy] eval logs maintained per use case, compared against defined quality criteria</li>
+<li>Principle 5 skills file security: skills files must be treated with the same rigor as source code — reviewed, version-controlled, audited. A malicious or poorly crafted skills file can corrupt agent behavior pipeline-wide.</li>
+<li>Principle 7: [FIELD:Army] Bedrock GovCloud path chosen to keep codebase off public infrastructure — a deliberate policy decision, not a workaround. [CDAO] RAI Toolkit SHIELD</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-5-core-patterns-and-practices">SECTION 5 — Core Patterns and Practices</h2>
+<h3 id="51-define-the-why-before-the-what">5.1 Define the Why Before the What</h3>
+<p><em>Four structured questions answered once per use case. A team may have multiple use cases — each gets its own answers, its own pilot, and its own ADR. These questions are not answered once for the team; they are answered once per adoption decision.</em></p>
+<ol>
+<li>What specific SDLC pain point or gap are you addressing?</li>
+<li>Which SDLC phase does this use case target? <em>(Plan, Design, Code, Build, Test, Release, Deploy, Operate, Monitor, Secure, Validate)</em></li>
+<li>Which team personas are most impacted by this use case?</li>
+<li>What is the classification of the motivation? <em>(improve quality / increase efficiency / automate / enhance security / accelerate delivery / support compliance)</em></li>
+</ol>
+<p>What a well-defined why looks like in practice:</p>
+<blockquote>
+<p><em>Army SMDCOE:</em> Six-person team. Started with one use case — unit testing and security scanning pushed right in the sprint. Target phase — test. Scoped tightly. Added additional use cases only after the first was validated.</p>
+<p><em>Navy Forge:</em> Defined nine use cases upfront, each targeting a different phase or workflow. Answered the four questions for each. Ran evaluations independently. A model for teams with multiple adoption candidates.</p>
+<p><strong>Author notes — Section 5.1:</strong></p>
+<ul>
+<li>[NIST] AI RMF MAP function — identify context, categorize AI use, assess risk</li>
+<li>[CDAO] Pathway: Responsible AI dimension starts here</li>
+<li>Question 4 — add "reduce cognitive load" to the motivation classification list in the prose version</li>
+<li><em>agentic</em> fifth question: "Does this use case involve agentic or autonomous workflows? If yes, apply Pattern 3/4 readiness criteria from Section 3 before proceeding." [AI4SDLC:ai-autonomy_continuum_play]</li>
+<li>[FIELD:Army] additional: team added framework-specific rules to shared context (e.g., no plain HTML controls where Telerik expected; no var where team preferred const/let). These were version-controlled like source code.</li>
+<li>[FIELD:Navy] additional: IDE plugin tested for smaller file-scoped tasks; CLI for multi-file context. Team documented successful prompts and prompt sequences to build a foundation for repeatable patterns.</li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="52-sdlc-phase-adoption-sequencing">5.2 SDLC Phase Adoption Sequencing</h3>
+<p><em>Start where risk is lowest and return is clearest. Sequence based on evidence, not enthusiasm.</em></p>
+<table>
+<thead>
+<tr>
+<th>Risk Tier</th>
+<th>SDLC Targets</th>
+<th>What the Evidence Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Start Here</strong></td>
+<td>Documentation generation, test scaffolding from specs (not from code), requirements summarization, code review assistance</td>
+<td>Army SMDCOE: infrastructure diagram in 5 minutes vs. ~1 week manually. Navy Forge: inline documentation in ~1 minute plus review vs. 6–7 hours.</td>
+</tr>
+<tr>
+<td><strong>Approach Carefully</strong></td>
+<td>Code refactoring, greenfield code generation, architecture decision support</td>
+<td>Navy Forge: Java scaffolding in 5–6 hours vs. an estimated 40 hours — but algorithmic logic still needed significant human review.</td>
+</tr>
+<tr>
+<td><strong>Wait or Gate Heavily</strong></td>
+<td>Autonomous test generation from code (known anti-pattern), autonomous deployment, security remediation without review, production incident response</td>
+<td>Army: generated tests reflected the current implementation and the quality of the original requirements — validates the bug, not the intent. Navy: test generation needed thorough review due to truncation, hallucinated method names, and shallow coverage.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Autonomous test generation directly from code is flagged as an anti-pattern throughout this play. Generate tests from specs or requirements — not from existing code.</p>
+<p><strong>Author notes — Section 5.2:</strong></p>
+<ul>
+<li>[AI4SDLC:code-gen-play] [AI4SDLC:testing-play] [AI4SDLC:documentation-play] [AI4SDLC:requirements_engineering_play]</li>
+<li>[FIELD:Army] additional: AI-assisted refactoring cut a JS function's execution time from ~60s to ~2s. Used heavily for .NET Framework to .NET Core 10 migration across ~120 projects — AI handled most of the migration work under developer supervision.</li>
+<li>[FIELD:Army] spec generation: [AI4SDLC:documentation-play] — note in the Start Here prose; spec generation ~6x faster with iterative prompting (Navy Forge data)</li>
+<li>[FIELD:Navy] additional: requirements verification was inconsistent — tool described functionality but could not reliably infer or trace the requirement. Bug analysis and fixes were unreliable. Dependency mapping inconsistent enough to require repeated review and re-prompting. Code segmentation and re-architecture severely limited by context window.</li>
+<li><em>agentic</em>: Pattern 3 orchestrated pipelines — do not introduce until P1/P2 patterns are proven and governance is in place [AI4SDLC:ai-autonomy_continuum_play]</li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="53-autonomy-scoping">5.3 Autonomy Scoping</h3>
+<p><em>Declare the pattern before the pilot begins. Hold it constant for the pilot duration — mid-pilot changes invalidate the before/after comparison. These are patterns, not stages. A team can run Pattern 1 for sensitive code and Pattern 2 for test scaffolding simultaneously.</em></p>
+<table>
+<thead>
+<tr>
+<th>Starting Condition</th>
+<th>Recommended Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DevSecOps baseline incomplete</td>
+<td>Pattern 1 — AI suggests; human decides every output</td>
+</tr>
+<tr>
+<td>Baseline present, governance forming</td>
+<td>Pattern 1–2 — AI assists; human reviews all outputs</td>
+</tr>
+<tr>
+<td>Baseline and review gates confirmed</td>
+<td>Pattern 2 — AI generates bounded workflow; human reviews before merge</td>
+</tr>
+<tr>
+<td>Governance mature, metrics established</td>
+<td>Pattern 2–3 — AI coordinates across phases; human monitors at gate</td>
+</tr>
+</tbody>
+</table>
+<p>Default to the lowest pattern that is operationally useful. A higher pattern is appropriate when evidence and governance justify it — not when the capability is available.</p>
+<blockquote>
+<p><em>Army SMDCOE stayed in Patterns 1–2. The team did not hand over merge or deploy authority. Governance was enforced through shared context files in source control, locked org-level rules, and a phased rollout — not through trust in the model.</em></p>
+<p><strong>Author notes — Section 5.3:</strong></p>
+<ul>
+<li>[AI4SDLC:ai-autonomy_continuum_play] [AI4SDLC:ai-autonomy-implementation-guide] — full framework and pattern-specific readiness checklists</li>
+<li>P1/P2/P3/P4 = Assistive Tools, Delegated Agents, Orchestrated Systems, Adaptive Ecosystems</li>
+<li>"Patterns not stages" — important to call out explicitly in prose; teams often misread this as a progression ladder where P4 is the goal</li>
+<li>[FIELD:Army] accountability quote to embed in prose: "I don't care if Claude wrote it. You are responsible for that. When it comes time for code review, don't tell me Claude said it was good." — this is a governance posture, not a limitation</li>
+<li>[FIELD:Navy] IDE plugin vs. CLI maps to P1 vs. P2: plugin for file-scoped tasks; CLI for multi-file context. Pattern selection affects which interface fits.</li>
+<li><em>agentic</em>: Pattern 3 and Pattern 4 require demonstrated P1/P2 success, dedicated governance infrastructure, and shadow AI prevention controls. Pattern-specific readiness checklists in [AI4SDLC:ai-autonomy-implementation-guide].</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-6-decision-framework-go-slow-no-go">SECTION 6 — Decision Framework: Go / Slow / No-Go</h2>
+<p><em>The eight dimensions below are the AI-SWEC pre-event (B-xx) assessment categories, structured as Go / Slow / No-Go signals. Working through this table IS the AI-SWEC pre-event assessment. The outcome — and the rationale behind it — becomes the first recorded entry in the ADR. Each dimension is assessed independently; one No-Go in Governance, Policy, or Environment is sufficient to pause.</em></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Go</th>
+<th>Slow</th>
+<th>No-Go</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GAI Strategic Alignment</td>
+<td>Plan exists; aligned to documented goal</td>
+<td>Plan in development</td>
+<td>No plan; purely reactive to mandate</td>
+</tr>
+<tr>
+<td>Disruption Tolerance</td>
+<td>Defined and concurred by leadership</td>
+<td>Implied, not documented</td>
+<td>Undefined; any failure will escalate</td>
+</tr>
+<tr>
+<td>SDLC Phase Targeting</td>
+<td>Specific phase plus measurable threshold</td>
+<td>Phase identified; threshold vague</td>
+<td>No phase targeted</td>
+</tr>
+<tr>
+<td>Baseline Metrics</td>
+<td>DORA plus quality baselines captured</td>
+<td>Partial baselines; gaps acknowledged</td>
+<td>No baselines — no before/after possible</td>
+</tr>
+<tr>
+<td>Governance and Policy</td>
+<td>IL-level confirmed; data handling in place</td>
+<td>Policy review in progress; interim controls defined</td>
+<td>Conflicts unresolved; no approved hosting path</td>
+</tr>
+<tr>
+<td>Human Oversight Model</td>
+<td>Approval gates defined for all AI outputs</td>
+<td>Planned but not operationalized</td>
+<td>No review gates defined</td>
+</tr>
+<tr>
+<td>Team Readiness</td>
+<td>Failure modes discussed; trust-building in place</td>
+<td>Curious but unprepared</td>
+<td>Resistant or overconfident</td>
+</tr>
+<tr>
+<td>Environment Readiness</td>
+<td>Approved tooling in delivery environment</td>
+<td>Being provisioned; timeline known</td>
+<td>Only shadow tools available</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpreting the result:</strong></p>
+<ul>
+<li><strong>Mostly Go</strong> — proceed to bounded pilot; the Go decision and rationale are recorded in the ADR now</li>
+<li><strong>Mixed Go/Slow</strong> — constrain scope; address Slow signals in the pilot plan; document the gaps and the conditional Go in the ADR</li>
+<li><strong>Any No-Go in Governance, Policy, or Environment</strong> — pause; resolve before piloting; document the No-Go and what must change in the ADR</li>
+<li><strong>Mostly Slow</strong> — readiness sprint; revisit in 30–60 days; document current state in the ADR so the revisit has a starting point</li>
+</ul>
+<p><strong>The Go/Slow/No-Go decision initiates the ADR.</strong> In all cases — Go, conditional Go, or No-Go — the assessment outcome and rationale are recorded at this point. The pilot adds post-event (P-xx) data. The decision record starts here.</p>
+<h3 id="61-record-the-decision-adr-jumpstart">6.1 Record the Decision — ADR Jumpstart</h3>
+<p><em>The Go/Slow/No-Go outcome is the first entry. The ADR is then carried through the pilot and completed with post-event data. See the <a href="../../resources/ArchitecturalDecisionRecord/">ADR template</a> in docs/resources.</em></p>
+<ul>
+<li><strong>Context:</strong> current SDLC state, pain points, mission context</li>
+<li><strong>Go/Slow/No-Go Outcome:</strong> the result of the assessment above and the rationale — first recorded entry</li>
+<li><strong>Decision:</strong> specific SDLC phase, use case, and autonomy pattern being piloted</li>
+<li><strong>Alternatives Considered:</strong> other phases or use cases evaluated and why they were deprioritized</li>
+<li><strong>Consequences:</strong> expected benefits, known risks, success threshold</li>
+<li><strong>Pre-Pilot Baselines:</strong> metric values captured before tooling was introduced <em>(added at Measure phase)</em></li>
+<li><strong>Post-Pilot Outcomes:</strong> results against the success threshold <em>(added at After phase)</em></li>
+</ul>
+<p>The AI-SWEC B-xx question set maps directly to the Context, Decision, and Consequences fields. The P-xx post-event data completes the record. Together they form the complete before/after evidence base.</p>
+<blockquote>
+<p><strong>Author notes — Section 6.1:</strong></p>
+<ul>
+<li>[MITRE AMM] Strategy and Resources pillar helps populate Alternatives Considered and Context — job aid, not the core framework</li>
+<li>[CDAO] DoD RAI S&amp;I Pathway: defensibility requires documented context, not compliance checkboxes</li>
+<li>Write into prose: "The AI-SWEC B-xx questions are the interview that builds the ADR. The P-xx questions are the evaluation that completes it."</li>
+<li><strong>AI-SWEC question IDs require verification before prose draft.</strong> B-xx/P-xx prefix convention confirmed. Specific question numbers must be verified against the current AI-SWEC decision tool before writing into prose.</li>
+</ul>
+<p><strong>Author notes — Section 6:</strong></p>
+<ul>
+<li>[NIST] AI RMF MAP function — categorize, classify risk, determine context</li>
+<li>[CDAO] Risk Management dimension governs the No-Go criteria; Responsible AI dimension governs policy alignment</li>
+<li>[MITRE AMM] Team Readiness row aligns to MITRE AMM Workforce Development pillar — job aid diagnostic</li>
+<li><em>agentic</em> conditional row (add when pilot includes agentic components): <strong>Agentic Governance Readiness</strong> — Go: skills file governance, agent registration, and sandbox all in place. Slow: one or two gaps; scoped pilot scope won't require missing elements. No-Go: no skills file governance, no agent registry, no sandbox — stop before any P2+ agentic pattern.</li>
+<li>Workgroup note: the No-Go criteria for Governance, Policy, and Environment are intentionally strict. "Slow" in those three dimensions does not mean "proceed with caution" — it means those gaps need resolution before the pilot scope is finalized.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-7-implementation-guidance-how-to-start">SECTION 7 — Implementation Guidance: How to Start</h2>
+<p><em>The full arc, step by step.</em></p>
+<h3 id="before-define-and-decide">Before — Define and Decide</h3>
+<ol>
+<li>Scope the why — delivery team, not just leadership; answer the four questions in Section 5.1; write it down; disagreement is useful data</li>
+<li>Assess readiness — walk the four-dimension checklist in Section 3; document gaps explicitly</li>
+<li>Make the Go/Slow/No-Go decision — document the decision and its rationale using the ADR Jumpstart fields in Section 6.1; if No-Go, define what needs to change before revisiting</li>
+</ol>
+<h3 id="measure-baseline-and-design">Measure — Baseline and Design</h3>
+<ol>
+<li>Capture pre-pilot baselines <em>(the most frequently skipped step — if omitted, the ADR cannot be produced with integrity)</em></li>
+<li>Select the autonomy pattern and scope the pilot — one phase, one tool, one sprint or delivery increment; declare the success threshold before starting</li>
+</ol>
+<h3 id="after-pilot-and-record">After — Pilot and Record</h3>
+<ol>
+<li>Run the bounded pilot — hold scope and pattern constant; require human review gates for all AI outputs</li>
+<li>Evaluate the adoption health composite — document the delta, not just the sentiment</li>
+<li>Make and record the decision — continue, adjust, or pause; document the rationale and pre/post-event data in an ADR; share with the AI4SDLC Working Group as an early adopter story</li>
+<li>Iterate or expand — each expansion needs a new why, new baselines, and a new ADR</li>
+</ol>
+<blockquote>
+<p><em>Army SMDCOE rollout is a worked example of this arc: GitLab Duo pilot with 5 users → cloud engineer validates → dev lead validates → expand to full dev team → expand beyond. Phase expansion gated on demonstrated trust, not on a schedule.</em></p>
+<p><em>Navy Forge is a worked example of the Measure phase done well: nine use cases, explicit quality criteria per use case, time savings measured only when quality criteria were met — results tabulated before any tool selection decision.</em></p>
+<p><strong>Author notes — Section 7:</strong></p>
+<ul>
+<li>[FIELD:Army] additional: daily CloudWatch-to-S3-to-SES report showed usage by individual, leaderboard, and cost visibility for planning. Managers used low-adoption signals to identify and coach hesitant developers directly. This is "freed-up time reinvestment" and "trust calibration" metrics in practice.</li>
+<li>[FIELD:Navy] next steps from evaluation: build prompt playbooks, set mandatory human review points for higher-risk use cases, collect productivity benchmarks over time so future decisions reflect program-specific evidence.</li>
+<li>Emphasize: expanding scope mid-pilot invalidates the before/after comparison. One of the most common errors in early adopter stories.</li>
+<li><em>agentic</em>: if pilot involves agentic components, verify agentic governance readiness row in Section 6 before starting. Hold the declared autonomy pattern constant — the pattern declaration IS the scope.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-8-risks-metrics-and-adoption-health-composite">SECTION 8 — Risks, Metrics, and Adoption Health Composite</h2>
+<p><em>Metrics map to the arc: baseline metrics = Measure phase; post-pilot signals and health composite = After phase. Neither has value without the other.</em></p>
+<p><strong>Common Risks:</strong></p>
+<ul>
+<li>Accelerating entropy — faster production of lower-quality code, tests, or documentation; speed without quality is not a win</li>
+<li>Baseline omission — "it felt faster" is not evidence; Army SMDCOE acknowledged missing several baseline metrics after the fact</li>
+<li>Anti-pattern amplification — AI reinforces problems already in the codebase; autonomous test generation from code is the canonical example</li>
+<li>Shadow tool usage — teams without approved tooling use personal accounts and browser access; data security and compliance risk</li>
+<li>Overconfidence after a single successful sprint — one sprint does not validate cross-SDLC AI use</li>
+</ul>
+<p><strong>Delivery Flow — DORA Four Key Metrics:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Capture Pre-Pilot</th>
+<th>Track Post-Pilot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deployment Frequency</td>
+<td>How often the team deploys to production</td>
+<td>Did frequency change, and in which direction?</td>
+</tr>
+<tr>
+<td>Lead Time for Changes</td>
+<td>Code commit to production deployment</td>
+<td>Did lead time shrink? Did quality hold?</td>
+</tr>
+<tr>
+<td>Change Failure Rate</td>
+<td>% of changes causing production failure</td>
+<td>Did AI-assisted changes fail more or less?</td>
+</tr>
+<tr>
+<td>Mean Time to Recovery</td>
+<td>Average recovery time from failure</td>
+<td>Was recovery faster or slower with AI-generated code?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Software Quality Metrics:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Pre-Pilot Baseline</th>
+<th>Post-Pilot Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quantitative Code Quality</td>
+<td>Coverage %, cyclomatic complexity, defect density, code churn</td>
+<td>Delta in each metric</td>
+</tr>
+<tr>
+<td>Qualitative Code Quality</td>
+<td>Readability, maintainability, testability, documentation completeness</td>
+<td>Team-assessed change using a consistent rubric</td>
+</tr>
+<tr>
+<td>Code Security</td>
+<td>Vulnerability count, severity, time to remediate</td>
+<td>Did AI tooling introduce new vulnerabilities?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Selected Field Results — Documentation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>What Was Measured</th>
+<th>Result</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infrastructure diagram from IaC artifacts</td>
+<td>5 minutes vs. approximately 1 week manually</td>
+<td>Army SMDCOE</td>
+</tr>
+<tr>
+<td>Inline documentation, full class</td>
+<td>~1 minute plus 30 minutes review vs. 6–7 hours</td>
+<td>Navy Forge</td>
+</tr>
+<tr>
+<td>Open API specification generation</td>
+<td>Approximately 6x faster with iterative prompting</td>
+<td>Navy Forge</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Human-Machine Teaming Indicators</strong> <em>(directional signals — no hard thresholds yet):</em></p>
+<ul>
+<li><strong>Trust Calibration</strong> — is reliance aligned with demonstrated capability in this context?</li>
+<li><strong>Oversight Burden Shift</strong> — more or less oversight than expected?</li>
+<li><strong>Prompt Hygiene Signal</strong> — prompts and skills files versioned and shared, or siloed with individuals?</li>
+<li><strong>Freed-Up Time Reinvestment</strong> — time saved reinvested in quality and learning, or absorbed into faster delivery?</li>
+</ul>
+<p><strong>Adoption Health Composite — evaluated at pilot close; structured narrative, not a score:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Key Questions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Effectiveness and Performance</td>
+<td>How appropriate was the AI for this SDLC task? Did it meet requirements and performance expectations?</td>
+</tr>
+<tr>
+<td>Transparency and Trust</td>
+<td>How explainable was the output? Did trust increase, decrease, or hold?</td>
+</tr>
+<tr>
+<td>Risk Profile Delta</td>
+<td>What disruption occurred? Vulnerabilities introduced? Did it stay within defined tolerance?</td>
+</tr>
+<tr>
+<td>Human Impact</td>
+<td>More or less oversight than expected? Effect on team communication, satisfaction, and workload?</td>
+</tr>
+<tr>
+<td>Value Realization</td>
+<td>Were the outcomes defined in the why actually achieved? Did success metrics move as intended?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Author notes — Section 8:</strong></p>
+<ul>
+<li>[NIST] AI RMF MEASURE function underpins the health composite evaluation</li>
+<li>[CDAO] Oversight dimension = governance and trust monitoring at pilot close</li>
+<li>[MITRE AMM] Risk Profile Delta row aligns to MITRE AMM risk governance pillar — flag as a job aid for teams using MITRE AMM as a diagnostic</li>
+<li>[NIST.AI.600-1] GenAI-specific risks to add to Common Risks: hallucination, data leakage, homogenization of outputs, confabulation of citations — all amplified in agentic workflows</li>
+<li><em>agentic</em> additional risks: skills file injection (malicious or poorly written agent instruction files corrupt agent behavior pipeline-wide); shadow agent activity (unapproved agents bypass audit trails) [AI4SDLC:ai-autonomy_continuum_play] [AI4SDLC:ai_sdlc_workflows_play]</li>
+<li><em>agentic</em> health composite additions (for pilots with agentic components): Was the declared autonomy pattern held constant? Were all agent actions logged and attributable to a human trigger? Were any shadow agent or skills file incidents observed?</li>
+<li>[FIELD:Army] additional: Army tracked line coverage and cybersecurity metrics; also tracked adoption via CloudWatch leaderboard. Did not track: human vs. AI test case ratio, manual changes after AI suggestions, code churn delta — these are the gaps they acknowledged and opportunities for future tracking.</li>
+<li>[FIELD:Navy] additional: quality judged by SME review per use case; time savings measured only when quality was met. Still in evaluation phase — no DORA baselines formally tracked yet.</li>
+<li><strong>AI-SWEC health composite mapping (needs verification before prose):</strong> Effectiveness and Performance corresponds to P-12 and P-13; Transparency and Trust to P-16 and P-17; Risk Profile Delta to P-01, P-02, P-31, P-32; Human Impact to P-19, P-22, P-23, P-35; Value Realization to P-08, P-09, P-36. Verify all P-xx numbers against the current AI-SWEC decision tool before writing into prose.</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-9-key-takeaways">SECTION 9 — Key Takeaways</h2>
+<ol>
+<li><strong>Before, measure, after — in that order.</strong> Skipping any phase breaks the evidence chain and makes the ADR impossible to produce with integrity.</li>
+<li><strong>The why is not optional.</strong> Without it, you cannot measure success, justify risk, or learn from the experience.</li>
+<li><strong>Premature adoption costs more than delayed adoption.</strong> Speed without readiness introduces security risk, erodes trust, and produces results that cannot be evaluated or repeated.</li>
+<li><strong>Sequencing matters more than speed.</strong> Documentation and test scaffolding from specifications are the right starting points — not code generation, not autonomous pipelines.</li>
+<li><strong>Baselines are the most skipped and most critical step.</strong> No baseline means no ADR. No ADR means no organizational learning.</li>
+<li><strong>Declare the autonomy pattern before the pilot. Hold it constant.</strong> Mid-pilot scope changes invalidate the comparison.</li>
+<li><strong>The decision is the goal. The ADR is the record.</strong> A deliberate, evidence-based decision to continue, adjust, or pause — documented so it is traceable, justifiable, and defensible. Not a presentation, not a dashboard.</li>
+<li><strong>Human oversight is a design requirement.</strong> Review gates are how trust is built, not how delivery is slowed. The goal is earning the right to expand autonomy with evidence.</li>
+<li><strong>The cycle repeats.</strong> Each new tool, phase, or autonomy expansion needs its own why, its own baselines, and its own ADR.</li>
+</ol>
+<blockquote>
+<p><strong>Author notes — Section 9:</strong></p>
+<ul>
+<li>Takeaway 7: [CDAO] DoD RAI S&amp;I Pathway — defensibility requires documented context, not compliance checkboxes</li>
+<li>Takeaway 8: [FIELD:Army] "Whatever they post in for a merge request, that person is responsible." That is a governance posture.</li>
+<li><em>agentic</em> addition if needed: "Agentic workflows are not exempt from this play. The cost of skipping the before/measure/after discipline scales with the autonomy level." [AI4SDLC:ai-autonomy_continuum_play]</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="section-10-companion-plays-and-references">SECTION 10 — Companion Plays and References</h2>
+<p><strong>Related Plays:</strong></p>
+<ul>
+<li><a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a> — pattern selection, autonomy health index, shadow AI governance</li>
+<li><a href="../ai-autonomy-implementation-guide/">AI Autonomy Implementation Guide</a> — pattern-specific readiness checklists, health metrics</li>
+<li><a href="../fundamentals-play/">Fundamentals for Designing an AI-Augmented Tool Chain</a> — hosting models, trust architecture</li>
+<li><a href="ai_sdlc_workflows_play.md">AI Workflow Design and Governance</a> — workflow governance, review gates, skills file governance</li>
+<li><a href="../requirements_engineering_play/">Requirements Engineering with AI Assistance</a> — maturity indicators, traceability</li>
+<li><a href="../testing-play/">AI-Augmented Testing</a> — test coverage metrics, defect escape rate, test-from-code anti-pattern</li>
+<li><a href="../code-gen-play/">Code Completion and Generation</a> — DevSecOps baseline requirements, code generation risk</li>
+<li><a href="../documentation-play/">AI-Assisted Documentation</a> — documentation use case metrics, field results</li>
+<li>AI Agentic Workflow Design and Skills File Governance <em>(forthcoming)</em></li>
+<li><a href="../aiswec_play-outline/">MITRE AI-SWEC Assessment</a> — full B-xx/P-xx question set, structured assessment walkthrough, and ADR field mapping; companion online tool in development</li>
+</ul>
+<p><strong>Key References:</strong></p>
+<ul>
+<li>MITRE AI-SWEC Framework — ArchAITecture Research Collaborative <em>(core framework)</em></li>
+<li>MITRE POV: <em>Healthy Software, Lasting Value — Engineering the AI-Augmented Software Lifecycle</em></li>
+<li>CDAO Pathway to AI Readiness — ai.mil</li>
+<li>DoD Responsible AI Strategy and Implementation Pathway (2022)</li>
+<li>CDAO Responsible AI Toolkit: SHIELD + DAGR</li>
+<li>NIST AI Risk Management Framework 1.0 (2023)</li>
+<li>NIST.AI.600-1 GenAI Profile (2024)</li>
+<li>MITRE AI Maturity Model (2023) — job aid for organizational diagnostic</li>
+<li>DORA 2025 State of AI-Assisted Software Development</li>
+<li>Geoffrey Moore, <em>Crossing the Chasm</em> (1991) — Technology Adoption Life Cycle</li>
+</ul>
+<hr />
+<h2 id="architectural-intent">Architectural Intent</h2>
+<p><em>Internal section — 1–2 sentences. Defines how this play connects to AI4SDLC software health and the autonomy continuum. Consistent with template and ai_sdlc_workflows_play convention.</em></p>
+<p>This play is the discipline behind every AI adoption decision — first use or fifth expansion. It contributes to software health by anchoring each adoption cycle in defined intent, measurable baselines, appropriate human oversight, and a traceable decision record. The cycle repeats: define the why, pilot with intention, measure the delta, then decide deliberately to continue, adjust, or pause.</p>
+<hr />
+<h2 id="discussion-points-for-the-workgroup">DISCUSSION POINTS FOR THE WORKGROUP</h2>
+<ol>
+<li>
+<p><strong>Repeating cycle:</strong> The play is framed as a repeating discipline with two re-entry triggers — adopting something new, or revisiting a prior pause when conditions have changed. A "No-Go" is not permanent. This framing is set; workgroup feedback welcome on whether additional re-entry triggers should be named.</p>
+</li>
+<li>
+<p><strong>MITRE AI-SWEC:</strong> The <a href="../aiswec_play-outline/">AI-SWEC Assessment play</a> holds the full B-xx/P-xx question set, structured assessment walkthrough, and ADR field mapping. A companion online tool providing visualization and ADR generation is in development. If the workgroup has AI adoption-specific considerations that should be captured in the AI-SWEC play before it moves to prose, flag them now.</p>
+</li>
+<li>
+<p><strong>Autonomy pattern terminology:</strong> This play uses Pattern 1–4 consistent with the Autonomy Continuum play. Flagging for workgroup awareness — if there is any inconsistency with how other plays use this terminology, it should be resolved before this play moves to prose.</p>
+</li>
+<li>
+<p><strong>Field examples — contributions welcome:</strong> Army SMDCOE and Navy Forge are the primary examples used throughout. If the workgroup can identify additional DoW early adopter stories before this play moves to prose draft, they will strengthen the evidence base.</p>
+</li>
+<li>
+<p><strong>ADR template:</strong> The ADR template exists at <a href="../../resources/ArchitecturalDecisionRecord/">docs/resources/ArchitecturalDecisionRecord.md</a>. The play will reference it directly rather than reproduce it. Workgroup input welcome on whether the existing template covers what an AI adoption decision record needs, or whether AI-specific fields should be added.</p>
+</li>
+</ol>
+<hr />
+<h2 id="authoring-notes">AUTHORING NOTES</h2>
+<ul>
+<li><strong>ADR link path:</strong> <code>../resources/ArchitecturalDecisionRecord.md</code> — play is in docs/plays/; path is correct.</li>
+<li><strong>Core framework is MITRE AI-SWEC.</strong> MITRE AMM and CDAO Pathway are job aids — cite them as such; do not position them as the framework.</li>
+<li><strong>AI-SWEC play is available.</strong> Link to <a href="../aiswec_play-outline/">aiswec_play-outline.md</a> for the full B-xx/P-xx question set. Do not reproduce the full question set here. The AI-SWEC play describes the planned online visualization and ADR generation tool.</li>
+<li><strong>AI-SWEC IDs require verification before prose.</strong> B-xx/P-xx prefix convention is confirmed (B = before pilot, P = post pilot). Specific question numbers referenced in Section 8 author notes must be verified against the current AI-SWEC decision tool before writing into prose.</li>
+<li>SEI AI Adoption Maturity Model: NOT published; do not reference.</li>
+<li>CDAO realigned under USD(R&amp;E) August 2025 — frameworks remain in force; note in a footnote if mentioning CDAO organizational structure.</li>
+<li>Agentic AI content is woven into existing risk posture framing throughout — NOT a standalone section. The Autonomy Continuum play owns agentic architecture.</li>
+<li>Both early adopter stories target May 2026 publish. Verify publication status before citing.</li>
+<li>"Skeptics" is preferred over "Laggards" (Moore's own term). In DoW contexts, add: <em>(often constraint-driven — policy, accreditation, or mission risk — rather than posture-driven)</em>.</li>
+<li>Voice: No em-dashes. No "ensure." No "leverage." No "transformative." Specific over vague. Direct over hedged.</li>
+</ul>
+<hr />
+<p><em>AI4SDLC Play Series — Department of War CIO Guidance. Draft. Not for distribution beyond the AI4SDLC Working Group.</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

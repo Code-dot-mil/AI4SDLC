@@ -1,0 +1,2206 @@
+<!-- overrides/main.html -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../testing-play/">
+      
+      
+        <link rel="next" href="../prompt-engineering/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/DOW_CIO_Seal.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Vibe Coding - AI for the SDLC</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/wordwrap.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#play-from-protovibe-to-production" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI for the SDLC" class="md-header__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI for the SDLC
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vibe Coding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../defining_your_why_play-outline/" class="md-tabs__link">
+          
+  
+  
+  Plays
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../army-smdcoe-play.md" class="md-tabs__link">
+          
+  
+  
+  Early Adopter Stories
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../human-machine-patterns/" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../emerging-practices/" class="md-tabs__link">
+          
+  
+  
+  Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ai-autonomy-implementation-guide/" class="md-tabs__link">
+          
+  
+  
+  Resources, Tools & Templates
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI for the SDLC" class="md-nav__button md-logo" aria-label="AI for the SDLC" data-md-component="logo">
+      
+  <img src="../../images/DOW_CIO_Seal.png" alt="logo">
+
+    </a>
+    AI for the SDLC
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Code-dot-mil/AI4SDLC" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    View Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guidance Lifecycle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ways_to_get_involved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get involved
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plays
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plays
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../defining_your_why_play-outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Defining Why
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fundamentals-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolchain Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements_engineering_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Assisted Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-gen-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GAI-Augmented Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-vibe-coding-is-and-why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What Vibe Coding Is and Why It Matters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What Vibe Coding Is and Why It Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-the-protovibe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 The Protovibe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-comprehension-is-its-own-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Comprehension Is Its Own Axis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-prerequisites-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Prerequisites and Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eight-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Eight Outcomes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Eight Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-the-undecided-protovibe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 The Undecided Protovibe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-baseline-transition-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Baseline Transition Gate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. The Baseline Transition Gate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-three-destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Three Destinations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-what-to-add-for-ai-generated-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 What to Add for AI-Generated Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-working-safely-before-the-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Working Safely Before the Gate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-key-takeaways-and-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Key Takeaways and Next Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Key Takeaways and Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-plays-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Plays and Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Engineering
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy_continuum_play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Autonomy Continuum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai_sdlc_workflows-play/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Workflow Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ide-security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IDE Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Early Adopter Stories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Early Adopter Stories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../army-smdcoe-play.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Army SMDCoE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patterns
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Patterns
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-machine-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human-Machine Interaction Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emerging-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emerging Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources, Tools & Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources, Tools & Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-autonomy-implementation-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Autonomy Implementation Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aiswec_play-outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Software Evaluation Criteria (AI-SWEC)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create New Play Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/ArchitecturalDecisionRecord/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectural Decision Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-vibe-coding-is-and-why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What Vibe Coding Is and Why It Matters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What Vibe Coding Is and Why It Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-the-protovibe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 The Protovibe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-comprehension-is-its-own-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Comprehension Is Its Own Axis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-prerequisites-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Prerequisites and Readiness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eight-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Eight Outcomes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Eight Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-the-undecided-protovibe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 The Undecided Protovibe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-baseline-transition-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Baseline Transition Gate
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. The Baseline Transition Gate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-three-destinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Three Destinations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-what-to-add-for-ai-generated-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 What to Add for AI-Generated Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-working-safely-before-the-gate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Working Safely Before the Gate
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-key-takeaways-and-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Key Takeaways and Next Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Key Takeaways and Next Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#related-plays-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Plays and Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  <!-- Check if the page has lifecycle metadata -->
+  
+    
+    <!-- Generate the appropriate badge based on lifecycle stage -->
+    <div class="lifecycle-badge alpha" 
+         role="img" 
+         aria-label="Alpha stage - Early development">
+      
+      <!-- Shape indicator -->
+      <span class="shape"></span>
+      
+      <!-- Stage name (uppercase) -->
+      <span>ALPHA</span>
+      
+      <!-- Optional timestamp -->
+      
+        <span class="lifecycle-timestamp">Updated: 2026-08-04</span>
+      
+    </div>
+  
+  
+  <!-- This renders the actual page content AFTER the badge -->
+  
+                  
+
+
+  
+  
+
+
+<h1 id="play-from-protovibe-to-production"><strong>Play: From Protovibe to Production</strong></h1>
+<blockquote>
+<p><em>Groundbreaking potential with limitations and challenges.</em></p>
+</blockquote>
+<hr />
+<h2 id="executive-summary"><strong>Executive Summary</strong></h2>
+<p>Vibe coding puts working software in the hands of people who could never build it before. A logistics analyst, a contracting officer, a clinician, a program manager: anyone who understands a problem deeply can now turn an idea into something that runs, in hours, without waiting in a development queue. This play is about keeping that value while handling what comes with it.<sup id="fnref:OWASP"><a class="footnote-ref" href="#fn:OWASP">1</a></sup></p>
+<p>The artifact that comes out of a vibe coding session is what we call a <strong>protovibe</strong>: working software that demonstrates intent but has not yet been fully understood by a human steward. Both halves of that sentence are true at once. A protovibe is genuinely valuable and genuinely unknown.</p>
+<p>Every protovibe ends in one of eight outcomes. Five of them are decisions the team records and acts on. Three of them mean the code enters sustained use, and those three share a single gate.</p>
+<p>📌 <strong>Key takeaway:</strong> Vibe freely. Then decide, deliberately, what the protovibe becomes.</p>
+<hr />
+<h2 id="1-what-vibe-coding-is-and-why-it-matters"><strong>1. What Vibe Coding Is and Why It Matters</strong></h2>
+<p>Vibe coding is the use of AI to produce working software directly from natural language description, without the person directing it reading or owning the generated code. The term comes from Andrej Karpathy in February 2025.<sup id="fnref:Karpathy"><a class="footnote-ref" href="#fn:Karpathy">2</a></sup> Academic work has since framed it as a genuine shift in how intent reaches a machine, moving the mediation of developer intent from deterministic instruction to probabilistic inference.<sup id="fnref:Meske"><a class="footnote-ref" href="#fn:Meske">3</a></sup></p>
+<p>This play uses <strong>proto-vibing</strong> as its term for that practice — a rename that keeps the activity (proto-vibing) and its artifact (protovibe) in the same word family, rather than two unrelated terms. Vibe coding remains the term of record in the literature cited throughout; proto-vibing is this play's label for it, used from here forward.</p>
+<p><strong>The value is real and measurable.</strong> A systematic review of 101 practitioner sources found speed and efficiency to be the dominant motivation at 62 percent of coded accounts, followed by accessibility and empowerment at 14 percent and learning and experimentation at 11 percent.<sup id="fnref:Fawzy"><a class="footnote-ref" href="#fn:Fawzy">4</a></sup> Non-developers in that review described building automations and public-facing forms without waiting on an IT department. For DoW programs, that is the headline: subject matter expertise can now be expressed directly as working software.</p>
+<p>This capability is most powerful exactly where traditional development is slowest. Requirements that are hard to write down but easy to demonstrate. Ideas that need a stakeholder's reaction before they deserve funding. Design questions with three plausible answers and no cheap way to compare them. Proto-vibing turns one-way doors into reversible experiments.</p>
+<h3 id="11-the-protovibe">1.1 The Protovibe</h3>
+<p>A <strong>protovibe</strong> is the artifact a proto-vibing session leaves behind: working software that demonstrates intent but has not yet been fully understood by a human steward.</p>
+<p>Naming the artifact matters more than naming the activity. The governance question was never whether someone should proto-vibe. It is what happens to the thing on disk afterward. A program can hold a useful conversation about three protovibes and their disposition. It cannot hold a useful conversation about whether proto-vibing is good.</p>
+<h3 id="12-comprehension-is-its-own-axis">1.2 Comprehension Is Its Own Axis</h3>
+<p>Proto-vibing is not a point on the task-level autonomy scale in the <a href="ai_sdlc_workflows_play.md">AI &amp; Agentic Workflow Design and Governance</a> play. That scale governs what an agent is <em>permitted</em> to do. Comprehension describes what the human <em>understood</em>. Every autonomy level presumes a human who comprehends, so a developer at Level 1 who applies a draft without reading it has satisfied the framework and learned nothing. That play already flags the same hazard when it warns that approving outputs without meaningful evaluation turns human-in-the-loop review into a formality.</p>
+<p>Agent count is likewise orthogonal. One agent whose output nobody reads produces a protovibe. Twelve agents orchestrated against a spec, with an engineer owning the design, do not. Scaling the mechanism does not change the comprehension question, though it does raise the containment requirement (Section 6).</p>
+<p>This matches what the empirical record shows about professionals. A study of 13 field observations and 99 experienced developers found that experienced developers retain agency over software design and implementation, planning before implementing and validating agent output, with expertise superseding vibes wherever expertise is present.<sup id="fnref:Huang"><a class="footnote-ref" href="#fn:Huang">5</a></sup> Protovibes are therefore not primarily a senior engineering problem. They arise where domain expertise is high and software engineering expertise is thin, which is precisely where the capability is most valuable.</p>
+<blockquote>
+<p>⚠️ <strong>Relationship to Code Generation.</strong> The <a href="../code-gen-play/">Leading Practices for Code Completion and Generation</a> play introduces VIBE Programming and directs that it be bounded by policy with strict gating before promotion. This play operationalizes that direction. It does not replace or amend it. A cross-reference should be added when that play next revises.</p>
+</blockquote>
+<hr />
+<h2 id="2-purpose-and-scope"><strong>2. Purpose and Scope</strong></h2>
+<p>This play governs what happens after a proto-vibing session ends: how a program names, contains, and disposes of or promotes the resulting protovibe. It does not decide whether to permit proto-vibing in the first place — that boundary is set by the Code Generation play's VIBE Programming guidance — and it does not cover model selection, IDE tooling, or prompt technique.</p>
+<p><strong>In scope:</strong> the protovibe as a named artifact, the eight-outcome decision set, the Baseline Transition Gate, and the environment controls that make exploration safe before that gate.</p>
+<p><strong>Out of scope:</strong> agent orchestration mechanics (see AI &amp; Agentic Workflow Design and Governance), requirements elicitation technique (see Requirements Engineering), and tool- or vendor-specific guidance.</p>
+<p><strong>Audience:</strong> engineers and subject matter experts running proto-vibing sessions, technical leads deciding whether a protovibe is promoted, and program leadership funding what comes after.</p>
+<hr />
+<h2 id="3-prerequisites-and-readiness"><strong>3. Prerequisites and Readiness</strong></h2>
+<p>A team does not need a mature DevSecOps pipeline to start proto-vibing — that is the point. These are the minimum conditions for running this play safely:</p>
+<ul>
+<li>[ ] An environment that can be made ephemeral and isolated, with no path to production credentials or systems</li>
+<li>[ ] Synthetic or approved non-sensitive data available for exploration</li>
+<li>[ ] A place to record protovibe inventory, expiration dates, and outcome decisions, even a simple tracker</li>
+<li>[ ] A named engineer able to own comprehension review before any protovibe crosses the gate in Section 5</li>
+<li>[ ] Familiarity with the Code Generation play's high-risk use-case boundaries, echoed in Section 6</li>
+</ul>
+<p>Teams without an established DevSecOps baseline can still vibe code under Section 6's controls. They cannot yet cross the gate in Section 5 — Step 3 of that gate assumes CI/CD, SSDF or SLSA practice, and SBOM, MLBOM, and AIBOM tracking are already in place.</p>
+<hr />
+<h2 id="4-eight-outcomes"><strong>4. Eight Outcomes</strong></h2>
+<p>Every protovibe ends somewhere. Five outcomes are decisions. Three mean the code enters sustained use and must pass the gate in Section 5.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Outcome</strong></th>
+<th><strong>What survives</strong></th>
+<th><strong>Family</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Insight</strong></td>
+<td>A design decision, a stakeholder alignment, a changed opinion</td>
+<td>Decision</td>
+</tr>
+<tr>
+<td><strong>2. Negative verdict</strong></td>
+<td>A documented "no": infeasible, not worth it, wrong requirement</td>
+<td>Decision</td>
+</tr>
+<tr>
+<td><strong>3. Lessons learned</strong></td>
+<td>Knowledge about the attempt; artifact deliberately disposed</td>
+<td>Decision</td>
+</tr>
+<tr>
+<td><strong>4. Requirements and production vision</strong></td>
+<td>Spec, interface contracts, acceptance criteria, ADRs</td>
+<td>Decision</td>
+</tr>
+<tr>
+<td><strong>5. Reference oracle</strong></td>
+<td>The running protovibe as a behavioral specification for a clean rebuild</td>
+<td>Decision</td>
+</tr>
+<tr>
+<td><strong>6. Selective salvage</strong></td>
+<td>Named fragments; the remainder disposed</td>
+<td><strong>Gate</strong></td>
+</tr>
+<tr>
+<td><strong>7. Debt-baselined transition</strong></td>
+<td>The full codebase, with a funded and owned debt register</td>
+<td><strong>Gate</strong></td>
+</tr>
+<tr>
+<td><strong>8. Bounded sustainment</strong></td>
+<td>The full codebase, used as-is inside hard constraints</td>
+<td><strong>Gate</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Insight and negative verdict are wins.</strong> A protovibe that proves an idea will not work, in two days, has saved a program a year and a program office a great deal of money. Record it as a deliverable, because a kill decision that nobody writes down gets re-litigated in twelve months.</p>
+<p><strong>Requirements and production vision is the highest-leverage outcome for DoW work.</strong> The specification, interface contracts, and Architectural Decision Records<sup id="fnref:ADR"><a class="footnote-ref" href="#fn:ADR">6</a></sup> a Harvest produces are the same artifacts an authorization package demands anyway, so the governance is not pure overhead. Pair this outcome with the <a href="../requirements_engineering_play/">Requirements Engineering</a> play. One caveat carried from industry practice: the specification informs the rebuild, it does not become the source of truth. Executable code remains the source of truth requiring maintenance.<sup id="fnref:TWSDD"><a class="footnote-ref" href="#fn:TWSDD">7</a></sup></p>
+<p><strong>Reference oracle</strong> keeps the protovibe running but never ships it. Engineers run it alongside the clean build and compare behavior, letting the protovibe define expected results for cases nobody wrote down. This is the right answer when domain logic is tacit, living in an expert's head rather than in any document.</p>
+<h3 id="41-the-undecided-protovibe">4.1 The Undecided Protovibe</h3>
+<p>There is a ninth ending, and it is the one this play exists to prevent: the protovibe quietly acquires users and obligations while none of the eight decisions is ever made.</p>
+<p>Nobody chooses this. Teams arrive at it, because five of the eight outcomes require an act of disposal, disposal requires a decision, and drift is free. Practitioner accounts show what accumulates in the meantime: only 29 percent of coded quality assurance behaviors involved manual testing or edits, while 36 percent skipped quality assurance entirely, 18 percent reflected uncritical trust in the output, and 10 percent delegated verification back to the AI that wrote the code.<sup id="fnref2:Fawzy"><a class="footnote-ref" href="#fn:Fawzy">4</a></sup></p>
+<hr />
+<h2 id="5-the-baseline-transition-gate"><strong>5. The Baseline Transition Gate</strong></h2>
+<p>Outcomes 6, 7, and 8 all mean the same thing: this code will be sustained. All three cross one gate, in this order, because each step depends on the one before it.</p>
+<p>The gate is what turns a promising protovibe into something a program can fund, staff, defend at a milestone review, and hand to a different team in three years.</p>
+<p><strong>Step 1: Comprehension.</strong> A named engineer can explain what the code does and why it is structured as it is, to a reviewer who did not write the prompt. Not "the team looked at it." One person owns it, by name, on a date. This step has no tooling and no shortcut, and it is the step that gets skipped.</p>
+<p><strong>Step 2: Architecture baseline.</strong> Document the as-built system: data model, trust boundaries, authorization model, external dependencies, deployment topology, and data sensitivity. Then record the delta between as-built and as-should-be. Nothing is remediated here. The delta <em>is</em> the debt register, and every entry gets an owner.</p>
+<p><strong>Step 3: DevSecOps entry.</strong> Now the pipeline means something. Apply the baseline established in the Code Generation play: CI/CD automation, static and dynamic analysis (SAST/DAST), required test coverage for edge cases and failure paths (not just the happy-path demo), secure supply chain practice under SSDF or SLSA, IaC discipline, and SBOM, MLBOM, and AIBOM tracking.<sup id="fnref:SSDF"><a class="footnote-ref" href="#fn:SSDF">8</a></sup> Add the controls in Section 5.2.</p>
+<blockquote>
+<p>⚠️ <strong>Order matters.</strong> Running a protovibe through the pipeline before Steps 1 and 2 produces a clean scan report on code nobody understands. That is worse than no report, because it manufactures confidence.</p>
+</blockquote>
+<h3 id="51-three-destinations">5.1 Three Destinations</h3>
+<p>Past the gate, only three things differ:</p>
+<ul>
+<li><strong>Selective salvage</strong> scopes all three steps to the surviving fragments and records an explicit disposition for the remainder.</li>
+<li><strong>Debt-baselined transition</strong> carries the full register forward with an owner, a date, and a funding line per entry.</li>
+<li><strong>Bounded sustainment</strong> accepts the debt permanently and substitutes hard usage constraints for remediation: a named user population, no sensitive data, no production integration, an inventory entry, and a set review interval. Note that these constraints are only enforceable because Step 2 documented the boundaries they refer to.</li>
+</ul>
+<h3 id="52-what-to-add-for-ai-generated-code">5.2 What to Add for AI-Generated Code</h3>
+<p>A standard pipeline validates code. These controls address what is distinctive about protovibes.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Risk area</strong></th>
+<th><strong>Control</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Configuration posture</td>
+<td>Scan IaC, storage ACLs, and database access policy, not code alone</td>
+</tr>
+<tr>
+<td>Authorization paths</td>
+<td>Discrete human review gate; verify server-side enforcement</td>
+</tr>
+<tr>
+<td>Static and dynamic analysis</td>
+<td>Run SAST/DAST against the protovibe as if it were freshly written code; "it already worked" is not an exemption</td>
+</tr>
+<tr>
+<td>Test coverage</td>
+<td>Require tests for edge cases and failure paths, not just the happy-path demo; treat weak error handling as a blocking finding</td>
+</tr>
+<tr>
+<td>Duplication</td>
+<td>Enforce clone and duplication thresholds as a quality gate</td>
+</tr>
+<tr>
+<td>Provenance</td>
+<td>Validate dependencies, including checks for non-existent packages</td>
+</tr>
+<tr>
+<td>Attribution</td>
+<td>Record AI authorship at commit, feeding SBOM and AIBOM</td>
+</tr>
+</tbody>
+</table>
+<p>The emphasis on configuration and authorization is deliberate. Research across large enterprise codebases found 322 percent more privilege escalation paths and 153 percent more design flaws in AI-generated code, gaps automated scanners miss because they reflect architectural decisions rather than discrete code-level defects.<sup id="fnref:Apiiro"><a class="footnote-ref" href="#fn:Apiiro">9</a></sup> Model capability does not close this on its own: syntax pass rates for generated code rose from roughly 50 percent to 95 percent between 2023 and 2026 while security pass rates stayed flat between 45 and 55 percent.<sup id="fnref:Veracode"><a class="footnote-ref" href="#fn:Veracode">10</a></sup> Maintainability signals move the same way, with refactored code falling from 21 percent of changed lines in 2022 to 3.8 percent in 2026 and duplicated blocks rising 81 percent.<sup id="fnref:GitClear"><a class="footnote-ref" href="#fn:GitClear">11</a></sup></p>
+<hr />
+<h2 id="6-working-safely-before-the-gate"><strong>6. Working Safely Before the Gate</strong></h2>
+<p>Explore freely. The controls below are what make that freedom safe to grant, which is why they belong to the environment rather than to the prompt. They apply to every protovibe from the moment a session starts.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Risk area</strong></th>
+<th><strong>Control</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credentials</td>
+<td>No production credentials in a protovibe session, without exception</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Synthetic or approved non-sensitive data only</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>Ephemeral and isolated, with automatic teardown</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Egress restricted to approved destinations</td>
+</tr>
+<tr>
+<td>Lifespan</td>
+<td>A recorded expiration date on every protovibe</td>
+</tr>
+<tr>
+<td>Visibility</td>
+<td>An inventory entry created at session start</td>
+</tr>
+<tr>
+<td>Multi-agent</td>
+<td>Parallel agents require isolated infrastructure and no shared credentials</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Where to start high, not low.</strong> Consistent with the high-risk categories in the Code Generation play, some work should begin at the gate rather than as a protovibe: authentication and authorization logic, cryptographic implementation, safety-critical and mission-critical software, and anything involving classified, CUI, or export-controlled material. Experienced developers independently converge on the same list, rating agents unsuitable for security-critical code, high-stakes or privacy-sensitive tasks, core business logic, and complex architectural refactoring.<sup id="fnref2:Huang"><a class="footnote-ref" href="#fn:Huang">5</a></sup> Above IL-2, treat isolated infrastructure and synthetic data as mandatory.</p>
+<blockquote>
+<p>⚠️ <strong>The promotion rule.</strong> The moment a protovibe acquires a user who is not its author, it is no longer a prototype. Not when it reaches production. Not when it touches sensitive data. At the first non-author user, because that is when someone else's expectations depend on code nobody understands.</p>
+</blockquote>
+<hr />
+<h2 id="7-key-takeaways-and-next-steps"><strong>7. Key Takeaways and Next Steps</strong></h2>
+<ul>
+<li><strong>Vibe freely, then decide.</strong> Eight outcomes. Five are decisions, three are a gate, and the ninth ending is what happens when nobody chooses.</li>
+<li><strong>Name the artifact.</strong> A protovibe is working software that demonstrates intent but has not yet been fully understood by a human steward. Both halves are true.</li>
+<li><strong>Insight and negative verdicts are wins.</strong> Record them. A documented "no" delivered in two days is a real deliverable.</li>
+<li><strong>Comprehension comes first, then architecture, then the pipeline.</strong> Reversing that order manufactures confidence.</li>
+<li><strong>Controls live in the environment.</strong> The mode is a team decision; the guardrails are an organizational standard.</li>
+</ul>
+<p><strong>Next steps.</strong> Pilot on one team. Track three measures: protovibes with a recorded outcome, expiration dates honored, and gate transitions completed versus deferred. Frame results using AI-SWEC and submit lessons learned to the AI4SDLC Working Group.</p>
+<p>Proto-vibing is groundbreaking potential with limitations and challenges. Run the play, and the potential is what your program keeps.</p>
+<h3 id="related-plays-and-resources">Related Plays and Resources</h3>
+<ul>
+<li><a href="../code-gen-play/">Leading Practices for Code Completion and Generation</a></li>
+<li><a href="ai_sdlc_workflows_play.md">AI &amp; Agentic Workflow Design and Governance</a></li>
+<li><a href="../ai-autonomy_continuum_play/">AI Autonomy Continuum</a></li>
+<li><a href="../requirements_engineering_play/">Requirements Engineering</a></li>
+<li><a href="../../resources/ArchitecturalDecisionRecord/">Architectural Decision Records</a></li>
+</ul>
+<p><strong>End of Play</strong></p>
+<hr />
+<hr />
+<blockquote>
+<p><strong>Note to the AI4SDLC Working Group</strong></p>
+<ol>
+<li><strong>No amendment required.</strong> This play extends the Code Generation play's VIBE Programming guidance rather than revising it. It introduces "protovibe" as a name for the artifact, not a replacement term for the practice, so no vocabulary change is proposed. A reciprocal cross-reference in the Code Generation play would help readers, whenever that play next revises.</li>
+<li><strong>Framework gap.</strong> The task-level autonomy framework records what an agent is permitted to do. It has no field for whether comprehension occurred. The outcome decision proposed here may belong in that framework rather than in a standalone play.</li>
+<li><strong>Citation verification.</strong> The Apiiro figures are drawn from a secondary summary and need primary confirmation to meet repository citation standards.</li>
+</ol>
+</blockquote>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:OWASP">
+<p>OWASP Foundation, "X03:2025 Inappropriate Trust in AI-Generated Code ('Vibe Coding')," <em>OWASP Top 10:2025 Next Steps</em>, 2025. [Online]. Available: https://www.owasp.org/Top10/2025/X01_2025-Next_Steps/#x03-2025-inappropriate-trust-in-ai-generated-code-vibe-coding&#160;<a class="footnote-backref" href="#fnref:OWASP" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Karpathy">
+<p>A. Karpathy, post on X, Feb. 2025. Describes a workflow in which the developer accepts generated code without reviewing it.&#160;<a class="footnote-backref" href="#fnref:Karpathy" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Meske">
+<p>C. Meske, T. Hermanns, E. von der Weiden, K.-U. Loser, and T. Berger, "Vibe Coding as a Reconfiguration of Intent Mediation in Software Development: Definition, Implications, and Research Agenda," <em>IEEE Access</em>, vol. 13, pp. 213242-213259, 2025. doi:10.1109/ACCESS.2025.3645466&#160;<a class="footnote-backref" href="#fnref:Meske" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Fawzy">
+<p>A. Fawzy, A. Tahir, and K. Blincoe, "Vibe Coding in Practice: Motivations, Challenges, and a Future Outlook - a Grey Literature Review," in <em>2026 IEEE/ACM 48th International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP '26)</em>, Rio de Janeiro, Brazil, Apr. 2026. doi:10.1145/3786583.3786866. Systematic review of 101 practitioner sources yielding 518 coded behavioral units.&#160;<a class="footnote-backref" href="#fnref:Fawzy" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:Fawzy" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Huang">
+<p>R. Huang, A. Reyna, S. Lerner, H. Xia, and B. Hempel, "Professional Software Developers Don't Vibe, They Control: AI Agent Use for Coding in 2025," arXiv:2512.14012, Dec. 2025. Thirteen field observations and 99 survey responses from developers with three or more years of professional experience.&#160;<a class="footnote-backref" href="#fnref:Huang" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:Huang" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ADR">
+<p>AI4SDLC, "Architectural Decision Records," <a href="../../resources/ArchitecturalDecisionRecord/">../resources/ArchitecturalDecisionRecord.md</a>&#160;<a class="footnote-backref" href="#fnref:ADR" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:TWSDD">
+<p>Thoughtworks, <em>Technology Radar</em>, Vol. 34, Apr. 2026. Spec-driven development is placed in the Assess ring, with executable code retained as the source of truth requiring maintenance.&#160;<a class="footnote-backref" href="#fnref:TWSDD" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:SSDF">
+<p>National Institute of Standards and Technology, "Secure Software Development Framework," NIST SP 800-218, and "Recommendations for Mitigating the Risk of AI Code Generation," NIST SP 800-218A, Jun. 2024.&#160;<a class="footnote-backref" href="#fnref:SSDF" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Apiiro">
+<p>Apiiro research across large enterprise codebases, 2026, comparing AI-generated and human-authored code. <em>Confirm against the primary publication before promotion beyond draft.</em>&#160;<a class="footnote-backref" href="#fnref:Apiiro" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Veracode">
+<p>Veracode, "GenAI Code Security Report," 2025, and Spring 2026 update.&#160;<a class="footnote-backref" href="#fnref:Veracode" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:GitClear">
+<p>GitClear, "The Maintainability Gap," 2026. Analysis of code-change data spanning 2023-2026.&#160;<a class="footnote-backref" href="#fnref:GitClear" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
