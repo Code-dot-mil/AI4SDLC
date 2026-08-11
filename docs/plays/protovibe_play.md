@@ -118,12 +118,12 @@ The gate is what turns a promising protovibe into something a program can fund, 
 
 > ⚠️ **Order matters.** Running a protovibe through the pipeline before Steps 1 and 2 produces a clean scan report on code nobody understands. That is worse than no report, because it manufactures confidence.
 
-### 5.1 Three Destinations
+### 5.1 Applying the Gate to Three Destinations
 
-Past the gate, only three things differ:
+The three destinations differ in the scope and conditions of the gate:
 
-- **Selective salvage** scopes all three steps to the surviving fragments and records an explicit disposition for the remainder.
-- **Debt-baselined transition** carries the full register forward with an owner, a date, and a funding line per entry.
+- **Selective salvage** identifies the fragments of the protovibe to be sustained, scopes all three steps to those fragments, and records the disposal of the remaining codebase in the protovibe inventory.
+- **Debt-baselined transition** applies all three steps to the full codebase. It carries the resulting debt register forward, with an owner, a date, and a funding line for every entry.
 - **Bounded sustainment** accepts the debt permanently and substitutes hard usage constraints for remediation: a named user population, no sensitive data, no production integration, an inventory entry, and a set review interval. Note that these constraints are only enforceable because Step 2 documented the boundaries they refer to.
 
 ### 5.2 What to Add for AI-Generated Code
