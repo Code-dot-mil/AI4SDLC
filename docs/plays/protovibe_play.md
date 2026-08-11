@@ -51,7 +51,7 @@ This matches what the empirical record shows about professionals. A study of 13 
 
 ## **2. Purpose and Scope**
 
-This play governs what happens after a proto-vibing session ends: how a program names, contains, and records the disposition of the resulting protovibe. It does not decide whether to permit proto-vibing in the first place — that boundary is set by the Code Generation play's VIBE Programming guidance — and it does not cover model selection, IDE tooling, or prompt technique.
+This play governs what happens after a proto-vibing session ends: how a program names, contains, and records the disposition of the resulting protovibe. It does not decide whether to permit proto-vibing in the first place — that boundary is set by the [Code Generation play](code-gen-play.md)'s VIBE Programming guidance — and it does not cover model selection, IDE tooling, or prompt technique.
 
 **In scope:** the protovibe as a named artifact, its eight possible outcomes, the baseline transition gate, and the environment controls that make exploration safe before that gate.
 
