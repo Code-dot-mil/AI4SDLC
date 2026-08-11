@@ -39,7 +39,7 @@ Naming the artifact matters because governance begins with what happens after a 
 
 ### 1.2 Comprehension Is Its Own Axis
 
-Proto-vibing is not a point on the task-level autonomy scale in the [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md) play. That scale governs what an agent is *permitted* to do. Comprehension describes what the human *understood*. Every autonomy level presumes a human who comprehends, so a developer at Level 1 who applies a draft without reading it has satisfied the framework and learned nothing. That play already flags the same hazard when it warns that approving outputs without meaningful evaluation turns human-in-the-loop review into a formality.
+Proto-vibing is not a point on the task-level autonomy scale in the [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md) play. That scale governs what an agent is *permitted* to do. Comprehension is a separate condition: it describes what a human understands about the output. A developer at Level 1 who applies a draft without reading it has completed the manual-application step but has not meaningfully performed the required review. That play already flags the same hazard when it warns that approving outputs without meaningful evaluation turns human-in-the-loop review into a formality.
 
 Agent count is likewise orthogonal. One agent whose output nobody reads produces a protovibe. Twelve agents orchestrated against a spec, with an engineer understanding the generated code, do not. Scaling the mechanism does not change the comprehension question, though it does raise the containment requirement (Section 6).
 
