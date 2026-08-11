@@ -108,7 +108,7 @@ Nobody chooses this. Teams arrive at it, because five of the eight outcomes requ
 
 Outcomes 6, 7, and 8 all mean the same thing: this code will be sustained. All three cross one gate, in this order, because each step depends on the one before it.
 
-The gate is what turns a promising protovibe into something a program can fund, staff, defend at a milestone review, and hand to a different team in three years.
+The gate is what turns a promising protovibe into something a program can fund, staff, defend at a milestone review, and hand to a different team in the future.
 
 **Step 1: Comprehension.** A named engineer can explain what the code does and why it is structured as it is, to a reviewer who did not write the prompt. Not "the team looked at it." One person owns it, by name, on a date. This step has no tooling and no shortcut, and it is the step that gets skipped.
 
