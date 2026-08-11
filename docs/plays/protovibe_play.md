@@ -140,7 +140,9 @@ A standard pipeline validates code. These controls address what is distinctive a
 | Provenance and dependencies | Validate dependency names, sources, and integrity; check for nonexistent or typosquatted packages and known vulnerabilities |
 | Attribution | Record AI authorship at commit, feeding SBOM and AIBOM |
 
-The emphasis on configuration and authorization is deliberate. Research across large enterprise codebases found 322 percent more privilege escalation paths and 153 percent more design flaws in AI-generated code, gaps automated scanners miss because they reflect architectural decisions rather than discrete code-level defects.[^Apiiro] Model capability does not close this on its own: syntax pass rates for generated code rose from roughly 50 percent to 95 percent between 2023 and 2026 while security pass rates stayed flat between 45 and 55 percent.[^Veracode] Maintainability signals move the same way, with refactored code falling from 21 percent of changed lines in 2022 to 3.8 percent in 2026 and duplicated blocks rising 81 percent.[^GitClear]
+The emphasis on configuration and authorization is deliberate. Research across large enterprise codebases found 322 percent more privilege escalation paths and 153 percent more design flaws in AI-generated code, gaps automated scanners miss because they reflect architectural decisions rather than discrete code-level defects.[^Apiiro]
+
+Other controls address risks that model capability alone does not resolve. Syntax pass rates for generated code rose from roughly 50 percent to 95 percent between 2023 and 2026 while security pass rates stayed flat between 45 and 55 percent.[^Veracode] Maintainability signals move the same way, with refactored code falling from 21 percent of changed lines in 2022 to 3.8 percent in 2026 and duplicated blocks rising 81 percent.[^GitClear]
 
 ---
 
