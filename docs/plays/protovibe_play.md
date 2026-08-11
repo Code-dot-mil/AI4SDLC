@@ -122,7 +122,7 @@ The gate is what turns a promising protovibe into something a program can fund, 
 
 If a gate transition is deferred or does not pass, the protovibe remains subject to the controls in [Section 6](#6-working-safely-before-the-gate) until the team remediates and retries or records an Outcome 1–5.
 
-### 5.1 Applying the Gate to Three Destinations
+### 5.1 Applying the Gate to Sustained-Use Outcomes
 
 The gate applies differently depending on the proposed sustained-use outcome:
 
