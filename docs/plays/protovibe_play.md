@@ -180,7 +180,7 @@ For work above IL-2, isolated infrastructure and synthetic data are mandatory.
 - **Comprehension comes first, then architecture, then the pipeline.** Reversing that order manufactures confidence.
 - **Controls live in the environment.** The mode is a team decision; the guardrails are an organizational standard.
 
-**Next steps.** Pilot on one team. Track three measures: protovibes with a recorded outcome, expiration dates honored, and gate transitions passed, deferred, or failed. Frame results using AI-SWEC and submit lessons learned to the AI4SDLC Working Group.
+**Next steps.** Pilot on one team. Track three measures: protovibes with a recorded outcome, expiration dates honored, and gate transitions passed, deferred, or failed. Frame results using [AI-SWEC](code-gen-play.md#ai-swec-grounding-your-why) and submit lessons learned to the AI4SDLC Working Group.
 
 Proto-vibing is groundbreaking potential with limitations and challenges. Run the play, and the potential is what your program keeps.
 
