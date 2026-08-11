@@ -110,7 +110,7 @@ Outcomes 6, 7, and 8 all mean the same thing: this code will be sustained. All t
 
 The gate is what turns a promising protovibe into something a program can fund, staff, defend at a milestone review, and hand to a different team in the future.
 
-**Step 1: Comprehension.** A named engineer can explain what the code does and why it is structured as it is, to a reviewer who did not write the prompt. Not "the team looked at it." One person owns it, by name, on a date. This step has no tooling and no shortcut, and it is the step that gets skipped.
+**Step 1: Comprehension.** A named engineer must be able to explain what the code does and why it is structured as it is to a reviewer who did not write the prompt. “The team looked at it” is not enough. That engineer is recorded as the code’s owner, by name and date. This step has no tooling or shortcut and must not be skipped.
 
 **Step 2: Architecture baseline.** Document the as-built system: data model, trust boundaries, authorization model, external dependencies, deployment topology, and data sensitivity. Then record the delta between as-built and as-should-be. Nothing is remediated here. The delta *is* the debt register, and every entry gets an owner.
 
