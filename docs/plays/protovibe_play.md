@@ -57,7 +57,7 @@ This play governs what happens after a proto-vibing session ends: how a program 
 
 **Out of scope:** agent orchestration mechanics (see [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md)), requirements elicitation technique (see [Requirements Engineering](requirements_engineering_play.md)), and tool- or vendor-specific guidance.
 
-**Audience:** engineers and subject matter experts running proto-vibing sessions, technical leads deciding whether a protovibe is promoted, and program leadership funding what comes after.
+**Audience:** engineers and subject matter experts running proto-vibing sessions; technical leads deciding a protovibe's disposition; and program leaders responsible for resourcing any follow-on work.
 
 ---
 
