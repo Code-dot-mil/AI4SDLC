@@ -69,7 +69,7 @@ A team does not need a mature DevSecOps pipeline to start proto-vibing — that 
 - [ ] Synthetic or approved non-sensitive data available for exploration
 - [ ] A place to record protovibe inventory, expiration dates, and outcome decisions, even a simple tracker
 - [ ] A named engineer able to own comprehension review before any protovibe crosses the gate in Section 5
-- [ ] Familiarity with the Code Generation play's high-risk use-case boundaries, echoed in Section 6
+- [ ] Familiarity with the Code Generation play's [high-risk use-case boundaries](code-gen-play.md#high-risk-use-cases), echoed in Section 6
 
 Teams without an established DevSecOps baseline can still vibe code under Section 6's controls. They cannot yet cross the gate in Section 5 — Step 3 of that gate assumes CI/CD, SSDF or SLSA practice, and SBOM, MLBOM, and AIBOM tracking are already in place.
 
