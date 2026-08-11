@@ -92,7 +92,7 @@ Every protovibe ends with a recorded outcome, chosen through a deliberate decisi
 
 **Insight and negative verdict are wins.** A protovibe that proves an idea will not work, in two days, has saved a program a year and a program office a great deal of money. Record it as a deliverable, because a kill decision that nobody writes down gets re-litigated in twelve months.
 
-Lessons learned preserves what the code taught without preserving the code. Record the question explored, assumptions, key results, and reason for disposal in the protovibe inventory. This makes failed experiments reusable and prevents later teams from repeating the work or rediscovering the same insight.
+**Lessons learned preserves what the code taught without preserving the code.** Record the question explored, assumptions, key results, and reason for disposal in the protovibe inventory. This makes failed experiments reusable and prevents later teams from repeating the work or rediscovering the same insight.
 
 **Requirements and production vision is the highest-leverage outcome for DoW work.** The specification, interface contracts, and Architectural Decision Records[^ADR] that result from this disposition are the same artifacts an authorization package demands anyway, so the governance is not pure overhead. Pair this outcome with the [Requirements Engineering](requirements_engineering_play.md) play. One caveat carried from industry practice: the specification informs the rebuild, it does not become the source of truth. Executable code remains the source of truth requiring maintenance.[^TWSDD]
 
