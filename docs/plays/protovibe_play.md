@@ -127,8 +127,8 @@ If a gate transition is deferred or does not pass, the protovibe remains subject
 The gate applies differently depending on the proposed sustained-use outcome:
 
 - **Selective salvage** identifies the fragments of the protovibe to be sustained, scopes all three steps to those fragments, and records the disposal of the remaining codebase in the protovibe inventory.
-- **Debt-baselined transition** applies all three steps to the full codebase. It carries the resulting debt register forward, with an owner, a date, and a funding line for every entry.
-- **Bounded sustainment** accepts the debt permanently and substitutes hard usage constraints for remediation: a named user population, no sensitive data, no production integration, an inventory entry, and a set review interval. Note that these constraints are only enforceable because Step 2 documented the boundaries they refer to.
+- **Debt-baselined transition** applies all three steps to the full protovibe codebase. It carries the resulting debt register forward, with an owner, a date, and a funding line for every entry.
+- **Bounded sustainment** accepts the debt of the full protovibe codebase permanently and substitutes hard usage constraints for remediation: a named user population, no sensitive data, no production integration, an inventory entry, and a set review interval. Note that these constraints are only enforceable because Step 2 documented the boundaries they refer to.
 
 ### 5.2 What to Add for AI-Generated Code
 
