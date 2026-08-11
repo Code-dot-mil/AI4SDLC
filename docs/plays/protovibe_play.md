@@ -160,7 +160,11 @@ Explore freely. The controls below are what make that freedom safe to grant, whi
 | Visibility | An inventory entry created at session start |
 | Multi-agent | Parallel agents require isolated infrastructure and no shared credentials |
 
-**Where to start high, not low.** Consistent with the high-risk categories in the Code Generation play, some work should begin at the gate rather than as a protovibe: authentication and authorization logic, cryptographic implementation, safety-critical and mission-critical software, and anything involving classified, CUI, or export-controlled material. Experienced developers independently converge on the same list, rating agents unsuitable for security-critical code, high-stakes or privacy-sensitive tasks, core business logic, and complex architectural refactoring.[^Huang] Above IL-2, treat isolated infrastructure and synthetic data as mandatory.
+**Where to start high, not low.** Some work must not begin as a protovibe. Authentication and authorization logic, cryptographic implementation, safety- or mission-critical software, and work involving classified, CUI, or export-controlled material must begin under standard engineering and DevSecOps controls.
+
+This boundary is consistent with concerns experienced developers report about AI agents in security-critical code, high-stakes or privacy-sensitive tasks, core business logic, and complex architectural refactoring.[^Huang]
+
+For work above IL-2, isolated infrastructure and synthetic data are mandatory.
 
 > ⚠️ **The promotion rule.** The moment a protovibe acquires a user who is not its author, it is no longer a prototype. Not when it reaches production. Not when it touches sensitive data. At the first non-author user, because that is when someone else's expectations depend on code nobody understands.
 
