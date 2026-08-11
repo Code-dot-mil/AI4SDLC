@@ -11,7 +11,7 @@ last_updated: "2026-08-04"
 
 ## **Executive Summary**
 
-Vibe coding puts working software in the hands of people who could never build it before. A logistics analyst, a contracting officer, a clinician, a program manager: anyone who understands a problem deeply can now turn an idea into something that runs, in hours, without waiting in a development queue. This play is about keeping that value while handling what comes with it.[^OWASP]
+Vibe coding puts the ability to build working software in the hands of people who could never build it before. A logistics analyst, a contracting officer, a clinician, a program manager: anyone who understands a problem deeply can now turn an idea into something that runs, in hours, without waiting in a development queue. This play is about keeping that value while handling what comes with it.[^OWASP]
 
 The artifact that comes out of a vibe coding session is what we call a **protovibe**: working software that demonstrates intent but has not yet been fully understood by a human steward. Both halves of that sentence are true at once. A protovibe is genuinely valuable and genuinely unknown.
 
