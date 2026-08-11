@@ -166,7 +166,7 @@ This boundary is consistent with concerns experienced developers report about AI
 
 For work above IL-2, isolated infrastructure and synthetic data are mandatory.
 
-> ⚠️ **The promotion rule.** The moment a protovibe acquires a user who is not its author, it is no longer a prototype. Not when it reaches production. Not when it touches sensitive data. At the first non-author user, because that is when someone else's expectations depend on code nobody understands.
+> ⚠️ **Promotion rule.** A protovibe is no longer a prototype when it acquires its first non-author user. The threshold is not production deployment or access to sensitive data; it is the point at which someone else’s expectations depend on code that has not been fully understood by a human steward.
 
 ---
 
