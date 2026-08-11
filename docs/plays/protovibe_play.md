@@ -23,7 +23,7 @@ Every protovibe ends with a recorded outcome, chosen through a deliberate decisi
 
 ## **1. What Vibe Coding Is and Why It Matters**
 
-Vibe coding is the use of AI to generate executable software from natural-language instructions, with the person directing it evaluating results rather than reading and understanding the generated code. The term comes from Andrej Karpathy in February 2025.[^Karpathy] Academic work has since framed it as a genuine shift in how intent reaches a machine, moving the mediation of developer intent from deterministic instruction to probabilistic inference.[^Meske]
+Vibe coding is the use of AI to generate runnable software from natural-language instructions, with the person directing it evaluating results rather than reading and understanding the generated code. The term comes from Andrej Karpathy in February 2025.[^Karpathy] Academic work has since framed it as a genuine shift in how intent reaches a machine, moving the mediation of developer intent from deterministic instruction to probabilistic inference.[^Meske]
 
 This play uses **proto-vibing** as its term for that practice — a rename that keeps the activity (proto-vibing) and its artifact (protovibe) in the same word family, rather than two unrelated terms. Vibe coding remains the term of record in the literature cited throughout; proto-vibing is this play's label for it, used from here forward.
 
