@@ -17,7 +17,7 @@ The artifact that comes out of a vibe coding session is what we call a **protovi
 
 Every protovibe ends in one of eight outcomes. Five of them are decisions the team records and acts on. Three of them mean the code enters sustained use, and those three share a single gate.
 
-📌 **Key takeaway:** Vibe freely. Then decide, deliberately, what the protovibe becomes.
+📌 **Key takeaway:** Vibe freely. Then deliberately decide whether to dispose of, preserve, rebuild, or sustain the protovibe.
 
 ---
 
