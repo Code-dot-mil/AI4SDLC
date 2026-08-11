@@ -96,7 +96,7 @@ Lessons learned preserves what the code taught without preserving the code. Reco
 
 **Requirements and production vision is the highest-leverage outcome for DoW work.** The specification, interface contracts, and Architectural Decision Records[^ADR] that result from this disposition are the same artifacts an authorization package demands anyway, so the governance is not pure overhead. Pair this outcome with the [Requirements Engineering](requirements_engineering_play.md) play. One caveat carried from industry practice: the specification informs the rebuild, it does not become the source of truth. Executable code remains the source of truth requiring maintenance.[^TWSDD]
 
-**Reference oracle** keeps the protovibe running but never ships it. Engineers run it alongside the clean build and compare behavior, letting the protovibe define expected results for cases nobody wrote down. This is the right answer when domain logic is tacit, living in an expert's head rather than in any document.
+**Reference oracle** keeps the protovibe running but never ships it. Access is limited to the clean-rebuild team; it may not acquire an operational user base. Engineers run it alongside the clean build and compare behavior, letting the protovibe define expected results for cases nobody wrote down. This is the right answer when domain logic is tacit, living in an expert's head rather than in any document.
 
 ### 4.1 The Undecided Protovibe
 
