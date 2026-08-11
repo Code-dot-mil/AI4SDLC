@@ -15,7 +15,7 @@ Vibe coding puts the ability to build working software in the hands of people wh
 
 The artifact that comes out of a vibe coding session is what we call a **protovibe**: working software that demonstrates intent but has not yet been fully understood by a human steward. Both halves of that sentence are true at once. A protovibe is genuinely valuable, but its implementation and operational consequences remain unknown.
 
-Every protovibe ends with a recorded outcome, chosen through a deliberate decision. Outcomes 1–5 do not place code in sustained use. Outcomes 6–8 can be achieved and recorded only after selected code passes the baseline transition gate.
+Every protovibe ends with a recorded outcome, chosen through a deliberate decision. Outcomes 1–5 preserve value without putting code into sustained use. Outcomes 6–8 allow selected code to enter sustained use only after it passes the baseline transition gate.
 
 📌 **Key takeaway:** Vibe freely. Then make a conscious decision and record an outcome for every protovibe. Sustained-use outcomes can be achieved and recorded only after passing the gate.
 
