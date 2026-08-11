@@ -35,7 +35,7 @@ This capability is most powerful exactly where traditional development is slowes
 
 A **protovibe** is the artifact a proto-vibing session leaves behind: working software that demonstrates intent but has not yet been fully understood by a human steward.
 
-Naming the artifact matters more than naming the activity. The governance question was never whether someone should proto-vibe. It is what happens to the thing on disk afterward. A program can hold a useful conversation about three protovibes and their disposition. It cannot hold a useful conversation about whether proto-vibing is good.
+Naming the artifact matters because governance begins with what happens after a session ends. A program can track protovibes and decide their disposition. It cannot usefully govern the abstract question of whether proto-vibing is good.
 
 ### 1.2 Comprehension Is Its Own Axis
 
