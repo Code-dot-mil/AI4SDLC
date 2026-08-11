@@ -114,7 +114,7 @@ The gate is what turns a promising protovibe into something a program can fund, 
 
 **Step 2: Architecture baseline.** Document the as-built system: data model, trust boundaries, authorization model, external dependencies, deployment topology, and data sensitivity. Then record the delta between as-built and as-should-be. Nothing is remediated here. The delta *is* the debt register, and every entry gets an owner.
 
-**Step 3: DevSecOps entry.** Now the pipeline means something. Apply the baseline established in the Code Generation play: CI/CD automation, static and dynamic analysis (SAST/DAST), required test coverage for edge cases and failure paths (not just the happy-path demo), secure supply chain practice under SSDF or SLSA, IaC discipline, and SBOM, MLBOM, and AIBOM tracking.[^SSDF] Add the controls in Section 5.2.
+**Step 3: DevSecOps entry.** With comprehension and an architecture baseline established, bring the code into the existing [DevSecOps baseline](code-gen-play.md#devsecops-baseline) and apply its [verification practices](code-gen-play.md#verification-practices). Then add the protovibe-specific controls in [Section 5.2](#52-what-to-add-for-ai-generated-code).
 
 > ⚠️ **Order matters.** Running a protovibe through the pipeline before Steps 1 and 2 produces a clean scan report on code nobody understands. That is worse than no report, because it manufactures confidence.
 
@@ -201,8 +201,6 @@ Proto-vibing is groundbreaking potential with limitations and challenges. Run th
 [^ADR]: AI4SDLC, "Architectural Decision Records," [../resources/ArchitecturalDecisionRecord.md](../resources/ArchitecturalDecisionRecord.md)
 
 [^TWSDD]: Thoughtworks, *Technology Radar*, Vol. 34, Apr. 2026. Spec-driven development is placed in the Assess ring, with executable code retained as the source of truth requiring maintenance.
-
-[^SSDF]: National Institute of Standards and Technology, "Secure Software Development Framework," NIST SP 800-218, and "Recommendations for Mitigating the Risk of AI Code Generation," NIST SP 800-218A, Jun. 2024.
 
 [^Apiiro]: Apiiro research across large enterprise codebases, 2026, comparing AI-generated and human-authored code. *Confirm against the primary publication before promotion beyond draft.*
 
