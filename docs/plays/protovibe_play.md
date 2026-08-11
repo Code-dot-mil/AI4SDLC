@@ -53,7 +53,7 @@ This matches what the empirical record shows about professionals. A study of 13 
 
 This play governs what happens after a proto-vibing session ends: how a program names, contains, and disposes of or promotes the resulting protovibe. It does not decide whether to permit proto-vibing in the first place — that boundary is set by the Code Generation play's VIBE Programming guidance — and it does not cover model selection, IDE tooling, or prompt technique.
 
-**In scope:** the protovibe as a named artifact, the eight-outcome decision set, the Baseline Transition Gate, and the environment controls that make exploration safe before that gate.
+**In scope:** the protovibe as a named artifact, the eight-outcome decision set, the baseline transition gate, and the environment controls that make exploration safe before that gate.
 
 **Out of scope:** agent orchestration mechanics (see AI & Agentic Workflow Design and Governance), requirements elicitation technique (see Requirements Engineering), and tool- or vendor-specific guidance.
 
