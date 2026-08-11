@@ -108,7 +108,7 @@ Nobody chooses this. Teams arrive at it because recording an outcome requires a 
 
 ## **5. The Baseline Transition Gate**
 
-Outcomes 6, 7, and 8 place code in sustained use. Each can be achieved and recorded only after the selected code passes one gate, in this order, because each step depends on the one before it.
+Outcomes 6, 7, and 8 place code in sustained use. Each can be achieved and recorded only after the selected code passes the baseline transition gate. Its three steps must occur in order because each depends on the preceding step.
 
 The gate is what turns a promising protovibe into something a program can fund, staff, defend at a milestone review, and hand to a different team in the future.
 
