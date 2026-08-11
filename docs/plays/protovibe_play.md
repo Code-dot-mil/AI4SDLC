@@ -98,7 +98,7 @@ Every protovibe ends somewhere. Five outcomes are decisions. Three mean the code
 
 ### 4.1 The Undecided Protovibe
 
-There is a ninth ending, and it is the one this play exists to prevent: the protovibe quietly acquires users and obligations while none of the eight decisions is ever made.
+One ending falls outside the eight defined outcomes: the protovibe quietly acquires users and obligations while no outcome is deliberately selected.
 
 Nobody chooses this. Teams arrive at it, because five of the eight outcomes require an act of disposal, disposal requires a decision, and drift is free. Practitioner accounts show what accumulates in the meantime: only 29 percent of coded quality assurance behaviors involved manual testing or edits, while 36 percent skipped quality assurance entirely, 18 percent reflected uncritical trust in the output, and 10 percent delegated verification back to the AI that wrote the code.[^Fawzy]
 
