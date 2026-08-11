@@ -136,7 +136,7 @@ A standard pipeline validates code. These controls address what is distinctive a
 | Authorization paths | Discrete human review gate; verify server-side enforcement |
 | Static and dynamic analysis | Run SAST/DAST against the protovibe as if it were freshly written code; "it already worked" is not an exemption |
 | Test coverage | Require tests for edge cases and failure paths, not just the happy-path demo; treat weak error handling as a blocking finding |
-| Duplication | Enforce clone and duplication thresholds as a quality gate |
+| Duplicated code and logic | Enforce thresholds for duplicated code and copy-pasted logic as a quality gate |
 | Provenance | Validate dependencies, including checks for non-existent packages |
 | Attribution | Record AI authorship at commit, feeding SBOM and AIBOM |
 
