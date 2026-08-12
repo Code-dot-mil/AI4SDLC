@@ -218,10 +218,3 @@ Proto-vibing is groundbreaking potential with limitations and challenges. Run th
 
 [^GitClear]: GitClear, "The Maintainability Gap," 2026. Analysis of code-change data spanning 2023-2026.
 
----
-
-> **Note to the AI4SDLC Working Group**
->
-> 1. **No amendment required.** This play extends the Code Generation play's VIBE Programming guidance rather than revising it. It introduces "protovibe" as a name for the artifact, not a replacement term for the practice, so no vocabulary change is proposed. A reciprocal cross-reference in the Code Generation play would help readers, whenever that play next revises.
-> 2. **Framework gap.** The task-level autonomy framework records what an agent is permitted to do. It has no field for whether comprehension occurred. The outcome model proposed here may belong in that framework rather than in a standalone play.
-> 3. **Citation verification.** The Apiiro figures are drawn from a secondary summary and need primary confirmation to meet repository citation standards.
