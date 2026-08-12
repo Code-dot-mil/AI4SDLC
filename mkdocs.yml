@@ -42,6 +42,7 @@ nav:
     - IDE Security: plays/ide-security.md 
   - Early Adopter Stories: 
     - Army SMDCoE: stories/army-smdcoe.md
+    - Navy FORGE: stories/navy-forge.md
   - Policy & Rules:
     - AI Governance Rulebook: policy_and_rules/ai-governance-rulebook.md
   - Patterns:
