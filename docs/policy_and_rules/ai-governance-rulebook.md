@@ -81,120 +81,120 @@ Each rule carries:
 
 **Requirement:** AI tools used for SDLC work must be approved for the system, environment, data, and mission use — for DoW proprietary development, through applicable RMF and cybersecurity processes, with auditing and monitoring available to designated authorities. If a tool changes system behavior, security posture, data flow, pipeline, or operational risk, coordinate with the authorizing official or risk owner before use.
 
-**Evidence:** approved tool list, AI use register, ATO boundary notes, risk acceptance record, ADR.
-**Owner:** program manager, system owner, authorizing official representative, security lead.
+**Evidence:** approved tool list, AI use register, ATO boundary notes, risk acceptance record, ADR.<br>
+**Owner:** program manager, system owner, authorizing official representative, security lead.<br>
 **Full guidance:** [Fundamentals for Designing an AI-Augmented Tool Chain](../plays/fundamentals-play.md) — hosting/usage model decision framework.[^OMB-M2521][^NIST-AIRMF][^DoDI851001][^DoDI8430AA][^CSKS]
 
 ### R2. Match the AI Tool to the Data Boundary
 
 **Requirement:** Choose the AI hosting and access model based on data sensitivity, classification, impact level, contractual restrictions, and need-to-know. Use only DoW-authorized models in accredited environments matched to the data's Impact Level. Non-public DoW information may only reach a generative AI application when that application resides on and is authorized for approved DoW information systems, and authorized models must not retain, train on, or expose that data beyond what's explicitly authorized.
 
-**Evidence:** data handling matrix, tool and model authorization record, Impact Level evidence, no-retention/no-training/no-exposure contract terms.
-**Owner:** data owner, system owner, security lead, privacy official, contracting officer (vendor tools).
+**Evidence:** data handling matrix, tool and model authorization record, Impact Level evidence, no-retention/no-training/no-exposure contract terms.<br>
+**Owner:** data owner, system owner, security lead, privacy official, contracting officer (vendor tools).<br>
 **Full guidance:** [Fundamentals for Designing an AI-Augmented Tool Chain](../plays/fundamentals-play.md) — hosting model comparison matrix.[^DoDZT][^NIST80053][^DoDI8430AA][^DoDI850001][^DoDI858201]
 
 ### R3. Do Not Put Sensitive Data into Unauthorized AI Services
 
 **Requirement:** Never submit classified information, CUI, export-controlled data, source-selection information, credentials, secrets, proprietary data, PII, code, configuration, or mission-sensitive source into an AI service unless it resides on approved DoW systems and is explicitly approved for that data. When AI processes information about individuals, apply applicable privacy, civil liberties, and data-minimization requirements.
 
-**Evidence:** acceptable-use policy, data classification guidance, training record, prompt logging policy, privacy review where applicable.
-**Owner:** every user; enforced by product owners, security leads, data owners, supervisors.
+**Evidence:** acceptable-use policy, data classification guidance, training record, prompt logging policy, privacy review where applicable.<br>
+**Owner:** every user; enforced by product owners, security leads, data owners, supervisors.<br>
 **Full guidance:** echoed as a guardrail throughout every play in this series — see especially [Fundamentals](../plays/fundamentals-play.md) §3 (Public SaaS risk) and the Data Protection row in each play's guardrail table.[^OMB-M2521][^NIST-GenAI][^DoDI8430AA][^PrivacyAuth]
 
 ### R4. Keep Humans Accountable for AI-Assisted Work
 
 **Requirement:** A named human stays accountable for AI-assisted requirements, designs, code, tests, documentation, deployment changes, compliance claims, and risk decisions. AI output can inform the work; it doesn't replace accountable human judgment.
 
-**Evidence:** PR reviewer, approval record, test acceptance, ADR, deployment approval, risk acceptance.
-**Owner:** product owner, technical lead, security lead, authorizing official representative, contracting officer (acquisition work).
+**Evidence:** PR reviewer, approval record, test acceptance, ADR, deployment approval, risk acceptance.<br>
+**Owner:** product owner, technical lead, security lead, authorizing official representative, contracting officer (acquisition work).<br>
 **Full guidance:** Calibrated Trust and Oversight play (forthcoming) — until published, see the human-accountability guardrail repeated in every play's guiding principles table.[^DoDEthics][^OMB-M2521]
 
 ### R5. Review, Test, and Scan AI-Generated Code Before Merge
 
 **Requirement:** AI-generated or AI-modified code, scripts, and tests meet the same engineering bar as human-authored code — peer review, automated tests, static analysis, dependency review, SCA, secret scanning, and applicable dynamic/integration testing. Review explicitly covers security vulnerabilities, safety implications, logical errors, IP infringement, and license obligations. High-impact code, security controls, IaC, and policy logic get elevated review.
 
-**Evidence:** PR review, CI/CD results, SAST/DAST results, dependency scan, SBOM entry, license/provenance review, threat model update.
-**Owner:** developer, reviewer, software lead, security engineer, DevSecOps lead.
+**Evidence:** PR review, CI/CD results, SAST/DAST results, dependency scan, SBOM entry, license/provenance review, threat model update.<br>
+**Owner:** developer, reviewer, software lead, security engineer, DevSecOps lead.<br>
 **Full guidance:** [Leading Practices for Code Completion and Generation](../plays/code-gen-play.md) §6 (Trust, Verification, and DevSecOps Pipeline Integration).[^NIST800218A][^NIST80053][^DoDI8430AA]
 
 ### R6. Verify AI Outputs Before Using Them as Evidence or Authority
 
 **Requirement:** AI-generated summaries, vulnerability explanations, compliance mappings, citations, and technical recommendations get verified against authoritative sources before use — they're never the final authority.
 
-**Evidence:** linked authoritative source, reviewer note, citation check, compliance review record.
-**Owner:** artifact author, reviewer, security lead, compliance lead, acquisition official (acquisition artifacts).
+**Evidence:** linked authoritative source, reviewer note, citation check, compliance review record.<br>
+**Owner:** artifact author, reviewer, security lead, compliance lead, acquisition official (acquisition artifacts).<br>
 **Full guidance:** [AI-Augmented Requirements Engineering](../plays/requirements_engineering_play.md) — "GenAI outputs must be validated, traceable, and never treated as final authority."[^AI4SDLC][^NIST-AIRMF][^NIST-GenAI]
 
 ### R7. Preserve Traceability from AI Use to Delivered Artifact
 
 **Requirement:** When AI materially affects a deliverable, record enough to reconstruct what tool was used, who used it, what context or prompt pattern was given, what changed, who reviewed it, and what decision resulted.
 
-**Evidence:** AI use register, commit message, PR template field, prompt template version, model/service version, reviewer identity.
-**Owner:** developer, product owner, software lead, security lead, records owner.
+**Evidence:** AI use register, commit message, PR template field, prompt template version, model/service version, reviewer identity.<br>
+**Owner:** developer, product owner, software lead, security lead, records owner.<br>
 **Full guidance:** AI Supply Chain Transparency Guide (forthcoming); prompt/output logging covered today in [Code Generation](../plays/code-gen-play.md) §6.[^DoDEthics][^OMB-M2521]
 
 ### R8. Protect Prompts, Prompt Libraries, Retrieval Sources, and AI Logs
 
 **Requirement:** Treat prompt templates, libraries, retrieval indexes, embeddings, model configuration, and AI logs as governed SDLC assets — versioned, access-controlled, reviewed, and protected to the sensitivity of what they expose or influence.
 
-**Evidence:** repository record, configuration baseline, access control list, audit log, retention rule, change approval.
-**Owner:** tool owner, repository owner, security lead, data owner.
+**Evidence:** repository record, configuration baseline, access control list, audit log, retention rule, change approval.<br>
+**Owner:** tool owner, repository owner, security lead, data owner.<br>
 **Full guidance:** [Prompt Engineering](../plays/prompt-engineering.md); PromptOps pattern in [Fundamentals](../plays/fundamentals-play.md) §2.[^NIST80053][^NIST-AIRMF]
 
 ### R9. Control AI Agents and Autonomous Workflows
 
 **Requirement:** Any AI agent that can edit repositories, run commands, create tickets, open PRs, change infrastructure, or act in CI/CD needs documented scope, permissions, logging, a rollback path, and human approval gates proportionate to risk. Autonomous action against production, mission systems, authorization boundaries, or high-impact environments needs explicit approval.
 
-**Evidence:** agent workflow design, permission model, approval gate, tool allowlist, audit log, rollback plan, risk assessment.
-**Owner:** software lead, DevSecOps lead, security lead, system owner, authorizing official representative.
+**Evidence:** agent workflow design, permission model, approval gate, tool allowlist, audit log, rollback plan, risk assessment.<br>
+**Owner:** software lead, DevSecOps lead, security lead, system owner, authorizing official representative.<br>
 **Full guidance:** [AI & Agentic Workflow Design and Governance](../plays/ai_sdlc_workflows-play.md) — the six-level task-autonomy framework is the direct implementation of this rule.[^NIST-AIRMF][^DoDEthics]
 
 ### R10. Monitor AI-Assisted SDLC Outcomes Continuously
 
 **Requirement:** Monitor AI-assisted workflows for defects, insecure code, hallucinated citations, privacy incidents, data leakage, review-depth erosion, model drift, and mission impact. For each AI-enabled capability: determine use-case-specific risk, define measurable benchmarks, verify performance before deployment, monitor continuously in operation, and address detected bias through existing risk management. Suspend or redesign unsafe or ineffective use.
 
-**Evidence:** metrics dashboard, defect trend, incident report, benchmark definition, pre-deployment verification, bias monitoring record, corrective action.
-**Owner:** product owner, software lead, security lead, quality lead, program manager.
+**Evidence:** metrics dashboard, defect trend, incident report, benchmark definition, pre-deployment verification, bias monitoring record, corrective action.<br>
+**Owner:** product owner, software lead, security lead, quality lead, program manager.<br>
 **Full guidance:** [Fundamentals](../plays/fundamentals-play.md) §7 (Measures and Success Indicators); [AI-Augmented Testing](../plays/testing-play.md) §8 for defect-escape and coverage metrics.[^OMB-M2521][^NIST-AIRMF][^DoDI8430AA]
 
 ### R11. Preserve Government Data Rights and Avoid Vendor Lock-In
 
 **Requirement:** Contracts and task orders for AI-enabled SDLC tools preserve government rights in code, data, prompts, logs, generated artifacts, and metadata needed for oversight, migration, continuity, and competition. Vendors may not train on or improve commercial offerings using federal information unless expressly authorized.
 
-**Evidence:** contract clause, data rights assertion, terms-of-service review, exit plan, interoperability requirement, post-award monitoring plan.
-**Owner:** contracting officer, program manager, legal counsel, data owner, technical lead.
+**Evidence:** contract clause, data rights assertion, terms-of-service review, exit plan, interoperability requirement, post-award monitoring plan.<br>
+**Owner:** contracting officer, program manager, legal counsel, data owner, technical lead.<br>
 **Full guidance:** no dedicated play yet — apply directly from cited policy.[^OMB-M2521][^OMB-M2522]
 
 ### R12. Use AI in Acquisition with Care
 
 **Requirement:** AI may assist acquisition research, drafting, comparison, and summarization, but acquisition officials validate facts, preserve competition, protect procurement-sensitive information, and avoid overreliance on opaque vendor outputs. Software systems designed or implemented with AI align with applicable software acquisition and digital engineering policy.
 
-**Evidence:** source verification, acquisition review, market research record, procurement-sensitive data handling note, contracting officer approval.
-**Owner:** contracting officer, program manager, requirements owner, technical evaluator.
+**Evidence:** source verification, acquisition review, market research record, procurement-sensitive data handling note, contracting officer approval.<br>
+**Owner:** contracting officer, program manager, requirements owner, technical evaluator.<br>
 **Full guidance:** no dedicated play yet — apply directly from cited policy.[^OMB-M2522][^OMB-M2521][^DoDI8430AA][^DoDI500087][^DoDI500097]
 
 ### R13. Train the Workforce Before Scaling AI Use
 
 **Requirement:** Teams get role-based training before scaling AI-assisted workflows — approved tools, data handling, secure prompt engineering, common AI-generated vulnerability patterns, verification, IP/license risk, traceability, and incident escalation.
 
-**Evidence:** training record, role-based curriculum, onboarding checklist, refresher cadence.
-**Owner:** program manager, software factory lead, training lead, security lead, supervisors.
+**Evidence:** training record, role-based curriculum, onboarding checklist, refresher cadence.<br>
+**Owner:** program manager, software factory lead, training lead, security lead, supervisors.<br>
 **Full guidance:** workforce-focused play not yet published (flagged as forthcoming in [Code Generation](../plays/code-gen-play.md) §9) — apply directly from cited policy in the meantime.[^OMB-M2521][^DoDRAIStrategy][^DoDI8430AA]
 
 ### R14. Share Reusable AI Assets When Allowed
 
 **Requirement:** Share reusable AI code, prompts, evaluation harnesses, models, and lessons learned across government — and as open source — when law, classification, national security, privacy, contract, and operational security constraints allow.
 
-**Evidence:** repository link, reuse catalog entry, release approval, data rights review, or a decision record explaining why release is restricted.
-**Owner:** program manager, repository owner, legal counsel, data owner, security lead.
+**Evidence:** repository link, reuse catalog entry, release approval, data rights review, or a decision record explaining why release is restricted.<br>
+**Owner:** program manager, repository owner, legal counsel, data owner, security lead.<br>
 **Full guidance:** no dedicated play yet — the AI4SDLC series is itself an example of this practice.[^OMB-M2521][^AI4SDLC]
 
 ### R15. Inventory AI Development Tools as Supply Chain Components
 
 **Requirement:** Code completion plugins, AI test generators, documentation assistants, and other AI-enabled dev tools get inventoried like any other SDLC dependency — assessed, approved, sourced from authorized DoW repositories, and covered by SCRM and an accurate SBOM. Track AI service endpoints, models, versions, significant datasets, and prompt templates as SBOM extensions or an emerging AIBOM. Treat AI-generated artifacts entering a controlled repository as a supply chain event from the point of generation, including at lower Impact Levels.
 
-**Evidence:** AI tool inventory cross-referenced with SBOM/AIBOM entries, authorized repository provenance, SCRM/security assessment evidence, current SBOM, lifecycle documentation referencing AI tool use.
-**Owner:** software factory architects, tool chain managers, program managers.
+**Evidence:** AI tool inventory cross-referenced with SBOM/AIBOM entries, authorized repository provenance, SCRM/security assessment evidence, current SBOM, lifecycle documentation referencing AI tool use.<br>
+**Owner:** software factory architects, tool chain managers, program managers.<br>
 **Full guidance:** AI Supply Chain Transparency Guide (forthcoming).[^DoDI8430AA][^DoDI500082]
 
 > **Note:** DoDI 8430.AA is draft/emerging guidance. Treat its AIBOM provisions as forward-looking practice, not a currently binding requirement, unless confirmed otherwise by an authoritative current version.
