@@ -217,4 +217,3 @@ Proto-vibing is groundbreaking potential with limitations and challenges. Run th
 [^Veracode]: Veracode, "GenAI Code Security Report," 2025, and Spring 2026 update.
 
 [^GitClear]: GitClear, "The Maintainability Gap," 2026. Analysis of code-change data spanning 2023-2026.
-
