@@ -59,7 +59,7 @@ Each **Play** in #AI4SDLC provides structured, no-nonsense guidance on adopting 
 
 - **Hosting AI** – Should you run AI **on-prem, in the cloud, or hybrid?** We break it down.  
 - **AI for Development** – AI copilots, IDE plugins, and agentic workflows—**what works for DoW teams?**  
-- **Security & Trust** – How to **govern AI tools, mitigate risk, and enforce compliance** without slowing innovation.  
+- **Security & Trust** – How to **govern AI tools, mitigate risk, and enforce compliance** without slowing innovation. See the **[AI Governance Rulebook](policy_and_rules/ai-governance-rulebook.md)** for the one-stop version.  
 - **AI for DevSecOps** – Automating testing, security, and compliance while maintaining **human oversight**.  
 - **Operational Impact** – AI isn’t just a tool—it’s part of **your mission execution strategy.**
 
@@ -79,7 +79,6 @@ This guidance is structured as a series of modular “plays,” each focused on 
 
 #### Upcoming Plays
 
-- **Governance for Responsible GenAI Adoption**  
 - **Building an AI-Augmented Workforce**  
 - **Risk Reference Companion**  
 - **Futures Watch: Agentics and Emerging Practices**

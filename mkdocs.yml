@@ -42,10 +42,11 @@ nav:
     - IDE Security: plays/ide-security.md 
   - Early Adopter Stories: 
     - Army SMDCoE: stories/army-smdcoe.md
+  - Policy & Rules:
+    - AI Governance Rulebook: policy_and_rules/ai-governance-rulebook.md
   - Patterns:
     - Human-Machine Interaction Patterns: plays/human-machine-patterns.md
   - Practices:
-    #- Governance: plays/governance-play.md
     - Emerging Practices: plays/emerging-practices.md
   - Resources, Tools & Templates:
     - AI Autonomy Implementation Guide: plays/ai-autonomy-implementation-guide.md 

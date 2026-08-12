@@ -560,7 +560,7 @@ These metrics complement AI-SWEC and reinforce mission-focused, evidence-based a
 
 ## **8. Governance and Policy**
 
-Governance is essential, but beyond the scope of this play. Full guidance on usage policies, enforcement mechanisms, audit trails, and Zero Trust alignment for GenAI-assisted development will be covered in a dedicated play: **Governance for Responsible GenAI Adoption** (coming soon).
+Governance is essential, but beyond the scope of this play. For a cross-cutting index of governance obligations — what's required, what evidence proves it, who owns it — see the [AI Governance Rulebook](../policy_and_rules/ai-governance-rulebook.md).
 
 > In the meantime, refer to **Home / Basics** and **Fundamentals for Designing an AI-Augmented Tool Chain** for baseline traceability and security design principles.
 

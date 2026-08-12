@@ -23,7 +23,7 @@ Futures Watch will analyze:
 This play builds upon:
 
 - **Code Generation & Completion** – current best practices for AI-assisted authoring
-- **Governance for Responsible GenAI Adoption** – anticipating policy and oversight needs
+- **[AI Governance Rulebook](../policy_and_rules/ai-governance-rulebook.md)** – policy and oversight obligations across the play series
 
 ## Coming Soon
 
