@@ -147,7 +147,7 @@ Each rule carries:
 
 **Evidence:** agent workflow design, permission model, approval gate, tool allowlist, audit log, rollback plan, risk assessment.
 **Owner:** software lead, DevSecOps lead, security lead, system owner, authorizing official representative.
-**Full guidance:** [AI & Agentic Workflow Design and Governance](../plays/ai_sdlc_workflows_play.md) — the six-level task-autonomy framework is the direct implementation of this rule.[^NIST-AIRMF][^DoDEthics]
+**Full guidance:** [AI & Agentic Workflow Design and Governance](../plays/ai_sdlc_workflows-play.md) — the six-level task-autonomy framework is the direct implementation of this rule.[^NIST-AIRMF][^DoDEthics]
 
 ### R10. Monitor AI-Assisted SDLC Outcomes Continuously
 
@@ -253,7 +253,7 @@ Each program or software factory should maintain:
 - [Leading Practices for Code Completion and Generation](../plays/code-gen-play.md)
 - [AI-Augmented Requirements Engineering](../plays/requirements_engineering_play.md)
 - [AI-Augmented Testing](../plays/testing-play.md)
-- [AI & Agentic Workflow Design and Governance](../plays/ai_sdlc_workflows_play.md)
+- [AI & Agentic Workflow Design and Governance](../plays/ai_sdlc_workflows-play.md)
 - [Prompt Engineering](../plays/prompt-engineering.md)
 
 **Key References**
