@@ -1,6 +1,6 @@
 ---
-lifecycle: alpha
-last_updated: "2026-08-04"
+lifecycle: rc
+last_updated: "2026-08-12"
 ---
 
 # **Play: From Protovibe to Production**
