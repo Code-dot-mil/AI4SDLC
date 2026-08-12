@@ -11,23 +11,23 @@ last_updated: "2026-08-04"
 
 ## **Executive Summary**
 
-Vibe coding puts working software in the hands of people who could never build it before. A logistics analyst, a contracting officer, a clinician, a program manager: anyone who understands a problem deeply can now turn an idea into something that runs, in hours, without waiting in a development queue. This play is about keeping that value while handling what comes with it.[^OWASP]
+Vibe coding puts the ability to build working software in the hands of people who could never build it before. A logistics analyst, a contracting officer, a clinician, a program manager: anyone who understands a problem deeply can now turn an idea into something that runs, in hours, without waiting in a development queue. This play is about keeping that value while handling what comes with it.[^OWASP]
 
-The artifact that comes out of a vibe coding session is what we call a **protovibe**: working software that demonstrates intent but has not yet been fully understood by a human steward. Both halves of that sentence are true at once. A protovibe is genuinely valuable and genuinely unknown.
+The artifact that comes out of a vibe coding session is what we call a **protovibe**: working software that demonstrates intent but has not yet been fully understood by a human steward. Both halves of that sentence are true at once. A protovibe is genuinely valuable, but its implementation and operational consequences remain unknown.
 
-Every protovibe ends in one of eight outcomes. Five of them are decisions the team records and acts on. Three of them mean the code enters sustained use, and those three share a single gate.
+Every protovibe ends with a recorded outcome, chosen through a deliberate decision. Outcomes 1–5 preserve value without putting code into sustained use. Outcomes 6–8 allow selected code to enter sustained use only after it passes the baseline transition gate.
 
-📌 **Key takeaway:** Vibe freely. Then decide, deliberately, what the protovibe becomes.
+📌 **Key takeaway:** Vibe freely. Then make a conscious decision and record an outcome for every protovibe. Sustained-use outcomes can be achieved and recorded only after passing the gate.
 
 ---
 
 ## **1. What Vibe Coding Is and Why It Matters**
 
-Vibe coding is the use of AI to produce working software directly from natural language description, without the person directing it reading or owning the generated code. The term comes from Andrej Karpathy in February 2025.[^Karpathy] Academic work has since framed it as a genuine shift in how intent reaches a machine, moving the mediation of developer intent from deterministic instruction to probabilistic inference.[^Meske]
+Vibe coding is the use of AI to generate runnable software from natural-language instructions, with the person directing it evaluating results rather than reading and understanding the generated code. The term comes from Andrej Karpathy in February 2025.[^Karpathy] Academic work has since framed it as a genuine shift in how intent reaches a machine, moving the mediation of developer intent from deterministic instruction to probabilistic inference.[^Meske]
 
 This play uses **proto-vibing** as its term for that practice — a rename that keeps the activity (proto-vibing) and its artifact (protovibe) in the same word family, rather than two unrelated terms. Vibe coding remains the term of record in the literature cited throughout; proto-vibing is this play's label for it, used from here forward.
 
-**The value is real and measurable.** A systematic review of 101 practitioner sources found speed and efficiency to be the dominant motivation at 62 percent of coded accounts, followed by accessibility and empowerment at 14 percent and learning and experimentation at 11 percent.[^Fawzy] Non-developers in that review described building automations and public-facing forms without waiting on an IT department. For DoW programs, that is the headline: subject matter expertise can now be expressed directly as working software.
+**The appeal is real and measurable.** A systematic review of 101 practitioner sources found speed and efficiency to be the dominant motivation at 62 percent of coded accounts, followed by accessibility and empowerment at 14 percent and learning and experimentation at 11 percent.[^Fawzy] Non-developers in that review described building automations and public-facing forms without waiting on an IT department. For DoW programs, that is the headline: subject matter expertise can now be expressed directly as working software.
 
 This capability is most powerful exactly where traditional development is slowest. Requirements that are hard to write down but easy to demonstrate. Ideas that need a stakeholder's reaction before they deserve funding. Design questions with three plausible answers and no cheap way to compare them. Proto-vibing turns one-way doors into reversible experiments.
 
@@ -35,15 +35,15 @@ This capability is most powerful exactly where traditional development is slowes
 
 A **protovibe** is the artifact a proto-vibing session leaves behind: working software that demonstrates intent but has not yet been fully understood by a human steward.
 
-Naming the artifact matters more than naming the activity. The governance question was never whether someone should proto-vibe. It is what happens to the thing on disk afterward. A program can hold a useful conversation about three protovibes and their disposition. It cannot hold a useful conversation about whether proto-vibing is good.
+Naming the artifact matters because governance begins with what happens after a session ends. A program can track protovibes and record their dispositions. It cannot usefully govern the abstract question of whether proto-vibing is good.
 
 ### 1.2 Comprehension Is Its Own Axis
 
-Proto-vibing is not a point on the task-level autonomy scale in the [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md) play. That scale governs what an agent is *permitted* to do. Comprehension describes what the human *understood*. Every autonomy level presumes a human who comprehends, so a developer at Level 1 who applies a draft without reading it has satisfied the framework and learned nothing. That play already flags the same hazard when it warns that approving outputs without meaningful evaluation turns human-in-the-loop review into a formality.
+Proto-vibing is not a point on the task-level autonomy scale in the [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md) play. That scale governs what an agent is *permitted* to do. Comprehension is a separate condition: it describes what a human understands about the output. A developer at Level 1 who applies a draft without reading it has completed the manual-application step but has not meaningfully performed the required review. That play already flags the same hazard when it warns that approving outputs without meaningful evaluation turns human-in-the-loop review into a formality.
 
-Agent count is likewise orthogonal. One agent whose output nobody reads produces a protovibe. Twelve agents orchestrated against a spec, with an engineer owning the design, do not. Scaling the mechanism does not change the comprehension question, though it does raise the containment requirement (Section 6).
+Agent count is likewise orthogonal. One agent whose output nobody reads produces a protovibe. Twelve agents orchestrated against a spec, with an engineer understanding the generated code, do not. Scaling the mechanism does not change the comprehension question, though it does raise the containment requirement (Section 6).
 
-This matches what the empirical record shows about professionals. A study of 13 field observations and 99 experienced developers found that experienced developers retain agency over software design and implementation, planning before implementing and validating agent output, with expertise superseding vibes wherever expertise is present.[^Huang] Protovibes are therefore not primarily a senior engineering problem. They arise where domain expertise is high and software engineering expertise is thin, which is precisely where the capability is most valuable.
+This matches what the empirical record shows about professionals. A study of 13 field observations and 99 experienced developers found that experienced developers retain agency over software design and implementation, planning before implementing and validating agent output, with expertise superseding vibes among the participants.[^Huang] Protovibes are therefore not primarily a senior engineering problem. They arise where domain expertise is high and software engineering expertise is thin, which is precisely where the capability is most valuable.
 
 > ⚠️ **Relationship to Code Generation.** The [Leading Practices for Code Completion and Generation](code-gen-play.md) play introduces VIBE Programming and directs that it be bounded by policy with strict gating before promotion. This play operationalizes that direction. It does not replace or amend it. A cross-reference should be added when that play next revises.
 
@@ -51,13 +51,13 @@ This matches what the empirical record shows about professionals. A study of 13 
 
 ## **2. Purpose and Scope**
 
-This play governs what happens after a proto-vibing session ends: how a program names, contains, and disposes of or promotes the resulting protovibe. It does not decide whether to permit proto-vibing in the first place — that boundary is set by the Code Generation play's VIBE Programming guidance — and it does not cover model selection, IDE tooling, or prompt technique.
+This play governs what happens after a proto-vibing session ends: how a program names, contains, and records the disposition of the resulting protovibe. It does not decide whether to permit proto-vibing in the first place — that boundary is set by the [Code Generation play](code-gen-play.md)'s VIBE Programming guidance — and it does not cover model selection, IDE tooling, or prompt technique.
 
-**In scope:** the protovibe as a named artifact, the eight-outcome decision set, the Baseline Transition Gate, and the environment controls that make exploration safe before that gate.
+**In scope:** the protovibe as a named artifact, its eight possible outcomes, the baseline transition gate, and the environment controls that make exploration safe before that gate.
 
-**Out of scope:** agent orchestration mechanics (see AI & Agentic Workflow Design and Governance), requirements elicitation technique (see Requirements Engineering), and tool- or vendor-specific guidance.
+**Out of scope:** agent orchestration mechanics (see [AI & Agentic Workflow Design and Governance](ai_sdlc_workflows-play.md)), requirements elicitation technique (see [Requirements Engineering](requirements_engineering_play.md)), and tool- or vendor-specific guidance.
 
-**Audience:** engineers and subject matter experts running proto-vibing sessions, technical leads deciding whether a protovibe is promoted, and program leadership funding what comes after.
+**Audience:** engineers and subject matter experts running proto-vibing sessions; technical leads deciding a protovibe's disposition; and program leaders responsible for resourcing any follow-on work.
 
 ---
 
@@ -65,66 +65,70 @@ This play governs what happens after a proto-vibing session ends: how a program 
 
 A team does not need a mature DevSecOps pipeline to start proto-vibing — that is the point. These are the minimum conditions for running this play safely:
 
-- [ ] An environment that can be made ephemeral and isolated, with no path to production credentials or systems
-- [ ] Synthetic or approved non-sensitive data available for exploration
-- [ ] A place to record protovibe inventory, expiration dates, and outcome decisions, even a simple tracker
-- [ ] A named engineer able to own comprehension review before any protovibe crosses the gate in Section 5
-- [ ] Familiarity with the Code Generation play's high-risk use-case boundaries, echoed in Section 6
+- An environment that can be made ephemeral and isolated, with no path to production credentials or systems
+- Synthetic or approved non-sensitive data available for exploration
+- A place to record protovibe inventory, expiration dates, and recorded outcomes, even a simple tracker
+- A named engineer able to own comprehension review before code selected for Outcomes 6–8 crosses the gate in Section 5
+- Familiarity with the Code Generation play's [high-risk use-case boundaries](code-gen-play.md#high-risk-use-cases), echoed in Section 6
 
-Teams without an established DevSecOps baseline can still vibe code under Section 6's controls. They cannot yet cross the gate in Section 5 — Step 3 of that gate assumes CI/CD, SSDF or SLSA practice, and SBOM, MLBOM, and AIBOM tracking are already in place.
+Teams without an established DevSecOps baseline can still vibe code under Section 6's controls. They cannot yet place code in sustained use through Outcomes 6–8, because Step 3 of the gate assumes CI/CD, SSDF or SLSA practice, and SBOM, MLBOM, and AIBOM tracking are already in place.
 
 ---
 
 ## **4. Eight Outcomes**
 
-Every protovibe ends somewhere. Five outcomes are decisions. Three mean the code enters sustained use and must pass the gate in Section 5.
+Every protovibe ends with a recorded outcome, chosen through a deliberate decision. Outcomes 1–5 do not place code in sustained use. Outcomes 6–8 can be achieved and recorded only after selected code passes the baseline transition gate in Section 5.
 
-| **Outcome** | **What survives** | **Family** |
+| **Outcome** | **What survives** | **Sustained use** |
 | --- | --- | --- |
-| **1. Insight** | A design decision, a stakeholder alignment, a changed opinion | Decision |
-| **2. Negative verdict** | A documented "no": infeasible, not worth it, wrong requirement | Decision |
-| **3. Lessons learned** | Knowledge about the attempt; artifact deliberately disposed | Decision |
-| **4. Requirements and production vision** | Spec, interface contracts, acceptance criteria, ADRs | Decision |
-| **5. Reference oracle** | The running protovibe as a behavioral specification for a clean rebuild | Decision |
-| **6. Selective salvage** | Named fragments; the remainder disposed | **Gate** |
-| **7. Debt-baselined transition** | The full codebase, with a funded and owned debt register | **Gate** |
-| **8. Bounded sustainment** | The full codebase, used as-is inside hard constraints | **Gate** |
+| **1. Insight** | A design decision, a stakeholder alignment, a changed opinion | No |
+| **2. Negative verdict** | A documented "no": infeasible, not worth it, wrong requirement | No |
+| **3. Lessons learned** | Knowledge about the attempt; artifact deliberately disposed | No |
+| **4. Requirements and production vision** | Spec, interface contracts, acceptance criteria, ADRs | No |
+| **5. Reference oracle** | The running protovibe as a behavioral specification for a clean rebuild | No |
+| **6. Selective salvage** | Named fragments; the remainder disposed | Yes—after passing the gate |
+| **7. Debt-baselined transition** | The full codebase, with a funded and owned debt register | Yes—after passing the gate |
+| **8. Bounded sustainment** | The full codebase, used as-is inside hard constraints | Yes—after passing the gate |
 
 **Insight and negative verdict are wins.** A protovibe that proves an idea will not work, in two days, has saved a program a year and a program office a great deal of money. Record it as a deliverable, because a kill decision that nobody writes down gets re-litigated in twelve months.
 
-**Requirements and production vision is the highest-leverage outcome for DoW work.** The specification, interface contracts, and Architectural Decision Records[^ADR] a Harvest produces are the same artifacts an authorization package demands anyway, so the governance is not pure overhead. Pair this outcome with the [Requirements Engineering](requirements_engineering_play.md) play. One caveat carried from industry practice: the specification informs the rebuild, it does not become the source of truth. Executable code remains the source of truth requiring maintenance.[^TWSDD]
+**Lessons learned preserves what the code taught without preserving the code.** Record the question explored, assumptions, key results, and reason for disposal in the protovibe inventory. This makes failed experiments reusable and prevents later teams from repeating the work or rediscovering the same insight.
 
-**Reference oracle** keeps the protovibe running but never ships it. Engineers run it alongside the clean build and compare behavior, letting the protovibe define expected results for cases nobody wrote down. This is the right answer when domain logic is tacit, living in an expert's head rather than in any document.
+**Requirements and production vision is the highest-leverage outcome for DoW work.** The specification, interface contracts, and Architectural Decision Records[^ADR] that result from this disposition are the same artifacts an authorization package demands anyway, so the governance is not pure overhead. Pair this outcome with the [Requirements Engineering](requirements_engineering_play.md) play. One caveat carried from industry practice: the specification informs the rebuild, it does not become the source of truth. Executable code remains the source of truth requiring maintenance.[^TWSDD]
+
+**Reference oracle** keeps the protovibe running but never ships it. Access is limited to the clean-rebuild team; it may not acquire an operational user base. Engineers run it alongside the clean build and compare behavior, letting the protovibe define expected results for cases nobody wrote down. This is the right answer when domain logic is tacit, living in an expert's head rather than in any document.
 
 ### 4.1 The Undecided Protovibe
 
-There is a ninth ending, and it is the one this play exists to prevent: the protovibe quietly acquires users and obligations while none of the eight decisions is ever made.
+One ending falls outside the eight defined outcomes: the protovibe quietly acquires users and obligations while no outcome is deliberately selected.
 
-Nobody chooses this. Teams arrive at it, because five of the eight outcomes require an act of disposal, disposal requires a decision, and drift is free. Practitioner accounts show what accumulates in the meantime: only 29 percent of coded quality assurance behaviors involved manual testing or edits, while 36 percent skipped quality assurance entirely, 18 percent reflected uncritical trust in the output, and 10 percent delegated verification back to the AI that wrote the code.[^Fawzy]
+Nobody chooses this. Teams arrive at it because recording an outcome requires a deliberate decision, while drift is free. Practitioner accounts show what accumulates in the meantime: only 29 percent of coded quality assurance behaviors involved manual testing or edits, while 36 percent skipped quality assurance entirely, 18 percent reflected uncritical trust in the output, and 10 percent delegated verification back to the AI that wrote the code.[^Fawzy]
 
 ---
 
 ## **5. The Baseline Transition Gate**
 
-Outcomes 6, 7, and 8 all mean the same thing: this code will be sustained. All three cross one gate, in this order, because each step depends on the one before it.
+Outcomes 6, 7, and 8 place code in sustained use. Each can be achieved and recorded only after the selected code passes the baseline transition gate. Its three steps must occur in order because each depends on the preceding step.
 
-The gate is what turns a promising protovibe into something a program can fund, staff, defend at a milestone review, and hand to a different team in three years.
+The gate is what turns a promising protovibe into something a program can fund, staff, defend at a milestone review, and hand to a different team in the future.
 
-**Step 1: Comprehension.** A named engineer can explain what the code does and why it is structured as it is, to a reviewer who did not write the prompt. Not "the team looked at it." One person owns it, by name, on a date. This step has no tooling and no shortcut, and it is the step that gets skipped.
+**Step 1: Comprehension.** A named engineer must be able to explain what the code does and why it is structured as it is to a reviewer who did not write the prompt. “The team looked at it” is not enough. That engineer is recorded as the code’s owner, by name and date. This step has no tooling or shortcut and must not be skipped.
 
 **Step 2: Architecture baseline.** Document the as-built system: data model, trust boundaries, authorization model, external dependencies, deployment topology, and data sensitivity. Then record the delta between as-built and as-should-be. Nothing is remediated here. The delta *is* the debt register, and every entry gets an owner.
 
-**Step 3: DevSecOps entry.** Now the pipeline means something. Apply the baseline established in the Code Generation play: CI/CD automation, static and dynamic analysis (SAST/DAST), required test coverage for edge cases and failure paths (not just the happy-path demo), secure supply chain practice under SSDF or SLSA, IaC discipline, and SBOM, MLBOM, and AIBOM tracking.[^SSDF] Add the controls in Section 5.2.
+**Step 3: DevSecOps entry.** With comprehension and an architecture baseline established, bring the code into the existing [DevSecOps baseline](code-gen-play.md#devsecops-baseline) and apply its [verification practices](code-gen-play.md#verification-practices). Then add the protovibe-specific controls in [Section 5.2](#52-what-to-add-for-ai-generated-code).
 
 > ⚠️ **Order matters.** Running a protovibe through the pipeline before Steps 1 and 2 produces a clean scan report on code nobody understands. That is worse than no report, because it manufactures confidence.
 
-### 5.1 Three Destinations
+If a gate transition is deferred or does not pass, the protovibe remains subject to the controls in [Section 6](#6-working-safely-before-the-gate) until the team remediates and retries or records an Outcome 1–5.
 
-Past the gate, only three things differ:
+### 5.1 Applying the Gate to Sustained-Use Outcomes
 
-- **Selective salvage** scopes all three steps to the surviving fragments and records an explicit disposition for the remainder.
-- **Debt-baselined transition** carries the full register forward with an owner, a date, and a funding line per entry.
-- **Bounded sustainment** accepts the debt permanently and substitutes hard usage constraints for remediation: a named user population, no sensitive data, no production integration, an inventory entry, and a set review interval. Note that these constraints are only enforceable because Step 2 documented the boundaries they refer to.
+The gate applies differently depending on the proposed sustained-use outcome:
+
+- **Selective salvage** identifies the fragments of the protovibe to be sustained, scopes all three steps to those fragments, and records the disposal of the remaining codebase in the protovibe inventory.
+- **Debt-baselined transition** applies all three steps to the full protovibe codebase. It carries the resulting debt register forward, with an owner, a date, and a funding line for every entry.
+- **Bounded sustainment** accepts the debt of the full protovibe codebase permanently and substitutes hard usage constraints for remediation: a named user population, no sensitive data, no production integration, an inventory entry, and a set review interval. Note that these constraints are only enforceable because Step 2 documented the boundaries they refer to.
 
 ### 5.2 What to Add for AI-Generated Code
 
@@ -136,11 +140,13 @@ A standard pipeline validates code. These controls address what is distinctive a
 | Authorization paths | Discrete human review gate; verify server-side enforcement |
 | Static and dynamic analysis | Run SAST/DAST against the protovibe as if it were freshly written code; "it already worked" is not an exemption |
 | Test coverage | Require tests for edge cases and failure paths, not just the happy-path demo; treat weak error handling as a blocking finding |
-| Duplication | Enforce clone and duplication thresholds as a quality gate |
-| Provenance | Validate dependencies, including checks for non-existent packages |
+| Duplicated code and logic | Enforce thresholds for duplicated code and copy-pasted logic as a quality gate |
+| Provenance and dependencies | Validate dependency names, sources, and integrity; check for nonexistent or typosquatted packages and known vulnerabilities |
 | Attribution | Record AI authorship at commit, feeding SBOM and AIBOM |
 
-The emphasis on configuration and authorization is deliberate. Research across large enterprise codebases found 322 percent more privilege escalation paths and 153 percent more design flaws in AI-generated code, gaps automated scanners miss because they reflect architectural decisions rather than discrete code-level defects.[^Apiiro] Model capability does not close this on its own: syntax pass rates for generated code rose from roughly 50 percent to 95 percent between 2023 and 2026 while security pass rates stayed flat between 45 and 55 percent.[^Veracode] Maintainability signals move the same way, with refactored code falling from 21 percent of changed lines in 2022 to 3.8 percent in 2026 and duplicated blocks rising 81 percent.[^GitClear]
+The emphasis on configuration and authorization is deliberate. Research across large enterprise codebases found 322 percent more privilege escalation paths and 153 percent more design flaws in AI-generated code, gaps automated scanners miss because they reflect architectural decisions rather than discrete code-level defects.[^Apiiro]
+
+Other controls address risks that model capability alone does not resolve. Syntax pass rates for generated code rose from roughly 50 percent to 95 percent between 2023 and 2026 while security pass rates stayed flat between 45 and 55 percent.[^Veracode] Maintainability signals move the same way, with refactored code falling from 21 percent of changed lines in 2022 to 3.8 percent in 2026 and duplicated blocks rising 81 percent.[^GitClear]
 
 ---
 
@@ -158,21 +164,25 @@ Explore freely. The controls below are what make that freedom safe to grant, whi
 | Visibility | An inventory entry created at session start |
 | Multi-agent | Parallel agents require isolated infrastructure and no shared credentials |
 
-**Where to start high, not low.** Consistent with the high-risk categories in the Code Generation play, some work should begin at the gate rather than as a protovibe: authentication and authorization logic, cryptographic implementation, safety-critical and mission-critical software, and anything involving classified, CUI, or export-controlled material. Experienced developers independently converge on the same list, rating agents unsuitable for security-critical code, high-stakes or privacy-sensitive tasks, core business logic, and complex architectural refactoring.[^Huang] Above IL-2, treat isolated infrastructure and synthetic data as mandatory.
+**Where to start high, not low.** Some work must not begin as a protovibe. Authentication and authorization logic, cryptographic implementation, safety- or mission-critical software, and work involving classified, CUI, or export-controlled material must begin under standard engineering and DevSecOps controls.
 
-> ⚠️ **The promotion rule.** The moment a protovibe acquires a user who is not its author, it is no longer a prototype. Not when it reaches production. Not when it touches sensitive data. At the first non-author user, because that is when someone else's expectations depend on code nobody understands.
+This boundary is consistent with concerns experienced developers report about AI agents in security-critical code, high-stakes or privacy-sensitive tasks, core business logic, and complex architectural refactoring.[^Huang]
+
+For work above IL-2, isolated infrastructure and synthetic data are mandatory.
+
+> ⚠️ **Promotion rule.** A protovibe is no longer a prototype when it acquires its first non-author user. The threshold is not production deployment or access to sensitive data; it is the point at which someone else’s expectations depend on code that has not been fully understood by a human steward.
 
 ---
 
 ## **7. Key Takeaways and Next Steps**
 
-- **Vibe freely, then decide.** Eight outcomes. Five are decisions, three are a gate, and the ninth ending is what happens when nobody chooses.
+- **Vibe freely, then decide.** Make a conscious decision and record an outcome for every protovibe. Outcomes 1–5 do not place code in sustained use; sustained-use outcomes can be achieved and recorded only after passing the gate.
 - **Name the artifact.** A protovibe is working software that demonstrates intent but has not yet been fully understood by a human steward. Both halves are true.
 - **Insight and negative verdicts are wins.** Record them. A documented "no" delivered in two days is a real deliverable.
 - **Comprehension comes first, then architecture, then the pipeline.** Reversing that order manufactures confidence.
 - **Controls live in the environment.** The mode is a team decision; the guardrails are an organizational standard.
 
-**Next steps.** Pilot on one team. Track three measures: protovibes with a recorded outcome, expiration dates honored, and gate transitions completed versus deferred. Frame results using AI-SWEC and submit lessons learned to the AI4SDLC Working Group.
+**Next steps.** Pilot on one team. Track three measures: protovibes with a recorded outcome, expiration dates honored, and gate transitions passed, deferred, or failed. Frame results using [AI-SWEC](code-gen-play.md#ai-swec-grounding-your-why) and submit lessons learned to the AI4SDLC Working Group.
 
 Proto-vibing is groundbreaking potential with limitations and challenges. Run the play, and the potential is what your program keeps.
 
@@ -202,8 +212,6 @@ Proto-vibing is groundbreaking potential with limitations and challenges. Run th
 
 [^TWSDD]: Thoughtworks, *Technology Radar*, Vol. 34, Apr. 2026. Spec-driven development is placed in the Assess ring, with executable code retained as the source of truth requiring maintenance.
 
-[^SSDF]: National Institute of Standards and Technology, "Secure Software Development Framework," NIST SP 800-218, and "Recommendations for Mitigating the Risk of AI Code Generation," NIST SP 800-218A, Jun. 2024.
-
 [^Apiiro]: Apiiro research across large enterprise codebases, 2026, comparing AI-generated and human-authored code. *Confirm against the primary publication before promotion beyond draft.*
 
 [^Veracode]: Veracode, "GenAI Code Security Report," 2025, and Spring 2026 update.
@@ -215,5 +223,5 @@ Proto-vibing is groundbreaking potential with limitations and challenges. Run th
 > **Note to the AI4SDLC Working Group**
 >
 > 1. **No amendment required.** This play extends the Code Generation play's VIBE Programming guidance rather than revising it. It introduces "protovibe" as a name for the artifact, not a replacement term for the practice, so no vocabulary change is proposed. A reciprocal cross-reference in the Code Generation play would help readers, whenever that play next revises.
-> 2. **Framework gap.** The task-level autonomy framework records what an agent is permitted to do. It has no field for whether comprehension occurred. The outcome decision proposed here may belong in that framework rather than in a standalone play.
+> 2. **Framework gap.** The task-level autonomy framework records what an agent is permitted to do. It has no field for whether comprehension occurred. The outcome model proposed here may belong in that framework rather than in a standalone play.
 > 3. **Citation verification.** The Apiiro figures are drawn from a secondary summary and need primary confirmation to meet repository citation standards.
