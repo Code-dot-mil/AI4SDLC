@@ -1,0 +1,33 @@
+schema_version: "1.0"
+ai_task_request:
+  id: "REQ-0001"
+  title: "Short, descriptive title"
+  task_type: "requirements|design|security|codegen|code_review|test|docs|other"
+  requester: "name/role"
+  accountable_owner: "name/role (who will review and own the result)"
+  boundary:
+    allowed_sources:
+      - "repo-only"
+    prohibited_content:
+      - "secrets"
+      - "credentials"
+      - "internal hostnames/domains"
+    data_sensitivity: "public|internal|cui|other (org-defined)"
+  context:
+    objective: "What outcome do you want?"
+    non_goals:
+      - "What is explicitly out of scope?"
+    constraints:
+      - "e.g., no external internet, restricted egress, specific toolchain"
+  required_output:
+    format: "markdown|yaml|json|diff|other"
+    must_include:
+      - "Assumptions"
+      - "Risks"
+      - "Verification steps"
+  verification_plan:
+    tests_or_checks:
+      - "What will you run/inspect to confirm correctness?"
+    acceptance_criteria:
+      - "What does 'done' look like?"
+  notes: "Optional"

@@ -1,0 +1,47 @@
+stages:
+  - ai4sdlc
+
+ai4sdlc_safety_scan:
+  stage: ai4sdlc
+  image: registry1.dso.mil/ironbank/opensource/alpinelinux/alpine:3.20
+  rules:
+    - when: always
+
+  script: |
+    set -eu
+
+    echo "AI4SDLC Safety Scan: checking for common identifier leaks..."
+    echo "NOTE: Excluding docs/ai/demo (intentional FAIL examples live there)."
+
+    EMAIL_RE='[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'
+    PRIVIP_RE='\b(10\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|192\.168\.[0-9]{1,3}\.[0-9]{1,3}|172\.(1[6-9]|2[0-9]|3[0-1])\.[0-9]{1,3}\.[0-9]{1,3})\b'
+    INTDNS_RE='\b[A-Za-z0-9.-]+\.(lan|local|internal|corp)\b'
+    ID_RE='\b(user_id|project_id|namespace_id)\b\s*[:=]\s*[0-9]+'
+
+    SCAN_PATHS="AGENTS.md .ai4sdlc .gitlab/duo .gitlab/issue_templates .gitlab/merge_request_templates docs/ai"
+    EXCLUDE_PATH_GLOB='docs/ai/demo/*'
+
+    FOUND=0
+
+    for p in $SCAN_PATHS; do
+      if [ -e "$p" ]; then
+        echo " - scanning $p (excluding $EXCLUDE_PATH_GLOB)"
+
+        MATCHES="$(find "$p" -type f ! -path "$EXCLUDE_PATH_GLOB" \
+          -exec grep -nE "$EMAIL_RE|$PRIVIP_RE|$INTDNS_RE|$ID_RE" {} + 2>/dev/null || true)"
+
+        if [ -n "$MATCHES" ]; then
+          echo "$MATCHES"
+          FOUND=1
+        fi
+      fi
+    done
+
+    if [ "$FOUND" -eq 1 ]; then
+      echo ""
+      echo "FAIL: Detected identifier-like content above (outside excluded demo paths)."
+      echo "Fix: redact to placeholders (<EMAIL_REDACTED>, <INTERNAL_HOSTNAME>, etc.)"
+      exit 2
+    fi
+
+    echo "OK: no identifier patterns detected in scanned paths (excluding demo)."
