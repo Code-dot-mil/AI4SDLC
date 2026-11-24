@@ -419,3 +419,6 @@ FodyWeavers.xsd
 
 # Project-specific
 _quarry/
+
+# macOS Finder metadata
+.DS_Store

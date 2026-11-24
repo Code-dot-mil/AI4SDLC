@@ -41,7 +41,9 @@ nav:
     - AI Workflow Design: plays/ai_sdlc_workflows-play.md
     - IDE Security: plays/ide-security.md 
   - Early Adopter Stories: 
+    - Overview: stories/index.md
     - Army SMDCoE: stories/army-smdcoe.md
+    - Navy FORGE: stories/navy-forge.md
   - Policy & Rules:
     - AI Governance Rulebook: policy_and_rules/ai-governance-rulebook.md
   - Patterns:
